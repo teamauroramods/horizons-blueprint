@@ -8,6 +8,7 @@ import com.teamaurora.horizons.core.data.server.HorizonsRecipeProvider;
 import com.teamaurora.horizons.core.data.server.modifiers.HorizonsAdvancementModifierProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBlockTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsItemTagsProvider;
+import com.teamaurora.horizons.core.other.HorizonsBlockInfo;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -39,7 +40,10 @@ public class Horizons {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-
+        event.enqueueWork(() -> {
+            HorizonsBlockInfo.registerCompostables();
+            HorizonsBlockInfo.registerFlammables();
+        });
     }
 
     private void clientSetup(FMLClientSetupEvent event) {
