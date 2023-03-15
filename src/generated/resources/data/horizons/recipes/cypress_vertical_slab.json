@@ -1,0 +1,30 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "blueprint:quark_flag",
+          "flag": "vertical_slabs"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "item": "horizons:cypress_slab"
+          }
+        },
+        "pattern": [
+          "#",
+          "#",
+          "#"
+        ],
+        "result": {
+          "count": 3,
+          "item": "horizons:cypress_vertical_slab"
+        }
+      }
+    }
+  ]
+}

@@ -1,29 +1,37 @@
 package com.teamaurora.horizons.core.registry;
 
 import com.mojang.datafixers.util.Pair;
+import com.teamabnormals.blueprint.common.block.*;
+import com.teamabnormals.blueprint.common.block.chest.BlueprintChestBlock;
+import com.teamabnormals.blueprint.common.block.chest.BlueprintTrappedChestBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintStandingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintWallSignBlock;
+import com.teamabnormals.blueprint.common.block.thatch.ThatchBlock;
+import com.teamabnormals.blueprint.common.block.thatch.ThatchSlabBlock;
+import com.teamabnormals.blueprint.common.block.thatch.ThatchStairBlock;
+import com.teamabnormals.blueprint.common.block.thatch.ThatchVerticalSlabBlock;
 import com.teamabnormals.blueprint.common.block.wood.*;
 import com.teamabnormals.blueprint.core.util.PropertyUtil;
 import com.teamabnormals.blueprint.core.util.registry.BlockSubRegistryHelper;
+import com.teamabnormals.blueprint.core.util.registry.ItemSubRegistryHelper;
+import com.teamaurora.horizons.common.block.AlgaeBlock;
 import com.teamaurora.horizons.core.Horizons;
+import com.teamaurora.horizons.core.other.HorizonsConstants;
 import com.teamaurora.horizons.core.other.HorizonsProperties;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.PressurePlateBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
-/*
+/**
  * @author rose_
  */
 @Mod.EventBusSubscriber(modid = Horizons.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class HorizonsBlocks {
     public static final BlockSubRegistryHelper HELPER = Horizons.REGISTRY_HELPER.getBlockSubHelper();
-    
+
     // Cypress //
 
     public static final RegistryObject<Block> STRIPPED_CYPRESS_LOG = HELPER.createBlock("stripped_cypress_log", () -> new StrippedLogBlock(HorizonsProperties.CYPRESS.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
@@ -43,5 +51,31 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> CYPRESS_SAPLING = HELPER.createBlock("cypress_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.SAPLING), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> POTTED_CYPRESS_SAPLING = HELPER.createBlockNoItem("potted_cypress_sapling", () -> new FlowerPotBlock(CYPRESS_SAPLING.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> CYPRESS_LEAVES = HELPER.createBlock("cypress_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.CYPRESS.leaves()), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> VERTICAL_CYPRESS_PLANKS = HELPER.createCompatBlock(HorizonsConstants.QUARK, "vertical_cypress_planks", () -> new Block(HorizonsProperties.CYPRESS.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CYPRESS_BEEHIVE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "cypress_beehive", () -> new BlueprintBeehiveBlock(HorizonsProperties.CYPRESS.beehive()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> CYPRESS_LADDER = HELPER.createFuelBlock("cypress_ladder", () -> new BlueprintLadderBlock(HorizonsProperties.CYPRESS.ladder()), 300, ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_DECORATIONS : null);
+    public static final RegistryObject<Block> CYPRESS_BOOKSHELF = HELPER.createFuelBlock("cypress_bookshelf", () -> new BookshelfBlock(HorizonsProperties.CYPRESS.bookshelf()), 300, ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_BUILDING_BLOCKS : null);
+    public static final RegistryObject<Block> CYPRESS_BOARDS = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "cypress_boards", () -> new RotatedPillarBlock(HorizonsProperties.CYPRESS.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> CYPRESS_VERTICAL_SLAB = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "cypress_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.CYPRESS.planks()), 150, CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_CYPRESS_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "stripped_cypress_post", () -> new WoodPostBlock(HorizonsProperties.CYPRESS.post()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> CYPRESS_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "cypress_post", () -> new WoodPostBlock(STRIPPED_CYPRESS_POST, HorizonsProperties.CYPRESS.post()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<BlueprintChestBlock> CYPRESS_CHEST = HELPER.createChestBlock("cypress", HorizonsProperties.CYPRESS.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_DECORATIONS : null);
+    public static final RegistryObject<BlueprintTrappedChestBlock> CYPRESS_TRAPPED_CHEST = HELPER.createTrappedChestBlock("cypress", HorizonsProperties.CYPRESS.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_REDSTONE : null);
+    public static final RegistryObject<Block> CYPRESS_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "cypress_hedge", () -> new HedgeBlock(HorizonsProperties.CYPRESS.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> CYPRESS_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "cypress_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.CYPRESS.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> CYPRESS_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "cypress_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.CYPRESS.leafPile()), CreativeModeTab.TAB_DECORATIONS);
+
+    // Gooseberry //
+
+    public static final RegistryObject<Block> GOOSEBERRY_SACK = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "gooseberry_sack", () -> new Block(HorizonsProperties.GOOSEBERRY_SACK), 300, CreativeModeTab.TAB_DECORATIONS);
+
+    // Algae //
+
+    public static final RegistryObject<Block> ALGAE = HELPER.createBlockNoItem("algae", () -> new AlgaeBlock(HorizonsProperties.ALGAE));
+    public static final RegistryObject<Block> ALGAE_THATCH = HELPER.createBlock("algae_thatch", () -> new ThatchBlock(HorizonsProperties.ALGAE_THATCH), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> ALGAE_THATCH_SLAB = HELPER.createBlock("algae_thatch_slab", () -> new ThatchSlabBlock(HorizonsProperties.ALGAE_THATCH),CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> ALGAE_THATCH_STAIRS = HELPER.createBlock("algae_thatch_stairs" ,() -> new ThatchStairBlock(ALGAE_THATCH.get().defaultBlockState(), HorizonsProperties.ALGAE_THATCH), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> ALGAE_THATCH_VERTICAL_SLAB = HELPER.createCompatBlock(HorizonsConstants.QUARK, "algae_thatch_vertical_slab", () -> new ThatchVerticalSlabBlock(HorizonsProperties.ALGAE_THATCH), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
 }

@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "blueprint:quark_flag",
+          "flag": "hedges"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "tag": "horizons:cypress_logs"
+          },
+          "L": {
+            "item": "horizons:cypress_leaves"
+          }
+        },
+        "pattern": [
+          "L",
+          "#"
+        ],
+        "result": {
+          "count": 2,
+          "item": "horizons:cypress_hedge"
+        }
+      }
+    }
+  ]
+}

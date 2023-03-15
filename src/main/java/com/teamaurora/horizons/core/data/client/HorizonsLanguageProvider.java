@@ -15,7 +15,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import org.codehaus.plexus.util.StringUtils;
 
-/*
+/**
  * @author rose_
  */
 public class HorizonsLanguageProvider extends LanguageProvider {
@@ -56,6 +56,27 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.CYPRESS_SAPLING);
         this.translateBlock(HorizonsBlocks.POTTED_CYPRESS_SAPLING);
         this.translateBlock(HorizonsBlocks.CYPRESS_LEAVES);
+
+        this.translateBlock(HorizonsBlocks.VERTICAL_CYPRESS_PLANKS);
+        this.translateBlock(HorizonsBlocks.CYPRESS_BEEHIVE);
+        this.translateBlock(HorizonsBlocks.CYPRESS_LADDER);
+        this.translateBlock(HorizonsBlocks.CYPRESS_BOOKSHELF);
+        this.translateBlock(HorizonsBlocks.CYPRESS_BOARDS);
+        this.translateBlock(HorizonsBlocks.CYPRESS_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.CYPRESS_POST);
+        this.translateBlock(HorizonsBlocks.STRIPPED_CYPRESS_POST);
+        this.translateBlock(HorizonsBlocks.CYPRESS_CHEST);
+        this.translateBlock(HorizonsBlocks.CYPRESS_TRAPPED_CHEST);
+        this.add(HorizonsBlocks.CYPRESS_HEDGE.get(), "Cypress Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.CYPRESS_LEAF_CARPET);
+        this.translateBlock(HorizonsBlocks.CYPRESS_LEAF_PILE);
+        this.translateBlock(HorizonsBlocks.GOOSEBERRY_SACK);
+
+        this.translateBlock(HorizonsBlocks.ALGAE);
+        this.translateBlock(HorizonsBlocks.ALGAE_THATCH);
+        this.translateBlock(HorizonsBlocks.ALGAE_THATCH_SLAB);
+        this.translateBlock(HorizonsBlocks.ALGAE_THATCH_STAIRS);
+        this.translateBlock(HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB);
     }
 
     private void translateItem(RegistryObject<? extends Item> item) {

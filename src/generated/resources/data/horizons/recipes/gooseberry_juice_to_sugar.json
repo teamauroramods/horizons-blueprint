@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "horizons:gooseberry_juice"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:sugar"
+  }
+}

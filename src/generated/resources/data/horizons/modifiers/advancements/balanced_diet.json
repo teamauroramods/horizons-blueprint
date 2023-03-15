@@ -1,0 +1,94 @@
+{
+  "modifiers": [
+    {
+      "type": "criteria",
+      "config": {
+        "criteria": {
+          "horizons:gooseberries": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:gooseberries"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          },
+          "horizons:gooseberry_jam": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:gooseberry_jam"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          },
+          "horizons:gooseberry_jam_cookie": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:gooseberry_jam_cookie"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          },
+          "horizons:gooseberry_juice": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:gooseberry_juice"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          },
+          "horizons:gooseberry_pie": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:gooseberry_pie"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          },
+          "horizons:honey_glazed_gooseberries": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:honey_glazed_gooseberries"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          }
+        },
+        "requirements": [
+          [
+            "horizons:gooseberries"
+          ],
+          [
+            "horizons:gooseberry_juice"
+          ],
+          [
+            "horizons:gooseberry_pie"
+          ],
+          [
+            "horizons:honey_glazed_gooseberries"
+          ],
+          [
+            "horizons:gooseberry_jam"
+          ],
+          [
+            "horizons:gooseberry_jam_cookie"
+          ]
+        ],
+        "should_replace_requirements": false
+      }
+    }
+  ],
+  "priority": "normal",
+  "selector": "minecraft:husbandry/balanced_diet"
+}

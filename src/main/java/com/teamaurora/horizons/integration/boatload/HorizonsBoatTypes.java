@@ -10,7 +10,7 @@ import net.minecraft.world.item.Item;
 
 import java.util.function.Supplier;
 
-/*
+/**
  * @author rose_
  */
 public final class HorizonsBoatTypes {

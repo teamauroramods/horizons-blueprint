@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_gooseberry_sack": {
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "horizons:gooseberry_sack"
+                  ]
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          },
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "horizons:gooseberry_sack_revert"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          }
+        },
+        "requirements": [
+          [
+            "has_gooseberry_sack",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "horizons:gooseberry_sack_revert"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "blueprint:quark_flag",
+          "flag": "berry_sack"
+        }
+      ]
+    }
+  ]
+}

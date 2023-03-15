@@ -23,7 +23,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 
-/*
+/**
  * @author rose_
  */
 public class DrinkableBottleItem extends HoneyBottleItem {

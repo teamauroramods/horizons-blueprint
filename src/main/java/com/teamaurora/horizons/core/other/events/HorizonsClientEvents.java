@@ -17,9 +17,12 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author rose_
+ */
 @Mod.EventBusSubscriber(modid = Horizons.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class HorizonsClientEvents {
-    private static final List<RegistryObject<Block>> FOLIAGE_COLOR_BLOCKS = Arrays.asList(HorizonsBlocks.CYPRESS_LEAVES);
+    private static final List<RegistryObject<Block>> FOLIAGE_COLOR_BLOCKS = Arrays.asList(HorizonsBlocks.CYPRESS_LEAVES, HorizonsBlocks.CYPRESS_HEDGE, HorizonsBlocks.CYPRESS_LEAF_CARPET, HorizonsBlocks.CYPRESS_LEAF_PILE);
 
     @SubscribeEvent
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {

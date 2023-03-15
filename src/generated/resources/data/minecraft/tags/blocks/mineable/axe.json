@@ -1,0 +1,14 @@
+{
+  "values": [
+    "horizons:cypress_bookshelf",
+    "horizons:cypress_vertical_slab",
+    "horizons:cypress_ladder",
+    "horizons:cypress_hedge",
+    "horizons:cypress_chest",
+    "horizons:cypress_trapped_chest",
+    "horizons:cypress_post",
+    "horizons:stripped_cypress_post",
+    "horizons:cypress_beehive",
+    "horizons:cypress_boards"
+  ]
+}

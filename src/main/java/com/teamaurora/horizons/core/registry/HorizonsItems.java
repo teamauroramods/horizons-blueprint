@@ -4,18 +4,20 @@ import com.mojang.datafixers.util.Pair;
 import com.teamabnormals.blueprint.common.item.InjectedItem;
 import com.teamabnormals.blueprint.core.util.PropertyUtil;
 import com.teamabnormals.blueprint.core.util.registry.ItemSubRegistryHelper;
+import com.teamaurora.horizons.common.item.AlgaeBlockItem;
 import com.teamaurora.horizons.common.item.DrinkableBottleItem;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.other.HorizonsConstants;
 import com.teamaurora.horizons.core.other.HorizonsFoods;
 import com.teamaurora.horizons.integration.boatload.HorizonsBoatTypes;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
-/*
+/**
  * @author rose_
  */
 @Mod.EventBusSubscriber(modid = Horizons.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -36,4 +38,9 @@ public class HorizonsItems {
     public static final Pair<RegistryObject<Item>, RegistryObject<Item>> CYPRESS_BOATS = HELPER.createBoatAndChestBoatItem("cypress", HorizonsBlocks.CYPRESS_PLANKS);
     public static final RegistryObject<Item> CYPRESS_FURNACE_BOAT = HELPER.createItem("cypress_furnace_boat", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.BOATLOAD) ? HorizonsBoatTypes.CYPRESS_FURNACE_BOAT : () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LARGE_CYPRESS_BOAT = HELPER.createItem("large_cypress_boat", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.BOATLOAD) ? HorizonsBoatTypes.LARGE_CYPRESS_BOAT : () -> new Item(new Item.Properties()));
+
+    // Misc //
+
+    public static final RegistryObject<Item> ALGAE = HELPER.createItem("algae", () -> new AlgaeBlockItem(HorizonsBlocks.ALGAE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+
 }

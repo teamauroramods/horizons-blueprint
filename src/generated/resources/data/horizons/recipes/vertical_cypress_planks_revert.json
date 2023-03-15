@@ -1,0 +1,24 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "blueprint:quark_flag",
+          "flag": "vertical_planks"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "horizons:vertical_cypress_planks"
+          }
+        ],
+        "result": {
+          "item": "horizons:cypress_planks"
+        }
+      }
+    }
+  ]
+}
