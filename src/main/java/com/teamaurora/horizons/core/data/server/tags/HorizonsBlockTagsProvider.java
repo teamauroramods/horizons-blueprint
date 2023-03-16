@@ -53,7 +53,7 @@ public class HorizonsBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.WOODEN_FENCES).add(HorizonsBlocks.CYPRESS_FENCE.get());
         this.tag(BlockTags.LOGS_THAT_BURN).addTag(HorizonsBlockTags.CYPRESS_LOGS);
         this.tag(BlockTags.LEAVES).addTag(HorizonsBlockTags.CYPRESS_LEAVES);
-        this.tag(BlockTags.CLIMBABLE).add(HorizonsBlocks.CYPRESS_LADDER.get());
+        this.tag(BlockTags.CLIMBABLE).add(HorizonsBlocks.CYPRESS_LADDER.get(), HorizonsBlocks.BEARD_MOSS.get());
         this.tag(BlockTags.FENCE_GATES).add(HorizonsBlocks.CYPRESS_FENCE_GATE.get());
         this.tag(BlockTags.SAPLINGS).add(HorizonsBlocks.CYPRESS_SAPLING.get());
         this.tag(BlockTags.FLOWER_POTS).add(HorizonsBlocks.POTTED_CYPRESS_SAPLING.get(), HorizonsBlocks.POTTED_BLUE_LILY.get(), HorizonsBlocks.POTTED_LIGHT_GRAY_LILY.get(), HorizonsBlocks.POTTED_CYAN_LILY.get(), HorizonsBlocks.POTTED_LIGHT_BLUE_LILY.get(), HorizonsBlocks.POTTED_MAGENTA_LILY.get(), HorizonsBlocks.POTTED_PINK_LILY.get(), HorizonsBlocks.POTTED_PURPLE_LILY.get(), HorizonsBlocks.POTTED_WHITE_LILY.get());

@@ -117,4 +117,7 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> POTTED_PURPLE_LILY = HELPER.createBlockNoItem("potted_purple_lily", () -> new FlowerPotBlock(PURPLE_LILY.get(), PropertyUtil.FLOWER_POT));
     public static final RegistryObject<Block> POTTED_WHITE_LILY = HELPER.createBlockNoItem("potted_white_lily", () -> new FlowerPotBlock(WHITE_LILY.get(), PropertyUtil.FLOWER_POT));
 
+    // Fern //
+
+    public static final RegistryObject<Block> GIANT_FERN = HELPER.createInjectedBlock("giant_fern", Items.LARGE_FERN, () -> new DoublePlantBlock(HorizonsProperties.GIANT_FERN), CreativeModeTab.TAB_DECORATIONS);
 }

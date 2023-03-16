@@ -5,8 +5,11 @@ import com.mojang.datafixers.util.Pair;
 import com.teamabnormals.blueprint.common.block.VerticalSlabBlock;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
+import net.minecraft.advancements.critereon.BlockPredicate;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.LocationPredicate;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.core.BlockPos;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
@@ -14,14 +17,19 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoublePlantBlock;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.ValidationContext;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
+import net.minecraft.world.level.storage.loot.predicates.LocationCheck;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraftforge.common.Tags;
@@ -131,6 +139,7 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropPottedContents(HorizonsBlocks.POTTED_PURPLE_LILY.get());
             this.dropPottedContents(HorizonsBlocks.POTTED_WHITE_LILY.get());
 
+            this.add(HorizonsBlocks.GIANT_FERN.get(), b -> createTriplePlantWithSeedDrops(b, net.minecraft.world.level.block.Blocks.FERN));
         }
 
         private void normalLeaves(Block leaves, Block sapling) {
@@ -164,6 +173,17 @@ public class HorizonsLootTableProvider extends LootTableProvider {
                                             .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
                                                     .setProperties(StatePropertiesPredicate.Builder.properties()
                                                             .hasProperty(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.DOUBLE)))))));
+        }
+
+        private static LootTable.Builder createTriplePlantWithSeedDrops(Block block, Block drop) {
+            LootPoolEntryContainer.Builder<?> builder = LootItem.lootTableItem(drop).apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F))).when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS))).otherwise(applyExplosionCondition(block, LootItem.lootTableItem(Items.WHEAT_SEEDS)).when(LootItemRandomChanceCondition.randomChance(0.125F)));
+            return LootTable.lootTable()
+                    .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(block)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).build()).build()), new BlockPos(0, 1, 0))))
+                    .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(drop)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(block)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).build()).build()), new BlockPos(0, -1, 0))));
         }
     }
 

@@ -77,8 +77,8 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.STRIPPED_CYPRESS_KNEE);
         this.translateBlock(HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE);
 
-        this.translateBlock(HorizonsBlocks.BEARD_MOSS_BLOCK);
-        this.translateBlock(HorizonsBlocks.BEARD_MOSS);
+        this.add(HorizonsBlocks.BEARD_MOSS_BLOCK.get(), "Beard Moss");
+        this.add(HorizonsBlocks.BEARD_MOSS.get(), "Hanging Beard Moss");
 
         this.translateBlock(HorizonsBlocks.CYPRESS_BRANCH);
         this.translateBlock(HorizonsBlocks.GOOSEBERRY_SACK);
@@ -106,6 +106,8 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.POTTED_PINK_LILY);
         this.translateBlock(HorizonsBlocks.POTTED_PURPLE_LILY);
         this.translateBlock(HorizonsBlocks.POTTED_WHITE_LILY);
+
+        this.translateBlock(HorizonsBlocks.GIANT_FERN);
 
     }
 

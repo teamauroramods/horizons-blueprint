@@ -17,8 +17,9 @@ public final class HorizonsProperties {
     public static final BlockBehaviour.Properties ALGAE_THATCH = BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_LIGHT_GREEN).strength(0.5F).sound(HorizonsSoundTypes.ALGAE_THATCH).noOcclusion();
     public static final BlockBehaviour.Properties CYPRESS_KNEE = BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).strength(2.0F).sound(HorizonsSoundTypes.THIN_WOOD).noOcclusion().dynamicShape();
     public static final BlockBehaviour.Properties CYPRESS_BRANCH = BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().sound(HorizonsSoundTypes.THIN_WOOD);
-    public static final BlockBehaviour.Properties BEARD_MOSS_BLOCK = BlockBehaviour.Properties.of(Material.PLANT).strength(0.1F).sound(SoundType.MOSS);
+    public static final BlockBehaviour.Properties BEARD_MOSS_BLOCK = BlockBehaviour.Properties.of(Material.PLANT).strength(0.1F).sound(SoundType.MOSS).noOcclusion().isValidSpawn(PropertyUtil::ocelotOrParrot).isSuffocating(PropertyUtil::never).isViewBlocking(PropertyUtil::never);
     public static final BlockBehaviour.Properties BEARD_MOSS = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.MOSS).noOcclusion().noCollission().randomTicks();
     public static final BlockBehaviour.Properties LILY = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.LILY_PAD).noOcclusion();
+    public static final BlockBehaviour.Properties GIANT_FERN = BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ);
 
 }

@@ -107,6 +107,8 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.lily(HorizonsBlocks.PINK_LILY, HorizonsBlocks.POTTED_PINK_LILY);
         this.lily(HorizonsBlocks.PURPLE_LILY, HorizonsBlocks.POTTED_PURPLE_LILY);
         this.lily(HorizonsBlocks.WHITE_LILY, HorizonsBlocks.POTTED_WHITE_LILY);
+
+        this.triplePlant(HorizonsBlocks.GIANT_FERN);
     }
 
     // Specific Block Generators //
@@ -162,7 +164,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void beardMossBlock(RegistryObject<Block> beardMoss) {
-        this.simpleBlock(beardMoss.get(), this.models().cubeAll(this.getItemName(beardMoss.get()), this.blockTexture(beardMoss.get())).renderType("cutout_mipped"));
+        this.simpleBlock(beardMoss.get(), this.models().cubeAll(this.getItemName(beardMoss.get()), this.blockTexture(beardMoss.get())).renderType("cutout"));
         this.itemModel(beardMoss);
     }
 
@@ -172,6 +174,18 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.pot(pot, flower);
         this.simpleBlock(lily.get(), this.models().withExistingParent(this.getItemName(lily.get()), this.modLoc("block/template_lily")).texture("flower", flower).renderType("cutout"));
         this.generatedItem(lily.get(), TextureFolder.Block);
+    }
+
+    private void triplePlant(RegistryObject<Block> plant) {
+        String name = this.getItemName(plant.get());
+
+        ModelFile top = this.models().withExistingParent(name + "_top", this.modLoc("block/template_triple_plant_top")).texture("cross", this.modLoc("block/" + name + "_middle")).texture("top", this.modLoc("block/" + name + "_top")).renderType("cutout");
+        ModelFile bottom =  this.models().withExistingParent(name + "_bottom", this.mcLoc("block/tinted_cross")).texture("cross", this.modLoc("block/" + name + "_bottom")).renderType("cutout");
+
+        this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_top"));
+        this.getVariantBuilder(plant.get())
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(top))
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(bottom));
     }
 
     // Generic Block Generators //

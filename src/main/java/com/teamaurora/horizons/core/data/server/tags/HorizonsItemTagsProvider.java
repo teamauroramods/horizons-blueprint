@@ -35,6 +35,8 @@ public class HorizonsItemTagsProvider extends ItemTagsProvider {
 
         //forge
         this.tag(HorizonsItemTags.BERRIES).add(HorizonsItems.GOOSEBERRIES.get());
+        this.tag(HorizonsItemTags.STRIPPED_LOGS).add(HorizonsBlocks.STRIPPED_CYPRESS_LOG.get().asItem());
+        this.tag(HorizonsItemTags.STRIPPED_WOOD).add(HorizonsBlocks.STRIPPED_CYPRESS_WOOD.get().asItem());
         this.tag(Tags.Items.BOOKSHELVES).add(HorizonsBlocks.CYPRESS_BOOKSHELF.get().asItem());
         this.copy(Tags.Blocks.CHESTS_WOODEN, Tags.Items.CHESTS_WOODEN);
         this.copy(Tags.Blocks.CHESTS_TRAPPED, Tags.Items.CHESTS_TRAPPED);

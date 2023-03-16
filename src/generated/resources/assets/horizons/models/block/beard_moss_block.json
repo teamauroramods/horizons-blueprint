@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
-  "render_type": "minecraft:cutout_mipped",
+  "render_type": "minecraft:cutout",
   "textures": {
     "all": "horizons:block/beard_moss_block"
   }
