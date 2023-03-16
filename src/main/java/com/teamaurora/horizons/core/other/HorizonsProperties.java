@@ -7,6 +7,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
 /**
+ * @author ebo2022
  * @author rose_
  */
 public final class HorizonsProperties {

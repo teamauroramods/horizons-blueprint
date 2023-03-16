@@ -2,6 +2,10 @@ package com.teamaurora.horizons.core.other;
 
 import net.minecraft.world.food.FoodProperties;
 
+/**
+ * @author ebo2022
+ * @author rose_
+ */
 public final class HorizonsFoods {
     public static final FoodProperties GOOSEBERRIES = new FoodProperties.Builder().nutrition(2).saturationMod(0.2F).build();
     public static final FoodProperties GOOSEBERRY_JUICE = new FoodProperties.Builder().nutrition(1).saturationMod(0.1F).build();

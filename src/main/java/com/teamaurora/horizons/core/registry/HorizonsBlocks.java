@@ -72,9 +72,7 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> CYPRESS_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "cypress_hedge", () -> new HedgeBlock(HorizonsProperties.CYPRESS.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CYPRESS_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "cypress_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.CYPRESS.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CYPRESS_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "cypress_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.CYPRESS.leafPile()), CreativeModeTab.TAB_DECORATIONS);
-
-    public static final RegistryObject<Block> HANGING_CYPRESS_LEAVES = HELPER.createBlock("hanging_cypress_leaves", () -> new HangingCypressLeavesBlock(HorizonsProperties.CYPRESS.leaves()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> CYPRESS_BRANCH = HELPER.createBlock("cypress_branch", () -> new CypressBranchBlock(HorizonsProperties.CYPRESS_BRANCH), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> HANGING_CYPRESS_LEAVES = HELPER.createInjectedBlock("hanging_cypress_leaves", Items.HANGING_ROOTS, () -> new HangingCypressLeavesBlock(HorizonsProperties.CYPRESS.leaves()), CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> CYPRESS_KNEE = HELPER.createBlock("cypress_knee", () -> new CypressKneeBlock(HorizonsProperties.CYPRESS_KNEE), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> LARGE_CYPRESS_KNEE = HELPER.createBlock("large_cypress_knee", () -> new DoubleCypressKneeBlock(HorizonsProperties.CYPRESS_KNEE), CreativeModeTab.TAB_DECORATIONS);
@@ -82,11 +80,13 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> STRIPPED_LARGE_CYPRESS_KNEE = HELPER.createBlock("stripped_large_cypress_knee", () -> new DoubleCypressKneeBlock(HorizonsProperties.CYPRESS_KNEE), CreativeModeTab.TAB_DECORATIONS);
 
     // Beard Moss //
-    public static final RegistryObject<Block> BEARD_MOSS_BLOCK = HELPER.createBlock("beard_moss_block", () -> new BeardMossBlockBlock(HorizonsProperties.BEARD_MOSS_BLOCK), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> BEARD_MOSS = HELPER.createBlock("beard_moss", () -> new BeardMossBlock(HorizonsProperties.BEARD_MOSS), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> BEARD_MOSS_BLOCK = HELPER.createInjectedBlock("beard_moss_block", Items.HANGING_ROOTS, () -> new BeardMossBlockBlock(HorizonsProperties.BEARD_MOSS_BLOCK), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> BEARD_MOSS = HELPER.createInjectedBlock("beard_moss", Items.HANGING_ROOTS, () -> new BeardMossBlock(HorizonsProperties.BEARD_MOSS), CreativeModeTab.TAB_DECORATIONS);
 
     // Gooseberry //
 
+    public static final RegistryObject<Block> CYPRESS_BRANCH = HELPER.createInjectedBlock("cypress_branch", Items.HANGING_ROOTS, () -> new CypressBranchBlock(HorizonsProperties.CYPRESS_BRANCH), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> GOOSEBERRY_SACK = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "gooseberry_sack", () -> new Block(HorizonsProperties.GOOSEBERRY_SACK), 300, CreativeModeTab.TAB_DECORATIONS);
 
     // Algae //

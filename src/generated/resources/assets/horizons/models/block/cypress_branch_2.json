@@ -1,0 +1,7 @@
+{
+  "parent": "horizons:block/template_branch",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "branch": "horizons:block/cypress_branch_2"
+  }
+}

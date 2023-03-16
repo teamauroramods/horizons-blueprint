@@ -70,9 +70,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add(HorizonsBlocks.CYPRESS_HEDGE.get(), "Cypress Leaf Hedge");
         this.translateBlock(HorizonsBlocks.CYPRESS_LEAF_CARPET);
         this.translateBlock(HorizonsBlocks.CYPRESS_LEAF_PILE);
-
         this.translateBlock(HorizonsBlocks.HANGING_CYPRESS_LEAVES);
-        this.translateBlock(HorizonsBlocks.CYPRESS_BRANCH);
 
         this.translateBlock(HorizonsBlocks.CYPRESS_KNEE);
         this.translateBlock(HorizonsBlocks.LARGE_CYPRESS_KNEE);
@@ -82,6 +80,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.BEARD_MOSS_BLOCK);
         this.translateBlock(HorizonsBlocks.BEARD_MOSS);
 
+        this.translateBlock(HorizonsBlocks.CYPRESS_BRANCH);
         this.translateBlock(HorizonsBlocks.GOOSEBERRY_SACK);
 
         this.translateBlock(HorizonsBlocks.ALGAE);

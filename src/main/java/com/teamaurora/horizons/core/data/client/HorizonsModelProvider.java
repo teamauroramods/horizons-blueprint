@@ -7,6 +7,7 @@ import com.teamabnormals.blueprint.common.block.chest.BlueprintTrappedChestBlock
 import com.teamabnormals.blueprint.common.block.sign.BlueprintStandingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintWallSignBlock;
 import com.teamabnormals.blueprint.core.Blueprint;
+import com.teamaurora.horizons.common.block.cypress.CypressBranchBlock;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
 import com.teamaurora.horizons.core.registry.HorizonsItems;
@@ -79,9 +80,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.post(HorizonsBlocks.CYPRESS_POST, HorizonsBlocks.CYPRESS_LOG);
         this.post(HorizonsBlocks.STRIPPED_CYPRESS_POST, HorizonsBlocks.STRIPPED_CYPRESS_LOG);
         this.chests(HorizonsBlocks.CYPRESS_CHEST, HorizonsBlocks.CYPRESS_TRAPPED_CHEST, HorizonsBlocks.CYPRESS_PLANKS);
-
         this.hangingLeaves(HorizonsBlocks.HANGING_CYPRESS_LEAVES);
-        this.cypressBranch(HorizonsBlocks.CYPRESS_BRANCH);
 
         this.cypressKnee(HorizonsBlocks.CYPRESS_KNEE);
         this.largeCypressKnee(HorizonsBlocks.LARGE_CYPRESS_KNEE);
@@ -91,6 +90,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.beardMossBlock(HorizonsBlocks.BEARD_MOSS_BLOCK);
         this.beardMoss(HorizonsBlocks.BEARD_MOSS);
 
+        this.cypressBranch(HorizonsBlocks.CYPRESS_BRANCH);
         this.cubeBottomTop(HorizonsBlocks.GOOSEBERRY_SACK);
 
         this.algae(HorizonsBlocks.ALGAE);
@@ -120,24 +120,36 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
     private void largeCypressKnee(RegistryObject<Block> knee) {
         String name = this.getItemName(knee.get());
-        Function<String, ModelFile> model = s -> this.models().cross(name + "_" + s, this.modLoc("block/" + name + "_" + s)).renderType("cutout");
 
         this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_bottom"));
-        this.getVariantBuilder(knee.get())
-                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(model.apply("top")))
-                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(model.apply("bottom")));
+        this.doubleBlockNoItem(knee);
     }
     
     private void cypressBranch(RegistryObject<Block> branch) {
+        String name = this.getItemName(branch.get());
+        Function<Integer, ModelFile> model = i -> this.models().withExistingParent(name + "_" + i, this.modLoc("block/template_branch")).texture("branch", this.modLoc("block/" + name + "_" + i)).renderType("cutout");
+
         this.generatedItem(branch.get(), TextureFolder.Item);
+        this.getVariantBuilder(branch.get())
+                .partialState().with(CypressBranchBlock.AGE, 0).with(CypressBranchBlock.FACING, Direction.NORTH).addModels(new ConfiguredModel(model.apply(0), 0, 180, true))
+                .partialState().with(CypressBranchBlock.AGE, 1).with(CypressBranchBlock.FACING, Direction.NORTH).addModels(new ConfiguredModel(model.apply(1), 0, 180, true))
+                .partialState().with(CypressBranchBlock.AGE, 2).with(CypressBranchBlock.FACING, Direction.NORTH).addModels(new ConfiguredModel(model.apply(2), 0, 180, true))
+                .partialState().with(CypressBranchBlock.AGE, 0).with(CypressBranchBlock.FACING, Direction.SOUTH).addModels(new ConfiguredModel(model.apply(0), 0, 0, true))
+                .partialState().with(CypressBranchBlock.AGE, 1).with(CypressBranchBlock.FACING, Direction.SOUTH).addModels(new ConfiguredModel(model.apply(1), 0, 0, true))
+                .partialState().with(CypressBranchBlock.AGE, 2).with(CypressBranchBlock.FACING, Direction.SOUTH).addModels(new ConfiguredModel(model.apply(2), 0, 0, true))
+                .partialState().with(CypressBranchBlock.AGE, 0).with(CypressBranchBlock.FACING, Direction.EAST).addModels(new ConfiguredModel(model.apply(0), 0, 270, true))
+                .partialState().with(CypressBranchBlock.AGE, 1).with(CypressBranchBlock.FACING, Direction.EAST).addModels(new ConfiguredModel(model.apply(1), 0, 270, true))
+                .partialState().with(CypressBranchBlock.AGE, 2).with(CypressBranchBlock.FACING, Direction.EAST).addModels(new ConfiguredModel(model.apply(2), 0, 270, true))
+                .partialState().with(CypressBranchBlock.AGE, 0).with(CypressBranchBlock.FACING, Direction.WEST).addModels(new ConfiguredModel(model.apply(0), 0, 90, true))
+                .partialState().with(CypressBranchBlock.AGE, 1).with(CypressBranchBlock.FACING, Direction.WEST).addModels(new ConfiguredModel(model.apply(1), 0, 90, true))
+                .partialState().with(CypressBranchBlock.AGE, 2).with(CypressBranchBlock.FACING, Direction.WEST).addModels(new ConfiguredModel(model.apply(2), 0, 90, true));
     }
 
     private void beardMoss(RegistryObject<Block> beardMoss) {
         String name = this.getItemName(beardMoss.get());
-        ResourceLocation top = Horizons.REGISTRY_HELPER.prefix("block/" + name + "_top");
-        ResourceLocation bottom = Horizons.REGISTRY_HELPER.prefix("block/" + name + "_bottom");
 
-        this.itemModels().withExistingParent(name, "item/generated").texture("layer0", bottom);
+        this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_bottom"));
+        this.doubleBlockNoItem(beardMoss);
     }
 
     private void beardMossBlock(RegistryObject<Block> beardMoss) {
@@ -350,6 +362,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
     private void cubeBottomTop(RegistryObject<Block> block) {
         String name = this.getItemName(block.get());
+
         this.simpleBlock(block.get(), this.models().cubeBottomTop(name, this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_bottom"), this.modLoc("block/" + name + "_top")));
         this.itemModel(block);
     }
@@ -387,8 +400,8 @@ public class HorizonsModelProvider extends BlockStateProvider {
         ModelFile outer_top = this.models().withExistingParent(name + "_outer_top", "blueprint:block/thatch/thatch_stairs_outer_top").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
         ModelFile top = this.models().withExistingParent(name + "_top", "blueprint:block/thatch/thatch_stairs_top").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
 
-        //brain damage
-        getVariantBuilder(thatch.get())
+        this.itemModel(thatch);
+        this.getVariantBuilder(thatch.get())
                 .forAllStatesExcept(state -> {
                     Direction facing = state.getValue(StairBlock.FACING);
                     Half half = state.getValue(StairBlock.HALF);
@@ -401,10 +414,10 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
                     yRot %= 360;
 
-                    return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? (half == Half.BOTTOM ? stairs : top) : shape == StairsShape.INNER_LEFT || shape == StairsShape.INNER_RIGHT ? (half == Half.BOTTOM ? inner : inner_top) : (half == Half.BOTTOM ? outer : outer_top)).rotationY(yRot).uvLock(true).build();
+                    return ConfiguredModel.builder().modelFile(shape == StairsShape.STRAIGHT ? (half == Half.BOTTOM ? stairs : top)
+                            : shape == StairsShape.INNER_LEFT || shape == StairsShape.INNER_RIGHT ? (half == Half.BOTTOM ? inner : inner_top)
+                            : (half == Half.BOTTOM ? outer : outer_top)).rotationY(yRot).uvLock(true).build();
                 }, StairBlock.WATERLOGGED);
-
-        this.itemModel(thatch);
     }
 
     private void thatchVerticalSlab(RegistryObject<Block> thatch, Supplier<Block> textureBlock) {
@@ -419,6 +432,15 @@ public class HorizonsModelProvider extends BlockStateProvider {
                 .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.EAST).addModels(new ConfiguredModel(model, 0, 90, true))
                 .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.WEST).addModels(new ConfiguredModel(model, 0, 270, true))
                 .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.DOUBLE).addModels(new ConfiguredModel(this.models().getExistingFile(texture)));
+    }
+
+    private void doubleBlockNoItem(RegistryObject<Block> block) {
+        String name = this.getItemName(block.get());
+        Function<String, ModelFile> model = s -> this.models().cross(name + "_" + s, this.modLoc("block/" + name + "_" + s)).renderType("cutout");
+
+        this.getVariantBuilder(block.get())
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(model.apply("top")))
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(model.apply("bottom")));
     }
 
     // Misc Util //
