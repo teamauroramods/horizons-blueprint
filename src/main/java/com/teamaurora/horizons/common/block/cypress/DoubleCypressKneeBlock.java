@@ -36,9 +36,9 @@ import javax.annotation.Nullable;
 public class DoubleCypressKneeBlock extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
-    protected static final VoxelShape SHAPE_BOTTOM = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
-    protected static final VoxelShape SHAPE_TOP = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D);
-    protected static final VoxelShape SHAPE_TOP_COLLISION = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D);
+    private static final VoxelShape SHAPE_BOTTOM = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
+    private static final VoxelShape SHAPE_TOP = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 8.0D, 11.0D);
+    private static final VoxelShape SHAPE_TOP_COLLISION = Block.box(5.0D, 0.0D, 5.0D, 11.0D, 5.0D, 11.0D);
 
     public DoubleCypressKneeBlock(Properties properties) {
         super(properties);

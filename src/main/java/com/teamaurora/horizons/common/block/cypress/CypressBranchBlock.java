@@ -39,10 +39,10 @@ import javax.annotation.Nullable;
 public class CypressBranchBlock extends Block implements BonemealableBlock {
     public static final IntegerProperty AGE = BlockStateProperties.AGE_2;
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
-    protected static final VoxelShape SHAPE_NORTH = Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 13.0D);
-    protected static final VoxelShape SHAPE_SOUTH = Block.box(4.0D, 4.0D, 3.0D, 12.0D, 12.0D, 16.0D);
-    protected static final VoxelShape SHAPE_EAST = Block.box(3.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D);
-    protected static final VoxelShape SHAPE_WEST = Block.box(0.0D, 4.0D, 4.0D, 13.0D, 12.0D, 12.0D);
+    private static final VoxelShape SHAPE_NORTH = Block.box(4.0D, 4.0D, 0.0D, 12.0D, 12.0D, 13.0D);
+    private static final VoxelShape SHAPE_SOUTH = Block.box(4.0D, 4.0D, 3.0D, 12.0D, 12.0D, 16.0D);
+    private static final VoxelShape SHAPE_EAST = Block.box(3.0D, 4.0D, 4.0D, 16.0D, 12.0D, 12.0D);
+    private static final VoxelShape SHAPE_WEST = Block.box(0.0D, 4.0D, 4.0D, 13.0D, 12.0D, 12.0D);
 
     public CypressBranchBlock(Properties properties) {
         super(properties);

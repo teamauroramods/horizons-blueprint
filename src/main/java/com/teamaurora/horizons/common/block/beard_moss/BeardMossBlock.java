@@ -30,7 +30,7 @@ import net.minecraftforge.common.IForgeShearable;
  */
 public class BeardMossBlock extends Block implements BonemealableBlock, IForgeShearable {
     public static final EnumProperty<DoubleBlockHalf> HALF = BlockStateProperties.DOUBLE_BLOCK_HALF;
-    protected static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
+    private static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 16.0D, 13.0D);
 
     public BeardMossBlock(Properties properties) {
         super(properties);

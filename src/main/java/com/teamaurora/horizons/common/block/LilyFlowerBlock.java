@@ -4,6 +4,7 @@ import com.teamabnormals.blueprint.common.block.BlueprintFlowerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.vehicle.Boat;
@@ -23,7 +24,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * @author JustinPlayzz
@@ -32,12 +32,14 @@ import java.util.Random;
  * @author rose_
  */
 public class LilyFlowerBlock extends BlueprintFlowerBlock {
-    protected static final VoxelShape LILY_PAD_AABB = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 1.5D, 15.0D);
-    protected static final VoxelShape LILY_FLOWER_AABB = Block.box(3.0D, 1.5D, 3.0D, 13.0D, 13.D, 13.0D);
-    protected static final VoxelShape SHAPE = Shapes.or(LILY_PAD_AABB, LILY_FLOWER_AABB);
+    private static final VoxelShape LILY_PAD_AABB = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 1.5D, 15.0D);
+    private static final VoxelShape LILY_FLOWER_AABB = Block.box(3.0D, 1.5D, 3.0D, 13.0D, 13.D, 13.0D);
+    private static final VoxelShape SHAPE = Shapes.or(LILY_PAD_AABB, LILY_FLOWER_AABB);
+    private static final List<LilyFlowerBlock> LILY_FLOWERS = new ArrayList<>();
 
     public LilyFlowerBlock(Properties builder) {
         super(() -> MobEffects.POISON, 12, builder);
+        LILY_FLOWERS.add(this);
     }
 
     @Override
@@ -77,6 +79,10 @@ public class LilyFlowerBlock extends BlueprintFlowerBlock {
         FluidState above = level.getFluidState(pos.above());
 
         return (fluid.getType() == Fluids.WATER || state.getMaterial() == Material.ICE) && above.getType() == Fluids.EMPTY;
+    }
+
+    public static Block getRandomLily(RandomSource rand) {
+        return LILY_FLOWERS.get(rand.nextInt(LILY_FLOWERS.size()));
     }
 
 }

@@ -21,7 +21,7 @@ import javax.annotation.Nullable;
  * @author rose_
  */
 public class HangingCypressLeavesBlock extends Block {
-    protected static final VoxelShape SHAPE = Block.box(1.0, 4.0, 1.0, 15.0, 16.0, 15.0);
+    private static final VoxelShape SHAPE = Block.box(1.0, 4.0, 1.0, 15.0, 16.0, 15.0);
 
     public HangingCypressLeavesBlock(Properties properties) {
         super(properties);
