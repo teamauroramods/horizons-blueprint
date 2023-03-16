@@ -9,6 +9,11 @@
     "horizons:cypress_post",
     "horizons:stripped_cypress_post",
     "horizons:cypress_beehive",
-    "horizons:cypress_boards"
+    "horizons:cypress_boards",
+    "horizons:cypress_knee",
+    "horizons:large_cypress_knee",
+    "horizons:stripped_cypress_knee",
+    "horizons:stripped_large_cypress_knee",
+    "horizons:cypress_branch"
   ]
 }

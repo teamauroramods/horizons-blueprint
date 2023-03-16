@@ -6,6 +6,9 @@
     "horizons:algae_thatch_stairs",
     "horizons:algae_thatch_vertical_slab",
     "horizons:cypress_leaves",
-    "horizons:cypress_leaf_carpet"
+    "horizons:cypress_leaf_carpet",
+    "horizons:hanging_cypress_leaves",
+    "horizons:beard_moss_block",
+    "horizons:beard_moss"
   ]
 }

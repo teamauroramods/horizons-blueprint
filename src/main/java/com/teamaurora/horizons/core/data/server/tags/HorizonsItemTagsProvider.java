@@ -13,6 +13,9 @@ import net.minecraft.tags.ItemTags;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.data.event.GatherDataEvent;
 
+/**
+ * @author rose_
+ */
 public class HorizonsItemTagsProvider extends ItemTagsProvider {
     public HorizonsItemTagsProvider(GatherDataEvent event) {
         super(event.getGenerator(), HorizonsBlockTagsProvider.INSTANCE, Horizons.MODID, event.getExistingFileHelper());

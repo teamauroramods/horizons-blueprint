@@ -3,7 +3,6 @@ package com.teamaurora.horizons.core.other.events;
 import com.teamabnormals.blueprint.core.util.DataUtil;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
-import net.minecraft.client.color.item.ItemColors;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.FoliageColor;
@@ -22,12 +21,11 @@ import java.util.List;
  */
 @Mod.EventBusSubscriber(modid = Horizons.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class HorizonsClientEvents {
-    private static final List<RegistryObject<Block>> FOLIAGE_COLOR_BLOCKS = Arrays.asList(HorizonsBlocks.CYPRESS_LEAVES, HorizonsBlocks.CYPRESS_HEDGE, HorizonsBlocks.CYPRESS_LEAF_CARPET, HorizonsBlocks.CYPRESS_LEAF_PILE);
+    private static final List<RegistryObject<Block>> FOLIAGE_COLOR_BLOCKS = Arrays.asList(HorizonsBlocks.CYPRESS_LEAVES, HorizonsBlocks.CYPRESS_HEDGE, HorizonsBlocks.CYPRESS_LEAF_CARPET, HorizonsBlocks.CYPRESS_LEAF_PILE, HorizonsBlocks.HANGING_CYPRESS_LEAVES);
 
     @SubscribeEvent
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
-        ItemColors colors = event.getItemColors();
-        DataUtil.registerBlockItemColor(colors, (stack, c) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, c), FOLIAGE_COLOR_BLOCKS);
+        DataUtil.registerBlockItemColor(event.getItemColors(), (stack, c) -> event.getBlockColors().getColor(((BlockItem) stack.getItem()).getBlock().defaultBlockState(), null, null, c), FOLIAGE_COLOR_BLOCKS);
     }
 
     @SubscribeEvent

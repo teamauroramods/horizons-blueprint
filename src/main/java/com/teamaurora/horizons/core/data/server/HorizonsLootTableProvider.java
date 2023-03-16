@@ -94,6 +94,17 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.CYPRESS_LEAF_CARPET.get());
             this.leafPile(HorizonsBlocks.CYPRESS_LEAF_PILE.get());
 
+            this.add(HorizonsBlocks.HANGING_CYPRESS_LEAVES.get(), Blocks::createShearsOnlyDrop);
+            this.add(HorizonsBlocks.CYPRESS_BRANCH.get(), Blocks::createShearsOnlyDrop);
+
+            this.dropSelf(HorizonsBlocks.CYPRESS_KNEE.get());
+            this.dropSelf(HorizonsBlocks.LARGE_CYPRESS_KNEE.get());
+            this.dropSelf(HorizonsBlocks.STRIPPED_CYPRESS_KNEE.get());
+            this.dropSelf(HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get());
+
+            this.add(HorizonsBlocks.BEARD_MOSS_BLOCK.get(), Blocks::createShearsOnlyDrop);
+            this.add(HorizonsBlocks.BEARD_MOSS.get(), Blocks::createShearsOnlyDrop);
+
             this.dropSelf(HorizonsBlocks.GOOSEBERRY_SACK.get());
 
             this.add(HorizonsBlocks.ALGAE.get(), Blocks::createShearsOnlyDrop);
@@ -112,7 +123,7 @@ public class HorizonsLootTableProvider extends LootTableProvider {
         }
 
         private void leafPile(Block block) {
-            this.add(block, (b) -> createMultifaceBlockDrops(b, MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS))));
+            this.add(block, b -> createMultifaceBlockDrops(b, MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS))));
         }
 
         @Override
