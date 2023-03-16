@@ -14,10 +14,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.block.state.properties.Half;
-import net.minecraft.world.level.block.state.properties.StairsShape;
+import net.minecraft.world.level.block.state.properties.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -26,6 +23,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Objects;
+import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
@@ -117,14 +115,17 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
     private void cypressKnee(RegistryObject<Block> knee) {
         this.generatedItem(knee.get(), TextureFolder.Block);
+        this.simpleCross(knee);
     }
 
     private void largeCypressKnee(RegistryObject<Block> knee) {
         String name = this.getItemName(knee.get());
-        ResourceLocation top = Horizons.REGISTRY_HELPER.prefix("block/" + name + "_top");
-        ResourceLocation bottom = Horizons.REGISTRY_HELPER.prefix("block/" + name + "_bottom");
+        Function<String, ModelFile> model = s -> this.models().cross(name + "_" + s, this.modLoc("block/" + name + "_" + s)).renderType("cutout");
 
-        this.itemModels().withExistingParent(name, "item/generated").texture("layer0", bottom);
+        this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_bottom"));
+        this.getVariantBuilder(knee.get())
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(model.apply("top")))
+                .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(model.apply("bottom")));
     }
     
     private void cypressBranch(RegistryObject<Block> branch) {
@@ -140,7 +141,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void beardMossBlock(RegistryObject<Block> beardMoss) {
-        this.simpleBlock(beardMoss.get(), this.models().cubeAll(this.getItemName(beardMoss.get()), this.blockTexture(beardMoss.get())).renderType("cutout"));
+        this.simpleBlock(beardMoss.get(), this.models().cubeAll(this.getItemName(beardMoss.get()), this.blockTexture(beardMoss.get())).renderType("cutout_mipped"));
         this.itemModel(beardMoss);
     }
 
