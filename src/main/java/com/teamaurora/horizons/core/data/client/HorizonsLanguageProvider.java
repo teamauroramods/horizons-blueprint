@@ -88,6 +88,25 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.ALGAE_THATCH_SLAB);
         this.translateBlock(HorizonsBlocks.ALGAE_THATCH_STAIRS);
         this.translateBlock(HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB);
+
+        this.translateBlock(HorizonsBlocks.BLUE_LILY);
+        this.translateBlock(HorizonsBlocks.LIGHT_GRAY_LILY);
+        this.translateBlock(HorizonsBlocks.CYAN_LILY);
+        this.translateBlock(HorizonsBlocks.LIGHT_BLUE_LILY);
+        this.translateBlock(HorizonsBlocks.MAGENTA_LILY);
+        this.translateBlock(HorizonsBlocks.PINK_LILY);
+        this.translateBlock(HorizonsBlocks.PURPLE_LILY);
+        this.translateBlock(HorizonsBlocks.WHITE_LILY);
+
+        this.translateBlock(HorizonsBlocks.POTTED_BLUE_LILY);
+        this.translateBlock(HorizonsBlocks.POTTED_LIGHT_GRAY_LILY);
+        this.translateBlock(HorizonsBlocks.POTTED_CYAN_LILY);
+        this.translateBlock(HorizonsBlocks.POTTED_LIGHT_BLUE_LILY);
+        this.translateBlock(HorizonsBlocks.POTTED_MAGENTA_LILY);
+        this.translateBlock(HorizonsBlocks.POTTED_PINK_LILY);
+        this.translateBlock(HorizonsBlocks.POTTED_PURPLE_LILY);
+        this.translateBlock(HorizonsBlocks.POTTED_WHITE_LILY);
+
     }
 
     private void translateItem(RegistryObject<? extends Item> item) {

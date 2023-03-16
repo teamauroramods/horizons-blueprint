@@ -24,6 +24,7 @@ import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
 import net.minecraftforge.common.crafting.conditions.OrCondition;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Consumer;
 
@@ -44,16 +45,21 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(HorizonsItems.GOOSEBERRY_PIE.get()).requires(HorizonsItems.GOOSEBERRIES.get()).requires(Tags.Items.EGGS).requires(Items.SUGAR).unlockedBy("has_gooseberries", has(HorizonsItems.GOOSEBERRIES.get())).save(consumer, getSaveLocation(HorizonsItems.GOOSEBERRY_PIE.get()));
         ShapelessRecipeBuilder.shapeless(HorizonsItems.GOOSEBERRY_JAM.get(), 3).requires(HorizonsItems.HONEY_GLAZED_GOOSEBERRIES.get()).requires(Items.GLASS_BOTTLE, 3).unlockedBy("has_honey_glazed_gooseberries", has(HorizonsItems.HONEY_GLAZED_GOOSEBERRIES.get())).save(consumer, getSaveLocation(HorizonsItems.GOOSEBERRY_JAM.get()));
         ShapelessRecipeBuilder.shapeless(Items.SUGAR, 3).requires(HorizonsItems.GOOSEBERRY_JAM.get()).unlockedBy("has_gooseberry_jam", has(HorizonsItems.GOOSEBERRY_JAM.get())).save(consumer, Horizons.REGISTRY_HELPER.prefix("gooseberry_jam_to_sugar"));
-
         quarkCompressedBlock(HorizonsItems.GOOSEBERRIES.get(), HorizonsBlocks.GOOSEBERRY_SACK.get(), "berry_sack", consumer);
-
         ShapedRecipeBuilder.shaped(HorizonsBlocks.ALGAE_THATCH.get(), 4).define('#', HorizonsBlocks.ALGAE.get()).pattern("##").pattern("##").unlockedBy("has_algae", has(HorizonsBlocks.ALGAE.get())).save(consumer, getSaveLocation(HorizonsBlocks.ALGAE_THATCH.get()));
         slab(HorizonsBlocks.ALGAE_THATCH.get(), HorizonsBlocks.ALGAE_THATCH_SLAB.get(), consumer);
         stairs(HorizonsBlocks.ALGAE_THATCH.get(), HorizonsBlocks.ALGAE_THATCH_STAIRS.get(), consumer);
         verticalSlab(HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB.get(), HorizonsBlocks.ALGAE_THATCH_SLAB.get(), consumer);
-
         woodSet("cypress", HorizonsItemTags.CYPRESS_LOGS, HorizonsBlocks.CYPRESS_PLANKS.get(), HorizonsBlocks.CYPRESS_SLAB.get(), HorizonsBlocks.CYPRESS_STAIRS.get(), HorizonsBlocks.CYPRESS_LOG.get(), HorizonsBlocks.CYPRESS_WOOD.get(), HorizonsBlocks.STRIPPED_CYPRESS_LOG.get(), HorizonsBlocks.STRIPPED_CYPRESS_WOOD.get(), HorizonsItems.CYPRESS_BOATS.getFirst().get(),  HorizonsItems.CYPRESS_BOATS.getSecond().get(), HorizonsBlocks.CYPRESS_BUTTON.get(), HorizonsBlocks.CYPRESS_DOOR.get(), HorizonsBlocks.CYPRESS_TRAPDOOR.get(), HorizonsBlocks.CYPRESS_FENCE.get(), HorizonsBlocks.CYPRESS_FENCE_GATE.get(), HorizonsBlocks.CYPRESS_PRESSURE_PLATE.get(), HorizonsBlocks.CYPRESS_SIGNS.getFirst().get(), HorizonsBlocks.CYPRESS_VERTICAL_SLAB.get(), HorizonsBlocks.CYPRESS_POST.get(), HorizonsBlocks.STRIPPED_CYPRESS_POST.get(), HorizonsBlocks.CYPRESS_BOARDS.get(), HorizonsBlocks.CYPRESS_BEEHIVE.get(), HorizonsBlocks.CYPRESS_LADDER.get(), HorizonsBlocks.CYPRESS_BOOKSHELF.get(), HorizonsBlocks.CYPRESS_CHEST.get(), HorizonsBlocks.CYPRESS_TRAPPED_CHEST.get(), HorizonsItems.LARGE_CYPRESS_BOAT.get(), HorizonsItems.CYPRESS_FURNACE_BOAT.get(), HorizonsBlocks.VERTICAL_CYPRESS_PLANKS.get(), consumer);
         leafSet(HorizonsItemTags.CYPRESS_LOGS, HorizonsBlocks.CYPRESS_LEAVES.get(), HorizonsBlocks.CYPRESS_HEDGE.get(), HorizonsBlocks.CYPRESS_LEAF_CARPET.get(), HorizonsBlocks.CYPRESS_LEAF_PILE.get(), consumer);
+        flowerToDye(HorizonsBlocks.BLUE_LILY.get(), Items.BLUE_DYE, consumer);
+        flowerToDye(HorizonsBlocks.LIGHT_GRAY_LILY.get(), Items.LIGHT_GRAY_DYE, consumer);
+        flowerToDye(HorizonsBlocks.CYAN_LILY.get(), Items.CYAN_DYE, consumer);
+        flowerToDye(HorizonsBlocks.LIGHT_BLUE_LILY.get(), Items.LIGHT_BLUE_DYE, consumer);
+        flowerToDye(HorizonsBlocks.MAGENTA_LILY.get(), Items.MAGENTA_DYE, consumer);
+        flowerToDye(HorizonsBlocks.PINK_LILY.get(), Items.PINK_DYE, consumer);
+        flowerToDye(HorizonsBlocks.PURPLE_LILY.get(), Items.PURPLE_DYE, consumer);
+        flowerToDye(HorizonsBlocks.WHITE_LILY.get(), Items.WHITE_DYE, consumer);
     }
 
     private static void woodSet(String name, TagKey<Item> logs, Block planks, Block slab, Block stairs, Block log, Block wood, Block strippedLog, Block strippedWood, ItemLike boat, ItemLike chestBoat, Block button, Block door, Block trapdoor, Block fence, Block fenceGate, Block pressurePlate, Block sign, Block verticalSlab, Block post, Block strippedPost, Block boards, Block beehive, Block ladder, Block bookshelf, Block chest, Block trappedChest, Item largeBoat, Item furnaceBoat, Block verticalPlanks, Consumer<FinishedRecipe> consumer) {
@@ -92,6 +98,12 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         conditionalRecipe(ShapedRecipeBuilder.shaped(leafCarpet, 3).define('#', leaves).pattern("##").unlockedBy("has_leaves", has(leaves)), getQuarkCondition("leaf_carpet"), consumer, getSaveLocation(leafCarpet));
         conditionalRecipe(ShapelessRecipeBuilder.shapeless(leafPile, 4).requires(leaves).unlockedBy("has_leaves", has(leaves)), new ModLoadedCondition("woodworks"), consumer, getSaveLocation(leafPile));
         conditionalRecipe(ShapedRecipeBuilder.shaped(leaves).define('#', leafPile).pattern("##").pattern("##").unlockedBy("has_leaf_pile", has(leafPile)), new ModLoadedCondition("woodworks"), consumer, Horizons.REGISTRY_HELPER.prefix(getItemName(leaves) + "_from_leaf_pile"));
+    }
+
+    private static void flowerToDye(Block flower, Item dye, Consumer<FinishedRecipe> consumer) {
+        String flowerName = getItemName(flower);
+        String dyeName = getItemName(dye);
+        ShapelessRecipeBuilder.shapeless(dye).group(dyeName).requires(flower).unlockedBy("has_" + flowerName, has(flower)).save(consumer, Horizons.REGISTRY_HELPER.prefix(dyeName + "_from_" + flowerName));
     }
 
     private static void stairs(ItemLike ingredient, ItemLike stairs, Consumer<FinishedRecipe> consumer) {

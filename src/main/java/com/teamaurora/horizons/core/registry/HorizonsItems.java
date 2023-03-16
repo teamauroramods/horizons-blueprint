@@ -6,6 +6,7 @@ import com.teamabnormals.blueprint.core.util.PropertyUtil;
 import com.teamabnormals.blueprint.core.util.registry.ItemSubRegistryHelper;
 import com.teamaurora.horizons.common.item.AlgaeBlockItem;
 import com.teamaurora.horizons.common.item.DrinkableBottleItem;
+import com.teamaurora.horizons.common.item.LilyItem;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.other.HorizonsConstants;
 import com.teamaurora.horizons.core.other.HorizonsFoods;
@@ -43,4 +44,14 @@ public class HorizonsItems {
 
     public static final RegistryObject<Item> ALGAE = HELPER.createItem("algae", () -> new AlgaeBlockItem(HorizonsBlocks.ALGAE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 
+    // Lily Items //
+
+    public static final RegistryObject<Item> BLUE_LILY = HELPER.createItem("blue_lily", () -> new LilyItem(HorizonsBlocks.BLUE_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> LIGHT_GRAY_LILY = HELPER.createItem("light_gray_lily", () -> new LilyItem(HorizonsBlocks.LIGHT_GRAY_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> CYAN_LILY = HELPER.createItem("cyan_lily", () -> new LilyItem(HorizonsBlocks.CYAN_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> LIGHT_BLUE_LILY = HELPER.createItem("light_blue_lily", () -> new LilyItem(HorizonsBlocks.LIGHT_BLUE_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> MAGENTA_LILY = HELPER.createItem("magenta_lily", () -> new LilyItem(HorizonsBlocks.MAGENTA_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> PINK_LILY = HELPER.createItem("pink_lily", () -> new LilyItem(HorizonsBlocks.PINK_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> PURPLE_LILY = HELPER.createItem("purple_lily", () -> new LilyItem(HorizonsBlocks.PURPLE_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> WHITE_LILY = HELPER.createItem("white_lily", () -> new LilyItem(HorizonsBlocks.WHITE_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "horizons:block/template_lily",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "flower": "horizons:block/white_lily"
+  }
+}

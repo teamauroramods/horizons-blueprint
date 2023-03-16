@@ -97,4 +97,24 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> ALGAE_THATCH_STAIRS = HELPER.createBlock("algae_thatch_stairs" ,() -> new ThatchStairBlock(ALGAE_THATCH.get().defaultBlockState(), HorizonsProperties.ALGAE_THATCH), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> ALGAE_THATCH_VERTICAL_SLAB = HELPER.createCompatBlock(HorizonsConstants.QUARK, "algae_thatch_vertical_slab", () -> new ThatchVerticalSlabBlock(HorizonsProperties.ALGAE_THATCH), CreativeModeTab.TAB_BUILDING_BLOCKS);
 
+    // Lily Flowers //
+
+    public static final RegistryObject<Block> BLUE_LILY = HELPER.createBlockNoItem("blue_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+    public static final RegistryObject<Block> LIGHT_GRAY_LILY = HELPER.createBlockNoItem("light_gray_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+    public static final RegistryObject<Block> CYAN_LILY = HELPER.createBlockNoItem("cyan_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+    public static final RegistryObject<Block> LIGHT_BLUE_LILY = HELPER.createBlockNoItem("light_blue_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+    public static final RegistryObject<Block> MAGENTA_LILY = HELPER.createBlockNoItem("magenta_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+    public static final RegistryObject<Block> PINK_LILY = HELPER.createBlockNoItem("pink_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+    public static final RegistryObject<Block> PURPLE_LILY = HELPER.createBlockNoItem("purple_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+    public static final RegistryObject<Block> WHITE_LILY = HELPER.createBlockNoItem("white_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
+
+    public static final RegistryObject<Block> POTTED_BLUE_LILY = HELPER.createBlockNoItem("potted_blue_lily", () -> new FlowerPotBlock(BLUE_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_LIGHT_GRAY_LILY= HELPER.createBlockNoItem("potted_light_gray_lily", () -> new FlowerPotBlock(LIGHT_GRAY_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_CYAN_LILY = HELPER.createBlockNoItem("potted_cyan_lily", () -> new FlowerPotBlock(CYAN_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_LIGHT_BLUE_LILY = HELPER.createBlockNoItem("potted_light_blue_lily", () -> new FlowerPotBlock(LIGHT_BLUE_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_MAGENTA_LILY = HELPER.createBlockNoItem("potted_magenta_lily", () -> new FlowerPotBlock(MAGENTA_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_PINK_LILY = HELPER.createBlockNoItem("potted_pink_lily", () -> new FlowerPotBlock(PINK_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_PURPLE_LILY = HELPER.createBlockNoItem("potted_purple_lily", () -> new FlowerPotBlock(PURPLE_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_WHITE_LILY = HELPER.createBlockNoItem("potted_white_lily", () -> new FlowerPotBlock(WHITE_LILY.get(), PropertyUtil.FLOWER_POT));
+
 }

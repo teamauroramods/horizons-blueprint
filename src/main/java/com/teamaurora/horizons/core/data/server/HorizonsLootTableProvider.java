@@ -11,7 +11,9 @@ import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.ValidationContext;
@@ -110,10 +112,35 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.add(HorizonsBlocks.ALGAE_THATCH_SLAB.get(), Blocks::createSlabItemTable);
             this.dropSelf(HorizonsBlocks.ALGAE_THATCH_STAIRS.get());
             this.add(HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+
+            this.dropSelfAndOther(HorizonsBlocks.BLUE_LILY.get(), Items.LILY_PAD);
+            this.dropSelfAndOther(HorizonsBlocks.LIGHT_GRAY_LILY.get(), Items.LILY_PAD);
+            this.dropSelfAndOther(HorizonsBlocks.CYAN_LILY.get(), Items.LILY_PAD);
+            this.dropSelfAndOther(HorizonsBlocks.LIGHT_BLUE_LILY.get(), Items.LILY_PAD);
+            this.dropSelfAndOther(HorizonsBlocks.MAGENTA_LILY.get(), Items.LILY_PAD);
+            this.dropSelfAndOther(HorizonsBlocks.PINK_LILY.get(), Items.LILY_PAD);
+            this.dropSelfAndOther(HorizonsBlocks.PURPLE_LILY.get(), Items.LILY_PAD);
+            this.dropSelfAndOther(HorizonsBlocks.WHITE_LILY.get(), Items.LILY_PAD);
+
+            this.dropPottedContents(HorizonsBlocks.POTTED_BLUE_LILY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_LIGHT_GRAY_LILY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_CYAN_LILY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_LIGHT_BLUE_LILY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_MAGENTA_LILY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_PINK_LILY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_PURPLE_LILY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_WHITE_LILY.get());
+
         }
 
         private void normalLeaves(Block leaves, Block sapling) {
             this.add(leaves, b -> createLeavesDrops(b, sapling, 0.05F, 0.0625F, 0.083333336F, 0.1F));
+        }
+
+        private void dropSelfAndOther(Block block, ItemLike other) {
+            this.add(block, b -> LootTable.lootTable()
+                    .withPool(applyExplosionCondition(other, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(other))))
+                    .withPool(applyExplosionCondition(block, LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).add(LootItem.lootTableItem(block)))));
         }
 
         private void bookshelf(Block block) {

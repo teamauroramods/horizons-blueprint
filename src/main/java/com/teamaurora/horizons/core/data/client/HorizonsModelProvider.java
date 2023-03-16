@@ -98,6 +98,15 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.thatchSlab(HorizonsBlocks.ALGAE_THATCH_SLAB, HorizonsBlocks.ALGAE_THATCH);
         this.thatchStairs(HorizonsBlocks.ALGAE_THATCH_STAIRS, HorizonsBlocks.ALGAE_THATCH);
         this.thatchVerticalSlab(HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB, HorizonsBlocks.ALGAE_THATCH);
+
+        this.lily(HorizonsBlocks.BLUE_LILY, HorizonsBlocks.POTTED_BLUE_LILY);
+        this.lily(HorizonsBlocks.LIGHT_GRAY_LILY, HorizonsBlocks.POTTED_LIGHT_GRAY_LILY);
+        this.lily(HorizonsBlocks.CYAN_LILY, HorizonsBlocks.POTTED_CYAN_LILY);
+        this.lily(HorizonsBlocks.LIGHT_BLUE_LILY, HorizonsBlocks.POTTED_LIGHT_BLUE_LILY);
+        this.lily(HorizonsBlocks.MAGENTA_LILY, HorizonsBlocks.POTTED_MAGENTA_LILY);
+        this.lily(HorizonsBlocks.PINK_LILY, HorizonsBlocks.POTTED_PINK_LILY);
+        this.lily(HorizonsBlocks.PURPLE_LILY, HorizonsBlocks.POTTED_PURPLE_LILY);
+        this.lily(HorizonsBlocks.WHITE_LILY, HorizonsBlocks.POTTED_WHITE_LILY);
     }
 
     // Specific Block Generators //
@@ -155,6 +164,14 @@ public class HorizonsModelProvider extends BlockStateProvider {
     private void beardMossBlock(RegistryObject<Block> beardMoss) {
         this.simpleBlock(beardMoss.get(), this.models().cubeAll(this.getItemName(beardMoss.get()), this.blockTexture(beardMoss.get())).renderType("cutout_mipped"));
         this.itemModel(beardMoss);
+    }
+
+    private void lily(RegistryObject<Block> lily, RegistryObject<Block> pot) {
+        ResourceLocation flower = this.blockTexture(lily.get());
+
+        this.pot(pot, flower);
+        this.simpleBlock(lily.get(), this.models().withExistingParent(this.getItemName(lily.get()), this.modLoc("block/template_lily")).texture("flower", flower).renderType("cutout"));
+        this.generatedItem(lily.get(), TextureFolder.Block);
     }
 
     // Generic Block Generators //

@@ -56,9 +56,9 @@ public class HorizonsBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.CLIMBABLE).add(HorizonsBlocks.CYPRESS_LADDER.get());
         this.tag(BlockTags.FENCE_GATES).add(HorizonsBlocks.CYPRESS_FENCE_GATE.get());
         this.tag(BlockTags.SAPLINGS).add(HorizonsBlocks.CYPRESS_SAPLING.get());
-        this.tag(BlockTags.FLOWER_POTS).add(HorizonsBlocks.POTTED_CYPRESS_SAPLING.get());
+        this.tag(BlockTags.FLOWER_POTS).add(HorizonsBlocks.POTTED_CYPRESS_SAPLING.get(), HorizonsBlocks.POTTED_BLUE_LILY.get(), HorizonsBlocks.POTTED_LIGHT_GRAY_LILY.get(), HorizonsBlocks.POTTED_CYAN_LILY.get(), HorizonsBlocks.POTTED_LIGHT_BLUE_LILY.get(), HorizonsBlocks.POTTED_MAGENTA_LILY.get(), HorizonsBlocks.POTTED_PINK_LILY.get(), HorizonsBlocks.POTTED_PURPLE_LILY.get(), HorizonsBlocks.POTTED_WHITE_LILY.get());
+        this.tag(BlockTags.SMALL_FLOWERS).add(HorizonsBlocks.BLUE_LILY.get(), HorizonsBlocks.LIGHT_GRAY_LILY.get(), HorizonsBlocks.CYAN_LILY.get(), HorizonsBlocks.LIGHT_BLUE_LILY.get(), HorizonsBlocks.MAGENTA_LILY.get(), HorizonsBlocks.PINK_LILY.get(), HorizonsBlocks.PURPLE_LILY.get(), HorizonsBlocks.WHITE_LILY.get());
         this.tag(BlockTags.MINEABLE_WITH_AXE).add(HorizonsBlocks.CYPRESS_BOOKSHELF.get(), HorizonsBlocks.CYPRESS_VERTICAL_SLAB.get(), HorizonsBlocks.CYPRESS_LADDER.get(), HorizonsBlocks.CYPRESS_HEDGE.get(), HorizonsBlocks.CYPRESS_CHEST.get(), HorizonsBlocks.CYPRESS_TRAPPED_CHEST.get(), HorizonsBlocks.CYPRESS_POST.get(), HorizonsBlocks.STRIPPED_CYPRESS_POST.get(), HorizonsBlocks.CYPRESS_BEEHIVE.get(), HorizonsBlocks.CYPRESS_BOARDS.get(), HorizonsBlocks.CYPRESS_KNEE.get(), HorizonsBlocks.LARGE_CYPRESS_KNEE.get(), HorizonsBlocks.STRIPPED_CYPRESS_KNEE.get(), HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get(), HorizonsBlocks.CYPRESS_BRANCH.get());
         this.tag(BlockTags.MINEABLE_WITH_HOE).add(HorizonsBlocks.ALGAE.get(), HorizonsBlocks.ALGAE_THATCH.get(), HorizonsBlocks.ALGAE_THATCH_SLAB.get(), HorizonsBlocks.ALGAE_THATCH_STAIRS.get(), HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB.get(), HorizonsBlocks.CYPRESS_LEAVES.get(), HorizonsBlocks.CYPRESS_LEAF_CARPET.get(), HorizonsBlocks.HANGING_CYPRESS_LEAVES.get(), HorizonsBlocks.BEARD_MOSS_BLOCK.get(), HorizonsBlocks.BEARD_MOSS.get());
-
     }
 }

@@ -22,6 +22,7 @@ import java.util.List;
 @Mod.EventBusSubscriber(modid = Horizons.MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class HorizonsClientEvents {
     private static final List<RegistryObject<Block>> FOLIAGE_COLOR_BLOCKS = Arrays.asList(HorizonsBlocks.CYPRESS_LEAVES, HorizonsBlocks.CYPRESS_HEDGE, HorizonsBlocks.CYPRESS_LEAF_CARPET, HorizonsBlocks.CYPRESS_LEAF_PILE, HorizonsBlocks.HANGING_CYPRESS_LEAVES);
+    private static final List<RegistryObject<Block>> LILY_COLOR_BLOCKS = Arrays.asList(HorizonsBlocks.BLUE_LILY, HorizonsBlocks.LIGHT_GRAY_LILY, HorizonsBlocks.CYAN_LILY, HorizonsBlocks.LIGHT_BLUE_LILY, HorizonsBlocks.MAGENTA_LILY, HorizonsBlocks.PINK_LILY, HorizonsBlocks.PURPLE_LILY, HorizonsBlocks.WHITE_LILY);
 
     @SubscribeEvent
     public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
@@ -31,6 +32,7 @@ public class HorizonsClientEvents {
     @SubscribeEvent
     public static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
         DataUtil.registerBlockColor(event.getBlockColors(), (state, tint, pos, u) -> pos != null && tint != null ? BiomeColors.getAverageFoliageColor(tint, pos) : FoliageColor.getDefaultColor(), FOLIAGE_COLOR_BLOCKS);
+        DataUtil.registerBlockColor(event.getBlockColors(), (state, tint, pos, u) -> tint != null && pos != null ? 2129968 : 7455580, LILY_COLOR_BLOCKS);
     }
 
 }
