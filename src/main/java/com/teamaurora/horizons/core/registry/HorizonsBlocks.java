@@ -120,5 +120,4 @@ public class HorizonsBlocks {
     // Misc //
 
     public static final RegistryObject<Block> GIANT_FERN = HELPER.createInjectedBlock("giant_fern", Items.LARGE_FERN, () -> new DoublePlantBlock(HorizonsProperties.GIANT_FERN), CreativeModeTab.TAB_DECORATIONS);
-
 }
