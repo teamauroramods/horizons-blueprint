@@ -9,6 +9,9 @@ import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.data.event.GatherDataEvent;
 
+/**
+ * @author rose_
+ */
 public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
     public HorizonsBiomeTagsProvider(GatherDataEvent event) {
         super(event.getGenerator(), Horizons.MODID, event.getExistingFileHelper());
@@ -28,7 +31,8 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(HorizonsBiomeTags.HAS_WHITE_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.SWAMP);
 
         this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
-        this.tag(HorizonsBiomeTags.HAS_DUCK).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(HorizonsBiomeTags.HAS_CATTAILS).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(HorizonsBiomeTags.HAS_MUD_DISK).add(HorizonsBiomes.BAYOU.getKey());
 
         this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(BiomeTags.HAS_SWAMP_HUT).add(HorizonsBiomes.BAYOU.getKey());
