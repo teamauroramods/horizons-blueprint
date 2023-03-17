@@ -7,6 +7,7 @@ import net.minecraft.world.level.biome.Biome;
 
 public final class HorizonsBiomeTags {
     public static final TagKey<Biome> HAS_PERCH = TagUtil.biomeTag("upgrade_aquatic", "has_animal/perch");
+    public static final TagKey<Biome> HAS_DUCK = TagUtil.biomeTag("environmental", "has_animal/duck");
 
     public static final TagKey<Biome> HAS_ALGAE = TagUtil.biomeTag(Horizons.MODID, "has_feature/algae");
 

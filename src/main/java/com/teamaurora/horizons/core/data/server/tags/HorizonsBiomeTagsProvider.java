@@ -28,6 +28,7 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(HorizonsBiomeTags.HAS_WHITE_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.SWAMP);
 
         this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(HorizonsBiomeTags.HAS_DUCK).add(HorizonsBiomes.BAYOU.getKey());
 
         this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(BiomeTags.HAS_SWAMP_HUT).add(HorizonsBiomes.BAYOU.getKey());
