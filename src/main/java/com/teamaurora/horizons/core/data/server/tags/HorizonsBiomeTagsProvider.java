@@ -1,6 +1,7 @@
 package com.teamaurora.horizons.core.data.server.tags;
 
 import com.teamaurora.horizons.core.Horizons;
+import com.teamaurora.horizons.core.other.tags.HorizonsBiomeTags;
 import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.tags.BiomeTags;
@@ -14,6 +15,8 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
 
     @Override
     protected void addTags() {
+        this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
+
         this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(BiomeTags.HAS_SWAMP_HUT).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(BiomeTags.SPAWNS_WARM_VARIANT_FROGS).add(HorizonsBiomes.BAYOU.getKey());
