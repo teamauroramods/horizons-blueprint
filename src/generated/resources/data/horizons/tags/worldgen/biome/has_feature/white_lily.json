@@ -1,6 +1,5 @@
 {
   "values": [
-    "horizons:bayou",
-    "minecraft:swamp"
+    "#forge:is_swamp"
   ]
 }

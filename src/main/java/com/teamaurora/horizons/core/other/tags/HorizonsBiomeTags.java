@@ -12,9 +12,7 @@ public final class HorizonsBiomeTags {
     public static final TagKey<Biome> HAS_PERCH = TagUtil.biomeTag("upgrade_aquatic", "has_animal/perch");
     public static final TagKey<Biome> HAS_CATTAILS = TagUtil.biomeTag("environmental", "has_feature/cattails");
     public static final TagKey<Biome> HAS_MUD_DISK = TagUtil.biomeTag("environmental", "has_feature/mud_disk");
-
     public static final TagKey<Biome> HAS_ALGAE = TagUtil.biomeTag(Horizons.MODID, "has_feature/algae");
-
     public static final TagKey<Biome> HAS_BLUE_LILY = TagUtil.biomeTag(Horizons.MODID, "has_feature/blue_lily");
     public static final TagKey<Biome> HAS_LIGHT_GRAY_LILY = TagUtil.biomeTag(Horizons.MODID, "has_feature/light_gray_lily");
     public static final TagKey<Biome> HAS_CYAN_LILY = TagUtil.biomeTag(Horizons.MODID, "has_feature/cyan_lily");
