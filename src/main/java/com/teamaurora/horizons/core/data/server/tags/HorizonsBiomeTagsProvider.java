@@ -15,6 +15,8 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
 
     @Override
     protected void addTags() {
+        this.tag(HorizonsBiomeTags.HAS_ALGAE).add(HorizonsBiomes.BAYOU.getKey());
+
         this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
 
         this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey());

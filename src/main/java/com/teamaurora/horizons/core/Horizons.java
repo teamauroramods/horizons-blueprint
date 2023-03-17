@@ -7,11 +7,13 @@ import com.teamaurora.horizons.core.data.server.HorizonsLootTableProvider;
 import com.teamaurora.horizons.core.data.server.HorizonsRecipeProvider;
 import com.teamaurora.horizons.core.data.server.HorizonsStructureRepaletterProvider;
 import com.teamaurora.horizons.core.data.server.modifiers.HorizonsAdvancementModifierProvider;
+import com.teamaurora.horizons.core.data.server.modifiers.HorizonsBiomeModifier;
 import com.teamaurora.horizons.core.data.server.modifiers.HorizonsModdedBiomeSliceProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBiomeTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBlockTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsItemTagsProvider;
 import com.teamaurora.horizons.core.other.HorizonsBlockInfo;
+import com.teamaurora.horizons.core.other.HorizonsFeatures;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -34,6 +36,9 @@ public class Horizons {
         final ModLoadingContext context = ModLoadingContext.get();
 
         MinecraftForge.EVENT_BUS.register(this);
+        HorizonsFeatures.FEATURES.register(bus);
+        HorizonsFeatures.Features.CONFIGURED_FEATURES.register(bus);
+        HorizonsFeatures.Placements.PLACED_FEATURES.register(bus);
 
         REGISTRY_HELPER.register(bus);
 
@@ -69,6 +74,7 @@ public class Horizons {
         gen.addProvider(server, new HorizonsAdvancementModifierProvider(event));
         gen.addProvider(server, new HorizonsStructureRepaletterProvider(event));
         gen.addProvider(server, new HorizonsModdedBiomeSliceProvider(event));
+        gen.addProvider(server, HorizonsBiomeModifier.register(event));
     }
 
 }

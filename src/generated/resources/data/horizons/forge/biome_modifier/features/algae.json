@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/algae",
+  "features": "horizons:algae",
+  "step": "vegetal_decoration"
+}
