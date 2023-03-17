@@ -23,12 +23,13 @@ public class HorizonsEntityEvents {
         ToolAction action = event.getToolAction();
         BlockState state = event.getState();
 
+        //cypress knee axe stripping
         if(action.equals(ToolActions.AXE_STRIP) && !event.isSimulated())
             if (state.is(HorizonsBlocks.CYPRESS_KNEE.get()))
                 event.setFinalState(HorizonsBlocks.STRIPPED_CYPRESS_KNEE.get().defaultBlockState());
             else if (state.is(HorizonsBlocks.LARGE_CYPRESS_KNEE.get())) {
                 BlockPos pos = state.getValue(DoubleCypressKneeBlock.HALF) == DoubleBlockHalf.UPPER ? event.getPos().below() : event.getPos();
-                ((DoubleCypressKneeBlock) HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get()).placeAt(event.getLevel(), pos, 3);
+                DoubleCypressKneeBlock.placeAt(HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get(), event.getLevel(), pos, 3);
                 event.setFinalState(HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get().withPropertiesOf(state));
             }
     }

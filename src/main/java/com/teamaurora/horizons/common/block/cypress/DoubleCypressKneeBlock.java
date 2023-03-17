@@ -65,9 +65,9 @@ public class DoubleCypressKneeBlock extends Block implements SimpleWaterloggedBl
         }
     }
 
-    public void placeAt(LevelAccessor level, BlockPos pos, int flags) {
-        level.setBlock(pos, this.defaultBlockState().setValue(HALF, DoubleBlockHalf.LOWER).setValue(WATERLOGGED, level.getFluidState(pos).getType().isSame(Fluids.WATER)), flags);
-        level.setBlock(pos.above(), this.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER).setValue(WATERLOGGED, level.getFluidState(pos.above()).getType().isSame(Fluids.WATER)), flags);
+    public static void placeAt(Block largeKnee, LevelAccessor level, BlockPos pos, int flags) {
+        level.setBlock(pos, largeKnee.defaultBlockState().setValue(HALF, DoubleBlockHalf.LOWER).setValue(WATERLOGGED, level.getFluidState(pos).getType().isSame(Fluids.WATER)), flags);
+        level.setBlock(pos.above(), largeKnee.defaultBlockState().setValue(HALF, DoubleBlockHalf.UPPER).setValue(WATERLOGGED, level.getFluidState(pos.above()).getType().isSame(Fluids.WATER)), flags);
     }
 
     @Override
