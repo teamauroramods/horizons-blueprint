@@ -5,18 +5,15 @@ import com.mojang.datafixers.util.Pair;
 import com.teamabnormals.blueprint.common.block.VerticalSlabBlock;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
-import net.minecraft.advancements.critereon.BlockPredicate;
-import net.minecraft.advancements.critereon.ItemPredicate;
-import net.minecraft.advancements.critereon.LocationPredicate;
-import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.advancements.critereon.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -32,6 +29,8 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.NumberProvider;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -104,10 +103,10 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.leafPile(HorizonsBlocks.CYPRESS_LEAF_PILE.get());
             this.add(HorizonsBlocks.HANGING_CYPRESS_LEAVES.get(), Blocks::createShearsOnlyDrop);
 
-            this.dropSelf(HorizonsBlocks.CYPRESS_KNEE.get());
-            this.dropSelf(HorizonsBlocks.LARGE_CYPRESS_KNEE.get());
-            this.dropSelf(HorizonsBlocks.STRIPPED_CYPRESS_KNEE.get());
-            this.dropSelf(HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get());
+            this.cypressKnee(HorizonsBlocks.CYPRESS_KNEE.get(), HorizonsBlocks.CYPRESS_LOG.get());
+            this.largeCypressKnee(HorizonsBlocks.LARGE_CYPRESS_KNEE.get(), HorizonsBlocks.CYPRESS_LOG.get());
+            this.cypressKnee(HorizonsBlocks.STRIPPED_CYPRESS_KNEE.get(), HorizonsBlocks.STRIPPED_CYPRESS_LOG.get());
+            this.largeCypressKnee(HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get(), HorizonsBlocks.STRIPPED_CYPRESS_LOG.get());
 
             this.add(HorizonsBlocks.BEARD_MOSS_BLOCK.get(), Blocks::createShearsOnlyDrop);
             this.add(HorizonsBlocks.BEARD_MOSS.get(), Blocks::createShearsOnlyDrop);
@@ -160,6 +159,23 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.add(block, b -> createMultifaceBlockDrops(b, MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS))));
         }
 
+        private void cypressKnee(Block knee, Block log) {
+            this.add(knee, b -> LootTable.lootTable().withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1f)).add(createCypressKneeLootItemBuilder(knee, log, UniformGenerator.between(1, 2)))));
+        }
+
+        private void largeCypressKnee(Block knee, Block log) {
+            LootPoolEntryContainer.Builder<?> builder = createCypressKneeLootItemBuilder(knee, log, UniformGenerator.between(2, 4));
+
+            this.add(knee, b -> LootTable.lootTable()
+                    .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(b)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).build()).build()), new BlockPos(0, 1, 0))))
+                    .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(b)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(b)
+                            .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).build()).build()), new BlockPos(0, -1, 0)))));
+        }
+
+
         @Override
         public Iterable<Block> getKnownBlocks() {
             return getContent(ForgeRegistries.BLOCKS);
@@ -176,7 +192,9 @@ public class HorizonsLootTableProvider extends LootTableProvider {
         }
 
         private static LootTable.Builder createTriplePlantWithSeedDrops(Block block, Block drop) {
-            LootPoolEntryContainer.Builder<?> builder = LootItem.lootTableItem(drop).apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F))).when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS))).otherwise(applyExplosionCondition(block, LootItem.lootTableItem(Items.WHEAT_SEEDS)).when(LootItemRandomChanceCondition.randomChance(0.125F)));
+            LootPoolEntryContainer.Builder<?> builder = LootItem.lootTableItem(drop).apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F)))
+                    .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS))).otherwise(applyExplosionCondition(block, LootItem.lootTableItem(Items.WHEAT_SEEDS)).when(LootItemRandomChanceCondition.randomChance(0.125F)));
+
             return LootTable.lootTable()
                     .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(block)
@@ -185,6 +203,12 @@ public class HorizonsLootTableProvider extends LootTableProvider {
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(block)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).build()).build()), new BlockPos(0, -1, 0))));
         }
+
+        private static LootPoolEntryContainer.Builder<?> createCypressKneeLootItemBuilder(Block knee, Block log, NumberProvider logCount) {
+            return LootItem.lootTableItem(knee).when(MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))))
+                    .otherwise(applyExplosionDecay(log, LootItem.lootTableItem(log).apply(SetItemCountFunction.setCount(logCount))));
+        }
+
     }
 
 }
