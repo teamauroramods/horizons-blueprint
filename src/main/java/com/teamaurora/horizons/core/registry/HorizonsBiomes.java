@@ -46,6 +46,7 @@ public class HorizonsBiomes {
         BiomeDefaultFeatures.addSwampExtraVegetation(gen);
 
         gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, AquaticPlacements.SEAGRASS_SWAMP);
+
         return biome(Biome.Precipitation.RAIN, 0.75F, 1.0F, 0x87C0C6, 0x3D5156, 0xA0E2E5, spawns, gen, OverworldBiomes.NORMAL_MUSIC);
     }
 
@@ -54,7 +55,8 @@ public class HorizonsBiomes {
 
         BiomeDefaultFeatures.commonSpawns(spawns);
         BiomeDefaultFeatures.farmAnimals(spawns);
-        spawns.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 1, 1, 1));
+        spawns.addSpawn(MobCategory.MONSTER, new MobSpawnSettings.SpawnerData(EntityType.SLIME, 2, 1, 1));
+        spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FROG, 3, 2, 4));
 
         return  spawns;
     }
