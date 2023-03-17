@@ -14,6 +14,15 @@ public final class HorizonsBlockInfo {
         DataUtil.registerCompostable(HorizonsBlocks.CYPRESS_LEAVES.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.CYPRESS_SAPLING.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.CYPRESS_LEAF_CARPET.get(), .3f);
+
+        DataUtil.registerCompostable(HorizonsBlocks.BLUE_LILY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.LIGHT_GRAY_LILY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.CYAN_LILY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.LIGHT_BLUE_LILY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.MAGENTA_LILY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.PINK_LILY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.PURPLE_LILY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.WHITE_LILY.get(), .65f);
     }
 
     public static void registerFlammables() {
@@ -33,11 +42,25 @@ public final class HorizonsBlockInfo {
         DataUtil.registerFlammable(HorizonsBlocks.CYPRESS_BEEHIVE.get(), 5, 20);
         DataUtil.registerFlammable(HorizonsBlocks.CYPRESS_POST.get(), 5, 20);
         DataUtil.registerFlammable(HorizonsBlocks.STRIPPED_CYPRESS_POST.get(), 5, 20);
-        
+
+        DataUtil.registerFlammable(HorizonsBlocks.CYPRESS_KNEE.get(), 5, 5);
+        DataUtil.registerFlammable(HorizonsBlocks.LARGE_CYPRESS_KNEE.get(), 5, 5);
+        DataUtil.registerFlammable(HorizonsBlocks.STRIPPED_CYPRESS_KNEE.get(), 5, 5);
+        DataUtil.registerFlammable(HorizonsBlocks.STRIPPED_LARGE_CYPRESS_KNEE.get(), 5, 5);
+
         DataUtil.registerFlammable(HorizonsBlocks.CYPRESS_LEAVES.get(), 30, 60);
         DataUtil.registerFlammable(HorizonsBlocks.CYPRESS_LEAF_CARPET.get(), 30, 60);
         DataUtil.registerFlammable(HorizonsBlocks.CYPRESS_HEDGE.get(), 5, 20);
         DataUtil.registerFlammable(HorizonsBlocks.CYPRESS_LEAF_PILE.get(), 30, 60);
+
+        DataUtil.registerFlammable(HorizonsBlocks.BLUE_LILY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.LIGHT_GRAY_LILY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.CYAN_LILY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.LIGHT_BLUE_LILY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.MAGENTA_LILY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.PINK_LILY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.PURPLE_LILY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.WHITE_LILY.get(), 60, 100);
     }
 
 }
