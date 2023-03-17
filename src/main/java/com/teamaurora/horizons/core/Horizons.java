@@ -13,7 +13,7 @@ import com.teamaurora.horizons.core.data.server.tags.HorizonsBiomeTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBlockTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsItemTagsProvider;
 import com.teamaurora.horizons.core.other.HorizonsBlockInfo;
-import com.teamaurora.horizons.core.other.HorizonsFeatures;
+import com.teamaurora.horizons.core.registry.HorizonsFeatures;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;

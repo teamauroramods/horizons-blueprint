@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/light_blue_lily",
+  "features": "horizons:light_blue_lily",
+  "step": "vegetal_decoration"
+}

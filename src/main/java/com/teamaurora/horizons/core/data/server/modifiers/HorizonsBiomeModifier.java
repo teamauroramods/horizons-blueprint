@@ -2,7 +2,7 @@ package com.teamaurora.horizons.core.data.server.modifiers;
 
 import com.mojang.serialization.JsonOps;
 import com.teamaurora.horizons.core.Horizons;
-import com.teamaurora.horizons.core.other.HorizonsFeatures;
+import com.teamaurora.horizons.core.registry.HorizonsFeatures;
 import com.teamaurora.horizons.core.other.tags.HorizonsBiomeTags;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
@@ -41,6 +41,15 @@ public class HorizonsBiomeModifier {
 
     public static JsonCodecProvider<BiomeModifier> register(GatherDataEvent event) {
         addFeature("algae", HorizonsBiomeTags.HAS_ALGAE, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.ALGAE);
+
+        addFeature("blue_lily", HorizonsBiomeTags.HAS_BLUE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.BLUE_LILY);
+        addFeature("light_gray_lily", HorizonsBiomeTags.HAS_LIGHT_GRAY_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.LIGHT_GRAY_LILY);
+        addFeature("cyan_lily", HorizonsBiomeTags.HAS_CYAN_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.CYAN_LILY);
+        addFeature("light_blue_lily", HorizonsBiomeTags.HAS_LIGHT_BLUE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.LIGHT_BLUE_LILY);
+        addFeature("magenta_lily", HorizonsBiomeTags.HAS_MAGENTA_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.MAGENTA_LILY);
+        addFeature("pink_lily", HorizonsBiomeTags.HAS_PINK_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.PINK_LILY);
+        addFeature("purple_lily", HorizonsBiomeTags.HAS_PURPLE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.PURPLE_LILY);
+        addFeature("white_lily", HorizonsBiomeTags.HAS_WHITE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.WHITE_LILY);
 
         return JsonCodecProvider.forDatapackRegistry(event.getGenerator(), event.getExistingFileHelper(), Horizons.MODID, RegistryOps.create(JsonOps.INSTANCE, access), ForgeRegistries.Keys.BIOME_MODIFIERS, modifiers);
     }

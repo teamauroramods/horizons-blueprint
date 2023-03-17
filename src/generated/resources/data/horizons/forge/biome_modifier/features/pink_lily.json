@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/pink_lily",
+  "features": "horizons:pink_lily",
+  "step": "vegetal_decoration"
+}

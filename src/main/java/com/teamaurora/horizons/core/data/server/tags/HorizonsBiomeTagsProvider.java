@@ -5,6 +5,7 @@ import com.teamaurora.horizons.core.other.tags.HorizonsBiomeTags;
 import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.data.event.GatherDataEvent;
 
@@ -16,6 +17,15 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
     @Override
     protected void addTags() {
         this.tag(HorizonsBiomeTags.HAS_ALGAE).add(HorizonsBiomes.BAYOU.getKey());
+
+        this.tag(HorizonsBiomeTags.HAS_BLUE_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_LIGHT_GRAY_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.MANGROVE_SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_CYAN_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.MANGROVE_SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_LIGHT_BLUE_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.MANGROVE_SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_MAGENTA_LILY).add(Biomes.SWAMP, Biomes.MANGROVE_SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_PINK_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_PURPLE_LILY).add(Biomes.SWAMP, Biomes.MANGROVE_SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_WHITE_LILY).add(HorizonsBiomes.BAYOU.getKey(), Biomes.SWAMP);
 
         this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
 
