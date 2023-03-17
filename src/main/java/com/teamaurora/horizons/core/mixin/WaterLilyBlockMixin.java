@@ -27,7 +27,7 @@ public class WaterLilyBlockMixin implements BonemealableBlock {
 
     @Override
     public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
-        level.setBlock(pos, LilyFlowerBlock.getRandomLily(random).defaultBlockState(), 3);
+        level.setBlock(pos, LilyFlowerBlock.getRandomLily(random).defaultBlockState(), 2);
     }
 
 }
