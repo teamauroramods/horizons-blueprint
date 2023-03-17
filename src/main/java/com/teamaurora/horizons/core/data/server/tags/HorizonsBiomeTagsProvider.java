@@ -1,0 +1,25 @@
+package com.teamaurora.horizons.core.data.server.tags;
+
+import com.teamaurora.horizons.core.Horizons;
+import com.teamaurora.horizons.core.registry.HorizonsBiomes;
+import net.minecraft.data.tags.BiomeTagsProvider;
+import net.minecraft.tags.BiomeTags;
+import net.minecraftforge.common.Tags;
+import net.minecraftforge.data.event.GatherDataEvent;
+
+public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
+    public HorizonsBiomeTagsProvider(GatherDataEvent event) {
+        super(event.getGenerator(), Horizons.MODID, event.getExistingFileHelper());
+    }
+
+    @Override
+    protected void addTags() {
+        this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(BiomeTags.HAS_SWAMP_HUT).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(BiomeTags.SPAWNS_WARM_VARIANT_FROGS).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(BiomeTags.HAS_RUINED_PORTAL_SWAMP).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(Tags.Biomes.IS_SWAMP).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(Tags.Biomes.IS_DENSE).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(Tags.Biomes.IS_DENSE_OVERWORLD).add(HorizonsBiomes.BAYOU.getKey());
+    }
+}

@@ -8,6 +8,7 @@ import com.teamaurora.horizons.core.data.server.HorizonsRecipeProvider;
 import com.teamaurora.horizons.core.data.server.HorizonsStructureRepaletterProvider;
 import com.teamaurora.horizons.core.data.server.modifiers.HorizonsAdvancementModifierProvider;
 import com.teamaurora.horizons.core.data.server.modifiers.HorizonsModdedBiomeSliceProvider;
+import com.teamaurora.horizons.core.data.server.tags.HorizonsBiomeTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBlockTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsItemTagsProvider;
 import com.teamaurora.horizons.core.other.HorizonsBlockInfo;
@@ -62,6 +63,7 @@ public class Horizons {
 
         gen.addProvider(server, new HorizonsRecipeProvider(event));
         gen.addProvider(server, new HorizonsBlockTagsProvider(event));
+        gen.addProvider(server, new HorizonsBiomeTagsProvider(event));
         gen.addProvider(server, new HorizonsItemTagsProvider(event));
         gen.addProvider(server, new HorizonsLootTableProvider(event));
         gen.addProvider(server, new HorizonsAdvancementModifierProvider(event));
