@@ -73,7 +73,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "minecraft:fern",
+          "block": "horizons:giant_fern",
           "condition": "minecraft:block_state_property",
           "properties": {
             "half": "upper"

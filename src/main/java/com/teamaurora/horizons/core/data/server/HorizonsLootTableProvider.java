@@ -10,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
@@ -138,7 +139,7 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropPottedContents(HorizonsBlocks.POTTED_PURPLE_LILY.get());
             this.dropPottedContents(HorizonsBlocks.POTTED_WHITE_LILY.get());
 
-            this.add(HorizonsBlocks.GIANT_FERN.get(), b -> createTriplePlantWithSeedDrops(b, net.minecraft.world.level.block.Blocks.FERN));
+            this.add(HorizonsBlocks.GIANT_FERN.get(), b -> createTriplePlantWithSeedDrops(b, Items.FERN));
         }
 
         private void normalLeaves(Block leaves, Block sapling) {
@@ -191,7 +192,7 @@ public class HorizonsLootTableProvider extends LootTableProvider {
                                                             .hasProperty(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.DOUBLE)))))));
         }
 
-        private static LootTable.Builder createTriplePlantWithSeedDrops(Block block, Block drop) {
+        private static LootTable.Builder createTriplePlantWithSeedDrops(Block block, ItemLike drop) {
             LootPoolEntryContainer.Builder<?> builder = LootItem.lootTableItem(drop).apply(SetItemCountFunction.setCount(ConstantValue.exactly(3.0F)))
                     .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(Items.SHEARS))).otherwise(applyExplosionCondition(block, LootItem.lootTableItem(Items.WHEAT_SEEDS)).when(LootItemRandomChanceCondition.randomChance(0.125F)));
 
@@ -199,12 +200,12 @@ public class HorizonsLootTableProvider extends LootTableProvider {
                     .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(block)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).build()).build()), new BlockPos(0, 1, 0))))
-                    .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(drop)
+                    .withPool(LootPool.lootPool().add(builder).when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(block)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).build()).build()), new BlockPos(0, -1, 0))));
         }
 
-        private static LootPoolEntryContainer.Builder<?> createCypressKneeLootItemBuilder(Block knee, Block log, NumberProvider logCount) {
+        private static LootPoolEntryContainer.Builder<?> createCypressKneeLootItemBuilder(Block knee, ItemLike log, NumberProvider logCount) {
             return LootItem.lootTableItem(knee).when(MatchTool.toolMatches(ItemPredicate.Builder.item().hasEnchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, MinMaxBounds.Ints.atLeast(1)))))
                     .otherwise(applyExplosionDecay(log, LootItem.lootTableItem(log).apply(SetItemCountFunction.setCount(logCount))));
         }
