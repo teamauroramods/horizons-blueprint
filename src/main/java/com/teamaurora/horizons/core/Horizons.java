@@ -5,6 +5,7 @@ import com.teamaurora.horizons.core.data.client.HorizonsLanguageProvider;
 import com.teamaurora.horizons.core.data.client.HorizonsModelProvider;
 import com.teamaurora.horizons.core.data.server.HorizonsLootTableProvider;
 import com.teamaurora.horizons.core.data.server.HorizonsRecipeProvider;
+import com.teamaurora.horizons.core.data.server.HorizonsStructureRepaletterProvider;
 import com.teamaurora.horizons.core.data.server.modifiers.HorizonsAdvancementModifierProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBlockTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsItemTagsProvider;
@@ -63,6 +64,7 @@ public class Horizons {
         gen.addProvider(server, new HorizonsItemTagsProvider(event));
         gen.addProvider(server, new HorizonsLootTableProvider(event));
         gen.addProvider(server, new HorizonsAdvancementModifierProvider(event));
+        gen.addProvider(server, new HorizonsStructureRepaletterProvider(event));
     }
 
 }

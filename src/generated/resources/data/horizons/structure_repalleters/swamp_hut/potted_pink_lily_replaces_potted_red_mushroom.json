@@ -1,0 +1,7 @@
+{
+  "type": "blueprint:simple",
+  "priority": "normal",
+  "replaces_block": "minecraft:potted_red_mushroom",
+  "replaces_with": "horizons:potted_pink_lily",
+  "selector": "minecraft:swamp_hut"
+}
