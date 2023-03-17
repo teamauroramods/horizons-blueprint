@@ -41,6 +41,10 @@ public class HorizonsItemTagsProvider extends ItemTagsProvider {
         this.copy(Tags.Blocks.CHESTS_WOODEN, Tags.Items.CHESTS_WOODEN);
         this.copy(Tags.Blocks.CHESTS_TRAPPED, Tags.Items.CHESTS_TRAPPED);
 
+        //boatload
+        this.tag(BlueprintItemTags.LARGE_BOATS).add(HorizonsItems.LARGE_CYPRESS_BOAT.get());
+        this.tag(BlueprintItemTags.FURNACE_BOATS).add(HorizonsItems.CYPRESS_FURNACE_BOAT.get());
+
         //minecraft
         this.tag(ItemTags.NON_FLAMMABLE_WOOD).add(HorizonsBlocks.CYPRESS_BOARDS.get().asItem());
         this.tag(ItemTags.BOATS).add(HorizonsItems.CYPRESS_BOATS.getFirst().get());
