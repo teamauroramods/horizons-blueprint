@@ -3,7 +3,9 @@ package com.teamaurora.horizons.core.data.client;
 import com.mojang.datafixers.util.Pair;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintStandingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintWallSignBlock;
+import com.teamabnormals.blueprint.core.util.registry.BiomeSubRegistryHelper;
 import com.teamaurora.horizons.core.Horizons;
+import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
 import com.teamaurora.horizons.core.registry.HorizonsItems;
 import net.minecraft.world.item.Item;
@@ -109,6 +111,9 @@ public class HorizonsLanguageProvider extends LanguageProvider {
 
         this.translateBlock(HorizonsBlocks.GIANT_FERN);
 
+        //biomes
+        this.translateBiome(HorizonsBiomes.BAYOU);
+
     }
 
     private void translateItem(RegistryObject<? extends Item> item) {
@@ -122,6 +127,10 @@ public class HorizonsLanguageProvider extends LanguageProvider {
     private void translateSigns(Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> sign, String name) {
         this.translateBlock(sign.getFirst());
         this.add(sign.getFirst().get().getDescriptionId().replace(name, name + "_wall"), this.toUpper(ForgeRegistries.BLOCKS, sign.getSecond()));
+    }
+
+    private void translateBiome(BiomeSubRegistryHelper.KeyedBiome biome) {
+        this.add("biome." + Horizons.MODID + "." + ForgeRegistries.BIOMES.getKey(biome.get()).getPath(), this.toUpper(ForgeRegistries.BIOMES, biome.getObject()));
     }
 
     private <T> String toUpper(IForgeRegistry<T> entry, RegistryObject<? extends T> object) {
