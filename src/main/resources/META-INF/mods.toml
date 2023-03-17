@@ -8,8 +8,11 @@ license = "All Rights Reserved"
     version = "1.0.0"
     displayName = "Horizons"
     logoFile = "logo.png"
+    itemIcon = "horizons:gooseberries"
+    configBackground = "horizons:textures/block/cypress_log.png"
     displayURL = "https://www.curseforge.com/minecraft/mc-mods/horizons"
     authors = "Team Aurora"
+    credits = "rose_"
     description = '''A mod about adding biomes with realism and the core Minecraft experience in mind.'''
 
 [[dependencies.horizons]]
