@@ -496,5 +496,4 @@ public class HorizonsModelProvider extends BlockStateProvider {
             return this.name().toLowerCase() + '/' + itemName;
         }
     }
-
 }
