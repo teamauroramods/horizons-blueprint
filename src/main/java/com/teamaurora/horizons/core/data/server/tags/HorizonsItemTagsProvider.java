@@ -27,8 +27,8 @@ public class HorizonsItemTagsProvider extends ItemTagsProvider {
         this.copy(HorizonsBlockTags.CYPRESS_LOGS, HorizonsItemTags.CYPRESS_LOGS);
 
         //quark
-        this.tag(BlueprintItemTags.BOATABLE_CHESTS).add(HorizonsBlocks.CYPRESS_CHEST.get().asItem());
-        this.tag(BlueprintItemTags.REVERTABLE_CHESTS).add(HorizonsBlocks.CYPRESS_CHEST.get().asItem());
+        this.tag(BlueprintItemTags.BOATABLE_CHESTS).add(HorizonsBlocks.CYPRESS_CHEST.get().asItem(), HorizonsBlocks.REDWOOD_CHEST.get().asItem());
+        this.tag(BlueprintItemTags.REVERTABLE_CHESTS).add(HorizonsBlocks.CYPRESS_CHEST.get().asItem(), HorizonsBlocks.REDWOOD_CHEST.get().asItem());
         this.copy(BlueprintBlockTags.LADDERS, BlueprintItemTags.LADDERS);
         this.copy(BlueprintBlockTags.VERTICAL_SLABS, BlueprintItemTags.VERTICAL_SLABS);
         this.copy(BlueprintBlockTags.WOODEN_VERTICAL_SLABS, BlueprintItemTags.WOODEN_VERTICAL_SLABS);
@@ -42,17 +42,17 @@ public class HorizonsItemTagsProvider extends ItemTagsProvider {
         this.copy(Tags.Blocks.CHESTS_TRAPPED, Tags.Items.CHESTS_TRAPPED);
 
         //boatload
-        this.tag(BlueprintItemTags.LARGE_BOATS).add(HorizonsItems.LARGE_CYPRESS_BOAT.get());
-        this.tag(BlueprintItemTags.FURNACE_BOATS).add(HorizonsItems.CYPRESS_FURNACE_BOAT.get());
+        this.tag(BlueprintItemTags.LARGE_BOATS).add(HorizonsItems.LARGE_CYPRESS_BOAT.get(), HorizonsItems.LARGE_CYPRESS_BOAT.get());
+        this.tag(BlueprintItemTags.FURNACE_BOATS).add(HorizonsItems.CYPRESS_FURNACE_BOAT.get(), HorizonsItems.CYPRESS_FURNACE_BOAT.get());
 
         //farmerdelight
-        this.tag(HorizonsItemTags.WOODEN_CABINETS).add(HorizonsBlocks.CYPRESS_CABINET.get().asItem());
+        this.tag(HorizonsItemTags.WOODEN_CABINETS).add(HorizonsBlocks.CYPRESS_CABINET.get().asItem(), HorizonsBlocks.REDWOOD_CABINET.get().asItem());
 
         //minecraft
-        this.tag(ItemTags.NON_FLAMMABLE_WOOD).add(HorizonsBlocks.CYPRESS_BOARDS.get().asItem());
-        this.tag(ItemTags.BOATS).add(HorizonsItems.CYPRESS_BOATS.getFirst().get());
-        this.tag(ItemTags.CHEST_BOATS).add(HorizonsItems.CYPRESS_BOATS.getSecond().get());
-        this.tag(ItemTags.SIGNS).add(HorizonsBlocks.CYPRESS_SIGNS.getFirst().get().asItem());
+        this.tag(ItemTags.NON_FLAMMABLE_WOOD).add(HorizonsBlocks.CYPRESS_BOARDS.get().asItem(), HorizonsBlocks.REDWOOD_BOARDS.get().asItem());
+        this.tag(ItemTags.BOATS).add(HorizonsItems.CYPRESS_BOATS.getFirst().get(), HorizonsItems.REDWOOD_BOATS.getFirst().get());
+        this.tag(ItemTags.CHEST_BOATS).add(HorizonsItems.CYPRESS_BOATS.getSecond().get(), HorizonsItems.REDWOOD_BOATS.getSecond().get());
+        this.tag(ItemTags.SIGNS).add(HorizonsBlocks.CYPRESS_SIGNS.getFirst().get().asItem(), HorizonsBlocks.REDWOOD_SIGNS.getFirst().get().asItem());
         this.copy(BlockTags.BUTTONS, ItemTags.BUTTONS);
         this.copy(HorizonsBlockTags.CYPRESS_LEAVES, ItemTags.LEAVES);
         this.copy(BlockTags.LOGS_THAT_BURN, ItemTags.LOGS_THAT_BURN);

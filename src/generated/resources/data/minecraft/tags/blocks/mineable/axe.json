@@ -15,6 +15,17 @@
     "horizons:stripped_cypress_knee",
     "horizons:stripped_large_cypress_knee",
     "horizons:cypress_branch",
-    "horizons:cypress_cabinet"
+    "horizons:cypress_cabinet",
+    "horizons:redwood_bookshelf",
+    "horizons:redwood_vertical_slab",
+    "horizons:redwood_ladder",
+    "horizons:redwood_hedge",
+    "horizons:redwood_chest",
+    "horizons:redwood_trapped_chest",
+    "horizons:redwood_post",
+    "horizons:stripped_redwood_post",
+    "horizons:redwood_beehive",
+    "horizons:redwood_boards",
+    "horizons:redwood_cabinet"
   ]
 }

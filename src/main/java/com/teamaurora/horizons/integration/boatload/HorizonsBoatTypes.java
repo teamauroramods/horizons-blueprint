@@ -15,7 +15,10 @@ import java.util.function.Supplier;
  */
 public final class HorizonsBoatTypes {
     public static final BoatloadBoatType CYPRESS = BoatloadBoatType.register(BoatloadBoatType.create(Horizons.REGISTRY_HELPER.prefix("cypress"), () -> HorizonsBlocks.CYPRESS_PLANKS.get().asItem(), () -> HorizonsItems.CYPRESS_BOATS.getFirst().get(), () -> HorizonsItems.CYPRESS_BOATS.getSecond().get(), () -> HorizonsItems.CYPRESS_FURNACE_BOAT.get(), () -> HorizonsItems.LARGE_CYPRESS_BOAT.get()));
+    public static final BoatloadBoatType REDWOOD = BoatloadBoatType.register(BoatloadBoatType.create(Horizons.REGISTRY_HELPER.prefix("redwood"), () -> HorizonsBlocks.REDWOOD_PLANKS.get().asItem(), () -> HorizonsItems.REDWOOD_BOATS.getFirst().get(), () -> HorizonsItems.REDWOOD_BOATS.getSecond().get(), () -> HorizonsItems.REDWOOD_FURNACE_BOAT.get(), () -> HorizonsItems.LARGE_REDWOOD_BOAT.get()));
 
     public static final Supplier<Item> CYPRESS_FURNACE_BOAT = () -> new FurnaceBoatItem(CYPRESS);
-    public static final Supplier<Item> LARGE_CYPRESS_BOAT = () -> new LargeBoatItem(CYPRESS);
+    public static final Supplier<Item> LARGE_CYPRESS_BOAT = () -> new LargeBoatItem(CYPRESS);    
+    public static final Supplier<Item> REDWOOD_FURNACE_BOAT = () -> new FurnaceBoatItem(REDWOOD);
+    public static final Supplier<Item> LARGE_REDWOOD_BOAT = () -> new LargeBoatItem(REDWOOD);
 }

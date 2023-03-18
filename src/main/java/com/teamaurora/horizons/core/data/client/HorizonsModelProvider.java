@@ -49,6 +49,10 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.generatedItem(HorizonsItems.CYPRESS_BOATS.getSecond().get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.CYPRESS_FURNACE_BOAT.get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.LARGE_CYPRESS_BOAT.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.REDWOOD_BOATS.getFirst().get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.REDWOOD_BOATS.getSecond().get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.REDWOOD_FURNACE_BOAT.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.LARGE_REDWOOD_BOAT.get(), TextureFolder.Item);
 
         //block states
         this.log(HorizonsBlocks.STRIPPED_CYPRESS_LOG);
@@ -110,6 +114,37 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.lily(HorizonsBlocks.WHITE_LILY, HorizonsBlocks.POTTED_WHITE_LILY);
 
         this.triplePlant(HorizonsBlocks.GIANT_FERN);
+
+        this.log(HorizonsBlocks.STRIPPED_REDWOOD_LOG);
+        this.cubeAll(HorizonsBlocks.STRIPPED_REDWOOD_WOOD, this.blockTexture(HorizonsBlocks.STRIPPED_REDWOOD_LOG.get()));
+        this.log(HorizonsBlocks.REDWOOD_LOG);
+        this.cubeAll(HorizonsBlocks.REDWOOD_WOOD, this.blockTexture(HorizonsBlocks.REDWOOD_LOG.get()));
+        this.cubeAll(HorizonsBlocks.REDWOOD_PLANKS);
+        this.slab(HorizonsBlocks.REDWOOD_SLAB, HorizonsBlocks.REDWOOD_PLANKS);
+        this.stairs(HorizonsBlocks.REDWOOD_STAIRS, HorizonsBlocks.REDWOOD_PLANKS);
+        this.fence(HorizonsBlocks.REDWOOD_FENCE, HorizonsBlocks.REDWOOD_PLANKS);
+        this.fenceGate(HorizonsBlocks.REDWOOD_FENCE_GATE, HorizonsBlocks.REDWOOD_PLANKS);
+        this.pressurePlate(HorizonsBlocks.REDWOOD_PRESSURE_PLATE, HorizonsBlocks.REDWOOD_PLANKS);
+        this.door(HorizonsBlocks.REDWOOD_DOOR);
+        this.trapdoor(HorizonsBlocks.REDWOOD_TRAPDOOR);
+        this.button(HorizonsBlocks.REDWOOD_BUTTON, HorizonsBlocks.REDWOOD_PLANKS);
+        this.signs(HorizonsBlocks.REDWOOD_SIGNS, HorizonsBlocks.REDWOOD_PLANKS);
+        this.leaves(HorizonsBlocks.REDWOOD_LEAVES);
+        this.pottedPlant(HorizonsBlocks.REDWOOD_SAPLING, HorizonsBlocks.POTTED_REDWOOD_SAPLING);
+
+        this.beehive(HorizonsBlocks.REDWOOD_BEEHIVE);
+        this.hedge(HorizonsBlocks.REDWOOD_HEDGE, HorizonsBlocks.REDWOOD_LEAVES, HorizonsBlocks.REDWOOD_LOG);
+        this.leafCarpet(HorizonsBlocks.REDWOOD_LEAF_CARPET, HorizonsBlocks.REDWOOD_LEAVES);
+        this.leafPile(HorizonsBlocks.REDWOOD_LEAF_PILE, HorizonsBlocks.REDWOOD_LEAVES, true);
+        this.ladder(HorizonsBlocks.REDWOOD_LADDER);
+        this.verticalPlanks(HorizonsBlocks.VERTICAL_REDWOOD_PLANKS, HorizonsBlocks.REDWOOD_PLANKS);
+        this.bookshelf(HorizonsBlocks.REDWOOD_BOOKSHELF, HorizonsBlocks.REDWOOD_PLANKS);
+        this.boards(HorizonsBlocks.REDWOOD_BOARDS);
+        this.verticalSlab(HorizonsBlocks.REDWOOD_VERTICAL_SLAB, HorizonsBlocks.REDWOOD_PLANKS);
+        this.post(HorizonsBlocks.REDWOOD_POST, HorizonsBlocks.REDWOOD_LOG);
+        this.post(HorizonsBlocks.STRIPPED_REDWOOD_POST, HorizonsBlocks.STRIPPED_REDWOOD_LOG);
+        this.chests(HorizonsBlocks.REDWOOD_CHEST, HorizonsBlocks.REDWOOD_TRAPPED_CHEST, HorizonsBlocks.REDWOOD_PLANKS);
+        //this.cabinet(HorizonsBlocks.REDWOOD_CABINET);
     }
 
     // Specific Block Generators //

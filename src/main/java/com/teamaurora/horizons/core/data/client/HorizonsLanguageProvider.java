@@ -112,6 +112,39 @@ public class HorizonsLanguageProvider extends LanguageProvider {
 
         this.translateBlock(HorizonsBlocks.GIANT_FERN);
 
+        this.translateBlock(HorizonsBlocks.STRIPPED_REDWOOD_LOG);
+        this.add(HorizonsBlocks.STRIPPED_REDWOOD_WOOD.get(), "Stripped Redwood");
+        this.translateBlock(HorizonsBlocks.REDWOOD_LOG);
+        this.add(HorizonsBlocks.REDWOOD_WOOD.get(), "Redwood");
+        this.translateBlock(HorizonsBlocks.REDWOOD_PLANKS);
+        this.translateBlock(HorizonsBlocks.REDWOOD_SLAB);
+        this.translateBlock(HorizonsBlocks.REDWOOD_STAIRS);
+        this.translateBlock(HorizonsBlocks.REDWOOD_FENCE);
+        this.translateBlock(HorizonsBlocks.REDWOOD_FENCE_GATE);
+        this.translateBlock(HorizonsBlocks.REDWOOD_PRESSURE_PLATE);
+        this.translateBlock(HorizonsBlocks.REDWOOD_DOOR);
+        this.translateBlock(HorizonsBlocks.REDWOOD_TRAPDOOR);
+        this.translateBlock(HorizonsBlocks.REDWOOD_BUTTON);
+        this.translateSigns(HorizonsBlocks.REDWOOD_SIGNS, "redwood");
+        this.translateBlock(HorizonsBlocks.REDWOOD_SAPLING);
+        this.translateBlock(HorizonsBlocks.POTTED_REDWOOD_SAPLING);
+        this.translateBlock(HorizonsBlocks.REDWOOD_LEAVES);
+
+        this.translateBlock(HorizonsBlocks.VERTICAL_REDWOOD_PLANKS);
+        this.translateBlock(HorizonsBlocks.REDWOOD_BEEHIVE);
+        this.translateBlock(HorizonsBlocks.REDWOOD_LADDER);
+        this.translateBlock(HorizonsBlocks.REDWOOD_BOOKSHELF);
+        this.translateBlock(HorizonsBlocks.REDWOOD_BOARDS);
+        this.translateBlock(HorizonsBlocks.REDWOOD_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.REDWOOD_POST);
+        this.translateBlock(HorizonsBlocks.STRIPPED_REDWOOD_POST);
+        this.translateBlock(HorizonsBlocks.REDWOOD_CHEST);
+        this.translateBlock(HorizonsBlocks.REDWOOD_TRAPPED_CHEST);
+        this.translateBlock(HorizonsBlocks.REDWOOD_CABINET);
+        this.add(HorizonsBlocks.REDWOOD_HEDGE.get(), "Redwood Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.REDWOOD_LEAF_CARPET);
+        this.translateBlock(HorizonsBlocks.REDWOOD_LEAF_PILE);
+
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);
 

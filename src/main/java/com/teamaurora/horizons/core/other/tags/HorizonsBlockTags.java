@@ -11,4 +11,6 @@ import net.minecraft.world.level.block.Block;
 public final class HorizonsBlockTags {
     public static final TagKey<Block> CYPRESS_LOGS = TagUtil.blockTag(Horizons.MODID, "cypress_logs");
     public static final TagKey<Block> CYPRESS_LEAVES = TagUtil.blockTag(Horizons.MODID, "cypress_leaves");
+    public static final TagKey<Block> REDWOOD_LOGS = TagUtil.blockTag(Horizons.MODID, "redwood_logs");
+    public static final TagKey<Block> REDWOOD_LEAVES = TagUtil.blockTag(Horizons.MODID, "redwood_leaves");
 }

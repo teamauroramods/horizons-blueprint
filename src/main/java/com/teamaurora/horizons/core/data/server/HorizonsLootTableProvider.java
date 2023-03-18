@@ -141,6 +141,40 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropPottedContents(HorizonsBlocks.POTTED_WHITE_LILY.get());
 
             this.add(HorizonsBlocks.GIANT_FERN.get(), b -> createTriplePlantWithSeedDrops(b, Items.FERN));
+
+            this.dropSelf(HorizonsBlocks.STRIPPED_REDWOOD_LOG.get());
+            this.dropSelf(HorizonsBlocks.STRIPPED_REDWOOD_WOOD.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_LOG.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_WOOD.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_PLANKS.get());
+            this.add(HorizonsBlocks.REDWOOD_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.REDWOOD_STAIRS.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_FENCE.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_FENCE_GATE.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_PRESSURE_PLATE.get());
+            this.add(HorizonsBlocks.REDWOOD_DOOR.get(), Blocks::createDoorTable);
+            this.dropSelf(HorizonsBlocks.REDWOOD_TRAPDOOR.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_BUTTON.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_SIGNS.getFirst().get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_SIGNS.getSecond().get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_SAPLING.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_REDWOOD_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.REDWOOD_LEAVES.get(), HorizonsBlocks.REDWOOD_SAPLING.get());
+
+            this.add(HorizonsBlocks.REDWOOD_BEEHIVE.get(), Blocks::createBeeHiveDrop);
+            this.dropSelf(HorizonsBlocks.REDWOOD_LADDER.get());
+            this.dropSelf(HorizonsBlocks.VERTICAL_REDWOOD_PLANKS.get());
+            this.bookshelf(HorizonsBlocks.REDWOOD_BOOKSHELF.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_BOARDS.get());
+            this.add(HorizonsBlocks.REDWOOD_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.STRIPPED_REDWOOD_POST.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_POST.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_CHEST.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_TRAPPED_CHEST.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_CABINET.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.REDWOOD_LEAF_PILE.get());
         }
 
         private void normalLeaves(Block leaves, Block sapling) {

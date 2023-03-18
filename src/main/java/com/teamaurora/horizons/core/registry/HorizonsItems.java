@@ -39,6 +39,9 @@ public class HorizonsItems {
     public static final Pair<RegistryObject<Item>, RegistryObject<Item>> CYPRESS_BOATS = HELPER.createBoatAndChestBoatItem("cypress", HorizonsBlocks.CYPRESS_PLANKS);
     public static final RegistryObject<Item> CYPRESS_FURNACE_BOAT = HELPER.createItem("cypress_furnace_boat", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.BOATLOAD) ? HorizonsBoatTypes.CYPRESS_FURNACE_BOAT : () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> LARGE_CYPRESS_BOAT = HELPER.createItem("large_cypress_boat", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.BOATLOAD) ? HorizonsBoatTypes.LARGE_CYPRESS_BOAT : () -> new Item(new Item.Properties()));
+    public static final Pair<RegistryObject<Item>, RegistryObject<Item>> REDWOOD_BOATS = HELPER.createBoatAndChestBoatItem("redwood", HorizonsBlocks.REDWOOD_PLANKS);
+    public static final RegistryObject<Item> REDWOOD_FURNACE_BOAT = HELPER.createItem("redwood_furnace_boat", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.BOATLOAD) ? HorizonsBoatTypes.REDWOOD_FURNACE_BOAT : () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> LARGE_REDWOOD_BOAT = HELPER.createItem("large_redwood_boat", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.BOATLOAD) ? HorizonsBoatTypes.LARGE_REDWOOD_BOAT : () -> new Item(new Item.Properties()));
 
     // Misc //
 

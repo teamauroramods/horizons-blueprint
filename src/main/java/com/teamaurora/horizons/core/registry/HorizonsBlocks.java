@@ -31,7 +31,6 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MaterialColor;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -124,5 +123,40 @@ public class HorizonsBlocks {
     // Misc //
 
     public static final RegistryObject<Block> GIANT_FERN = HELPER.createInjectedBlock("giant_fern", Items.LARGE_FERN, () -> new DoublePlantBlock(HorizonsProperties.GIANT_FERN), CreativeModeTab.TAB_DECORATIONS);
+
+    // Redwood //
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = HELPER.createBlock("stripped_redwood_log", () -> new StrippedLogBlock(HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = HELPER.createBlock("stripped_redwood_wood", () -> new StrippedWoodBlock(HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_LOG = HELPER.createBlock("redwood_log", () -> new LogBlock(STRIPPED_REDWOOD_LOG, HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_WOOD = HELPER.createBlock("redwood_wood", () -> new WoodBlock(STRIPPED_REDWOOD_WOOD, HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_PLANKS = HELPER.createBlock("redwood_planks", () -> new PlanksBlock(HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_SLAB = HELPER.createBlock("redwood_slab", () -> new WoodSlabBlock(HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_STAIRS = HELPER.createBlock("redwood_stairs", () -> new WoodStairBlock(REDWOOD_PLANKS.get().defaultBlockState(), HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_FENCE = HELPER.createFuelBlock("redwood_fence", () -> new WoodFenceBlock(HorizonsProperties.REDWOOD.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDWOOD_FENCE_GATE = HELPER.createFuelBlock("redwood_fence_gate", () -> new WoodFenceGateBlock(HorizonsProperties.REDWOOD.planks()), 300, CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDWOOD_PRESSURE_PLATE = HELPER.createBlock("redwood_pressure_plate", () -> new WoodPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, HorizonsProperties.REDWOOD.pressurePlate()), CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDWOOD_DOOR = HELPER.createBlock("redwood_door", () -> new WoodDoorBlock(HorizonsProperties.REDWOOD.door()), CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDWOOD_TRAPDOOR = HELPER.createBlock("redwood_trapdoor", () -> new WoodTrapDoorBlock(HorizonsProperties.REDWOOD.trapdoor()), CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDWOOD_BUTTON = HELPER.createBlock("redwood_button", () -> new BlueprintWoodButtonBlock(HorizonsProperties.REDWOOD.button()), CreativeModeTab.TAB_REDSTONE);
+    public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> REDWOOD_SIGNS = HELPER.createSignBlock("redwood", MaterialColor.COLOR_PURPLE);
+    public static final RegistryObject<Block> REDWOOD_SAPLING = HELPER.createBlock("redwood_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.SAPLING), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> POTTED_REDWOOD_SAPLING = HELPER.createBlockNoItem("potted_redwood_sapling", () -> new FlowerPotBlock(REDWOOD_SAPLING.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> REDWOOD_LEAVES = HELPER.createBlock("redwood_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.REDWOOD.leaves()), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> VERTICAL_REDWOOD_PLANKS = HELPER.createCompatBlock(HorizonsConstants.QUARK, "vertical_redwood_planks", () -> new Block(HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_BEEHIVE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "redwood_beehive", () -> new BlueprintBeehiveBlock(HorizonsProperties.REDWOOD.beehive()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDWOOD_LADDER = HELPER.createFuelBlock("redwood_ladder", () -> new BlueprintLadderBlock(HorizonsProperties.REDWOOD.ladder()), 300, ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_DECORATIONS : null);
+    public static final RegistryObject<Block> REDWOOD_BOOKSHELF = HELPER.createFuelBlock("redwood_bookshelf", () -> new BookshelfBlock(HorizonsProperties.REDWOOD.bookshelf()), 300, ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_BUILDING_BLOCKS : null);
+    public static final RegistryObject<Block> REDWOOD_BOARDS = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "redwood_boards", () -> new RotatedPillarBlock(HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD_VERTICAL_SLAB = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "redwood_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.REDWOOD.planks()), 150, CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "stripped_redwood_post", () -> new WoodPostBlock(HorizonsProperties.REDWOOD.post()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDWOOD_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "redwood_post", () -> new WoodPostBlock(STRIPPED_REDWOOD_POST, HorizonsProperties.REDWOOD.post()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<BlueprintChestBlock> REDWOOD_CHEST = HELPER.createChestBlock("redwood", HorizonsProperties.REDWOOD.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_DECORATIONS : null);
+    public static final RegistryObject<BlueprintTrappedChestBlock> REDWOOD_TRAPPED_CHEST = HELPER.createTrappedChestBlock("redwood", HorizonsProperties.REDWOOD.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_REDSTONE : null);
+    public static final RegistryObject<Block> REDWOOD_CABINET = HELPER.createCompatFuelBlock(HorizonsConstants.FARMERSDELIGHT, "redwood_cabinet", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.FARMERSDELIGHT) ? HorizonsFDCompat.CABINET_SUPPLIER : () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDWOOD_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "redwood_hedge", () -> new HedgeBlock(HorizonsProperties.REDWOOD.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDWOOD_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "redwood_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.REDWOOD.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDWOOD_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "redwood_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.REDWOOD.leafPile()), CreativeModeTab.TAB_DECORATIONS);
 
 }
