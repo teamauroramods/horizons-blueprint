@@ -45,6 +45,8 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.generatedItem(HorizonsItems.GOOSEBERRY_JAM.get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.GOOSEBERRY_JAM_COOKIE.get(), TextureFolder.Item);
 
+        this.generatedItem(HorizonsItems.REDBUD_BLOSSOMS.get(), TextureFolder.Item);
+
         this.generatedItem(HorizonsItems.CYPRESS_BOATS.getFirst().get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.CYPRESS_BOATS.getSecond().get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.CYPRESS_FURNACE_BOAT.get(), TextureFolder.Item);
@@ -221,6 +223,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.hedge(HorizonsBlocks.FLOWERING_REDBUD_HEDGE, HorizonsBlocks.FLOWERING_REDBUD_LEAVES, HorizonsBlocks.FLOWERING_REDBUD_LOG);
         this.leafCarpet(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET, HorizonsBlocks.FLOWERING_REDBUD_LEAVES);
         this.leafPile(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE, HorizonsBlocks.FLOWERING_REDBUD_LEAVES, false);
+        this.leafPile(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE, HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE, false);
         this.ladder(HorizonsBlocks.REDBUD_LADDER);
         this.verticalPlanks(HorizonsBlocks.VERTICAL_REDBUD_PLANKS, HorizonsBlocks.REDBUD_PLANKS);
         this.bookshelf(HorizonsBlocks.REDBUD_BOOKSHELF, HorizonsBlocks.REDBUD_PLANKS);

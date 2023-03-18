@@ -264,6 +264,7 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get());
             this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET.get());
             this.leafPile(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get());
+            this.leafPile(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get());
 
             this.dropSelf(HorizonsBlocks.STRIPPED_JACARANDA_LOG.get());
             this.dropSelf(HorizonsBlocks.STRIPPED_JACARANDA_WOOD.get());

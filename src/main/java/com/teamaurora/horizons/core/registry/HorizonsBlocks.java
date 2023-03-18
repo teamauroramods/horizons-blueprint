@@ -255,6 +255,7 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> FLOWERING_REDBUD_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "flowering_redbud_hedge", () -> new HedgeBlock(HorizonsProperties.REDBUD.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "flowering_redbud_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.REDBUD.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_REDBUD_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "flowering_redbud_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.REDBUD.leafPile()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_BLOSSOMS_LEAF_PILE = HELPER.createBlock("redbud_blossoms_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.REDBUD_BLOSSOMS), CreativeModeTab.TAB_DECORATIONS);
 
     // Jacaranda //
 

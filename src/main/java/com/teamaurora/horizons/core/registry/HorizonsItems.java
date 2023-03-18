@@ -52,6 +52,7 @@ public class HorizonsItems {
     // Misc //
 
     public static final RegistryObject<Item> ALGAE = HELPER.createItem("algae", () -> new AlgaeBlockItem(HorizonsBlocks.ALGAE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
+    public static final RegistryObject<Item> REDBUD_BLOSSOMS = HELPER.createItem("redbud_blossoms", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     // Lily Items //
 

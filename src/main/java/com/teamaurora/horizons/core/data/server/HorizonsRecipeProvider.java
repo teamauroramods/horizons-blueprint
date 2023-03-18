@@ -68,6 +68,7 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         leafSet(HorizonsItemTags.JACARANDA_LOGS, HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES.get(), HorizonsBlocks.BUDDING_BLUE_JACARANDA_HEDGE.get(), HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_CARPET.get(), HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_PILE.get(), consumer);
         leafSet(HorizonsItemTags.JACARANDA_LOGS, HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES.get(), HorizonsBlocks.FLOWERING_BLUE_JACARANDA_HEDGE.get(), HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_CARPET.get(), HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_PILE.get(), consumer);
         post(HorizonsBlocks.FLOWERING_REDBUD_POST.get(), HorizonsBlocks.FLOWERING_REDBUD_WOOD.get(), consumer);
+        ShapedRecipeBuilder.shaped(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get(), 4).define('#', HorizonsItems.REDBUD_BLOSSOMS.get()).pattern("##").pattern("##").unlockedBy(getHasName(HorizonsItems.REDBUD_BLOSSOMS.get()), has(HorizonsItems.REDBUD_BLOSSOMS.get())).save(consumer, getSaveLocation(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get()));
         flowerToDye(HorizonsBlocks.BLUE_LILY.get(), Items.BLUE_DYE, consumer);
         flowerToDye(HorizonsBlocks.LIGHT_GRAY_LILY.get(), Items.LIGHT_GRAY_DYE, consumer);
         flowerToDye(HorizonsBlocks.CYAN_LILY.get(), Items.CYAN_DYE, consumer);

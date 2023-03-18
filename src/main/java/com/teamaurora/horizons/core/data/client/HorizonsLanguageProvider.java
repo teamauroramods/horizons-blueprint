@@ -35,6 +35,8 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateItem(HorizonsItems.GOOSEBERRY_JAM);
         this.translateItem(HorizonsItems.GOOSEBERRY_JAM_COOKIE);
 
+        this.translateItem(HorizonsItems.REDBUD_BLOSSOMS);
+
         this.translateItem(HorizonsItems.CYPRESS_BOATS.getFirst());
         this.translateItem(HorizonsItems.CYPRESS_BOATS.getSecond());
         this.translateItem(HorizonsItems.CYPRESS_FURNACE_BOAT);
@@ -245,6 +247,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get(), "Flowering Redbud Leaf Hedge");
         this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET);
         this.add(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get(), "Pile of Flowering Redbud Leaves");
+        this.add(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get(), "Pile of Redbud Blossoms");
 
         this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_LOG);
         this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_WOOD);

@@ -1,6 +1,7 @@
 package com.teamaurora.horizons.core.other;
 
 import com.teamabnormals.blueprint.core.util.PropertyUtil;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -27,4 +28,5 @@ public final class HorizonsProperties {
     public static final BlockBehaviour.Properties GIANT_FERN = BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ);
     public static final BlockBehaviour.Properties BOULDER = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
     public static final BlockBehaviour.Properties BOULDER_BRICKS = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).sound(SoundType.NETHER_BRICKS).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
+    public static final BlockBehaviour.Properties REDBUD_BLOSSOMS = Block.Properties.of(Material.PLANT, MaterialColor.COLOR_PINK).noCollission().strength(0.2F).sound(SoundType.FLOWERING_AZALEA);
 }
