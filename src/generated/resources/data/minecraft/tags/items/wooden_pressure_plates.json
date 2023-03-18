@@ -1,6 +1,7 @@
 {
   "values": [
     "horizons:cypress_pressure_plate",
-    "horizons:redwood_pressure_plate"
+    "horizons:redwood_pressure_plate",
+    "horizons:redbud_pressure_plate"
   ]
 }

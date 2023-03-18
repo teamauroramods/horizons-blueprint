@@ -53,6 +53,10 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.generatedItem(HorizonsItems.REDWOOD_BOATS.getSecond().get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.REDWOOD_FURNACE_BOAT.get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.LARGE_REDWOOD_BOAT.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.REDBUD_BOATS.getFirst().get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.REDBUD_BOATS.getSecond().get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.REDBUD_FURNACE_BOAT.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.LARGE_REDBUD_BOAT.get(), TextureFolder.Item);
 
         //block states
         this.log(HorizonsBlocks.STRIPPED_CYPRESS_LOG);
@@ -135,7 +139,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.beehive(HorizonsBlocks.REDWOOD_BEEHIVE);
         this.hedge(HorizonsBlocks.REDWOOD_HEDGE, HorizonsBlocks.REDWOOD_LEAVES, HorizonsBlocks.REDWOOD_LOG);
         this.leafCarpet(HorizonsBlocks.REDWOOD_LEAF_CARPET, HorizonsBlocks.REDWOOD_LEAVES);
-        this.leafPile(HorizonsBlocks.REDWOOD_LEAF_PILE, HorizonsBlocks.REDWOOD_LEAVES, true);
+        this.leafPile(HorizonsBlocks.REDWOOD_LEAF_PILE, HorizonsBlocks.REDWOOD_LEAVES, false);
         this.ladder(HorizonsBlocks.REDWOOD_LADDER);
         this.verticalPlanks(HorizonsBlocks.VERTICAL_REDWOOD_PLANKS, HorizonsBlocks.REDWOOD_PLANKS);
         this.bookshelf(HorizonsBlocks.REDWOOD_BOOKSHELF, HorizonsBlocks.REDWOOD_PLANKS);
@@ -179,6 +183,50 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.pottedPlant(HorizonsBlocks.ORANGE_DAISY, HorizonsBlocks.POTTED_ORANGE_DAISY);
         this.pottedPlant(HorizonsBlocks.MAGENTA_DAISY, HorizonsBlocks.POTTED_MAGENTA_DAISY);
         this.pottedPlant(HorizonsBlocks.BLUE_DAISY, HorizonsBlocks.POTTED_BLUE_DAISY);
+
+        this.log(HorizonsBlocks.STRIPPED_REDBUD_LOG);
+        this.cubeAll(HorizonsBlocks.STRIPPED_REDBUD_WOOD, this.blockTexture(HorizonsBlocks.STRIPPED_REDBUD_LOG.get()));
+        this.log(HorizonsBlocks.REDBUD_LOG);
+        this.cubeAll(HorizonsBlocks.REDBUD_WOOD, this.blockTexture(HorizonsBlocks.REDBUD_LOG.get()));
+        this.variantLog(HorizonsBlocks.FLOWERING_REDBUD_LOG, HorizonsBlocks.REDBUD_LOG);
+        this.cubeAll(HorizonsBlocks.FLOWERING_REDBUD_WOOD, this.blockTexture(HorizonsBlocks.FLOWERING_REDBUD_LOG.get()));
+        this.cubeAll(HorizonsBlocks.REDBUD_PLANKS);
+        this.slab(HorizonsBlocks.REDBUD_SLAB, HorizonsBlocks.REDBUD_PLANKS);
+        this.stairs(HorizonsBlocks.REDBUD_STAIRS, HorizonsBlocks.REDBUD_PLANKS);
+        this.fence(HorizonsBlocks.REDBUD_FENCE, HorizonsBlocks.REDBUD_PLANKS);
+        this.fenceGate(HorizonsBlocks.REDBUD_FENCE_GATE, HorizonsBlocks.REDBUD_PLANKS);
+        this.pressurePlate(HorizonsBlocks.REDBUD_PRESSURE_PLATE, HorizonsBlocks.REDBUD_PLANKS);
+        this.door(HorizonsBlocks.REDBUD_DOOR);
+        this.trapdoor(HorizonsBlocks.REDBUD_TRAPDOOR);
+        this.button(HorizonsBlocks.REDBUD_BUTTON, HorizonsBlocks.REDBUD_PLANKS);
+        this.signs(HorizonsBlocks.REDBUD_SIGNS, HorizonsBlocks.REDBUD_PLANKS);
+        this.pottedPlant(HorizonsBlocks.REDBUD_SAPLING, HorizonsBlocks.POTTED_REDBUD_SAPLING);
+        this.pottedPlant(HorizonsBlocks.BUDDING_REDBUD_SAPLING, HorizonsBlocks.POTTED_BUDDING_REDBUD_SAPLING);
+        this.pottedPlant(HorizonsBlocks.FLOWERING_REDBUD_SAPLING, HorizonsBlocks.POTTED_FLOWERING_REDBUD_SAPLING);
+        this.leaves(HorizonsBlocks.REDBUD_LEAVES);
+        this.leaves(HorizonsBlocks.BUDDING_REDBUD_LEAVES);
+        this.leaves(HorizonsBlocks.FLOWERING_REDBUD_LEAVES);
+
+        this.beehive(HorizonsBlocks.REDBUD_BEEHIVE);
+        this.hedge(HorizonsBlocks.REDBUD_HEDGE, HorizonsBlocks.REDBUD_LEAVES, HorizonsBlocks.REDBUD_LOG);
+        this.leafCarpet(HorizonsBlocks.REDBUD_LEAF_CARPET, HorizonsBlocks.REDBUD_LEAVES);
+        this.leafPile(HorizonsBlocks.REDBUD_LEAF_PILE, HorizonsBlocks.REDBUD_LEAVES, false);
+        this.hedge(HorizonsBlocks.BUDDING_REDBUD_HEDGE, HorizonsBlocks.BUDDING_REDBUD_LEAVES, HorizonsBlocks.FLOWERING_REDBUD_LOG);
+        this.leafCarpet(HorizonsBlocks.BUDDING_REDBUD_LEAF_CARPET, HorizonsBlocks.BUDDING_REDBUD_LEAVES);
+        this.leafPile(HorizonsBlocks.BUDDING_REDBUD_LEAF_PILE, HorizonsBlocks.BUDDING_REDBUD_LEAVES, false);
+        this.hedge(HorizonsBlocks.FLOWERING_REDBUD_HEDGE, HorizonsBlocks.FLOWERING_REDBUD_LEAVES, HorizonsBlocks.FLOWERING_REDBUD_LOG);
+        this.leafCarpet(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET, HorizonsBlocks.FLOWERING_REDBUD_LEAVES);
+        this.leafPile(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE, HorizonsBlocks.FLOWERING_REDBUD_LEAVES, false);
+        this.ladder(HorizonsBlocks.REDBUD_LADDER);
+        this.verticalPlanks(HorizonsBlocks.VERTICAL_REDBUD_PLANKS, HorizonsBlocks.REDBUD_PLANKS);
+        this.bookshelf(HorizonsBlocks.REDBUD_BOOKSHELF, HorizonsBlocks.REDBUD_PLANKS);
+        this.boards(HorizonsBlocks.REDBUD_BOARDS);
+        this.verticalSlab(HorizonsBlocks.REDBUD_VERTICAL_SLAB, HorizonsBlocks.REDBUD_PLANKS);
+        this.post(HorizonsBlocks.REDBUD_POST, HorizonsBlocks.REDBUD_LOG);
+        this.post(HorizonsBlocks.STRIPPED_REDBUD_POST, HorizonsBlocks.STRIPPED_REDBUD_LOG);
+        this.post(HorizonsBlocks.FLOWERING_REDBUD_POST, HorizonsBlocks.FLOWERING_REDBUD_LOG);
+        this.chests(HorizonsBlocks.REDBUD_CHEST, HorizonsBlocks.REDBUD_TRAPPED_CHEST, HorizonsBlocks.REDBUD_PLANKS);
+        this.cabinet(HorizonsBlocks.REDBUD_CABINET);
     }
 
     // Specific Block Generators //
@@ -204,6 +252,11 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
         this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_bottom"));
         this.doubleBlockNoItem(knee);
+    }
+
+    private void variantLog(RegistryObject<Block> variant, RegistryObject<Block> log) {
+        this.axisBlock((RotatedPillarBlock)variant.get(), this.blockTexture(variant.get()), this.modLoc("block/" + this.getItemName(log.get()) + "_top"));
+        this.itemModel(variant);
     }
     
     private void cypressBranch(RegistryObject<Block> branch) {

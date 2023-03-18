@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "horizons:redbud_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "redbud_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "horizons:redbud_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "redbud_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "horizons:redbud_slab"
+    ]
+  }
+}

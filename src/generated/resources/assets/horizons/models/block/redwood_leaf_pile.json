@@ -1,5 +1,5 @@
 {
-  "parent": "blueprint:block/tinted_leaf_pile",
+  "parent": "blueprint:block/leaf_pile",
   "render_type": "minecraft:cutout",
   "textures": {
     "all": "horizons:block/redwood_leaves"

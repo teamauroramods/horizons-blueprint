@@ -1,0 +1,25 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "woodworks"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shapeless",
+        "ingredients": [
+          {
+            "item": "horizons:flowering_redbud_leaves"
+          }
+        ],
+        "result": {
+          "count": 4,
+          "item": "horizons:flowering_redbud_leaf_pile"
+        }
+      }
+    }
+  ]
+}

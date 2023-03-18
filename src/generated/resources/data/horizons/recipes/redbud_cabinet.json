@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "type": "forge:mod_loaded",
+          "modid": "farmersdelight"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "key": {
+          "#": {
+            "item": "horizons:redbud_slab"
+          },
+          "T": {
+            "item": "horizons:redbud_trapdoor"
+          }
+        },
+        "pattern": [
+          "###",
+          "T T",
+          "###"
+        ],
+        "result": {
+          "item": "horizons:redbud_cabinet"
+        }
+      }
+    }
+  ]
+}

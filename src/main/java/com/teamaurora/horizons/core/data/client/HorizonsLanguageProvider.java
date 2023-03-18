@@ -5,12 +5,10 @@ import com.teamabnormals.blueprint.common.block.sign.BlueprintStandingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintWallSignBlock;
 import com.teamabnormals.blueprint.core.util.registry.BiomeSubRegistryHelper;
 import com.teamaurora.horizons.core.Horizons;
-import com.teamaurora.horizons.core.data.server.HorizonsLootTableProvider;
 import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
 import com.teamaurora.horizons.core.registry.HorizonsItems;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -41,11 +39,14 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateItem(HorizonsItems.CYPRESS_BOATS.getSecond());
         this.translateItem(HorizonsItems.CYPRESS_FURNACE_BOAT);
         this.translateItem(HorizonsItems.LARGE_CYPRESS_BOAT);
-
         this.translateItem(HorizonsItems.REDWOOD_BOATS.getFirst());
         this.translateItem(HorizonsItems.REDWOOD_BOATS.getSecond());
         this.translateItem(HorizonsItems.REDWOOD_FURNACE_BOAT);
         this.translateItem(HorizonsItems.LARGE_REDWOOD_BOAT);
+        this.translateItem(HorizonsItems.REDBUD_BOATS.getFirst());
+        this.translateItem(HorizonsItems.REDBUD_BOATS.getSecond());
+        this.translateItem(HorizonsItems.REDBUD_FURNACE_BOAT);
+        this.translateItem(HorizonsItems.LARGE_REDBUD_BOAT);
 
         //blocks
         this.translateBlock(HorizonsBlocks.STRIPPED_CYPRESS_LOG);
@@ -79,7 +80,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.CYPRESS_CABINET);
         this.add(HorizonsBlocks.CYPRESS_HEDGE.get(), "Cypress Leaf Hedge");
         this.translateBlock(HorizonsBlocks.CYPRESS_LEAF_CARPET);
-        this.translateBlock(HorizonsBlocks.CYPRESS_LEAF_PILE);
+        this.add(HorizonsBlocks.CYPRESS_LEAF_PILE.get(), "Pile of Cypress Leaves");
         this.translateBlock(HorizonsBlocks.HANGING_CYPRESS_LEAVES);
 
         this.translateBlock(HorizonsBlocks.CYPRESS_KNEE);
@@ -150,7 +151,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.REDWOOD_CABINET);
         this.add(HorizonsBlocks.REDWOOD_HEDGE.get(), "Redwood Leaf Hedge");
         this.translateBlock(HorizonsBlocks.REDWOOD_LEAF_CARPET);
-        this.translateBlock(HorizonsBlocks.REDWOOD_LEAF_PILE);
+        this.add(HorizonsBlocks.REDWOOD_LEAF_PILE.get(), "Pile of Redwood Leaves");
 
         this.translateBlock(HorizonsBlocks.LIGHT_BOULDER);
         this.translateBlock(HorizonsBlocks.LIGHT_BOULDER_SLAB);
@@ -192,6 +193,54 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.POTTED_ORANGE_DAISY);
         this.translateBlock(HorizonsBlocks.POTTED_MAGENTA_DAISY);
         this.translateBlock(HorizonsBlocks.POTTED_BLUE_DAISY);
+
+        this.translateBlock(HorizonsBlocks.STRIPPED_REDBUD_LOG);
+        this.translateBlock(HorizonsBlocks.STRIPPED_REDBUD_WOOD);
+        this.translateBlock(HorizonsBlocks.REDBUD_LOG);
+        this.translateBlock(HorizonsBlocks.REDBUD_WOOD);
+        this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_LOG);
+        this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_WOOD);
+        this.translateBlock(HorizonsBlocks.REDBUD_PLANKS);
+        this.translateBlock(HorizonsBlocks.REDBUD_SLAB);
+        this.translateBlock(HorizonsBlocks.REDBUD_STAIRS);
+        this.translateBlock(HorizonsBlocks.REDBUD_FENCE);
+        this.translateBlock(HorizonsBlocks.REDBUD_FENCE_GATE);
+        this.translateBlock(HorizonsBlocks.REDBUD_PRESSURE_PLATE);
+        this.translateBlock(HorizonsBlocks.REDBUD_DOOR);
+        this.translateBlock(HorizonsBlocks.REDBUD_TRAPDOOR);
+        this.translateBlock(HorizonsBlocks.REDBUD_BUTTON);
+        this.translateSigns(HorizonsBlocks.REDBUD_SIGNS, "redbud");
+        this.translateBlock(HorizonsBlocks.REDBUD_SAPLING);
+        this.translateBlock(HorizonsBlocks.POTTED_REDBUD_SAPLING);
+        this.translateBlock(HorizonsBlocks.BUDDING_REDBUD_SAPLING);
+        this.translateBlock(HorizonsBlocks.POTTED_BUDDING_REDBUD_SAPLING);
+        this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_SAPLING);
+        this.translateBlock(HorizonsBlocks.POTTED_FLOWERING_REDBUD_SAPLING);
+        this.translateBlock(HorizonsBlocks.REDBUD_LEAVES);
+        this.translateBlock(HorizonsBlocks.BUDDING_REDBUD_LEAVES);
+        this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_LEAVES);
+
+        this.translateBlock(HorizonsBlocks.REDBUD_BEEHIVE);
+        this.translateBlock(HorizonsBlocks.REDBUD_LADDER);
+        this.translateBlock(HorizonsBlocks.VERTICAL_REDBUD_PLANKS);
+        this.translateBlock(HorizonsBlocks.REDBUD_BOOKSHELF);
+        this.translateBlock(HorizonsBlocks.REDBUD_BOARDS);
+        this.translateBlock(HorizonsBlocks.REDBUD_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.STRIPPED_REDBUD_POST);
+        this.translateBlock(HorizonsBlocks.REDBUD_POST);
+        this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_POST);
+        this.translateBlock(HorizonsBlocks.REDBUD_CHEST);
+        this.translateBlock(HorizonsBlocks.REDBUD_TRAPPED_CHEST);
+        this.translateBlock(HorizonsBlocks.REDBUD_CABINET);
+        this.add(HorizonsBlocks.REDBUD_HEDGE.get(), "Redbud Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.REDBUD_LEAF_CARPET);
+        this.add(HorizonsBlocks.REDBUD_LEAF_PILE.get(), "Pile of Rudbud Leaves");
+        this.add(HorizonsBlocks.BUDDING_REDBUD_HEDGE.get(), "Budding Redbud Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.BUDDING_REDBUD_LEAF_CARPET);
+        this.add(HorizonsBlocks.BUDDING_REDBUD_LEAF_PILE.get(), "Pile of Budding Redbud Leaves");
+        this.add(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get(), "Flowering Redbud Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET);
+        this.add(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get(), "Pile of Flowering Redbud Leaves");
 
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);

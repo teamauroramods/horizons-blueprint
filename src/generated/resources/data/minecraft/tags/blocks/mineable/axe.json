@@ -26,6 +26,22 @@
     "horizons:stripped_redwood_post",
     "horizons:redwood_beehive",
     "horizons:redwood_boards",
-    "horizons:redwood_cabinet"
+    "horizons:redwood_cabinet",
+    "horizons:redbud_bookshelf",
+    "horizons:redbud_vertical_slab",
+    "horizons:redbud_ladder",
+    "horizons:redbud_hedge",
+    "horizons:redbud_chest",
+    "horizons:redbud_trapped_chest",
+    "horizons:redbud_post",
+    "horizons:stripped_redbud_post",
+    "horizons:redbud_beehive",
+    "horizons:redbud_boards",
+    "horizons:redbud_cabinet",
+    "horizons:flowering_redbud_log",
+    "horizons:flowering_redbud_wood",
+    "horizons:budding_redbud_hedge",
+    "horizons:flowering_redbud_hedge",
+    "horizons:flowering_redbud_post"
   ]
 }

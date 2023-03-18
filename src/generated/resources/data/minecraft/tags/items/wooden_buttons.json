@@ -1,6 +1,7 @@
 {
   "values": [
     "horizons:cypress_button",
-    "horizons:redwood_button"
+    "horizons:redwood_button",
+    "horizons:redbud_button"
   ]
 }

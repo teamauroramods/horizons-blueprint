@@ -1,0 +1,46 @@
+{
+  "advancements": [
+    {
+      "advancement": {
+        "parent": "minecraft:recipes/root",
+        "criteria": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "horizons:vertical_redbud_planks_revert"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_vertical_redbud_planks": {
+            "conditions": {
+              "items": [
+                {
+                  "items": [
+                    "horizons:vertical_redbud_planks"
+                  ]
+                }
+              ]
+            },
+            "trigger": "minecraft:inventory_changed"
+          }
+        },
+        "requirements": [
+          [
+            "has_vertical_redbud_planks",
+            "has_the_recipe"
+          ]
+        ],
+        "rewards": {
+          "recipes": [
+            "horizons:vertical_redbud_planks_revert"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "blueprint:quark_flag",
+          "flag": "vertical_planks"
+        }
+      ]
+    }
+  ]
+}

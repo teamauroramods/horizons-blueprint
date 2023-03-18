@@ -10,7 +10,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
@@ -216,6 +215,55 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropPottedContents(HorizonsBlocks.POTTED_ORANGE_DAISY.get());
             this.dropPottedContents(HorizonsBlocks.POTTED_MAGENTA_DAISY.get());
             this.dropPottedContents(HorizonsBlocks.POTTED_BLUE_DAISY.get());
+
+            this.dropSelf(HorizonsBlocks.STRIPPED_REDBUD_LOG.get());
+            this.dropSelf(HorizonsBlocks.STRIPPED_REDBUD_WOOD.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_LOG.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_WOOD.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_LOG.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_WOOD.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_PLANKS.get());
+            this.add(HorizonsBlocks.REDBUD_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.REDBUD_STAIRS.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_FENCE.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_FENCE_GATE.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_PRESSURE_PLATE.get());
+            this.add(HorizonsBlocks.REDBUD_DOOR.get(), Blocks::createDoorTable);
+            this.dropSelf(HorizonsBlocks.REDBUD_TRAPDOOR.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_BUTTON.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_SIGNS.getFirst().get());
+            this.dropSelf(HorizonsBlocks.REDBUD_SIGNS.getSecond().get());
+            this.dropSelf(HorizonsBlocks.REDBUD_SAPLING.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_REDBUD_SAPLING.get());
+            this.dropSelf(HorizonsBlocks.BUDDING_REDBUD_SAPLING.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_BUDDING_REDBUD_SAPLING.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_SAPLING.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_FLOWERING_REDBUD_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.REDBUD_LEAVES.get(), HorizonsBlocks.REDBUD_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.BUDDING_REDBUD_LEAVES.get(), HorizonsBlocks.REDBUD_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.FLOWERING_REDBUD_LEAVES.get(), HorizonsBlocks.REDBUD_SAPLING.get());
+
+            this.add(HorizonsBlocks.REDBUD_BEEHIVE.get(), Blocks::createBeeHiveDrop);
+            this.dropSelf(HorizonsBlocks.REDBUD_LADDER.get());
+            this.dropSelf(HorizonsBlocks.VERTICAL_REDBUD_PLANKS.get());
+            this.bookshelf(HorizonsBlocks.REDBUD_BOOKSHELF.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_BOARDS.get());
+            this.add(HorizonsBlocks.REDBUD_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.STRIPPED_REDBUD_POST.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_POST.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_POST.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_CHEST.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_TRAPPED_CHEST.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_CABINET.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.REDBUD_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.REDBUD_LEAF_PILE.get());
+            this.dropSelf(HorizonsBlocks.BUDDING_REDBUD_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.BUDDING_REDBUD_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.BUDDING_REDBUD_LEAF_PILE.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get());
         }
 
         private void normalLeaves(Block leaves, Block sapling) {

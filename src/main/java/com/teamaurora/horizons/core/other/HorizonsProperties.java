@@ -13,6 +13,7 @@ import net.minecraft.world.level.material.MaterialColor;
 public final class HorizonsProperties {
     public static final PropertyUtil.WoodSetProperties CYPRESS = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_GREEN).build();
     public static final PropertyUtil.WoodSetProperties REDWOOD = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_RED).build();
+    public static final PropertyUtil.WoodSetProperties REDBUD = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_RED).build();
 
     public static final BlockBehaviour.Properties GOOSEBERRY_SACK = BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_GREEN).strength(0.5F).sound(SoundType.WOOL);
     public static final BlockBehaviour.Properties ALGAE = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(HorizonsSoundTypes.ALGAE).noOcclusion().noCollission();
@@ -24,4 +25,5 @@ public final class HorizonsProperties {
     public static final BlockBehaviour.Properties LILY = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(SoundType.LILY_PAD).noOcclusion();
     public static final BlockBehaviour.Properties GIANT_FERN = BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT).noCollission().instabreak().sound(SoundType.GRASS).offsetType(BlockBehaviour.OffsetType.XZ);
     public static final BlockBehaviour.Properties BOULDER = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
+    public static final BlockBehaviour.Properties BOULDER_BRICKS = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).sound(SoundType.NETHER_BRICKS).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
 }

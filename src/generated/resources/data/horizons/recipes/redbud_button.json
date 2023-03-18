@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "horizons:redbud_planks"
+    }
+  ],
+  "result": {
+    "item": "horizons:redbud_button"
+  }
+}

@@ -1,6 +1,9 @@
 {
   "values": [
     "horizons:cypress_hedge",
-    "horizons:redwood_hedge"
+    "horizons:redwood_hedge",
+    "horizons:redbud_hedge",
+    "horizons:budding_redbud_hedge",
+    "horizons:flowering_redbud_hedge"
   ]
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "horizons:block/redbud_slab"
+    },
+    "type=double": {
+      "model": "horizons:block/redbud_planks"
+    },
+    "type=top": {
+      "model": "horizons:block/redbud_slab_top"
+    }
+  }
+}

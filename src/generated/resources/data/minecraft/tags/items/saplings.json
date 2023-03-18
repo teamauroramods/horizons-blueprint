@@ -1,6 +1,9 @@
 {
   "values": [
     "horizons:cypress_sapling",
-    "horizons:redwood_sapling"
+    "horizons:redwood_sapling",
+    "horizons:redbud_sapling",
+    "horizons:budding_redbud_sapling",
+    "horizons:flowering_redbud_sapling"
   ]
 }

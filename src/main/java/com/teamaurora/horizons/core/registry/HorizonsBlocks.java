@@ -182,11 +182,11 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER_STAIRS = HELPER.createBlock("mossy_dark_boulder_stairs", () -> new StairBlock(MOSSY_DARK_BOULDER.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER_VERTICAL_SLAB = HELPER.createBlock("mossy_dark_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER_WALL = HELPER.createBlock("mossy_dark_boulder_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> BOULDER_BRICKS = HELPER.createBlock("boulder_bricks", () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> BOULDER_BRICK_SLAB = HELPER.createBlock("boulder_brick_slab", () -> new SlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> BOULDER_BRICK_STAIRS = HELPER.createBlock("boulder_brick_stairs", () -> new StairBlock(BOULDER_BRICKS.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> BOULDER_BRICK_VERTICAL_SLAB = HELPER.createBlock("boulder_brick_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> BOULDER_BRICK_WALL = HELPER.createBlock("boulder_brick_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> BOULDER_BRICKS = HELPER.createBlock("boulder_bricks", () -> new Block(HorizonsProperties.BOULDER_BRICKS), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> BOULDER_BRICK_SLAB = HELPER.createBlock("boulder_brick_slab", () -> new SlabBlock(HorizonsProperties.BOULDER_BRICKS), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> BOULDER_BRICK_STAIRS = HELPER.createBlock("boulder_brick_stairs", () -> new StairBlock(BOULDER_BRICKS.get()::defaultBlockState, HorizonsProperties.BOULDER_BRICKS), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> BOULDER_BRICK_VERTICAL_SLAB = HELPER.createBlock("boulder_brick_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER_BRICKS), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> BOULDER_BRICK_WALL = HELPER.createBlock("boulder_brick_wall", () -> new WallBlock(HorizonsProperties.BOULDER_BRICKS), CreativeModeTab.TAB_DECORATIONS);
 
     // Daisy Flowers //
 
@@ -205,4 +205,55 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> POTTED_ORANGE_DAISY = HELPER.createBlockNoItem("potted_orange_daisy", () -> new FlowerPotBlock(ORANGE_DAISY.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_MAGENTA_DAISY = HELPER.createBlockNoItem("potted_magenta_daisy", () -> new FlowerPotBlock(MAGENTA_DAISY.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_BLUE_DAISY = HELPER.createBlockNoItem("potted_blue_daisy", () -> new FlowerPotBlock(BLUE_DAISY.get(), PropertyUtil.flowerPot()));
+
+    // Redbud //
+
+    public static final RegistryObject<Block> STRIPPED_REDBUD_LOG = HELPER.createBlock("stripped_redbud_log", () -> new StrippedLogBlock(HorizonsProperties.REDBUD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_REDBUD_WOOD = HELPER.createBlock("stripped_redbud_wood", () -> new StrippedWoodBlock(HorizonsProperties.REDBUD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_LOG = HELPER.createBlock("redbud_log", () -> new LogBlock(STRIPPED_REDBUD_LOG, HorizonsProperties.REDBUD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_WOOD = HELPER.createBlock("redbud_wood", () -> new WoodBlock(STRIPPED_REDBUD_WOOD, HorizonsProperties.REDBUD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_LOG = HELPER.createBlock("flowering_redbud_log", () -> new LogBlock(STRIPPED_REDBUD_LOG, HorizonsProperties.REDBUD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_WOOD = HELPER.createBlock("flowering_redbud_wood", () -> new WoodBlock(STRIPPED_REDBUD_WOOD, HorizonsProperties.REDBUD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_PLANKS = HELPER.createBlock("redbud_planks", () -> new PlanksBlock(HorizonsProperties.REDBUD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_SLAB = HELPER.createBlock("redbud_slab", () -> new WoodSlabBlock(HorizonsProperties.REDBUD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_STAIRS = HELPER.createBlock("redbud_stairs", () -> new WoodStairBlock(REDBUD_PLANKS.get().defaultBlockState(), HorizonsProperties.REDBUD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_FENCE = HELPER.createFuelBlock("redbud_fence", () -> new WoodFenceBlock(HorizonsProperties.REDBUD.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_FENCE_GATE = HELPER.createFuelBlock("redbud_fence_gate", () -> new WoodFenceGateBlock(HorizonsProperties.REDBUD.planks()), 300, CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDBUD_PRESSURE_PLATE = HELPER.createBlock("redbud_pressure_plate", () -> new WoodPressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, HorizonsProperties.REDBUD.pressurePlate()), CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDBUD_DOOR = HELPER.createBlock("redbud_door", () -> new WoodDoorBlock(HorizonsProperties.REDBUD.door()), CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDBUD_TRAPDOOR = HELPER.createBlock("redbud_trapdoor", () -> new WoodTrapDoorBlock(HorizonsProperties.REDBUD.trapdoor()), CreativeModeTab.TAB_REDSTONE);
+    public static final RegistryObject<Block> REDBUD_BUTTON = HELPER.createBlock("redbud_button", () -> new BlueprintWoodButtonBlock(HorizonsProperties.REDBUD.button()), CreativeModeTab.TAB_REDSTONE);
+    public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> REDBUD_SIGNS = HELPER.createSignBlock("redbud", MaterialColor.COLOR_PURPLE);
+    public static final RegistryObject<Block> REDBUD_SAPLING = HELPER.createBlock("redbud_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> POTTED_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_redbud_sapling", () -> new FlowerPotBlock(REDBUD_SAPLING.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> BUDDING_REDBUD_SAPLING = HELPER.createBlock("budding_redbud_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> POTTED_BUDDING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_budding_redbud_sapling", () -> new FlowerPotBlock(REDBUD_SAPLING.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> FLOWERING_REDBUD_SAPLING = HELPER.createBlock("flowering_redbud_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> POTTED_FLOWERING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_flowering_redbud_sapling", () -> new FlowerPotBlock(REDBUD_SAPLING.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> REDBUD_LEAVES = HELPER.createBlock("redbud_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.REDBUD.leaves()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> BUDDING_REDBUD_LEAVES = HELPER.createBlock("budding_redbud_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.REDBUD.leaves()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_LEAVES = HELPER.createBlock("flowering_redbud_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.REDBUD.leaves()), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> VERTICAL_REDBUD_PLANKS = HELPER.createCompatBlock(HorizonsConstants.QUARK, "vertical_redbud_planks", () -> new Block(HorizonsProperties.REDBUD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_BEEHIVE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "redbud_beehive", () -> new BlueprintBeehiveBlock(HorizonsProperties.REDBUD.beehive()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_LADDER = HELPER.createFuelBlock("redbud_ladder", () -> new BlueprintLadderBlock(HorizonsProperties.REDBUD.ladder()), 300, ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_DECORATIONS : null);
+    public static final RegistryObject<Block> REDBUD_BOOKSHELF = HELPER.createFuelBlock("redbud_bookshelf", () -> new BookshelfBlock(HorizonsProperties.REDBUD.bookshelf()), 300, ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_BUILDING_BLOCKS : null);
+    public static final RegistryObject<Block> REDBUD_BOARDS = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "redbud_boards", () -> new RotatedPillarBlock(HorizonsProperties.REDBUD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDBUD_VERTICAL_SLAB = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "redbud_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.REDBUD.planks()), 150, CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_REDBUD_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "stripped_redbud_post", () -> new WoodPostBlock(HorizonsProperties.REDBUD.post()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "redbud_post", () -> new WoodPostBlock(STRIPPED_REDBUD_POST, HorizonsProperties.REDBUD.post()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "flowering_redbud_post", () -> new WoodPostBlock(STRIPPED_REDBUD_POST, HorizonsProperties.REDBUD.post()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<BlueprintChestBlock> REDBUD_CHEST = HELPER.createChestBlock("redbud", HorizonsProperties.REDBUD.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_DECORATIONS : null);
+    public static final RegistryObject<BlueprintTrappedChestBlock> REDBUD_TRAPPED_CHEST = HELPER.createTrappedChestBlock("redbud", HorizonsProperties.REDBUD.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_REDSTONE : null);
+    public static final RegistryObject<Block> REDBUD_CABINET = HELPER.createCompatFuelBlock(HorizonsConstants.FARMERSDELIGHT, "redbud_cabinet", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.FARMERSDELIGHT) ? HorizonsFDCompat.CABINET_SUPPLIER : () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "redbud_hedge", () -> new HedgeBlock(HorizonsProperties.REDBUD.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "redbud_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.REDBUD.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> REDBUD_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "redbud_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.REDBUD.leafPile()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> BUDDING_REDBUD_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "budding_redbud_hedge", () -> new HedgeBlock(HorizonsProperties.REDBUD.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> BUDDING_REDBUD_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "budding_redbud_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.REDBUD.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> BUDDING_REDBUD_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "budding_redbud_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.REDBUD.leafPile()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "flowering_redbud_hedge", () -> new HedgeBlock(HorizonsProperties.REDBUD.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "flowering_redbud_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.REDBUD.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FLOWERING_REDBUD_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "flowering_redbud_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.REDBUD.leafPile()), CreativeModeTab.TAB_DECORATIONS);
+
 }
