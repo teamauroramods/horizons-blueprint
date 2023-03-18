@@ -80,6 +80,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.post(HorizonsBlocks.CYPRESS_POST, HorizonsBlocks.CYPRESS_LOG);
         this.post(HorizonsBlocks.STRIPPED_CYPRESS_POST, HorizonsBlocks.STRIPPED_CYPRESS_LOG);
         this.chests(HorizonsBlocks.CYPRESS_CHEST, HorizonsBlocks.CYPRESS_TRAPPED_CHEST, HorizonsBlocks.CYPRESS_PLANKS);
+        this.cabinet(HorizonsBlocks.CYPRESS_CABINET);
         this.hangingLeaves(HorizonsBlocks.HANGING_CYPRESS_LEAVES);
 
         this.cypressKnee(HorizonsBlocks.CYPRESS_KNEE);
@@ -463,6 +464,15 @@ public class HorizonsModelProvider extends BlockStateProvider {
                 .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.EAST).addModels(new ConfiguredModel(model, 0, 90, true))
                 .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.WEST).addModels(new ConfiguredModel(model, 0, 270, true))
                 .partialState().with(VerticalSlabBlock.TYPE, VerticalSlabBlock.VerticalSlabType.DOUBLE).addModels(new ConfiguredModel(this.models().getExistingFile(texture)));
+    }
+
+    private void cabinet(RegistryObject<Block> cabinet) {
+        String name = this.getItemName(cabinet.get());
+        ModelFile model = this.models().orientable(name, this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_front"), this.modLoc("block/" + name + "_end"));
+        ModelFile model_open = this.models().orientable(name + "_open", this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_front_open"), this.modLoc("block/" + name + "_end"));
+
+        this.horizontalBlock(cabinet.get(), s -> s.getValue(BlockStateProperties.OPEN) ? model_open : model);
+        this.itemModel(cabinet);
     }
 
     private void doubleBlockNoItem(RegistryObject<Block> block) {

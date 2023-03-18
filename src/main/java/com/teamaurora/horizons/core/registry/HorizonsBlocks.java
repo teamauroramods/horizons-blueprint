@@ -24,11 +24,14 @@ import com.teamaurora.horizons.common.block.cypress.HangingCypressLeavesBlock;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.other.HorizonsConstants;
 import com.teamaurora.horizons.core.other.HorizonsProperties;
+import com.teamaurora.horizons.integration.farmersdelight.HorizonsFDCompat;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.OakTreeGrower;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MaterialColor;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -69,6 +72,7 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> CYPRESS_POST = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "cypress_post", () -> new WoodPostBlock(STRIPPED_CYPRESS_POST, HorizonsProperties.CYPRESS.post()), 300, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<BlueprintChestBlock> CYPRESS_CHEST = HELPER.createChestBlock("cypress", HorizonsProperties.CYPRESS.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_DECORATIONS : null);
     public static final RegistryObject<BlueprintTrappedChestBlock> CYPRESS_TRAPPED_CHEST = HELPER.createTrappedChestBlock("cypress", HorizonsProperties.CYPRESS.chest(), ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.QUARK) || ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.WOODWORKS) ? CreativeModeTab.TAB_REDSTONE : null);
+    public static final RegistryObject<Block> CYPRESS_CABINET = HELPER.createCompatFuelBlock(HorizonsConstants.FARMERSDELIGHT, "cypress_cabinet", ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.FARMERSDELIGHT) ? HorizonsFDCompat.CABINET_SUPPLIER : () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)), 300, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CYPRESS_HEDGE = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "cypress_hedge", () -> new HedgeBlock(HorizonsProperties.CYPRESS.planks()), 300, CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CYPRESS_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "cypress_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.CYPRESS.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> CYPRESS_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "cypress_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.CYPRESS.leafPile()), CreativeModeTab.TAB_DECORATIONS);

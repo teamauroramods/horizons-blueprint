@@ -99,6 +99,7 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.CYPRESS_POST.get());
             this.dropSelf(HorizonsBlocks.CYPRESS_CHEST.get());
             this.dropSelf(HorizonsBlocks.CYPRESS_TRAPPED_CHEST.get());
+            this.dropSelf(HorizonsBlocks.CYPRESS_CABINET.get());
             this.dropSelf(HorizonsBlocks.CYPRESS_HEDGE.get());
             this.dropSelf(HorizonsBlocks.CYPRESS_LEAF_CARPET.get());
             this.leafPile(HorizonsBlocks.CYPRESS_LEAF_PILE.get());

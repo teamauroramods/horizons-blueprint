@@ -45,6 +45,9 @@ public class HorizonsItemTagsProvider extends ItemTagsProvider {
         this.tag(BlueprintItemTags.LARGE_BOATS).add(HorizonsItems.LARGE_CYPRESS_BOAT.get());
         this.tag(BlueprintItemTags.FURNACE_BOATS).add(HorizonsItems.CYPRESS_FURNACE_BOAT.get());
 
+        //farmerdelight
+        this.tag(HorizonsItemTags.WOODEN_CABINETS).add(HorizonsBlocks.CYPRESS_CABINET.get().asItem());
+
         //minecraft
         this.tag(ItemTags.NON_FLAMMABLE_WOOD).add(HorizonsBlocks.CYPRESS_BOARDS.get().asItem());
         this.tag(ItemTags.BOATS).add(HorizonsItems.CYPRESS_BOATS.getFirst().get());
