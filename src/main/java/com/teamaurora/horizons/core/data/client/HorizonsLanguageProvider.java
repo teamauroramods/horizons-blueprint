@@ -41,6 +41,11 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateItem(HorizonsItems.CYPRESS_FURNACE_BOAT);
         this.translateItem(HorizonsItems.LARGE_CYPRESS_BOAT);
 
+        this.translateItem(HorizonsItems.REDWOOD_BOATS.getFirst());
+        this.translateItem(HorizonsItems.REDWOOD_BOATS.getSecond());
+        this.translateItem(HorizonsItems.REDWOOD_FURNACE_BOAT);
+        this.translateItem(HorizonsItems.LARGE_REDWOOD_BOAT);
+
         //blocks
         this.translateBlock(HorizonsBlocks.STRIPPED_CYPRESS_LOG);
         this.translateBlock(HorizonsBlocks.STRIPPED_CYPRESS_WOOD);

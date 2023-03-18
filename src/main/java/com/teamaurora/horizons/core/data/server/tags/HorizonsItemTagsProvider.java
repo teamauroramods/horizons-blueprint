@@ -25,6 +25,7 @@ public class HorizonsItemTagsProvider extends ItemTagsProvider {
     protected void addTags() {
         //horizons
         this.copy(HorizonsBlockTags.CYPRESS_LOGS, HorizonsItemTags.CYPRESS_LOGS);
+        this.copy(HorizonsBlockTags.REDWOOD_LOGS, HorizonsItemTags.REDWOOD_LOGS);
 
         //quark
         this.tag(BlueprintItemTags.BOATABLE_CHESTS).add(HorizonsBlocks.CYPRESS_CHEST.get().asItem(), HorizonsBlocks.REDWOOD_CHEST.get().asItem());

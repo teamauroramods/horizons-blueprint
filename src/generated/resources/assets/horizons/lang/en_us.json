@@ -129,5 +129,9 @@
   "item.horizons.gooseberry_juice": "Gooseberry Juice",
   "item.horizons.gooseberry_pie": "Gooseberry Pie",
   "item.horizons.honey_glazed_gooseberries": "Honey Glazed Gooseberries",
-  "item.horizons.large_cypress_boat": "Large Cypress Boat"
+  "item.horizons.large_cypress_boat": "Large Cypress Boat",
+  "item.horizons.large_redwood_boat": "Large Redwood Boat",
+  "item.horizons.redwood_boat": "Redwood Boat",
+  "item.horizons.redwood_chest_boat": "Redwood Chest Boat",
+  "item.horizons.redwood_furnace_boat": "Redwood Furnace Boat"
 }

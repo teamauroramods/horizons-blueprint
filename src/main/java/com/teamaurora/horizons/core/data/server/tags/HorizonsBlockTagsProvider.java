@@ -53,7 +53,7 @@ public class HorizonsBlockTagsProvider extends BlockTagsProvider {
         this.tag(BlockTags.WALL_SIGNS).add(HorizonsBlocks.CYPRESS_SIGNS.getSecond().get(), HorizonsBlocks.REDWOOD_SIGNS.getSecond().get());
         this.tag(BlockTags.STANDING_SIGNS).add(HorizonsBlocks.CYPRESS_SIGNS.getFirst().get(), HorizonsBlocks.REDWOOD_SIGNS.getFirst().get());
         this.tag(BlockTags.WOODEN_FENCES).add(HorizonsBlocks.CYPRESS_FENCE.get(), HorizonsBlocks.REDWOOD_FENCE.get());
-        //this.tag(BlockTags.LOGS_THAT_BURN).addTag(HorizonsBlockTags.CYPRESS_LOGS).addTag(HorizonsBlockTags.REDWOOD_LOGS); this crashes the game for some fucking reason
+        this.tag(BlockTags.LOGS_THAT_BURN).addTag(HorizonsBlockTags.CYPRESS_LOGS).addTag(HorizonsBlockTags.REDWOOD_LOGS);
         this.tag(BlockTags.LEAVES).addTag(HorizonsBlockTags.CYPRESS_LEAVES).addTag(HorizonsBlockTags.REDWOOD_LEAVES);
         this.tag(BlockTags.CLIMBABLE).add(HorizonsBlocks.CYPRESS_LADDER.get(), HorizonsBlocks.BEARD_MOSS.get());
         this.tag(BlockTags.FENCE_GATES).add(HorizonsBlocks.CYPRESS_FENCE_GATE.get(), HorizonsBlocks.REDWOOD_FENCE_GATE.get());

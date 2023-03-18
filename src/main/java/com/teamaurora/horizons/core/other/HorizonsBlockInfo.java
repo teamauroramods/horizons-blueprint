@@ -83,7 +83,6 @@ public final class HorizonsBlockInfo {
         DataUtil.registerFlammable(HorizonsBlocks.REDWOOD_LEAF_CARPET.get(), 30, 60);
         DataUtil.registerFlammable(HorizonsBlocks.REDWOOD_HEDGE.get(), 5, 20);
         DataUtil.registerFlammable(HorizonsBlocks.REDWOOD_LEAF_PILE.get(), 30, 60);
-        
 
         DataUtil.registerFlammable(HorizonsBlocks.BLUE_LILY.get(), 60, 100);
         DataUtil.registerFlammable(HorizonsBlocks.LIGHT_GRAY_LILY.get(), 60, 100);
