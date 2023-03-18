@@ -280,7 +280,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.JACARANDA_TRAPPED_CHEST);
         this.translateBlock(HorizonsBlocks.JACARANDA_CABINET);
         this.add(HorizonsBlocks.JACARANDA_HEDGE.get(), "Jacaranda Leaf Hedge");
-        
+
         this.translateBlock(HorizonsBlocks.JACARANDA_LEAF_CARPET);
         this.add(HorizonsBlocks.JACARANDA_LEAF_PILE.get(), "Pile of Jacaranda Leaves");
         this.add(HorizonsBlocks.BUDDING_JACARANDA_HEDGE.get(), "Budding Jacaranda Leaf Hedge");
