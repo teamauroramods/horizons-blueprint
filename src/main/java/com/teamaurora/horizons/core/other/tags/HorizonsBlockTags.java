@@ -17,4 +17,7 @@ public final class HorizonsBlockTags {
 
     public static final TagKey<Block> REDBUD_LOGS = TagUtil.blockTag(Horizons.MODID, "redbud_logs");
     public static final TagKey<Block> REDBUD_LEAVES = TagUtil.blockTag(Horizons.MODID, "redbud_leaves");
+
+    public static final TagKey<Block> JACARANDA_LOGS = TagUtil.blockTag(Horizons.MODID, "jacaranda_logs");
+    public static final TagKey<Block> JACARANDA_LEAVES = TagUtil.blockTag(Horizons.MODID, "jacaranda_leaves");
 }

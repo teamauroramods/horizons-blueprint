@@ -2,6 +2,14 @@
   "values": [
     "horizons:cypress_leaf_pile",
     "horizons:redwood_leaf_pile",
-    "horizons:redbud_leaf_pile"
+    "horizons:redbud_leaf_pile",
+    "horizons:budding_redbud_leaf_pile",
+    "horizons:flowering_redbud_leaf_pile",
+    "horizons:jacaranda_leaf_pile",
+    "horizons:budding_jacaranda_leaf_pile",
+    "horizons:flowering_jacaranda_leaf_pile",
+    "horizons:blue_jacaranda_leaf_pile",
+    "horizons:budding_blue_jacaranda_leaf_pile",
+    "horizons:flowering_blue_jacaranda_leaf_pile"
   ]
 }

@@ -4,6 +4,12 @@
     "horizons:redwood_hedge",
     "horizons:redbud_hedge",
     "horizons:budding_redbud_hedge",
-    "horizons:flowering_redbud_hedge"
+    "horizons:flowering_redbud_hedge",
+    "horizons:jacaranda_hedge",
+    "horizons:budding_jacaranda_hedge",
+    "horizons:flowering_jacaranda_hedge",
+    "horizons:blue_jacaranda_hedge",
+    "horizons:budding_blue_jacaranda_hedge",
+    "horizons:flowering_blue_jacaranda_hedge"
   ]
 }

@@ -42,6 +42,22 @@
     "horizons:flowering_redbud_wood",
     "horizons:budding_redbud_hedge",
     "horizons:flowering_redbud_hedge",
-    "horizons:flowering_redbud_post"
+    "horizons:flowering_redbud_post",
+    "horizons:jacaranda_bookshelf",
+    "horizons:jacaranda_vertical_slab",
+    "horizons:jacaranda_ladder",
+    "horizons:jacaranda_hedge",
+    "horizons:jacaranda_chest",
+    "horizons:jacaranda_trapped_chest",
+    "horizons:jacaranda_post",
+    "horizons:stripped_jacaranda_post",
+    "horizons:jacaranda_beehive",
+    "horizons:jacaranda_boards",
+    "horizons:jacaranda_cabinet",
+    "horizons:budding_jacaranda_hedge",
+    "horizons:flowering_jacaranda_hedge",
+    "horizons:blue_jacaranda_hedge",
+    "horizons:budding_blue_jacaranda_hedge",
+    "horizons:flowering_blue_jacaranda_hedge"
   ]
 }

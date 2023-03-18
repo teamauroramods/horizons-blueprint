@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "horizons:jacaranda_slab"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "jacaranda_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "horizons:jacaranda_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "jacaranda_planks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "horizons:jacaranda_slab"
+    ]
+  }
+}

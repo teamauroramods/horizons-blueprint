@@ -2,6 +2,7 @@
   "values": [
     "horizons:cypress_fence",
     "horizons:redwood_fence",
-    "horizons:redbud_fence_gate"
+    "horizons:redbud_fence_gate",
+    "horizons:jacaranda_fence_gate"
   ]
 }
