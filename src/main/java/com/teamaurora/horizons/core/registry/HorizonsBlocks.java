@@ -161,7 +161,7 @@ public class HorizonsBlocks {
 
     // Boulders //
 
-    public static final RegistryObject<Block> LIGHT_BOULDER = HELPER.createBlock("light_boulder", () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> LIGHT_BOULDER = HELPER.createInjectedBlock("light_boulder", Items.COBBLESTONE, () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> LIGHT_BOULDER_SLAB = HELPER.createBlock("light_boulder_slab", () -> new SlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> LIGHT_BOULDER_STAIRS = HELPER.createBlock("light_boulder_stairs", () -> new StairBlock(LIGHT_BOULDER.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> LIGHT_BOULDER_VERTICAL_SLAB = HELPER.createBlock("light_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
@@ -173,7 +173,7 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> MOSSY_LIGHT_BOULDER_VERTICAL_SLAB = HELPER.createBlock("mossy_light_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_LIGHT_BOULDER_WALL = HELPER.createBlock("mossy_light_boulder_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
 
-    public static final RegistryObject<Block> DARK_BOULDER = HELPER.createBlock("dark_boulder", () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> DARK_BOULDER = HELPER.createInjectedBlock("dark_boulder", Items.COBBLESTONE, () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> DARK_BOULDER_SLAB = HELPER.createBlock("dark_boulder_slab", () -> new SlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> DARK_BOULDER_STAIRS = HELPER.createBlock("dark_boulder_stairs", () -> new StairBlock(DARK_BOULDER.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> DARK_BOULDER_VERTICAL_SLAB = HELPER.createBlock("dark_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
