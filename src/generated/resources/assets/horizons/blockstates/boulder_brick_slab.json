@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "horizons:block/boulder_brick_slab"
+    },
+    "type=double": {
+      "model": "horizons:block/boulder_bricks"
+    },
+    "type=top": {
+      "model": "horizons:block/boulder_brick_slab_top"
+    }
+  }
+}

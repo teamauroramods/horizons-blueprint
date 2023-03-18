@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "horizons:block/light_boulder",
+    "side": "horizons:block/light_boulder",
+    "top": "horizons:block/light_boulder"
+  }
+}

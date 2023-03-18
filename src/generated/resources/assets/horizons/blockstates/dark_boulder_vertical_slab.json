@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "type=double": {
+      "model": "horizons:block/dark_boulder"
+    },
+    "type=east": {
+      "model": "horizons:block/dark_boulder_vertical_slab",
+      "uvlock": true,
+      "y": 90
+    },
+    "type=north": {
+      "model": "horizons:block/dark_boulder_vertical_slab",
+      "uvlock": true
+    },
+    "type=south": {
+      "model": "horizons:block/dark_boulder_vertical_slab",
+      "uvlock": true,
+      "y": 180
+    },
+    "type=west": {
+      "model": "horizons:block/dark_boulder_vertical_slab",
+      "uvlock": true,
+      "y": 270
+    }
+  }
+}

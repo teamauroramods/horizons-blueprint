@@ -175,6 +175,32 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.REDWOOD_HEDGE.get());
             this.dropSelf(HorizonsBlocks.REDWOOD_LEAF_CARPET.get());
             this.leafPile(HorizonsBlocks.REDWOOD_LEAF_PILE.get());
+
+            this.dropSelf(HorizonsBlocks.LIGHT_BOULDER.get());
+            this.add(HorizonsBlocks.LIGHT_BOULDER_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.LIGHT_BOULDER_STAIRS.get());
+            this.add(HorizonsBlocks.LIGHT_BOULDER_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.LIGHT_BOULDER_WALL.get());
+            this.dropSelf(HorizonsBlocks.MOSSY_LIGHT_BOULDER.get());
+            this.add(HorizonsBlocks.MOSSY_LIGHT_BOULDER_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.MOSSY_LIGHT_BOULDER_STAIRS.get());
+            this.add(HorizonsBlocks.MOSSY_LIGHT_BOULDER_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.MOSSY_LIGHT_BOULDER_WALL.get());
+            this.dropSelf(HorizonsBlocks.DARK_BOULDER.get());
+            this.add(HorizonsBlocks.DARK_BOULDER_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.DARK_BOULDER_STAIRS.get());
+            this.add(HorizonsBlocks.DARK_BOULDER_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.DARK_BOULDER_WALL.get());
+            this.dropSelf(HorizonsBlocks.MOSSY_DARK_BOULDER.get());
+            this.add(HorizonsBlocks.MOSSY_DARK_BOULDER_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.MOSSY_DARK_BOULDER_STAIRS.get());
+            this.add(HorizonsBlocks.MOSSY_DARK_BOULDER_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.MOSSY_DARK_BOULDER_WALL.get());
+            this.dropSelf(HorizonsBlocks.BOULDER_BRICKS.get());
+            this.add(HorizonsBlocks.BOULDER_BRICK_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.BOULDER_BRICK_STAIRS.get());
+            this.add(HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.BOULDER_BRICK_WALL.get());
         }
 
         private void normalLeaves(Block leaves, Block sapling) {

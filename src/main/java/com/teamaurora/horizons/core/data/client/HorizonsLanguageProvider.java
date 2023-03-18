@@ -5,6 +5,7 @@ import com.teamabnormals.blueprint.common.block.sign.BlueprintStandingSignBlock;
 import com.teamabnormals.blueprint.common.block.sign.BlueprintWallSignBlock;
 import com.teamabnormals.blueprint.core.util.registry.BiomeSubRegistryHelper;
 import com.teamaurora.horizons.core.Horizons;
+import com.teamaurora.horizons.core.data.server.HorizonsLootTableProvider;
 import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
 import com.teamaurora.horizons.core.registry.HorizonsItems;
@@ -144,6 +145,32 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add(HorizonsBlocks.REDWOOD_HEDGE.get(), "Redwood Leaf Hedge");
         this.translateBlock(HorizonsBlocks.REDWOOD_LEAF_CARPET);
         this.translateBlock(HorizonsBlocks.REDWOOD_LEAF_PILE);
+
+        this.translateBlock(HorizonsBlocks.LIGHT_BOULDER);
+        this.translateBlock(HorizonsBlocks.LIGHT_BOULDER_SLAB);
+        this.translateBlock(HorizonsBlocks.LIGHT_BOULDER_STAIRS);
+        this.translateBlock(HorizonsBlocks.LIGHT_BOULDER_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.LIGHT_BOULDER_WALL);
+        this.translateBlock(HorizonsBlocks.MOSSY_LIGHT_BOULDER);
+        this.translateBlock(HorizonsBlocks.MOSSY_LIGHT_BOULDER_SLAB);
+        this.translateBlock(HorizonsBlocks.MOSSY_LIGHT_BOULDER_STAIRS);
+        this.translateBlock(HorizonsBlocks.MOSSY_LIGHT_BOULDER_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.MOSSY_LIGHT_BOULDER_WALL);
+        this.translateBlock(HorizonsBlocks.DARK_BOULDER);
+        this.translateBlock(HorizonsBlocks.DARK_BOULDER_SLAB);
+        this.translateBlock(HorizonsBlocks.DARK_BOULDER_STAIRS);
+        this.translateBlock(HorizonsBlocks.DARK_BOULDER_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.DARK_BOULDER_WALL);
+        this.translateBlock(HorizonsBlocks.MOSSY_DARK_BOULDER);
+        this.translateBlock(HorizonsBlocks.MOSSY_DARK_BOULDER_SLAB);
+        this.translateBlock(HorizonsBlocks.MOSSY_DARK_BOULDER_STAIRS);
+        this.translateBlock(HorizonsBlocks.MOSSY_DARK_BOULDER_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.MOSSY_DARK_BOULDER_WALL);
+        this.translateBlock(HorizonsBlocks.BOULDER_BRICKS);
+        this.translateBlock(HorizonsBlocks.BOULDER_BRICK_SLAB);
+        this.translateBlock(HorizonsBlocks.BOULDER_BRICK_STAIRS);
+        this.translateBlock(HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.BOULDER_BRICK_WALL);
 
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);

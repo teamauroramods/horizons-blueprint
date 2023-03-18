@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "horizons:block/boulder_bricks",
+    "side": "horizons:block/boulder_bricks",
+    "top": "horizons:block/boulder_bricks"
+  }
+}

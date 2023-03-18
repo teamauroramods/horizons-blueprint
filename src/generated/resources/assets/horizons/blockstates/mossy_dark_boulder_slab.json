@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "horizons:block/mossy_dark_boulder_slab"
+    },
+    "type=double": {
+      "model": "horizons:block/mossy_dark_boulder"
+    },
+    "type=top": {
+      "model": "horizons:block/mossy_dark_boulder_slab_top"
+    }
+  }
+}

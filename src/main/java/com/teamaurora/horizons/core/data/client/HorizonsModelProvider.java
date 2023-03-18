@@ -145,6 +145,32 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.post(HorizonsBlocks.STRIPPED_REDWOOD_POST, HorizonsBlocks.STRIPPED_REDWOOD_LOG);
         this.chests(HorizonsBlocks.REDWOOD_CHEST, HorizonsBlocks.REDWOOD_TRAPPED_CHEST, HorizonsBlocks.REDWOOD_PLANKS);
         //this.cabinet(HorizonsBlocks.REDWOOD_CABINET);
+
+        this.cubeAll(HorizonsBlocks.LIGHT_BOULDER);
+        this.slab(HorizonsBlocks.LIGHT_BOULDER_SLAB, HorizonsBlocks.LIGHT_BOULDER);
+        this.stairs(HorizonsBlocks.LIGHT_BOULDER_STAIRS, HorizonsBlocks.LIGHT_BOULDER);
+        this.verticalSlab(HorizonsBlocks.LIGHT_BOULDER_VERTICAL_SLAB, HorizonsBlocks.LIGHT_BOULDER);
+        this.wall(HorizonsBlocks.LIGHT_BOULDER_WALL, HorizonsBlocks.LIGHT_BOULDER);
+        this.cubeAll(HorizonsBlocks.MOSSY_LIGHT_BOULDER);
+        this.slab(HorizonsBlocks.MOSSY_LIGHT_BOULDER_SLAB, HorizonsBlocks.MOSSY_LIGHT_BOULDER);
+        this.stairs(HorizonsBlocks.MOSSY_LIGHT_BOULDER_STAIRS, HorizonsBlocks.MOSSY_LIGHT_BOULDER);
+        this.verticalSlab(HorizonsBlocks.MOSSY_LIGHT_BOULDER_VERTICAL_SLAB, HorizonsBlocks.MOSSY_LIGHT_BOULDER);
+        this.wall(HorizonsBlocks.MOSSY_LIGHT_BOULDER_WALL, HorizonsBlocks.MOSSY_LIGHT_BOULDER);
+        this.cubeAll(HorizonsBlocks.DARK_BOULDER);
+        this.slab(HorizonsBlocks.DARK_BOULDER_SLAB, HorizonsBlocks.DARK_BOULDER);
+        this.stairs(HorizonsBlocks.DARK_BOULDER_STAIRS, HorizonsBlocks.DARK_BOULDER);
+        this.verticalSlab(HorizonsBlocks.DARK_BOULDER_VERTICAL_SLAB, HorizonsBlocks.DARK_BOULDER);
+        this.wall(HorizonsBlocks.DARK_BOULDER_WALL, HorizonsBlocks.DARK_BOULDER);
+        this.cubeAll(HorizonsBlocks.MOSSY_DARK_BOULDER);
+        this.slab(HorizonsBlocks.MOSSY_DARK_BOULDER_SLAB, HorizonsBlocks.MOSSY_DARK_BOULDER);
+        this.stairs(HorizonsBlocks.MOSSY_DARK_BOULDER_STAIRS, HorizonsBlocks.MOSSY_DARK_BOULDER);
+        this.verticalSlab(HorizonsBlocks.MOSSY_DARK_BOULDER_VERTICAL_SLAB, HorizonsBlocks.MOSSY_DARK_BOULDER);
+        this.wall(HorizonsBlocks.MOSSY_DARK_BOULDER_WALL, HorizonsBlocks.MOSSY_DARK_BOULDER);
+        this.cubeAll(HorizonsBlocks.BOULDER_BRICKS);
+        this.slab(HorizonsBlocks.BOULDER_BRICK_SLAB, HorizonsBlocks.BOULDER_BRICKS);
+        this.stairs(HorizonsBlocks.BOULDER_BRICK_STAIRS, HorizonsBlocks.BOULDER_BRICKS);
+        this.verticalSlab(HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB, HorizonsBlocks.BOULDER_BRICKS);
+        this.wall(HorizonsBlocks.BOULDER_BRICK_WALL, HorizonsBlocks.BOULDER_BRICKS);
     }
 
     // Specific Block Generators //
@@ -517,6 +543,12 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.getVariantBuilder(block.get())
                 .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER).addModels(new ConfiguredModel(model.apply("top")))
                 .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(model.apply("bottom")));
+    }
+
+    private void wall(RegistryObject<? extends Block> wall, Supplier<? extends Block> textureBlock) {
+        ResourceLocation texture = this.blockTexture(textureBlock.get());
+        this.wallBlock((WallBlock) wall.get(), texture);
+        this.itemModels().wallInventory(this.getItemName(wall.get()), texture);
     }
 
     // Misc Util //

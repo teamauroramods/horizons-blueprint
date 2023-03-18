@@ -1,6 +1,8 @@
 {
   "values": [
     "horizons:cypress_planks",
-    "horizons:vertical_cypress_planks"
+    "horizons:vertical_cypress_planks",
+    "horizons:redwood_planks",
+    "horizons:vertical_redwood_planks"
   ]
 }

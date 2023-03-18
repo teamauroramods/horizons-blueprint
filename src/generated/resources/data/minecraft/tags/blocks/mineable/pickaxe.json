@@ -1,0 +1,29 @@
+{
+  "values": [
+    "horizons:light_boulder",
+    "horizons:light_boulder_slab",
+    "horizons:light_boulder_stairs",
+    "horizons:light_boulder_vertical_slab",
+    "horizons:light_boulder_wall",
+    "horizons:mossy_light_boulder",
+    "horizons:mossy_light_boulder_slab",
+    "horizons:mossy_light_boulder_stairs",
+    "horizons:mossy_light_boulder_vertical_slab",
+    "horizons:mossy_light_boulder_wall",
+    "horizons:dark_boulder",
+    "horizons:dark_boulder_slab",
+    "horizons:dark_boulder_stairs",
+    "horizons:dark_boulder_vertical_slab",
+    "horizons:dark_boulder_wall",
+    "horizons:mossy_dark_boulder",
+    "horizons:mossy_dark_boulder_slab",
+    "horizons:mossy_dark_boulder_stairs",
+    "horizons:mossy_dark_boulder_vertical_slab",
+    "horizons:mossy_dark_boulder_wall",
+    "horizons:boulder_bricks",
+    "horizons:boulder_brick_slab",
+    "horizons:boulder_brick_stairs",
+    "horizons:boulder_brick_vertical_slab",
+    "horizons:boulder_brick_wall"
+  ]
+}
