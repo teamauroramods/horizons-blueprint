@@ -4,7 +4,13 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_redwood_vertical_planks": {
+          "has_the_recipe": {
+            "conditions": {
+              "recipe": "horizons:vertical_redwood_planks_revert"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+          },
+          "has_vertical_redwood_planks": {
             "conditions": {
               "items": [
                 {
@@ -15,17 +21,11 @@
               ]
             },
             "trigger": "minecraft:inventory_changed"
-          },
-          "has_the_recipe": {
-            "conditions": {
-              "recipe": "horizons:vertical_redwood_planks_revert"
-            },
-            "trigger": "minecraft:recipe_unlocked"
           }
         },
         "requirements": [
           [
-            "has_redwood_vertical_planks",
+            "has_vertical_redwood_planks",
             "has_the_recipe"
           ]
         ],

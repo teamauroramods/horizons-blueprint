@@ -4,7 +4,7 @@
       "advancement": {
         "parent": "minecraft:recipes/root",
         "criteria": {
-          "has_leaves": {
+          "has_redwood_leaves": {
             "conditions": {
               "items": [
                 {
@@ -25,7 +25,7 @@
         },
         "requirements": [
           [
-            "has_leaves",
+            "has_redwood_leaves",
             "has_the_recipe"
           ]
         ],

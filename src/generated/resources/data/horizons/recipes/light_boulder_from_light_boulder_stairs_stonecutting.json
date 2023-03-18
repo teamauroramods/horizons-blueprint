@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "horizons:light_boulder"
+  },
+  "result": "horizons:light_boulder_stairs"
+}

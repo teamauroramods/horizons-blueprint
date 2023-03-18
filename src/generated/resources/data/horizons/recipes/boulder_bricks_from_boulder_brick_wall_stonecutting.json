@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "horizons:boulder_bricks"
+  },
+  "result": "horizons:boulder_brick_wall"
+}

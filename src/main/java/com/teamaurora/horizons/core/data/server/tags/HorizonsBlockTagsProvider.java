@@ -29,7 +29,7 @@ public class HorizonsBlockTagsProvider extends BlockTagsProvider {
         this.tag(HorizonsBlockTags.REDWOOD_LEAVES).add(HorizonsBlocks.REDWOOD_LEAVES.get());
 
         //quark
-        this.tag(BlueprintBlockTags.VERTICAL_SLABS).add(HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB.get());
+        this.tag(BlueprintBlockTags.VERTICAL_SLABS).add(HorizonsBlocks.ALGAE_THATCH_VERTICAL_SLAB.get(), HorizonsBlocks.LIGHT_BOULDER_VERTICAL_SLAB.get(), HorizonsBlocks.DARK_BOULDER_VERTICAL_SLAB.get(), HorizonsBlocks.MOSSY_LIGHT_BOULDER_VERTICAL_SLAB.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_VERTICAL_SLAB.get(), HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB.get());
         this.tag(BlueprintBlockTags.WOODEN_VERTICAL_SLABS).add(HorizonsBlocks.CYPRESS_VERTICAL_SLAB.get(), HorizonsBlocks.REDWOOD_VERTICAL_SLAB.get());
         this.tag(BlueprintBlockTags.HEDGES).add(HorizonsBlocks.CYPRESS_HEDGE.get(), HorizonsBlocks.REDWOOD_HEDGE.get());
         this.tag(BlueprintBlockTags.LADDERS).add(HorizonsBlocks.CYPRESS_LADDER.get(), HorizonsBlocks.REDWOOD_LADDER.get());
@@ -42,6 +42,9 @@ public class HorizonsBlockTagsProvider extends BlockTagsProvider {
         this.tag(Tags.Blocks.CHESTS_TRAPPED).add(HorizonsBlocks.CYPRESS_TRAPPED_CHEST.get(), HorizonsBlocks.REDWOOD_TRAPPED_CHEST.get());
 
         //minecraft
+        this.tag(BlockTags.SLABS).add(HorizonsBlocks.ALGAE_THATCH_SLAB.get(), HorizonsBlocks.LIGHT_BOULDER_SLAB.get(), HorizonsBlocks.DARK_BOULDER_SLAB.get(), HorizonsBlocks.MOSSY_LIGHT_BOULDER_SLAB.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_SLAB.get(), HorizonsBlocks.BOULDER_BRICK_SLAB.get());
+        this.tag(BlockTags.STAIRS).add(HorizonsBlocks.ALGAE_THATCH_STAIRS.get(), HorizonsBlocks.LIGHT_BOULDER_STAIRS.get(), HorizonsBlocks.DARK_BOULDER_STAIRS.get(), HorizonsBlocks.MOSSY_LIGHT_BOULDER_STAIRS.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_STAIRS.get(), HorizonsBlocks.BOULDER_BRICK_STAIRS.get());
+        this.tag(BlockTags.WALLS).add(HorizonsBlocks.LIGHT_BOULDER_WALL.get(), HorizonsBlocks.DARK_BOULDER_WALL.get(), HorizonsBlocks.MOSSY_LIGHT_BOULDER_WALL.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_WALL.get(), HorizonsBlocks.BOULDER_BRICK_WALL.get());
         this.tag(BlockTags.BEEHIVES).add(HorizonsBlocks.CYPRESS_BEEHIVE.get(), HorizonsBlocks.REDWOOD_BEEHIVE.get());
         this.tag(BlockTags.WOODEN_BUTTONS).add(HorizonsBlocks.CYPRESS_BUTTON.get(), HorizonsBlocks.REDWOOD_BUTTON.get());
         this.tag(BlockTags.WOODEN_PRESSURE_PLATES).add(HorizonsBlocks.CYPRESS_PRESSURE_PLATE.get(), HorizonsBlocks.REDWOOD_PRESSURE_PLATE.get());

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "D": {
+      "item": "horizons:dark_boulder"
+    },
+    "L": {
+      "item": "horizons:light_boulder"
+    }
+  },
+  "pattern": [
+    "LD",
+    "DL"
+  ],
+  "result": {
+    "count": 4,
+    "item": "horizons:boulder_bricks"
+  }
+}
