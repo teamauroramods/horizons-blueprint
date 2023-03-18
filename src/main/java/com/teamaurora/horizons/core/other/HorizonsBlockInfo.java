@@ -30,6 +30,14 @@ public final class HorizonsBlockInfo {
         DataUtil.registerCompostable(HorizonsBlocks.PINK_LILY.get(), .65f);
         DataUtil.registerCompostable(HorizonsBlocks.PURPLE_LILY.get(), .65f);
         DataUtil.registerCompostable(HorizonsBlocks.WHITE_LILY.get(), .65f);
+
+        DataUtil.registerCompostable(HorizonsBlocks.YELLOW_DAISY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.RED_DAISY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.PURPLE_DAISY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.PINK_DAISY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.ORANGE_DAISY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.MAGENTA_DAISY.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.BLUE_DAISY.get(), .65f);
     }
 
     public static void registerFlammables() {
@@ -92,6 +100,14 @@ public final class HorizonsBlockInfo {
         DataUtil.registerFlammable(HorizonsBlocks.PINK_LILY.get(), 60, 100);
         DataUtil.registerFlammable(HorizonsBlocks.PURPLE_LILY.get(), 60, 100);
         DataUtil.registerFlammable(HorizonsBlocks.WHITE_LILY.get(), 60, 100);
+
+        DataUtil.registerFlammable(HorizonsBlocks.YELLOW_DAISY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.RED_DAISY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.PURPLE_DAISY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.PINK_DAISY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.ORANGE_DAISY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.MAGENTA_DAISY.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.BLUE_DAISY.get(), 60, 100);
     }
 
 }

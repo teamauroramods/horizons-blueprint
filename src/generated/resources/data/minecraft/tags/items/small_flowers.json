@@ -7,6 +7,13 @@
     "horizons:magenta_lily",
     "horizons:pink_lily",
     "horizons:purple_lily",
-    "horizons:white_lily"
+    "horizons:white_lily",
+    "horizons:yellow_daisy",
+    "horizons:red_daisy",
+    "horizons:purple_daisy",
+    "horizons:pink_daisy",
+    "horizons:orange_daisy",
+    "horizons:magenta_daisy",
+    "horizons:blue_daisy"
   ]
 }
