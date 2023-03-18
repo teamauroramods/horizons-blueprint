@@ -1,6 +1,8 @@
 {
   "values": [
     "horizons:cypress_furnace_boat",
-    "horizons:cypress_furnace_boat"
+    "horizons:redwood_furnace_boat",
+    "horizons:redbud_furnace_boat",
+    "horizons:jacaranda_furnace_boat"
   ]
 }

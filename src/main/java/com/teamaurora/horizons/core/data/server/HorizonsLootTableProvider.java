@@ -264,6 +264,62 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get());
             this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET.get());
             this.leafPile(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get());
+
+            this.dropSelf(HorizonsBlocks.STRIPPED_JACARANDA_LOG.get());
+            this.dropSelf(HorizonsBlocks.STRIPPED_JACARANDA_WOOD.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_LOG.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_WOOD.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_PLANKS.get());
+            this.add(HorizonsBlocks.JACARANDA_SLAB.get(), Blocks::createSlabItemTable);
+            this.dropSelf(HorizonsBlocks.JACARANDA_STAIRS.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_FENCE.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_FENCE_GATE.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_PRESSURE_PLATE.get());
+            this.add(HorizonsBlocks.JACARANDA_DOOR.get(), Blocks::createDoorTable);
+            this.dropSelf(HorizonsBlocks.JACARANDA_TRAPDOOR.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_BUTTON.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_SIGNS.getFirst().get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_SIGNS.getSecond().get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_SAPLING.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_JACARANDA_SAPLING.get());
+            this.dropSelf(HorizonsBlocks.BLUE_JACARANDA_SAPLING.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_BLUE_JACARANDA_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.JACARANDA_LEAVES.get(), HorizonsBlocks.JACARANDA_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.BUDDING_JACARANDA_LEAVES.get(), HorizonsBlocks.JACARANDA_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.FLOWERING_JACARANDA_LEAVES.get(), HorizonsBlocks.JACARANDA_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.BLUE_JACARANDA_LEAVES.get(), HorizonsBlocks.BLUE_JACARANDA_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES.get(), HorizonsBlocks.BLUE_JACARANDA_SAPLING.get());
+            this.normalLeaves(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES.get(), HorizonsBlocks.BLUE_JACARANDA_SAPLING.get());
+
+            this.add(HorizonsBlocks.JACARANDA_BEEHIVE.get(), Blocks::createBeeHiveDrop);
+            this.dropSelf(HorizonsBlocks.JACARANDA_LADDER.get());
+            this.dropSelf(HorizonsBlocks.VERTICAL_JACARANDA_PLANKS.get());
+            this.bookshelf(HorizonsBlocks.JACARANDA_BOOKSHELF.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_BOARDS.get());
+            this.add(HorizonsBlocks.JACARANDA_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
+            this.dropSelf(HorizonsBlocks.STRIPPED_JACARANDA_POST.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_POST.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_CHEST.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_TRAPPED_CHEST.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_CABINET.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.JACARANDA_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.JACARANDA_LEAF_PILE.get());
+            this.dropSelf(HorizonsBlocks.BUDDING_JACARANDA_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.BUDDING_JACARANDA_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.BUDDING_JACARANDA_LEAF_PILE.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_JACARANDA_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_PILE.get());
+            this.dropSelf(HorizonsBlocks.BLUE_JACARANDA_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.BLUE_JACARANDA_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.BLUE_JACARANDA_LEAF_PILE.get());
+            this.dropSelf(HorizonsBlocks.BUDDING_BLUE_JACARANDA_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_PILE.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_HEDGE.get());
+            this.dropSelf(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_CARPET.get());
+            this.leafPile(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_PILE.get());
         }
 
         private void normalLeaves(Block leaves, Block sapling) {

@@ -14,6 +14,7 @@ public final class HorizonsProperties {
     public static final PropertyUtil.WoodSetProperties CYPRESS = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_GREEN).build();
     public static final PropertyUtil.WoodSetProperties REDWOOD = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_RED).build();
     public static final PropertyUtil.WoodSetProperties REDBUD = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_RED).build();
+    public static final PropertyUtil.WoodSetProperties JACARANDA = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_PURPLE).build();
 
     public static final BlockBehaviour.Properties GOOSEBERRY_SACK = BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_GREEN).strength(0.5F).sound(SoundType.WOOL);
     public static final BlockBehaviour.Properties ALGAE = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(HorizonsSoundTypes.ALGAE).noOcclusion().noCollission();

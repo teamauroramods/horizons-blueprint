@@ -234,13 +234,71 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.REDBUD_CABINET);
         this.add(HorizonsBlocks.REDBUD_HEDGE.get(), "Redbud Leaf Hedge");
         this.translateBlock(HorizonsBlocks.REDBUD_LEAF_CARPET);
-        this.add(HorizonsBlocks.REDBUD_LEAF_PILE.get(), "Pile of Rudbud Leaves");
+        this.add(HorizonsBlocks.REDBUD_LEAF_PILE.get(), "Pile of Redbud Leaves");
         this.add(HorizonsBlocks.BUDDING_REDBUD_HEDGE.get(), "Budding Redbud Leaf Hedge");
         this.translateBlock(HorizonsBlocks.BUDDING_REDBUD_LEAF_CARPET);
         this.add(HorizonsBlocks.BUDDING_REDBUD_LEAF_PILE.get(), "Pile of Budding Redbud Leaves");
         this.add(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get(), "Flowering Redbud Leaf Hedge");
         this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET);
         this.add(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get(), "Pile of Flowering Redbud Leaves");
+
+        this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_LOG);
+        this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_WOOD);
+        this.translateBlock(HorizonsBlocks.JACARANDA_LOG);
+        this.translateBlock(HorizonsBlocks.JACARANDA_WOOD);
+
+        this.translateBlock(HorizonsBlocks.JACARANDA_PLANKS);
+        this.translateBlock(HorizonsBlocks.JACARANDA_SLAB);
+        this.translateBlock(HorizonsBlocks.JACARANDA_STAIRS);
+        this.translateBlock(HorizonsBlocks.JACARANDA_FENCE);
+        this.translateBlock(HorizonsBlocks.JACARANDA_FENCE_GATE);
+        this.translateBlock(HorizonsBlocks.JACARANDA_PRESSURE_PLATE);
+        this.translateBlock(HorizonsBlocks.JACARANDA_DOOR);
+        this.translateBlock(HorizonsBlocks.JACARANDA_TRAPDOOR);
+        this.translateBlock(HorizonsBlocks.JACARANDA_BUTTON);
+        this.translateSigns(HorizonsBlocks.JACARANDA_SIGNS, "jacaranda");
+        this.translateBlock(HorizonsBlocks.JACARANDA_SAPLING);
+        this.translateBlock(HorizonsBlocks.POTTED_JACARANDA_SAPLING);
+        this.translateBlock(HorizonsBlocks.BLUE_JACARANDA_SAPLING);
+        this.translateBlock(HorizonsBlocks.POTTED_BLUE_JACARANDA_SAPLING);
+        this.translateBlock(HorizonsBlocks.JACARANDA_LEAVES);
+        this.translateBlock(HorizonsBlocks.BUDDING_JACARANDA_LEAVES);
+        this.translateBlock(HorizonsBlocks.FLOWERING_JACARANDA_LEAVES);
+        this.translateBlock(HorizonsBlocks.BLUE_JACARANDA_LEAVES);
+        this.translateBlock(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES);
+        this.translateBlock(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES);
+
+        this.translateBlock(HorizonsBlocks.JACARANDA_BEEHIVE);
+        this.translateBlock(HorizonsBlocks.JACARANDA_LADDER);
+        this.translateBlock(HorizonsBlocks.VERTICAL_JACARANDA_PLANKS);
+        this.translateBlock(HorizonsBlocks.JACARANDA_BOOKSHELF);
+        this.translateBlock(HorizonsBlocks.JACARANDA_BOARDS);
+        this.translateBlock(HorizonsBlocks.JACARANDA_VERTICAL_SLAB);
+        this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_POST);
+        this.translateBlock(HorizonsBlocks.JACARANDA_POST);
+        this.translateBlock(HorizonsBlocks.JACARANDA_CHEST);
+        this.translateBlock(HorizonsBlocks.JACARANDA_TRAPPED_CHEST);
+        this.translateBlock(HorizonsBlocks.JACARANDA_CABINET);
+        this.add(HorizonsBlocks.JACARANDA_HEDGE.get(), "Jacaranda Leaf Hedge");
+        
+        this.translateBlock(HorizonsBlocks.JACARANDA_LEAF_CARPET);
+        this.add(HorizonsBlocks.JACARANDA_LEAF_PILE.get(), "Pile of Jacaranda Leaves");
+        this.add(HorizonsBlocks.BUDDING_JACARANDA_HEDGE.get(), "Budding Jacaranda Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.BUDDING_JACARANDA_LEAF_CARPET);
+        this.add(HorizonsBlocks.BUDDING_JACARANDA_LEAF_PILE.get(), "Pile of Budding Jacaranda Leaves");
+        this.add(HorizonsBlocks.FLOWERING_JACARANDA_HEDGE.get(), "Flowering Jacaranda Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_CARPET);
+        this.add(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_PILE.get(), "Pile of Flowering Jacaranda Leaves");
+
+        this.add(HorizonsBlocks.BLUE_JACARANDA_HEDGE.get(), "Blue Jacaranda Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.BLUE_JACARANDA_LEAF_CARPET);
+        this.add(HorizonsBlocks.BLUE_JACARANDA_LEAF_PILE.get(), "Pile of Blue Jacaranda Leaves");
+        this.add(HorizonsBlocks.BUDDING_BLUE_JACARANDA_HEDGE.get(), "Budding Blue Jacaranda Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_CARPET);
+        this.add(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_PILE.get(), "Pile of Budding Blue Jacaranda Leaves");
+        this.add(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_HEDGE.get(), "Flowering Blue Jacaranda Leaf Hedge");
+        this.translateBlock(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_CARPET);
+        this.add(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_PILE.get(), "Pile of Flowering Blue Jacaranda Leaves");
 
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);

@@ -57,6 +57,10 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.generatedItem(HorizonsItems.REDBUD_BOATS.getSecond().get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.REDBUD_FURNACE_BOAT.get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.LARGE_REDBUD_BOAT.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.JACARANDA_BOATS.getFirst().get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.JACARANDA_BOATS.getSecond().get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.JACARANDA_FURNACE_BOAT.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.LARGE_JACARANDA_BOAT.get(), TextureFolder.Item);
 
         //block states
         this.log(HorizonsBlocks.STRIPPED_CYPRESS_LOG);
@@ -227,6 +231,58 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.post(HorizonsBlocks.FLOWERING_REDBUD_POST, HorizonsBlocks.FLOWERING_REDBUD_LOG);
         this.chests(HorizonsBlocks.REDBUD_CHEST, HorizonsBlocks.REDBUD_TRAPPED_CHEST, HorizonsBlocks.REDBUD_PLANKS);
         this.cabinet(HorizonsBlocks.REDBUD_CABINET);
+
+        this.log(HorizonsBlocks.STRIPPED_JACARANDA_LOG);
+        this.cubeAll(HorizonsBlocks.STRIPPED_JACARANDA_WOOD, this.blockTexture(HorizonsBlocks.STRIPPED_JACARANDA_LOG.get()));
+        this.log(HorizonsBlocks.JACARANDA_LOG);
+        this.cubeAll(HorizonsBlocks.JACARANDA_WOOD, this.blockTexture(HorizonsBlocks.JACARANDA_LOG.get()));
+        this.cubeAll(HorizonsBlocks.JACARANDA_PLANKS);
+        this.slab(HorizonsBlocks.JACARANDA_SLAB, HorizonsBlocks.JACARANDA_PLANKS);
+        this.stairs(HorizonsBlocks.JACARANDA_STAIRS, HorizonsBlocks.JACARANDA_PLANKS);
+        this.fence(HorizonsBlocks.JACARANDA_FENCE, HorizonsBlocks.JACARANDA_PLANKS);
+        this.fenceGate(HorizonsBlocks.JACARANDA_FENCE_GATE, HorizonsBlocks.JACARANDA_PLANKS);
+        this.pressurePlate(HorizonsBlocks.JACARANDA_PRESSURE_PLATE, HorizonsBlocks.JACARANDA_PLANKS);
+        this.door(HorizonsBlocks.JACARANDA_DOOR);
+        this.trapdoor(HorizonsBlocks.JACARANDA_TRAPDOOR);
+        this.button(HorizonsBlocks.JACARANDA_BUTTON, HorizonsBlocks.JACARANDA_PLANKS);
+        this.signs(HorizonsBlocks.JACARANDA_SIGNS, HorizonsBlocks.JACARANDA_PLANKS);
+        this.pottedPlant(HorizonsBlocks.JACARANDA_SAPLING, HorizonsBlocks.POTTED_JACARANDA_SAPLING);
+        this.pottedPlant(HorizonsBlocks.BLUE_JACARANDA_SAPLING, HorizonsBlocks.POTTED_BLUE_JACARANDA_SAPLING);
+        this.leaves(HorizonsBlocks.JACARANDA_LEAVES);
+        this.leaves(HorizonsBlocks.BUDDING_JACARANDA_LEAVES);
+        this.leaves(HorizonsBlocks.FLOWERING_JACARANDA_LEAVES);
+        this.leaves(HorizonsBlocks.BLUE_JACARANDA_LEAVES);
+        this.leaves(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES);
+        this.leaves(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES);
+
+        this.beehive(HorizonsBlocks.JACARANDA_BEEHIVE);
+        this.hedge(HorizonsBlocks.JACARANDA_HEDGE, HorizonsBlocks.JACARANDA_LEAVES, HorizonsBlocks.JACARANDA_LOG);
+        this.leafCarpet(HorizonsBlocks.JACARANDA_LEAF_CARPET, HorizonsBlocks.JACARANDA_LEAVES);
+        this.leafPile(HorizonsBlocks.JACARANDA_LEAF_PILE, HorizonsBlocks.JACARANDA_LEAVES, false);
+        this.hedge(HorizonsBlocks.BUDDING_JACARANDA_HEDGE, HorizonsBlocks.BUDDING_JACARANDA_LEAVES, HorizonsBlocks.JACARANDA_LOG);
+        this.leafCarpet(HorizonsBlocks.BUDDING_JACARANDA_LEAF_CARPET, HorizonsBlocks.BUDDING_JACARANDA_LEAVES);
+        this.leafPile(HorizonsBlocks.BUDDING_JACARANDA_LEAF_PILE, HorizonsBlocks.BUDDING_JACARANDA_LEAVES, false);
+        this.hedge(HorizonsBlocks.FLOWERING_JACARANDA_HEDGE, HorizonsBlocks.FLOWERING_JACARANDA_LEAVES, HorizonsBlocks.JACARANDA_LOG);
+        this.leafCarpet(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_CARPET, HorizonsBlocks.FLOWERING_JACARANDA_LEAVES);
+        this.leafPile(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_PILE, HorizonsBlocks.FLOWERING_JACARANDA_LEAVES, false);
+        this.hedge(HorizonsBlocks.BLUE_JACARANDA_HEDGE, HorizonsBlocks.BLUE_JACARANDA_LEAVES, HorizonsBlocks.JACARANDA_LOG);
+        this.leafCarpet(HorizonsBlocks.BLUE_JACARANDA_LEAF_CARPET, HorizonsBlocks.BLUE_JACARANDA_LEAVES);
+        this.leafPile(HorizonsBlocks.BLUE_JACARANDA_LEAF_PILE, HorizonsBlocks.BLUE_JACARANDA_LEAVES, false);
+        this.hedge(HorizonsBlocks.BUDDING_BLUE_JACARANDA_HEDGE, HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES, HorizonsBlocks.JACARANDA_LOG);
+        this.leafCarpet(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_CARPET, HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES);
+        this.leafPile(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_PILE, HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES, false);
+        this.hedge(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_HEDGE, HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES, HorizonsBlocks.JACARANDA_LOG);
+        this.leafCarpet(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_CARPET, HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES);
+        this.leafPile(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_PILE, HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES, false);
+        this.ladder(HorizonsBlocks.JACARANDA_LADDER);
+        this.verticalPlanks(HorizonsBlocks.VERTICAL_JACARANDA_PLANKS, HorizonsBlocks.JACARANDA_PLANKS);
+        this.bookshelf(HorizonsBlocks.JACARANDA_BOOKSHELF, HorizonsBlocks.JACARANDA_PLANKS);
+        this.boards(HorizonsBlocks.JACARANDA_BOARDS);
+        this.verticalSlab(HorizonsBlocks.JACARANDA_VERTICAL_SLAB, HorizonsBlocks.JACARANDA_PLANKS);
+        this.post(HorizonsBlocks.JACARANDA_POST, HorizonsBlocks.JACARANDA_LOG);
+        this.post(HorizonsBlocks.STRIPPED_JACARANDA_POST, HorizonsBlocks.STRIPPED_JACARANDA_LOG);
+        this.chests(HorizonsBlocks.JACARANDA_CHEST, HorizonsBlocks.JACARANDA_TRAPPED_CHEST, HorizonsBlocks.JACARANDA_PLANKS);
+        this.cabinet(HorizonsBlocks.JACARANDA_CABINET);
     }
 
     // Specific Block Generators //

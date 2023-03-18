@@ -1,5 +1,7 @@
 {
   "values": [
-    "horizons:stripped_cypress_log"
+    "horizons:stripped_cypress_log",
+    "horizons:stripped_redbud_log",
+    "horizons:stripped_jacaranda_log"
   ]
 }

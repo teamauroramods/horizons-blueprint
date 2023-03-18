@@ -1,6 +1,8 @@
 {
   "values": [
     "horizons:cypress_boards",
-    "horizons:redwood_boards"
+    "horizons:redwood_boards",
+    "horizons:redbud_boards",
+    "horizons:jacaranda_boards"
   ]
 }
