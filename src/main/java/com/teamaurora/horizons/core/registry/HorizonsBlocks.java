@@ -25,6 +25,7 @@ import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.other.HorizonsConstants;
 import com.teamaurora.horizons.core.other.HorizonsProperties;
 import com.teamaurora.horizons.integration.farmersdelight.HorizonsFDCompat;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
@@ -57,8 +58,8 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> CYPRESS_TRAPDOOR = HELPER.createBlock("cypress_trapdoor", () -> new WoodTrapDoorBlock(HorizonsProperties.CYPRESS.trapdoor()), CreativeModeTab.TAB_REDSTONE);
     public static final RegistryObject<Block> CYPRESS_BUTTON = HELPER.createBlock("cypress_button", () -> new BlueprintWoodButtonBlock(HorizonsProperties.CYPRESS.button()), CreativeModeTab.TAB_REDSTONE);
     public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> CYPRESS_SIGNS = HELPER.createSignBlock("cypress", MaterialColor.COLOR_PURPLE);
-    public static final RegistryObject<Block> CYPRESS_SAPLING = HELPER.createBlock("cypress_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.SAPLING), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> POTTED_CYPRESS_SAPLING = HELPER.createBlockNoItem("potted_cypress_sapling", () -> new FlowerPotBlock(CYPRESS_SAPLING.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> CYPRESS_SAPLING = HELPER.createBlock("cypress_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> POTTED_CYPRESS_SAPLING = HELPER.createBlockNoItem("potted_cypress_sapling", () -> new FlowerPotBlock(CYPRESS_SAPLING.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> CYPRESS_LEAVES = HELPER.createBlock("cypress_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.CYPRESS.leaves()), CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> VERTICAL_CYPRESS_PLANKS = HELPER.createCompatBlock(HorizonsConstants.QUARK, "vertical_cypress_planks", () -> new Block(HorizonsProperties.CYPRESS.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
@@ -111,14 +112,14 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> PURPLE_LILY = HELPER.createBlockNoItem("purple_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
     public static final RegistryObject<Block> WHITE_LILY = HELPER.createBlockNoItem("white_lily", () -> new LilyFlowerBlock(HorizonsProperties.LILY));
 
-    public static final RegistryObject<Block> POTTED_BLUE_LILY = HELPER.createBlockNoItem("potted_blue_lily", () -> new FlowerPotBlock(BLUE_LILY.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_LIGHT_GRAY_LILY= HELPER.createBlockNoItem("potted_light_gray_lily", () -> new FlowerPotBlock(LIGHT_GRAY_LILY.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_CYAN_LILY = HELPER.createBlockNoItem("potted_cyan_lily", () -> new FlowerPotBlock(CYAN_LILY.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_LIGHT_BLUE_LILY = HELPER.createBlockNoItem("potted_light_blue_lily", () -> new FlowerPotBlock(LIGHT_BLUE_LILY.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_MAGENTA_LILY = HELPER.createBlockNoItem("potted_magenta_lily", () -> new FlowerPotBlock(MAGENTA_LILY.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_PINK_LILY = HELPER.createBlockNoItem("potted_pink_lily", () -> new FlowerPotBlock(PINK_LILY.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_PURPLE_LILY = HELPER.createBlockNoItem("potted_purple_lily", () -> new FlowerPotBlock(PURPLE_LILY.get(), PropertyUtil.FLOWER_POT));
-    public static final RegistryObject<Block> POTTED_WHITE_LILY = HELPER.createBlockNoItem("potted_white_lily", () -> new FlowerPotBlock(WHITE_LILY.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> POTTED_BLUE_LILY = HELPER.createBlockNoItem("potted_blue_lily", () -> new FlowerPotBlock(BLUE_LILY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_LIGHT_GRAY_LILY= HELPER.createBlockNoItem("potted_light_gray_lily", () -> new FlowerPotBlock(LIGHT_GRAY_LILY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_CYAN_LILY = HELPER.createBlockNoItem("potted_cyan_lily", () -> new FlowerPotBlock(CYAN_LILY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_LIGHT_BLUE_LILY = HELPER.createBlockNoItem("potted_light_blue_lily", () -> new FlowerPotBlock(LIGHT_BLUE_LILY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_MAGENTA_LILY = HELPER.createBlockNoItem("potted_magenta_lily", () -> new FlowerPotBlock(MAGENTA_LILY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_PINK_LILY = HELPER.createBlockNoItem("potted_pink_lily", () -> new FlowerPotBlock(PINK_LILY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_PURPLE_LILY = HELPER.createBlockNoItem("potted_purple_lily", () -> new FlowerPotBlock(PURPLE_LILY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_WHITE_LILY = HELPER.createBlockNoItem("potted_white_lily", () -> new FlowerPotBlock(WHITE_LILY.get(), PropertyUtil.flowerPot()));
 
     // Misc //
 
@@ -140,8 +141,8 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> REDWOOD_TRAPDOOR = HELPER.createBlock("redwood_trapdoor", () -> new WoodTrapDoorBlock(HorizonsProperties.REDWOOD.trapdoor()), CreativeModeTab.TAB_REDSTONE);
     public static final RegistryObject<Block> REDWOOD_BUTTON = HELPER.createBlock("redwood_button", () -> new BlueprintWoodButtonBlock(HorizonsProperties.REDWOOD.button()), CreativeModeTab.TAB_REDSTONE);
     public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> REDWOOD_SIGNS = HELPER.createSignBlock("redwood", MaterialColor.COLOR_PURPLE);
-    public static final RegistryObject<Block> REDWOOD_SAPLING = HELPER.createBlock("redwood_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.SAPLING), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> POTTED_REDWOOD_SAPLING = HELPER.createBlockNoItem("potted_redwood_sapling", () -> new FlowerPotBlock(REDWOOD_SAPLING.get(), PropertyUtil.FLOWER_POT));
+    public static final RegistryObject<Block> REDWOOD_SAPLING = HELPER.createBlock("redwood_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> POTTED_REDWOOD_SAPLING = HELPER.createBlockNoItem("potted_redwood_sapling", () -> new FlowerPotBlock(REDWOOD_SAPLING.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> REDWOOD_LEAVES = HELPER.createBlock("redwood_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.REDWOOD.leaves()), CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> VERTICAL_REDWOOD_PLANKS = HELPER.createCompatBlock(HorizonsConstants.QUARK, "vertical_redwood_planks", () -> new Block(HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
@@ -166,29 +167,42 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> LIGHT_BOULDER_STAIRS = HELPER.createBlock("light_boulder_stairs", () -> new StairBlock(LIGHT_BOULDER.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> LIGHT_BOULDER_VERTICAL_SLAB = HELPER.createBlock("light_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> LIGHT_BOULDER_WALL = HELPER.createBlock("light_boulder_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
-
     public static final RegistryObject<Block> MOSSY_LIGHT_BOULDER = HELPER.createBlock("mossy_light_boulder", () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_LIGHT_BOULDER_SLAB = HELPER.createBlock("mossy_light_boulder_slab", () -> new SlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_LIGHT_BOULDER_STAIRS = HELPER.createBlock("mossy_light_boulder_stairs", () -> new StairBlock(MOSSY_LIGHT_BOULDER.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_LIGHT_BOULDER_VERTICAL_SLAB = HELPER.createBlock("mossy_light_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_LIGHT_BOULDER_WALL = HELPER.createBlock("mossy_light_boulder_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
-
     public static final RegistryObject<Block> DARK_BOULDER = HELPER.createInjectedBlock("dark_boulder", Items.COBBLESTONE, () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> DARK_BOULDER_SLAB = HELPER.createBlock("dark_boulder_slab", () -> new SlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> DARK_BOULDER_STAIRS = HELPER.createBlock("dark_boulder_stairs", () -> new StairBlock(DARK_BOULDER.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> DARK_BOULDER_VERTICAL_SLAB = HELPER.createBlock("dark_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> DARK_BOULDER_WALL = HELPER.createBlock("dark_boulder_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
-
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER = HELPER.createBlock("mossy_dark_boulder", () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER_SLAB = HELPER.createBlock("mossy_dark_boulder_slab", () -> new SlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER_STAIRS = HELPER.createBlock("mossy_dark_boulder_stairs", () -> new StairBlock(MOSSY_DARK_BOULDER.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER_VERTICAL_SLAB = HELPER.createBlock("mossy_dark_boulder_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> MOSSY_DARK_BOULDER_WALL = HELPER.createBlock("mossy_dark_boulder_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
-
     public static final RegistryObject<Block> BOULDER_BRICKS = HELPER.createBlock("boulder_bricks", () -> new Block(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> BOULDER_BRICK_SLAB = HELPER.createBlock("boulder_brick_slab", () -> new SlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> BOULDER_BRICK_STAIRS = HELPER.createBlock("boulder_brick_stairs", () -> new StairBlock(BOULDER_BRICKS.get()::defaultBlockState, HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> BOULDER_BRICK_VERTICAL_SLAB = HELPER.createBlock("boulder_brick_vertical_slab", () -> new VerticalSlabBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> BOULDER_BRICK_WALL = HELPER.createBlock("boulder_brick_wall", () -> new WallBlock(HorizonsProperties.BOULDER), CreativeModeTab.TAB_DECORATIONS);
 
+    // Daisy Flowers //
+
+    public static final RegistryObject<Block> YELLOW_DAISY = HELPER.createBlock("yellow_daisy", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> RED_DAISY = HELPER.createBlock("red_daisy", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> PURPLE_DAISY = HELPER.createBlock("purple_daisy", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> PINK_DAISY = HELPER.createBlock("pink_daisy", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> ORANGE_DAISY = HELPER.createBlock("orange_daisy", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> MAGENTA_DAISY = HELPER.createBlock("magenta_daisy", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> BLUE_DAISY = HELPER.createBlock("blue_daisy", () -> new BlueprintFlowerBlock(() -> MobEffects.BLINDNESS, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> POTTED_YELLOW_DAISY = HELPER.createBlockNoItem("potted_yellow_daisy", () -> new FlowerPotBlock(YELLOW_DAISY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_RED_DAISY = HELPER.createBlockNoItem("potted_red_daisy", () -> new FlowerPotBlock(RED_DAISY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_PURPLE_DAISY = HELPER.createBlockNoItem("potted_purple_daisy", () -> new FlowerPotBlock(PURPLE_DAISY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_PINK_DAISY = HELPER.createBlockNoItem("potted_pink_daisy", () -> new FlowerPotBlock(PINK_DAISY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_ORANGE_DAISY = HELPER.createBlockNoItem("potted_orange_daisy", () -> new FlowerPotBlock(ORANGE_DAISY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_MAGENTA_DAISY = HELPER.createBlockNoItem("potted_magenta_daisy", () -> new FlowerPotBlock(MAGENTA_DAISY.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_BLUE_DAISY = HELPER.createBlockNoItem("potted_blue_daisy", () -> new FlowerPotBlock(BLUE_DAISY.get(), PropertyUtil.flowerPot()));
 }

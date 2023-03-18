@@ -171,6 +171,14 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.stairs(HorizonsBlocks.BOULDER_BRICK_STAIRS, HorizonsBlocks.BOULDER_BRICKS);
         this.verticalSlab(HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB, HorizonsBlocks.BOULDER_BRICKS);
         this.wall(HorizonsBlocks.BOULDER_BRICK_WALL, HorizonsBlocks.BOULDER_BRICKS);
+
+        this.pottedPlant(HorizonsBlocks.YELLOW_DAISY, HorizonsBlocks.POTTED_YELLOW_DAISY);
+        this.pottedPlant(HorizonsBlocks.RED_DAISY, HorizonsBlocks.POTTED_RED_DAISY);
+        this.pottedPlant(HorizonsBlocks.PURPLE_DAISY, HorizonsBlocks.POTTED_PURPLE_DAISY);
+        this.pottedPlant(HorizonsBlocks.PINK_DAISY, HorizonsBlocks.POTTED_PINK_DAISY);
+        this.pottedPlant(HorizonsBlocks.ORANGE_DAISY, HorizonsBlocks.POTTED_ORANGE_DAISY);
+        this.pottedPlant(HorizonsBlocks.MAGENTA_DAISY, HorizonsBlocks.POTTED_MAGENTA_DAISY);
+        this.pottedPlant(HorizonsBlocks.BLUE_DAISY, HorizonsBlocks.POTTED_BLUE_DAISY);
     }
 
     // Specific Block Generators //

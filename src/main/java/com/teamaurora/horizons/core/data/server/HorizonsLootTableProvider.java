@@ -201,6 +201,21 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.BOULDER_BRICK_STAIRS.get());
             this.add(HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB.get(), Blocks::createVerticalSlabItemTable);
             this.dropSelf(HorizonsBlocks.BOULDER_BRICK_WALL.get());
+
+            this.dropSelf(HorizonsBlocks.YELLOW_DAISY.get());
+            this.dropSelf(HorizonsBlocks.RED_DAISY.get());
+            this.dropSelf(HorizonsBlocks.PURPLE_DAISY.get());
+            this.dropSelf(HorizonsBlocks.PINK_DAISY.get());
+            this.dropSelf(HorizonsBlocks.ORANGE_DAISY.get());
+            this.dropSelf(HorizonsBlocks.MAGENTA_DAISY.get());
+            this.dropSelf(HorizonsBlocks.BLUE_DAISY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_YELLOW_DAISY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_RED_DAISY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_PURPLE_DAISY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_PINK_DAISY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_ORANGE_DAISY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_MAGENTA_DAISY.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_BLUE_DAISY.get());
         }
 
         private void normalLeaves(Block leaves, Block sapling) {

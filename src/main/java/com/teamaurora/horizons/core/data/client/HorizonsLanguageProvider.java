@@ -10,6 +10,7 @@ import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
 import com.teamaurora.horizons.core.registry.HorizonsItems;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -176,6 +177,21 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.BOULDER_BRICK_STAIRS);
         this.translateBlock(HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB);
         this.translateBlock(HorizonsBlocks.BOULDER_BRICK_WALL);
+
+        this.translateBlock(HorizonsBlocks.YELLOW_DAISY);
+        this.translateBlock(HorizonsBlocks.RED_DAISY);
+        this.translateBlock(HorizonsBlocks.PURPLE_DAISY);
+        this.translateBlock(HorizonsBlocks.PINK_DAISY);
+        this.translateBlock(HorizonsBlocks.ORANGE_DAISY);
+        this.translateBlock(HorizonsBlocks.MAGENTA_DAISY);
+        this.translateBlock(HorizonsBlocks.BLUE_DAISY);
+        this.translateBlock(HorizonsBlocks.POTTED_YELLOW_DAISY);
+        this.translateBlock(HorizonsBlocks.POTTED_RED_DAISY);
+        this.translateBlock(HorizonsBlocks.POTTED_PURPLE_DAISY);
+        this.translateBlock(HorizonsBlocks.POTTED_PINK_DAISY);
+        this.translateBlock(HorizonsBlocks.POTTED_ORANGE_DAISY);
+        this.translateBlock(HorizonsBlocks.POTTED_MAGENTA_DAISY);
+        this.translateBlock(HorizonsBlocks.POTTED_BLUE_DAISY);
 
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);

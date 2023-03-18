@@ -72,7 +72,13 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         stoneBlockSet(HorizonsBlocks.DARK_BOULDER.get(), HorizonsBlocks.DARK_BOULDER_SLAB.get(), HorizonsBlocks.DARK_BOULDER_STAIRS.get(), HorizonsBlocks.DARK_BOULDER_VERTICAL_SLAB.get(), HorizonsBlocks.DARK_BOULDER_WALL.get(), consumer);
         stoneBlockSet(HorizonsBlocks.MOSSY_DARK_BOULDER.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_SLAB.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_STAIRS.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_VERTICAL_SLAB.get(), HorizonsBlocks.MOSSY_DARK_BOULDER_WALL.get(), consumer);
         stoneBlockSet(HorizonsBlocks.BOULDER_BRICKS.get(), HorizonsBlocks.BOULDER_BRICK_SLAB.get(), HorizonsBlocks.BOULDER_BRICK_STAIRS.get(), HorizonsBlocks.BOULDER_BRICK_VERTICAL_SLAB.get(), HorizonsBlocks.BOULDER_BRICK_WALL.get(), consumer);
-
+        flowerToDye(HorizonsBlocks.YELLOW_DAISY.get(), Items.YELLOW_DYE, consumer);
+        flowerToDye(HorizonsBlocks.RED_DAISY.get(), Items.RED_DYE, consumer);
+        flowerToDye(HorizonsBlocks.PURPLE_DAISY.get(), Items.PURPLE_DYE, consumer);
+        flowerToDye(HorizonsBlocks.PINK_DAISY.get(), Items.PINK_DYE, consumer);
+        flowerToDye(HorizonsBlocks.ORANGE_DAISY.get(), Items.ORANGE_DYE, consumer);
+        flowerToDye(HorizonsBlocks.MAGENTA_DAISY.get(), Items.MAGENTA_DYE, consumer);
+        flowerToDye(HorizonsBlocks.BLUE_DAISY.get(), Items.BLUE_DYE, consumer);
     }
 
     private static void woodSet(TagKey<Item> logs, Block planks, Block slab, Block stairs, Block log, Block wood, Block strippedLog, Block strippedWood, ItemLike boat, ItemLike chestBoat, Block button, Block door, Block trapdoor, Block fence, Block fenceGate, Block pressurePlate, Block sign, Block verticalSlab, Block post, Block strippedPost, Block boards, Block beehive, Block ladder, Block bookshelf, Block chest, Block trappedChest, Item largeBoat, Item furnaceBoat, Block verticalPlanks, Block cabinet, Consumer<FinishedRecipe> consumer) {
