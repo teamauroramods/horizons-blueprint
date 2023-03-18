@@ -19,6 +19,7 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
     @Override
     protected void addTags() {
         this.tag(HorizonsBiomeTags.HAS_ALGAE).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(HorizonsBiomeTags.HAS_GIANT_FERN).addTag(Tags.Biomes.IS_SWAMP);
 
         this.tag(HorizonsBiomeTags.HAS_BLUE_LILY).addTag(Tags.Biomes.IS_SWAMP);
         this.tag(HorizonsBiomeTags.HAS_LIGHT_GRAY_LILY).addTag(Tags.Biomes.IS_SWAMP);

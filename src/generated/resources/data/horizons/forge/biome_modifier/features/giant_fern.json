@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/giant_fern",
+  "features": "horizons:giant_fern",
+  "step": "vegetal_decoration"
+}

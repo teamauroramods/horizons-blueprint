@@ -41,6 +41,7 @@ public class HorizonsBiomeModifier {
 
     public static JsonCodecProvider<BiomeModifier> register(GatherDataEvent event) {
         addFeature("algae", HorizonsBiomeTags.HAS_ALGAE, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.ALGAE);
+        addFeature("giant_fern", HorizonsBiomeTags.HAS_GIANT_FERN, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.GIANT_FERN);
 
         addFeature("blue_lily", HorizonsBiomeTags.HAS_BLUE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.BLUE_LILY);
         addFeature("light_gray_lily", HorizonsBiomeTags.HAS_LIGHT_GRAY_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.LIGHT_GRAY_LILY);

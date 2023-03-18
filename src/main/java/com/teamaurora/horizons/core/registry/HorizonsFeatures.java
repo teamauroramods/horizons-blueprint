@@ -30,6 +30,8 @@ public final class HorizonsFeatures {
     public static RegistryObject<Feature<NoneFeatureConfiguration>> ALGAE_PATCH = FEATURES.register("algae_patch", AlgaePatch::new);
 
     public static class Configs {
+        public static final RandomPatchConfiguration GIANT_FERN = createPlantPatch(64, HorizonsBlocks.GIANT_FERN.get().defaultBlockState());
+
         public static final RandomPatchConfiguration BLUE_LILY = createPlantPatch(64, HorizonsBlocks.BLUE_LILY.get().defaultBlockState());
         public static final RandomPatchConfiguration LIGHT_GRAY_LILY = createPlantPatch(64, HorizonsBlocks.LIGHT_GRAY_LILY.get().defaultBlockState());
         public static final RandomPatchConfiguration CYAN_LILY = createPlantPatch(64, HorizonsBlocks.CYAN_LILY.get().defaultBlockState());
@@ -52,6 +54,7 @@ public final class HorizonsFeatures {
         public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES = DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Horizons.MODID);
 
         public static final RegistryObject<ConfiguredFeature<?, ?>> ALGAE = CONFIGURED_FEATURES.register("algae", () -> new ConfiguredFeature<>(ALGAE_PATCH.get(), NoneFeatureConfiguration.NONE));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> GIANT_FERN = CONFIGURED_FEATURES.register("giant_fern", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.GIANT_FERN));
 
         public static final RegistryObject<ConfiguredFeature<?, ?>> BLUE_LILY = CONFIGURED_FEATURES.register("blue_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.BLUE_LILY));
         public static final RegistryObject<ConfiguredFeature<?, ?>> LIGHT_GRAY_LILY = CONFIGURED_FEATURES.register("light_gray_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.LIGHT_GRAY_LILY));
@@ -67,6 +70,7 @@ public final class HorizonsFeatures {
         public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Horizons.MODID);
 
         public static final RegistryObject<PlacedFeature> ALGAE = createPlantPatch("algae", 3, Features.ALGAE);
+        public static final RegistryObject<PlacedFeature> GIANT_FERN = createPlantPatch("giant_fern", 4, Features.GIANT_FERN);
 
         public static final RegistryObject<PlacedFeature> BLUE_LILY = createPlantPatch("blue_lily", 64, Features.BLUE_LILY);
         public static final RegistryObject<PlacedFeature> LIGHT_GRAY_LILY = createPlantPatch("light_gray_lily", 64, Features.LIGHT_GRAY_LILY);
