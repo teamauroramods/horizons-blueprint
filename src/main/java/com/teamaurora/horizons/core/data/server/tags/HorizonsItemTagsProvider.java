@@ -51,6 +51,9 @@ public class HorizonsItemTagsProvider extends ItemTagsProvider {
         //farmerdelight
         this.tag(HorizonsItemTags.WOODEN_CABINETS).add(HorizonsBlocks.CYPRESS_CABINET.get().asItem(), HorizonsBlocks.REDWOOD_CABINET.get().asItem(), HorizonsBlocks.REDBUD_CABINET.get().asItem(), HorizonsBlocks.JACARANDA_CABINET.get().asItem());
 
+        //environmental
+        this.tag(HorizonsItemTags.DUCK_FOOD).add(HorizonsItems.ALGAE.get());
+
         //minecraft
         this.tag(ItemTags.NON_FLAMMABLE_WOOD).add(HorizonsBlocks.CYPRESS_BOARDS.get().asItem(), HorizonsBlocks.REDWOOD_BOARDS.get().asItem(), HorizonsBlocks.REDBUD_BOARDS.get().asItem(), HorizonsBlocks.JACARANDA_BOARDS.get().asItem());
         this.tag(ItemTags.BOATS).add(HorizonsItems.CYPRESS_BOATS.getFirst().get(), HorizonsItems.REDWOOD_BOATS.getFirst().get(), HorizonsItems.REDBUD_BOATS.getFirst().get().asItem(), HorizonsItems.REDBUD_BOATS.getFirst().get().asItem());
