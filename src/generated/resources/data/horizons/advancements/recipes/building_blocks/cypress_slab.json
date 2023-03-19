@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "cypress_planks": {
+    "has_cypress_planks": {
       "conditions": {
         "items": [
           {
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "cypress_planks",
+      "has_cypress_planks",
       "has_the_recipe"
     ]
   ],

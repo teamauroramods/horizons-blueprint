@@ -18,7 +18,7 @@ public final class HorizonsProperties {
     public static final PropertyUtil.WoodSetProperties JACARANDA = PropertyUtil.WoodSetProperties.builder(MaterialColor.COLOR_PURPLE).build();
 
     public static final BlockBehaviour.Properties GOOSEBERRY_SACK = BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_GREEN).strength(0.5F).sound(SoundType.WOOL);
-    public static final BlockBehaviour.Properties ALGAE = BlockBehaviour.Properties.of(Material.PLANT).instabreak().sound(HorizonsSoundTypes.ALGAE).noOcclusion().noCollission();
+    public static final BlockBehaviour.Properties ALGAE = BlockBehaviour.Properties.of(Material.REPLACEABLE_PLANT).instabreak().sound(HorizonsSoundTypes.ALGAE).noOcclusion().noCollission();
     public static final BlockBehaviour.Properties ALGAE_THATCH = BlockBehaviour.Properties.of(Material.GRASS, MaterialColor.COLOR_LIGHT_GREEN).strength(0.5F).sound(HorizonsSoundTypes.ALGAE_THATCH).noOcclusion();
     public static final BlockBehaviour.Properties CYPRESS_KNEE = BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.COLOR_BROWN).strength(2.0F).sound(HorizonsSoundTypes.THIN_WOOD).noOcclusion().dynamicShape();
     public static final BlockBehaviour.Properties CYPRESS_BRANCH = BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().sound(HorizonsSoundTypes.THIN_WOOD);

@@ -247,7 +247,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get(), "Flowering Redbud Leaf Hedge");
         this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET);
         this.add(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get(), "Pile of Flowering Redbud Leaves");
-        this.add(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get(), "Pile of Redbud Blossoms");
+        this.add(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get(), "Pile of Redbud Blossoms]");
 
         this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_LOG);
         this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_WOOD);
@@ -313,23 +313,23 @@ public class HorizonsLanguageProvider extends LanguageProvider {
     }
 
     private void translateItem(RegistryObject<? extends Item> item) {
-        this.add(item.get(), this.toUpper(ForgeRegistries.ITEMS, item));
+        this.add(item.get(), toUpper(ForgeRegistries.ITEMS, item));
     }
 
     private void translateBlock(RegistryObject<? extends Block> block) {
-        this.add(block.get(), this.toUpper(ForgeRegistries.BLOCKS, block));
+        this.add(block.get(), toUpper(ForgeRegistries.BLOCKS, block));
     }
 
     private void translateSigns(Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> sign, String name) {
         this.translateBlock(sign.getFirst());
-        this.add(sign.getFirst().get().getDescriptionId().replace(name, name + "_wall"), this.toUpper(ForgeRegistries.BLOCKS, sign.getSecond()));
+        this.add(sign.getFirst().get().getDescriptionId().replace(name, name + "_wall"), toUpper(ForgeRegistries.BLOCKS, sign.getSecond()));
     }
 
     private void translateBiome(BiomeSubRegistryHelper.KeyedBiome biome) {
-        this.add("biome." + Horizons.MODID + "." + ForgeRegistries.BIOMES.getKey(biome.get()).getPath(), this.toUpper(ForgeRegistries.BIOMES, biome.getObject()));
+        this.add("biome." + Horizons.MODID + "." + ForgeRegistries.BIOMES.getKey(biome.get()).getPath(), toUpper(ForgeRegistries.BIOMES, biome.getObject()));
     }
 
-    private <T> String toUpper(IForgeRegistry<T> entry, RegistryObject<? extends T> object) {
+    private static <T> String toUpper(IForgeRegistry<T> entry, RegistryObject<? extends T> object) {
         return StringUtils.capitaliseAllWords(entry.getKey(object.get()).getPath().replace('_', ' '));
     }
 

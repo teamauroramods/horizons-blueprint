@@ -6,13 +6,19 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.InclusiveRange;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.DualNoiseProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
 import net.minecraftforge.registries.DeferredRegister;
@@ -41,12 +47,23 @@ public final class HorizonsFeatures {
         public static final RandomPatchConfiguration PURPLE_LILY = createPlantPatch(64, HorizonsBlocks.PURPLE_LILY.get().defaultBlockState());
         public static final RandomPatchConfiguration WHITE_LILY = createPlantPatch(64, HorizonsBlocks.WHITE_LILY.get().defaultBlockState());
 
+        public static final TreeConfiguration CYPRESS_TREE = createCypressTree().build();
 
         private static RandomPatchConfiguration createPlantPatch(int tries, BlockState state) {
             return new RandomPatchConfiguration(tries, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                     new SimpleBlockConfiguration(new DualNoiseProvider(new InclusiveRange<Integer>(1, 3),
                             new NormalNoise.NoiseParameters(-10, 1d), 1f, 2345l,
                             new NormalNoise.NoiseParameters(-3, 1d), 1f, List.of(state)))));
+        }
+
+        private static TreeConfiguration.TreeConfigurationBuilder createCypressTree() {
+            return new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(HorizonsBlocks.CYPRESS_LOG.get()),
+                    new StraightTrunkPlacer(0, 0, 0),
+                    BlockStateProvider.simple(HorizonsBlocks.CYPRESS_LEAVES.get().defaultBlockState()),
+                    new BlobFoliagePlacer(ConstantInt.of(0), ConstantInt.of(0), 0),
+                    new TwoLayersFeatureSize(0, 0, 0)).forceDirt();
+
         }
     }
 
