@@ -323,6 +323,11 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.leafPile(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_PILE.get());
 
             this.dropSelf(HorizonsBlocks.SUNFLOWER_SEED_SACK.get());
+
+
+            this.dropSelf(HorizonsBlocks.LAVENDER.get()); //change
+            this.dropSelf(HorizonsBlocks.TALL_LAVENDER.get()); //change
+            this.dropSelf(HorizonsBlocks.LAVENDER_BASKET.get());
         }
 
         private void normalLeaves(Block leaves, Block sapling) {

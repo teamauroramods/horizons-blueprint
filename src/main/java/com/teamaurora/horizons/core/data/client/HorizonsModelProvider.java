@@ -289,6 +289,10 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.cabinet(HorizonsBlocks.JACARANDA_CABINET);
 
         this.cubeBottomTop(HorizonsBlocks.SUNFLOWER_SEED_SACK);
+
+        this.lavender(HorizonsBlocks.LAVENDER);
+        this.doubleBlockNoItem(HorizonsBlocks.TALL_LAVENDER);
+        this.cubeBottomTop(HorizonsBlocks.LAVENDER_BASKET);
     }
 
     // Specific Block Generators //
@@ -296,11 +300,11 @@ public class HorizonsModelProvider extends BlockStateProvider {
     private void algae(RegistryObject<Block> algae) {
         this.generatedItem(algae.get(), TextureFolder.Block);
         //ill change this eventually, the model works, but it shouldn't be a multipart builder
-        this.getMultipartBuilder(algae.get()).part().modelFile(this.models().withExistingParent(this.getItemName(algae.get()), "blueprint:block/leaf_pile").texture("all", this.blockTexture(algae.get())).renderType("cutout")).uvLock(true).rotationX(90).addModel();
+        this.getMultipartBuilder(algae.get()).part().modelFile(this.models().withExistingParent(getItemName(algae.get()), "blueprint:block/leaf_pile").texture("all", this.blockTexture(algae.get())).renderType("cutout")).uvLock(true).rotationX(90).addModel();
     }
 
     private void hangingLeaves(RegistryObject<Block> hangingLeaves) {
-        this.simpleBlock(hangingLeaves.get(), this.models().withExistingParent(this.getItemName(hangingLeaves.get()), "minecraft:tinted_cross").texture("cross", this.blockTexture(hangingLeaves.get())).renderType("cutout"));
+        this.simpleBlock(hangingLeaves.get(), this.models().withExistingParent(getItemName(hangingLeaves.get()), "minecraft:tinted_cross").texture("cross", this.blockTexture(hangingLeaves.get())).renderType("cutout"));
         this.generatedItem(hangingLeaves.get(), TextureFolder.Block);
     }
 
@@ -310,19 +314,19 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void largeCypressKnee(RegistryObject<Block> knee) {
-        String name = this.getItemName(knee.get());
+        String name = getItemName(knee.get());
 
         this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_bottom"));
         this.doubleBlockNoItem(knee);
     }
 
     private void variantLog(RegistryObject<Block> variant, RegistryObject<Block> log) {
-        this.axisBlock((RotatedPillarBlock)variant.get(), this.blockTexture(variant.get()), this.modLoc("block/" + this.getItemName(log.get()) + "_top"));
+        this.axisBlock((RotatedPillarBlock)variant.get(), this.blockTexture(variant.get()), this.modLoc("block/" + getItemName(log.get()) + "_top"));
         this.itemModel(variant);
     }
     
     private void cypressBranch(RegistryObject<Block> branch) {
-        String name = this.getItemName(branch.get());
+        String name = getItemName(branch.get());
         Function<Integer, ModelFile> model = i -> this.models().withExistingParent(name + "_" + i, this.modLoc("block/template_branch")).texture("branch", this.modLoc("block/" + name + "_" + i)).renderType("cutout");
 
         this.generatedItem(branch.get(), TextureFolder.Item);
@@ -342,14 +346,14 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void beardMoss(RegistryObject<Block> beardMoss) {
-        String name = this.getItemName(beardMoss.get());
+        String name = getItemName(beardMoss.get());
 
         this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_bottom"));
         this.doubleBlockNoItem(beardMoss);
     }
 
     private void beardMossBlock(RegistryObject<Block> beardMoss) {
-        this.simpleBlock(beardMoss.get(), this.models().cubeAll(this.getItemName(beardMoss.get()), this.blockTexture(beardMoss.get())).renderType("cutout"));
+        this.simpleBlock(beardMoss.get(), this.models().cubeAll(getItemName(beardMoss.get()), this.blockTexture(beardMoss.get())).renderType("cutout"));
         this.itemModel(beardMoss);
     }
 
@@ -357,7 +361,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         ResourceLocation flower = this.blockTexture(lily.get());
 
         this.pot(pot, flower);
-        this.simpleBlock(lily.get(), this.models().withExistingParent(this.getItemName(lily.get()), this.modLoc("block/template_lily")).texture("flower", flower).renderType("cutout"));
+        this.simpleBlock(lily.get(), this.models().withExistingParent(getItemName(lily.get()), this.modLoc("block/template_lily")).texture("flower", flower).renderType("cutout"));
         this.generatedItem(lily.get(), TextureFolder.Block);
     }
 
@@ -373,6 +377,10 @@ public class HorizonsModelProvider extends BlockStateProvider {
                 .partialState().with(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).addModels(new ConfiguredModel(bottom));
     }
 
+    private void lavender(RegistryObject<Block> lavender) {
+        this.generatedItem(lavender.get(), TextureFolder.Item);
+    }
+
     // Generic Block Generators //
 
     private void pottedPlant(RegistryObject<Block> plant, RegistryObject<Block> pot) {
@@ -382,26 +390,26 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void pot(RegistryObject<Block> pot, ResourceLocation texture) {
-        ModelFile model = this.models().withExistingParent(Objects.requireNonNull(ForgeRegistries.BLOCKS.getKey(pot.get())).getPath(), "block/flower_pot_cross").texture("plant", texture).renderType("cutout");
+        ModelFile model = this.models().withExistingParent(getBlockName(pot.get()), "block/flower_pot_cross").texture("plant", texture).renderType("cutout");
         this.simpleBlock(pot.get(), model);
     }
 
     private void trapdoor(RegistryObject<Block> trapdoor) {
-        String name = this.getItemName(trapdoor.get());
+        String name = getItemName(trapdoor.get());
         this.trapdoorBlockWithRenderType((TrapDoorBlock) trapdoor.get(), this.blockTexture(trapdoor.get()), true, "cutout");
         this.itemModels().withExistingParent(name, this.modLoc("block/" + name + "_bottom"));
     }
 
     private void door(RegistryObject<Block> door) {
-        String name = "block/" + this.getItemName(door.get());
-        this.doorBlockWithRenderType((DoorBlock) door.get(), this.getItemName(door.get()).replace("_door", ""), this.modLoc(name + "_bottom"), this.modLoc(name + "_top"), "cutout");
+        String name = "block/" + getItemName(door.get());
+        this.doorBlockWithRenderType((DoorBlock) door.get(), getItemName(door.get()).replace("_door", ""), this.modLoc(name + "_bottom"), this.modLoc(name + "_top"), "cutout");
         this.generatedItem(door.get(), TextureFolder.Item);
     }
 
     private void button(RegistryObject<Block> button, Supplier<Block> textureBlock) {
         ResourceLocation texture = this.blockTexture(textureBlock.get());
         this.buttonBlock((ButtonBlock) button.get(), texture);
-        this.itemModels().buttonInventory(this.getItemName(button.get()), texture);
+        this.itemModels().buttonInventory(getItemName(button.get()), texture);
     }
 
     private void pressurePlate(RegistryObject<Block> pressurePlate, Supplier<Block> textureBlock) {
@@ -412,7 +420,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
     private void fence(RegistryObject<Block> fence, Supplier<Block> textureBlock) {
         ResourceLocation texture = this.blockTexture(textureBlock.get());
         this.fenceBlock((FenceBlock) fence.get(), texture);
-        this.itemModels().fenceInventory(this.getItemName(fence.get()), texture);
+        this.itemModels().fenceInventory(getItemName(fence.get()), texture);
     }
 
     private void fenceGate(RegistryObject<Block> gate, Supplier<Block> textureBlock) {
@@ -437,17 +445,17 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void cubeAll(RegistryObject<Block> block, ResourceLocation texture) {
-        this.simpleBlock(block.get(), this.models().cubeAll(this.getItemName(block.get()), texture));
+        this.simpleBlock(block.get(), this.models().cubeAll(getItemName(block.get()), texture));
         this.itemModel(block);
     }
 
     private void leaves(RegistryObject<Block> leaves) {
-        this.simpleBlock(leaves.get(), this.models().withExistingParent(this.getItemName(leaves.get()), "block/leaves").texture("all", this.blockTexture(leaves.get())).renderType("cutout"));
+        this.simpleBlock(leaves.get(), this.models().withExistingParent(getItemName(leaves.get()), "block/leaves").texture("all", this.blockTexture(leaves.get())).renderType("cutout"));
         this.itemModel(leaves);
     }
 
     private void simpleCross(RegistryObject<Block> block) {
-        this.simpleBlock(block.get(), this.models().cross(this.getItemName(block.get()), this.blockTexture(block.get())).renderType("cutout"));
+        this.simpleBlock(block.get(), this.models().cross(getItemName(block.get()), this.blockTexture(block.get())).renderType("cutout"));
     }
 
     private void signs(Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> signs, Supplier<Block> textureBlock) {
@@ -456,12 +464,12 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void log(RegistryObject<Block> log) {
-        this.axisBlock((RotatedPillarBlock)log.get(), this.blockTexture(log.get()), this.modLoc("block/" + this.getItemName(log.get()) + "_top"));
+        this.axisBlock((RotatedPillarBlock)log.get(), this.blockTexture(log.get()), this.modLoc("block/" + getItemName(log.get()) + "_top"));
         this.itemModel(log);
     }
 
     private void beehive(RegistryObject<Block> beehive) {
-        String name = this.getItemName(beehive.get());
+        String name = getItemName(beehive.get());
         ModelFile model = this.models().orientable(name, this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_front"), this.modLoc("block/" + name + "_end"));
         ModelFile model_honey = this.models().orientable(name + "_honey", this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_front_honey"), this.modLoc("block/" + name + "_end"));
 
@@ -470,7 +478,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void hedge(RegistryObject<Block> hedge, Supplier<Block> leaves, Supplier<Block> log) {
-        String name = this.getItemName(hedge.get());
+        String name = getItemName(hedge.get());
         ModelFile post = this.models().withExistingParent(name + "_post", "blueprint:block/hedge_post").texture("leaf", this.blockTexture(leaves.get())).texture("log", this.blockTexture(log.get())).renderType("cutout");
         ModelFile side = this.models().withExistingParent(name + "_side", "blueprint:block/hedge_side").texture("leaf", this.blockTexture(leaves.get())).renderType("cutout");
         ModelFile extend = this.models().withExistingParent(name + "_extend", "blueprint:block/hedge_extend").texture("leaf", this.blockTexture(leaves.get())).renderType("cutout");
@@ -486,20 +494,20 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void chests(RegistryObject<BlueprintChestBlock> chest, RegistryObject<BlueprintTrappedChestBlock> trapped, Supplier<Block> textureBlock) {
-        ModelFile model =  this.models().getBuilder(this.getItemName(chest.get())).texture("particle", this.blockTexture(textureBlock.get()));
+        ModelFile model =  this.models().getBuilder(getItemName(chest.get())).texture("particle", this.blockTexture(textureBlock.get()));
         this.simpleBlock(chest.get(), model);
         this.simpleBlock(trapped.get(), model);
-        this.itemModels().withExistingParent(this.getItemName(chest.get()), "blueprint:item/template_chest");
-        this.itemModels().withExistingParent(this.getItemName(trapped.get()), "blueprint:item/template_chest");
+        this.itemModels().withExistingParent(getItemName(chest.get()), "blueprint:item/template_chest");
+        this.itemModels().withExistingParent(getItemName(trapped.get()), "blueprint:item/template_chest");
     }
 
     private void leafCarpet(RegistryObject<Block> carpet, Supplier<Block> textureBlock) {
-        this.simpleBlock(carpet.get(), this.models().withExistingParent(this.getItemName(carpet.get()), "blueprint:block/leaf_carpet").texture("all", this.blockTexture(textureBlock.get())).renderType("cutout"));
+        this.simpleBlock(carpet.get(), this.models().withExistingParent(getItemName(carpet.get()), "blueprint:block/leaf_carpet").texture("all", this.blockTexture(textureBlock.get())).renderType("cutout"));
         this.itemModel(carpet);
     }
 
     private void post(RegistryObject<Block> post, Supplier<Block> textureBlock) {
-        ModelFile model = this.models().withExistingParent(this.getItemName(post.get()), "blueprint:block/post").texture("texture", this.blockTexture(textureBlock.get()));
+        ModelFile model = this.models().withExistingParent(getItemName(post.get()), "blueprint:block/post").texture("texture", this.blockTexture(textureBlock.get()));
         ModelFile chain = this.models().getExistingFile(Blueprint.REGISTRY_HELPER.prefix("block/chain_small"));
         ModelFile chainTop = this.models().getExistingFile(Blueprint.REGISTRY_HELPER.prefix("block/chain_small_top"));
 
@@ -517,7 +525,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void leafPile(RegistryObject<Block> leafPile, Supplier<Block> textureBlock, boolean tinted) {
-        String name = this.getItemName(leafPile.get());
+        String name = getItemName(leafPile.get());
         ModelFile model = this.models().withExistingParent(name, "blueprint:block/" + (tinted ? "tinted_" : "") + "leaf_pile").texture("all", this.blockTexture(textureBlock.get())).renderType("cutout");
 
         this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + this.getItemName(textureBlock.get())));
@@ -532,7 +540,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
     private void verticalSlab(RegistryObject<Block> slab, Supplier<Block> textureBlock) {
         ResourceLocation texture = this.blockTexture(textureBlock.get());
-        ModelFile model = this.models().withExistingParent(this.getItemName(slab.get()), "blueprint:block/vertical_slab").texture("top", texture).texture("bottom", texture).texture("side", texture);
+        ModelFile model = this.models().withExistingParent(getItemName(slab.get()), "blueprint:block/vertical_slab").texture("top", texture).texture("bottom", texture).texture("side", texture);
 
         this.itemModel(slab);
         this.getVariantBuilder(slab.get())
@@ -545,14 +553,14 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
     private void verticalPlanks(RegistryObject<Block> planks, Supplier<Block> textureBlock) {
         ResourceLocation texture = this.blockTexture(textureBlock.get());
-        ModelFile model = this.models().withExistingParent(this.getItemName(planks.get()), "blueprint:block/vertical_planks").texture("all", texture);
+        ModelFile model = this.models().withExistingParent(getItemName(planks.get()), "blueprint:block/vertical_planks").texture("all", texture);
 
         this.itemModel(planks);
         this.simpleBlock(planks.get(), model);
     }
 
     private void boards(RegistryObject<Block> boards) {
-        String name = this.getItemName(boards.get());
+        String name = getItemName(boards.get());
         ResourceLocation texture = this.blockTexture(boards.get());
         ModelFile boardsModel = models().getBuilder(name).parent(new ModelFile.UncheckedModelFile(new ResourceLocation(Blueprint.MOD_ID, "block/template_boards"))).texture("all", texture);
         ModelFile boardsHorizontalModel = models().getBuilder(name + "_horizontal").parent(new ModelFile.UncheckedModelFile(new ResourceLocation(Blueprint.MOD_ID, "block/template_boards_horizontal"))).texture("all", texture);
@@ -565,26 +573,26 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void bookshelf(RegistryObject<Block> bookshelf, Supplier<Block> planks) {
-        this.simpleBlock(bookshelf.get(), this.models().cubeColumn(this.getItemName(bookshelf.get()), this.blockTexture(bookshelf.get()), this.blockTexture(planks.get())));
+        this.simpleBlock(bookshelf.get(), this.models().cubeColumn(getItemName(bookshelf.get()), this.blockTexture(bookshelf.get()), this.blockTexture(planks.get())));
         this.itemModel(bookshelf);
     }
 
     private void ladder(RegistryObject<Block> ladder) {
         ResourceLocation texture = this.blockTexture(ladder.get());
 
-        this.horizontalBlock(ladder.get(), this.models().withExistingParent(this.getItemName(ladder.get()), "block/ladder").texture("particle", texture).renderType("cutout").texture("texture", texture));
+        this.horizontalBlock(ladder.get(), this.models().withExistingParent(getItemName(ladder.get()), "block/ladder").texture("particle", texture).renderType("cutout").texture("texture", texture));
         this.generatedItem(ladder.get(), TextureFolder.Block);
     }
 
     private void cubeBottomTop(RegistryObject<Block> block) {
-        String name = this.getItemName(block.get());
+        String name = getItemName(block.get());
 
         this.simpleBlock(block.get(), this.models().cubeBottomTop(name, this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_bottom"), this.modLoc("block/" + name + "_top")));
         this.itemModel(block);
     }
 
     private void thatch(RegistryObject<Block> thatch) {
-        String name = this.getItemName(thatch.get());
+        String name = getItemName(thatch.get());
         ResourceLocation texture = this.blockTexture(thatch.get());
         ResourceLocation extrudes = this.modLoc("block/" + name + "_extrudes");
 
@@ -593,9 +601,9 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void thatchSlab(RegistryObject<Block> thatch, Supplier<Block> textureBlock) {
-        String name = this.getItemName(thatch.get());
+        String name = getItemName(thatch.get());
         ResourceLocation texture = this.blockTexture(textureBlock.get());
-        ResourceLocation extrudes = this.modLoc("block/" +  this.getItemName(textureBlock.get()) + "_extrudes");
+        ResourceLocation extrudes = this.modLoc("block/" +  getItemName(textureBlock.get()) + "_extrudes");
 
         ModelFile bottom = this.models().withExistingParent(name, "blueprint:block/thatch/thatch_slab").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
         ModelFile top = this.models().withExistingParent(name + "_top", "blueprint:block/thatch/thatch_slab_top").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
@@ -605,9 +613,9 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void thatchStairs(RegistryObject<Block> thatch, Supplier<Block> textureBlock) {
-        String name = this.getItemName(thatch.get());
+        String name = getItemName(thatch.get());
         ResourceLocation texture = this.blockTexture(textureBlock.get());
-        ResourceLocation extrudes = this.modLoc("block/" +  this.getItemName(textureBlock.get()) + "_extrudes");
+        ResourceLocation extrudes = this.modLoc("block/" +  getItemName(textureBlock.get()) + "_extrudes");
 
         ModelFile stairs = this.models().withExistingParent(name, "blueprint:block/thatch/thatch_stairs").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
         ModelFile inner = this.models().withExistingParent(name + "_inner", "blueprint:block/thatch/thatch_stairs_inner").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
@@ -638,8 +646,8 @@ public class HorizonsModelProvider extends BlockStateProvider {
 
     private void thatchVerticalSlab(RegistryObject<Block> thatch, Supplier<Block> textureBlock) {
         ResourceLocation texture = this.blockTexture(textureBlock.get());
-        ResourceLocation extrudes = this.modLoc("block/" +  this.getItemName(textureBlock.get()) + "_extrudes");
-        ModelFile model = this.models().withExistingParent(this.getItemName(thatch.get()), "blueprint:block/thatch/thatch_vertical_slab").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
+        ResourceLocation extrudes = this.modLoc("block/" +  getItemName(textureBlock.get()) + "_extrudes");
+        ModelFile model = this.models().withExistingParent(getItemName(thatch.get()), "blueprint:block/thatch/thatch_vertical_slab").texture("thatch", texture).texture("extrudes", extrudes).renderType("cutout");
 
         this.itemModel(thatch);
         this.getVariantBuilder(thatch.get())
@@ -651,7 +659,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void cabinet(RegistryObject<Block> cabinet) {
-        String name = this.getItemName(cabinet.get());
+        String name = getItemName(cabinet.get());
         ModelFile model = this.models().orientable(name, this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_front"), this.modLoc("block/" + name + "_end"));
         ModelFile model_open = this.models().orientable(name + "_open", this.modLoc("block/" + name + "_side"), this.modLoc("block/" + name + "_front_open"), this.modLoc("block/" + name + "_end"));
 
@@ -660,7 +668,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
     }
 
     private void doubleBlockNoItem(RegistryObject<Block> block) {
-        String name = this.getItemName(block.get());
+        String name = getBlockName(block.get());
         Function<String, ModelFile> model = s -> this.models().cross(name + "_" + s, this.modLoc("block/" + name + "_" + s)).renderType("cutout");
 
         this.getVariantBuilder(block.get())
@@ -671,22 +679,26 @@ public class HorizonsModelProvider extends BlockStateProvider {
     private void wall(RegistryObject<? extends Block> wall, Supplier<? extends Block> textureBlock) {
         ResourceLocation texture = this.blockTexture(textureBlock.get());
         this.wallBlock((WallBlock) wall.get(), texture);
-        this.itemModels().wallInventory(this.getItemName(wall.get()), texture);
+        this.itemModels().wallInventory(getItemName(wall.get()), texture);
     }
 
     // Misc Util //
 
     private void itemModel(RegistryObject<Block> block) {
-        this.itemModels().withExistingParent(this.getItemName(block.get()), this.blockTexture(block.get()));
+        this.itemModels().withExistingParent(getItemName(block.get()), this.blockTexture(block.get()));
     }
 
     private void generatedItem(ItemLike item, TextureFolder folder) {
-        String name = this.getItemName(item);
+        String name = getItemName(item);
         this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc(folder.format(name)));
     }
 
-    private String getItemName(ItemLike item) {
+    private static String getItemName(ItemLike item) {
         return ForgeRegistries.ITEMS.getKey(item.asItem()).getPath();
+    }
+
+    private static String getBlockName(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block).getPath();
     }
 
     private enum TextureFolder {

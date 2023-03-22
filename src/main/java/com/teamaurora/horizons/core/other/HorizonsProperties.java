@@ -30,5 +30,7 @@ public final class HorizonsProperties {
     public static final BlockBehaviour.Properties BOULDER_BRICKS = BlockBehaviour.Properties.of(Material.STONE, MaterialColor.STONE).sound(SoundType.NETHER_BRICKS).requiresCorrectToolForDrops().strength(1.5F, 6.0F);
     public static final BlockBehaviour.Properties REDBUD_BLOSSOMS = Block.Properties.of(Material.PLANT, MaterialColor.COLOR_PINK).noCollission().strength(0.2F).sound(SoundType.FLOWERING_AZALEA);
     public static final BlockBehaviour.Properties SUNFLOWER_SEED_SACK = BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN).strength(0.5F).sound(SoundType.WOOL);
+    public static final BlockBehaviour.Properties LAVENDER_BASKET = BlockBehaviour.Properties.of(Material.WOOL, MaterialColor.COLOR_BROWN).strength(0.5F).sound(SoundType.WOOD);
+    public static final BlockBehaviour.Properties LAVENDER = Block.Properties.of(Material.PLANT).noCollission().instabreak().sound(SoundType.AZALEA).offsetType(Block.OffsetType.XZ);
 
 }

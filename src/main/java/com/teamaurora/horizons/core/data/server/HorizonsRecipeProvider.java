@@ -94,6 +94,7 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         flowerToDye(HorizonsBlocks.BLUE_DAISY.get(), Items.BLUE_DYE, consumer);
         ShapelessRecipeBuilder.shapeless(HorizonsItems.SUNFLOWER_SEEDS.get(), 2).requires(Items.SUNFLOWER).unlockedBy(getHasName(Items.SUNFLOWER), has(Items.SUNFLOWER)).save(consumer, getSaveLocation(HorizonsItems.SUNFLOWER_SEEDS.get()));
         quarkCompressedBlock(HorizonsItems.SUNFLOWER_SEEDS.get(), HorizonsBlocks.SUNFLOWER_SEED_SACK.get(), "berry_sack", consumer);
+        quarkCompressedBlock(HorizonsBlocks.LAVENDER.get(), HorizonsBlocks.LAVENDER_BASKET.get(), "berry_sack", consumer);
     }
 
     private static void woodSet(TagKey<Item> logs, Block planks, Block slab, Block stairs, Block log, Block wood, Block strippedLog, Block strippedWood, ItemLike boat, ItemLike chestBoat, Block button, Block door, Block trapdoor, Block fence, Block fenceGate, Block pressurePlate, Block sign, Block verticalSlab, Block post, Block strippedPost, Block boards, Block beehive, Block ladder, Block bookshelf, Block chest, Block trappedChest, Item largeBoat, Item furnaceBoat, Block verticalPlanks, Block cabinet, Consumer<FinishedRecipe> consumer) {

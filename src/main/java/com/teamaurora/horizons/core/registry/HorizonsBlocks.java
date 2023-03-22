@@ -21,6 +21,8 @@ import com.teamaurora.horizons.common.block.cypress.CypressBranchBlock;
 import com.teamaurora.horizons.common.block.cypress.CypressKneeBlock;
 import com.teamaurora.horizons.common.block.cypress.DoubleCypressKneeBlock;
 import com.teamaurora.horizons.common.block.cypress.HangingCypressLeavesBlock;
+import com.teamaurora.horizons.common.block.lavender.LavenderBlock;
+import com.teamaurora.horizons.common.block.lavender.TallLavenderBlock;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.other.HorizonsConstants;
 import com.teamaurora.horizons.core.other.HorizonsProperties;
@@ -317,4 +319,11 @@ public class HorizonsBlocks {
     // Sunflower //
 
     public static final RegistryObject<Block> SUNFLOWER_SEED_SACK = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "sunflower_seed_sack", () -> new Block(HorizonsProperties.SUNFLOWER_SEED_SACK), 300, CreativeModeTab.TAB_DECORATIONS);
+
+    // Lavender //
+
+    public static final RegistryObject<Block> LAVENDER = HELPER.createBlock("lavender", () -> new LavenderBlock(HorizonsProperties.LAVENDER), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> TALL_LAVENDER = HELPER.createBlockNoItem("tall_lavender", () -> new TallLavenderBlock(HorizonsProperties.LAVENDER));
+    public static final RegistryObject<Block> LAVENDER_BASKET = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "lavender_basket", () -> new Block(HorizonsProperties.LAVENDER_BASKET), 300, CreativeModeTab.TAB_DECORATIONS);
+
 }

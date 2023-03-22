@@ -310,6 +310,10 @@ public class HorizonsLanguageProvider extends LanguageProvider {
 
         this.translateBlock(HorizonsBlocks.SUNFLOWER_SEED_SACK);
 
+        this.translateBlock(HorizonsBlocks.LAVENDER);
+        this.add(HorizonsBlocks.TALL_LAVENDER.get(), "Lavender");
+        this.translateBlock(HorizonsBlocks.LAVENDER_BASKET);
+
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);
 

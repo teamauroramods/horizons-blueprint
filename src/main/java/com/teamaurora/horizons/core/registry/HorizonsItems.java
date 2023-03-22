@@ -55,7 +55,6 @@ public class HorizonsItems {
     public static final RegistryObject<Item> REDBUD_BLOSSOMS = HELPER.createItem("redbud_blossoms", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
     public static final RegistryObject<Item> SUNFLOWER_SEEDS = HELPER.createItem("sunflower_seeds", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
-
     // Lily Items //
 
     public static final RegistryObject<Item> BLUE_LILY = HELPER.createItem("blue_lily", () -> new LilyItem(HorizonsBlocks.BLUE_LILY.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
