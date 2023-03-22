@@ -46,6 +46,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.generatedItem(HorizonsItems.GOOSEBERRY_JAM_COOKIE.get(), TextureFolder.Item);
 
         this.generatedItem(HorizonsItems.REDBUD_BLOSSOMS.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.SUNFLOWER_SEEDS.get(), TextureFolder.Item);
 
         this.generatedItem(HorizonsItems.CYPRESS_BOATS.getFirst().get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.CYPRESS_BOATS.getSecond().get(), TextureFolder.Item);
@@ -286,6 +287,8 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.post(HorizonsBlocks.STRIPPED_JACARANDA_POST, HorizonsBlocks.STRIPPED_JACARANDA_LOG);
         this.chests(HorizonsBlocks.JACARANDA_CHEST, HorizonsBlocks.JACARANDA_TRAPPED_CHEST, HorizonsBlocks.JACARANDA_PLANKS);
         this.cabinet(HorizonsBlocks.JACARANDA_CABINET);
+
+        this.cubeBottomTop(HorizonsBlocks.SUNFLOWER_SEED_SACK);
     }
 
     // Specific Block Generators //

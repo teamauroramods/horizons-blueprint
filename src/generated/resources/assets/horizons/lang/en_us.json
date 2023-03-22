@@ -230,6 +230,7 @@
   "block.horizons.stripped_redwood_log": "Stripped Redwood Log",
   "block.horizons.stripped_redwood_post": "Stripped Redwood Post",
   "block.horizons.stripped_redwood_wood": "Stripped Redwood",
+  "block.horizons.sunflower_seed_sack": "Sunflower Seed Sack",
   "block.horizons.vertical_cypress_planks": "Vertical Cypress Planks",
   "block.horizons.vertical_jacaranda_planks": "Vertical Jacaranda Planks",
   "block.horizons.vertical_redbud_planks": "Vertical Redbud Planks",
@@ -258,5 +259,6 @@
   "item.horizons.redbud_furnace_boat": "Redbud Furnace Boat",
   "item.horizons.redwood_boat": "Redwood Boat",
   "item.horizons.redwood_chest_boat": "Redwood Chest Boat",
-  "item.horizons.redwood_furnace_boat": "Redwood Furnace Boat"
+  "item.horizons.redwood_furnace_boat": "Redwood Furnace Boat",
+  "item.horizons.sunflower_seeds": "Sunflower Seeds"
 }

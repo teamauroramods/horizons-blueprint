@@ -121,7 +121,7 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> POTTED_PURPLE_LILY = HELPER.createBlockNoItem("potted_purple_lily", () -> new FlowerPotBlock(PURPLE_LILY.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_WHITE_LILY = HELPER.createBlockNoItem("potted_white_lily", () -> new FlowerPotBlock(WHITE_LILY.get(), PropertyUtil.flowerPot()));
 
-    // Misc //
+    // Fern //
 
     public static final RegistryObject<Block> GIANT_FERN = HELPER.createInjectedBlock("giant_fern", Items.LARGE_FERN, () -> new DoublePlantBlock(HorizonsProperties.GIANT_FERN), CreativeModeTab.TAB_DECORATIONS);
 
@@ -314,4 +314,7 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> FLOWERING_BLUE_JACARANDA_LEAF_CARPET = HELPER.createCompatBlock(HorizonsConstants.QUARK, "flowering_blue_jacaranda_leaf_carpet", () -> new LeafCarpetBlock(HorizonsProperties.JACARANDA.leafCarpet()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> FLOWERING_BLUE_JACARANDA_LEAF_PILE = HELPER.createCompatBlock(HorizonsConstants.WOODWORKS, "flowering_blue_jacaranda_leaf_pile", () -> new LeafPileBlock(HorizonsProperties.JACARANDA.leafPile()), CreativeModeTab.TAB_DECORATIONS);
 
+    // Sunflower //
+
+    public static final RegistryObject<Block> SUNFLOWER_SEED_SACK = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "sunflower_seed_sack", () -> new Block(HorizonsProperties.SUNFLOWER_SEED_SACK), 300, CreativeModeTab.TAB_DECORATIONS);
 }

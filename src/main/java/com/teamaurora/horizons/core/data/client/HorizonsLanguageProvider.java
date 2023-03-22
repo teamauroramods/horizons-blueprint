@@ -36,6 +36,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateItem(HorizonsItems.GOOSEBERRY_JAM_COOKIE);
 
         this.translateItem(HorizonsItems.REDBUD_BLOSSOMS);
+        this.translateItem(HorizonsItems.SUNFLOWER_SEEDS);
 
         this.translateItem(HorizonsItems.CYPRESS_BOATS.getFirst());
         this.translateItem(HorizonsItems.CYPRESS_BOATS.getSecond());
@@ -306,6 +307,8 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_HEDGE.get(), "Flowering Blue Jacaranda Leaf Hedge");
         this.translateBlock(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_CARPET);
         this.add(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_PILE.get(), "Pile of Flowering Blue Jacaranda Leaves");
+
+        this.translateBlock(HorizonsBlocks.SUNFLOWER_SEED_SACK);
 
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);

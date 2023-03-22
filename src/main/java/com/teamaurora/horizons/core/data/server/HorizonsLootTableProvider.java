@@ -321,6 +321,8 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_HEDGE.get());
             this.dropSelf(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_CARPET.get());
             this.leafPile(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_PILE.get());
+
+            this.dropSelf(HorizonsBlocks.SUNFLOWER_SEED_SACK.get());
         }
 
         private void normalLeaves(Block leaves, Block sapling) {

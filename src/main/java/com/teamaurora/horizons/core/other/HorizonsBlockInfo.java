@@ -7,9 +7,12 @@ import com.teamaurora.horizons.core.registry.HorizonsItems;
 public final class HorizonsBlockInfo {
     public static void registerCompostables() {
         DataUtil.registerCompostable(HorizonsItems.GOOSEBERRIES.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.GOOSEBERRY_SACK.get(), 1f);
         DataUtil.registerCompostable(HorizonsItems.HONEY_GLAZED_GOOSEBERRIES.get(), .3f);
         DataUtil.registerCompostable(HorizonsItems.GOOSEBERRY_JAM_COOKIE.get(), .85f);
         DataUtil.registerCompostable(HorizonsItems.GOOSEBERRY_PIE.get(), 1f);
+        DataUtil.registerCompostable(HorizonsItems.SUNFLOWER_SEEDS.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.SUNFLOWER_SEED_SACK.get(), 1f);
 
         DataUtil.registerCompostable(HorizonsBlocks.CYPRESS_LEAVES.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.CYPRESS_SAPLING.get(), .3f);
