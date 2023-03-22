@@ -1,5 +1,7 @@
 package com.teamaurora.horizons.core.other;
 
+import com.teamaurora.horizons.core.registry.HorizonsEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.food.FoodProperties;
 
 /**
@@ -16,5 +18,5 @@ public final class HorizonsFoods {
     public static final FoodProperties GOOSEBERRY_JAM_COOKIE_FAST = new FoodProperties.Builder().nutrition(2).saturationMod(0.3F).fast().build();
     public static final FoodProperties LAVENDER_SALAD = new FoodProperties.Builder().nutrition(6).saturationMod(0.5F).build();
     public static final FoodProperties SUNFLOWER_SEEDS = new FoodProperties.Builder().nutrition(2).saturationMod(0.1F).build();
-    public static final FoodProperties LAVENDER_TEA = new FoodProperties.Builder().nutrition(0).saturationMod(0.0F).build(); //add tea effect
+    public static final FoodProperties LAVENDER_TEA = new FoodProperties.Builder().nutrition(0).saturationMod(0.0F).effect(() -> new MobEffectInstance(HorizonsEffects.SUPPORTIVE.get(), 200, 0, false, true, true), 1).build();
 }
