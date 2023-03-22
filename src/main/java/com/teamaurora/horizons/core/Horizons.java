@@ -13,7 +13,9 @@ import com.teamaurora.horizons.core.data.server.tags.HorizonsBiomeTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBlockTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsItemTagsProvider;
 import com.teamaurora.horizons.core.other.HorizonsBlockInfo;
+import com.teamaurora.horizons.core.registry.HorizonsEffects;
 import com.teamaurora.horizons.core.registry.HorizonsFeatures;
+import com.teamaurora.horizons.core.registry.util.EffectSubRegistryHelper;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -22,6 +24,7 @@ import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
 /**
  * @author rose_
@@ -29,7 +32,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 @Mod(Horizons.MODID)
 public class Horizons {
     public static final String MODID = "horizons";
-    public static final RegistryHelper REGISTRY_HELPER = new RegistryHelper(MODID);
+    public static final RegistryHelper REGISTRY_HELPER = RegistryHelper.create(MODID, h -> h.putSubHelper(ForgeRegistries.MOB_EFFECTS, new EffectSubRegistryHelper(h)));
 
     public Horizons() {
         final IEventBus bus = Mod.EventBusSubscriber.Bus.MOD.bus().get();
@@ -51,6 +54,7 @@ public class Horizons {
         event.enqueueWork(() -> {
             HorizonsBlockInfo.registerCompostables();
             HorizonsBlockInfo.registerFlammables();
+            HorizonsEffects.registerPotionRecipes();
         });
     }
 

@@ -7,8 +7,10 @@ import com.teamabnormals.blueprint.core.util.registry.BiomeSubRegistryHelper;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
+import com.teamaurora.horizons.core.registry.HorizonsEffects;
 import com.teamaurora.horizons.core.registry.HorizonsItems;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -319,6 +321,11 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);
 
+        //effects
+        this.translatePotion(HorizonsEffects.SUPPORTIVE_NORMAL, "Supportive");
+        this.translatePotion(HorizonsEffects.SUPPORTIVE_LONG, "Supportive");
+        this.translatePotion(HorizonsEffects.SUPPORTIVE_STRONG, "Supportive");
+
     }
 
     private void translateItem(RegistryObject<? extends Item> item) {
@@ -336,6 +343,15 @@ public class HorizonsLanguageProvider extends LanguageProvider {
 
     private void translateBiome(BiomeSubRegistryHelper.KeyedBiome biome) {
         this.add("biome." + Horizons.MODID + "." + ForgeRegistries.BIOMES.getKey(biome.get()).getPath(), toUpper(ForgeRegistries.BIOMES, biome.getObject()));
+    }
+
+    private void translatePotion(RegistryObject<? extends Potion> potion, String effect) {
+        String name = ForgeRegistries.POTIONS.getKey(potion.get()).getPath();
+
+        this.add("item.minecraft.potion.effect." + name, "Potion of " + effect);
+        this.add("item.minecraft.splash_potion.effect." + name, "Splash Potion of " + effect);
+        this.add("item.minecraft.tipped_arrow.effect." + name, "Arrow of " + effect);
+        this.add("item.minecraft.lingering_potion.effect." + name, "Lingering Potion of " + effect);
     }
 
     private static <T> String toUpper(IForgeRegistry<T> entry, RegistryObject<? extends T> object) {

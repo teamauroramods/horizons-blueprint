@@ -265,5 +265,17 @@
   "item.horizons.redwood_boat": "Redwood Boat",
   "item.horizons.redwood_chest_boat": "Redwood Chest Boat",
   "item.horizons.redwood_furnace_boat": "Redwood Furnace Boat",
-  "item.horizons.sunflower_seeds": "Sunflower Seeds"
+  "item.horizons.sunflower_seeds": "Sunflower Seeds",
+  "item.minecraft.lingering_potion.effect.supportive": "Lingering Potion of Supportive",
+  "item.minecraft.lingering_potion.effect.supportive_long": "Lingering Potion of Supportive",
+  "item.minecraft.lingering_potion.effect.supportive_strong": "Lingering Potion of Supportive",
+  "item.minecraft.potion.effect.supportive": "Potion of Supportive",
+  "item.minecraft.potion.effect.supportive_long": "Potion of Supportive",
+  "item.minecraft.potion.effect.supportive_strong": "Potion of Supportive",
+  "item.minecraft.splash_potion.effect.supportive": "Splash Potion of Supportive",
+  "item.minecraft.splash_potion.effect.supportive_long": "Splash Potion of Supportive",
+  "item.minecraft.splash_potion.effect.supportive_strong": "Splash Potion of Supportive",
+  "item.minecraft.tipped_arrow.effect.supportive": "Arrow of Supportive",
+  "item.minecraft.tipped_arrow.effect.supportive_long": "Arrow of Supportive",
+  "item.minecraft.tipped_arrow.effect.supportive_strong": "Arrow of Supportive"
 }
