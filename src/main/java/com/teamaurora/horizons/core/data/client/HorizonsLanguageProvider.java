@@ -9,6 +9,7 @@ import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import com.teamaurora.horizons.core.registry.HorizonsBlocks;
 import com.teamaurora.horizons.core.registry.HorizonsEffects;
 import com.teamaurora.horizons.core.registry.HorizonsItems;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.level.block.Block;
@@ -322,6 +323,9 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBiome(HorizonsBiomes.BAYOU);
 
         //effects
+        this.translateEffect(HorizonsEffects.SUPPORTIVE);
+
+        //potions
         this.translatePotion(HorizonsEffects.SUPPORTIVE_NORMAL, "Supportive");
         this.translatePotion(HorizonsEffects.SUPPORTIVE_LONG, "Supportive");
         this.translatePotion(HorizonsEffects.SUPPORTIVE_STRONG, "Supportive");
@@ -353,6 +357,10 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add("item.minecraft.tipped_arrow.effect." + name, "Arrow of " + effect);
         this.add("item.minecraft.lingering_potion.effect." + name, "Lingering Potion of " + effect);
         this.add("item.caverns_and_chasms.tether_potion.effect." + name, "Tether Potion of " + effect);
+    }
+
+    private void translateEffect(RegistryObject<? extends MobEffect> effect) {
+        this.add(effect.get(), toUpper(ForgeRegistries.MOB_EFFECTS, effect));
     }
 
     private static <T> String toUpper(IForgeRegistry<T> entry, RegistryObject<? extends T> object) {
