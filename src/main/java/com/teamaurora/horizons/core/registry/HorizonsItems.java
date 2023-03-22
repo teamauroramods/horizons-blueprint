@@ -12,6 +12,7 @@ import com.teamaurora.horizons.core.other.HorizonsConstants;
 import com.teamaurora.horizons.core.other.HorizonsFoods;
 import com.teamaurora.horizons.integration.boatload.HorizonsBoatTypes;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.item.BowlFoodItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -34,6 +35,11 @@ public class HorizonsItems {
     public static final RegistryObject<Item> GOOSEBERRY_JAM = HELPER.createItem("gooseberry_jam", () -> new DrinkableBottleItem(() -> SoundEvents.HONEY_DRINK, HorizonsFoods.GOOSEBERRY_JAM));
     public static final RegistryObject<Item> GOOSEBERRY_JAM_COOKIE = HELPER.createItem("gooseberry_jam_cookie", () -> new Item(PropertyUtil.food(ItemSubRegistryHelper.areModsLoaded(HorizonsConstants.FARMERSDELIGHT) ? HorizonsFoods.GOOSEBERRY_JAM_COOKIE_FAST : HorizonsFoods.GOOSEBERRY_JAM_COOKIE)));
 
+    public static final RegistryObject<Item> SUNFLOWER_SEEDS = HELPER.createItem("sunflower_seeds", () -> new Item(PropertyUtil.food(HorizonsFoods.SUNFLOWER_SEEDS)));
+    public static final RegistryObject<Item> LAVENDER_SALAD = HELPER.createItem("lavender_salad", () -> new BowlFoodItem(PropertyUtil.food(HorizonsFoods.LAVENDER_SALAD).stacksTo(1).craftRemainder(Items.BOWL)));
+    public static final RegistryObject<Item> LAVENDER_TEA = HELPER.createItem("lavender_tea", () -> new DrinkableBottleItem(HorizonsFoods.LAVENDER_TEA));
+
+
     // Boats //
 
     public static final Pair<RegistryObject<Item>, RegistryObject<Item>> CYPRESS_BOATS = HELPER.createBoatAndChestBoatItem("cypress", HorizonsBlocks.CYPRESS_PLANKS);
@@ -53,7 +59,6 @@ public class HorizonsItems {
 
     public static final RegistryObject<Item> ALGAE = HELPER.createItem("algae", () -> new AlgaeBlockItem(HorizonsBlocks.ALGAE.get(), new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS)));
     public static final RegistryObject<Item> REDBUD_BLOSSOMS = HELPER.createItem("redbud_blossoms", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
-    public static final RegistryObject<Item> SUNFLOWER_SEEDS = HELPER.createItem("sunflower_seeds", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     // Lily Items //
 

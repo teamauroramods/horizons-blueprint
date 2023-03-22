@@ -63,6 +63,36 @@
               }
             },
             "trigger": "minecraft:consume_item"
+          },
+          "horizons:lavender_salad": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:lavender_salad"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          },
+          "horizons:lavender_tea": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:lavender_tea"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
+          },
+          "horizons:sunflower_seeds": {
+            "conditions": {
+              "item": {
+                "items": [
+                  "horizons:sunflower_seeds"
+                ]
+              }
+            },
+            "trigger": "minecraft:consume_item"
           }
         },
         "requirements": [
@@ -83,6 +113,15 @@
           ],
           [
             "horizons:gooseberry_jam_cookie"
+          ],
+          [
+            "horizons:sunflower_seeds"
+          ],
+          [
+            "horizons:lavender_salad"
+          ],
+          [
+            "horizons:lavender_tea"
           ]
         ],
         "should_replace_requirements": false

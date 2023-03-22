@@ -23,7 +23,6 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -44,9 +43,11 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.generatedItem(HorizonsItems.HONEY_GLAZED_GOOSEBERRIES.get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.GOOSEBERRY_JAM.get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.GOOSEBERRY_JAM_COOKIE.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.SUNFLOWER_SEEDS.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.LAVENDER_SALAD.get(), TextureFolder.Item);
+        this.generatedItem(HorizonsItems.LAVENDER_TEA.get(), TextureFolder.Item);
 
         this.generatedItem(HorizonsItems.REDBUD_BLOSSOMS.get(), TextureFolder.Item);
-        this.generatedItem(HorizonsItems.SUNFLOWER_SEEDS.get(), TextureFolder.Item);
 
         this.generatedItem(HorizonsItems.CYPRESS_BOATS.getFirst().get(), TextureFolder.Item);
         this.generatedItem(HorizonsItems.CYPRESS_BOATS.getSecond().get(), TextureFolder.Item);

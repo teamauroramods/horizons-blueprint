@@ -34,9 +34,11 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateItem(HorizonsItems.HONEY_GLAZED_GOOSEBERRIES);
         this.translateItem(HorizonsItems.GOOSEBERRY_JAM);
         this.translateItem(HorizonsItems.GOOSEBERRY_JAM_COOKIE);
+        this.translateItem(HorizonsItems.SUNFLOWER_SEEDS);
+        this.translateItem(HorizonsItems.LAVENDER_SALAD);
+        this.translateItem(HorizonsItems.LAVENDER_TEA);
 
         this.translateItem(HorizonsItems.REDBUD_BLOSSOMS);
-        this.translateItem(HorizonsItems.SUNFLOWER_SEEDS);
 
         this.translateItem(HorizonsItems.CYPRESS_BOATS.getFirst());
         this.translateItem(HorizonsItems.CYPRESS_BOATS.getSecond());

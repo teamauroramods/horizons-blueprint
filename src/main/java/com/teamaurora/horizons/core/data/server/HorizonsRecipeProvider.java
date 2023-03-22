@@ -12,6 +12,7 @@ import net.minecraft.advancements.critereon.MinMaxBounds;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -20,10 +21,7 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
-import net.minecraftforge.common.crafting.conditions.AndCondition;
-import net.minecraftforge.common.crafting.conditions.ICondition;
-import net.minecraftforge.common.crafting.conditions.ModLoadedCondition;
-import net.minecraftforge.common.crafting.conditions.OrCondition;
+import net.minecraftforge.common.crafting.conditions.*;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -95,6 +93,8 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         ShapelessRecipeBuilder.shapeless(HorizonsItems.SUNFLOWER_SEEDS.get(), 2).requires(Items.SUNFLOWER).unlockedBy(getHasName(Items.SUNFLOWER), has(Items.SUNFLOWER)).save(consumer, getSaveLocation(HorizonsItems.SUNFLOWER_SEEDS.get()));
         quarkCompressedBlock(HorizonsItems.SUNFLOWER_SEEDS.get(), HorizonsBlocks.SUNFLOWER_SEED_SACK.get(), "berry_sack", consumer);
         quarkCompressedBlock(HorizonsBlocks.LAVENDER.get(), HorizonsBlocks.LAVENDER_BASKET.get(), "berry_sack", consumer);
+        ShapelessRecipeBuilder.shapeless(HorizonsItems.LAVENDER_SALAD.get()).requires(HorizonsBlocks.LAVENDER.get(), 2).requires(Items.CARROT).requires(Items.BOWL).unlockedBy(getHasName(HorizonsBlocks.LAVENDER.get()), has(HorizonsBlocks.LAVENDER.get())).save(consumer, getSaveLocation(HorizonsItems.LAVENDER_SALAD.get()));
+        conditionalRecipe(ShapelessRecipeBuilder.shapeless(HorizonsItems.LAVENDER_TEA.get()).requires(HorizonsBlocks.LAVENDER.get()).requires(ItemTags.LEAVES).requires(Items.GLASS_BOTTLE).unlockedBy(getHasName(HorizonsBlocks.LAVENDER.get()), has(HorizonsBlocks.LAVENDER.get())), new NotCondition(new ModLoadedCondition("farmersdelight")), consumer, getSaveLocation(HorizonsItems.LAVENDER_TEA.get()));
     }
 
     private static void woodSet(TagKey<Item> logs, Block planks, Block slab, Block stairs, Block log, Block wood, Block strippedLog, Block strippedWood, ItemLike boat, ItemLike chestBoat, Block button, Block door, Block trapdoor, Block fence, Block fenceGate, Block pressurePlate, Block sign, Block verticalSlab, Block post, Block strippedPost, Block boards, Block beehive, Block ladder, Block bookshelf, Block chest, Block trappedChest, Item largeBoat, Item furnaceBoat, Block verticalPlanks, Block cabinet, Consumer<FinishedRecipe> consumer) {
