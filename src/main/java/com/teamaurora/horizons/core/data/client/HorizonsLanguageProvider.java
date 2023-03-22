@@ -352,6 +352,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add("item.minecraft.splash_potion.effect." + name, "Splash Potion of " + effect);
         this.add("item.minecraft.tipped_arrow.effect." + name, "Arrow of " + effect);
         this.add("item.minecraft.lingering_potion.effect." + name, "Lingering Potion of " + effect);
+        this.add("item.caverns_and_chasms.tether_potion.effect." + name, "Tether Potion of " + effect);
     }
 
     private static <T> String toUpper(IForgeRegistry<T> entry, RegistryObject<? extends T> object) {
