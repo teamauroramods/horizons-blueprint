@@ -319,6 +319,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
 
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);
+        this.translateBiome(HorizonsBiomes.REDBUD_GROVE);
 
         //effects
         this.translateEffect(HorizonsEffects.SUPPORTIVE);
