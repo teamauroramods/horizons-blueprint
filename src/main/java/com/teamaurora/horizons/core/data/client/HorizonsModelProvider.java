@@ -156,7 +156,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.post(HorizonsBlocks.REDWOOD_POST, HorizonsBlocks.REDWOOD_LOG);
         this.post(HorizonsBlocks.STRIPPED_REDWOOD_POST, HorizonsBlocks.STRIPPED_REDWOOD_LOG);
         this.chests(HorizonsBlocks.REDWOOD_CHEST, HorizonsBlocks.REDWOOD_TRAPPED_CHEST, HorizonsBlocks.REDWOOD_PLANKS);
-        //this.cabinet(HorizonsBlocks.REDWOOD_CABINET);
+        this.cabinet(HorizonsBlocks.REDWOOD_CABINET);
 
         this.cubeAll(HorizonsBlocks.LIGHT_BOULDER);
         this.slab(HorizonsBlocks.LIGHT_BOULDER_SLAB, HorizonsBlocks.LIGHT_BOULDER);

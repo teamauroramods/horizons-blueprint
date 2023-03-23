@@ -29,7 +29,6 @@ public class HorizonsEffects {
     public static final RegistryObject<Potion> SUPPORTIVE_LONG = HELPER.createPotion("supportive_long", SUPPORTIVE, 3600, 0);
     public static final RegistryObject<Potion> SUPPORTIVE_STRONG = HELPER.createPotion("supportive_strong", SUPPORTIVE, 864, 1);
 
-
     public static void registerPotionRecipes() {
         DataUtil.addMix(Potions.AWKWARD, HorizonsBlocks.LAVENDER.get().asItem(), SUPPORTIVE_NORMAL.get());
         DataUtil.addMix(SUPPORTIVE_NORMAL.get(), Items.GLOWSTONE_DUST, SUPPORTIVE_STRONG.get());

@@ -65,6 +65,10 @@ public final class HorizonsBlockInfo {
         DataUtil.registerCompostable(HorizonsBlocks.ORANGE_DAISY.get(), .65f);
         DataUtil.registerCompostable(HorizonsBlocks.MAGENTA_DAISY.get(), .65f);
         DataUtil.registerCompostable(HorizonsBlocks.BLUE_DAISY.get(), .65f);
+
+        DataUtil.registerCompostable(HorizonsBlocks.HELICONIA.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.AMARANTHUS.get(), .65f);
+        DataUtil.registerCompostable(HorizonsBlocks.MYOSOTIS.get(), .65f);
     }
 
     public static void registerFlammables() {
@@ -135,6 +139,10 @@ public final class HorizonsBlockInfo {
         DataUtil.registerFlammable(HorizonsBlocks.ORANGE_DAISY.get(), 60, 100);
         DataUtil.registerFlammable(HorizonsBlocks.MAGENTA_DAISY.get(), 60, 100);
         DataUtil.registerFlammable(HorizonsBlocks.BLUE_DAISY.get(), 60, 100);
+
+        DataUtil.registerFlammable(HorizonsBlocks.HELICONIA.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.AMARANTHUS.get(), 60, 100);
+        DataUtil.registerFlammable(HorizonsBlocks.MYOSOTIS.get(), 60, 100);
     }
 
 }
