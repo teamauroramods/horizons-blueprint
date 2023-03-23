@@ -70,6 +70,7 @@ public class HorizonsBiomes {
         BiomeDefaultFeatures.addInfestedStone(gen);
 
         gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.REDBUD_TREES.getHolder().get());
+        gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.TALL_BIRCH.getHolder().get());
 
         return biome(Biome.Precipitation.RAIN, 0.8F, 0.8F, 937679, 329011, 12638463, spawns, gen, Musics.createGameMusic(SoundEvents.MUSIC_BIOME_MEADOW));
     }
