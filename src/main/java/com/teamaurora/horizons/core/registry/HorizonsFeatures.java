@@ -89,14 +89,14 @@ public final class HorizonsFeatures {
         public static final RegistryObject<PlacedFeature> ALGAE = createPlantPatch("algae", 3, Features.ALGAE);
         public static final RegistryObject<PlacedFeature> GIANT_FERN = createPlantPatch("giant_fern", 4, Features.GIANT_FERN);
 
-        public static final RegistryObject<PlacedFeature> BLUE_LILY = createPlantPatch("blue_lily", 64, Features.BLUE_LILY);
-        public static final RegistryObject<PlacedFeature> LIGHT_GRAY_LILY = createPlantPatch("light_gray_lily", 64, Features.LIGHT_GRAY_LILY);
-        public static final RegistryObject<PlacedFeature> CYAN_LILY = createPlantPatch("cyan_lily", 64, Features.CYAN_LILY);
-        public static final RegistryObject<PlacedFeature> LIGHT_BLUE_LILY = createPlantPatch("light_blue_lily", 64, Features.LIGHT_BLUE_LILY);
-        public static final RegistryObject<PlacedFeature> MAGENTA_LILY = createPlantPatch("magenta_lily", 64, Features.MAGENTA_LILY);
-        public static final RegistryObject<PlacedFeature> PINK_LILY = createPlantPatch("pink_lily", 64, Features.PINK_LILY);
-        public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPlantPatch("purple_lily", 64, Features.PURPLE_LILY);
-        public static final RegistryObject<PlacedFeature> WHITE_LILY = createPlantPatch("white_lily", 64, Features.WHITE_LILY);
+        public static final RegistryObject<PlacedFeature> BLUE_LILY = createPlantPatch("blue_lily", 82, Features.BLUE_LILY);
+        public static final RegistryObject<PlacedFeature> LIGHT_GRAY_LILY = createPlantPatch("light_gray_lily", 82, Features.LIGHT_GRAY_LILY);
+        public static final RegistryObject<PlacedFeature> CYAN_LILY = createPlantPatch("cyan_lily", 82, Features.CYAN_LILY);
+        public static final RegistryObject<PlacedFeature> LIGHT_BLUE_LILY = createPlantPatch("light_blue_lily", 82, Features.LIGHT_BLUE_LILY);
+        public static final RegistryObject<PlacedFeature> MAGENTA_LILY = createPlantPatch("magenta_lily", 82, Features.MAGENTA_LILY);
+        public static final RegistryObject<PlacedFeature> PINK_LILY = createPlantPatch("pink_lily", 82, Features.PINK_LILY);
+        public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPlantPatch("purple_lily", 82, Features.PURPLE_LILY);
+        public static final RegistryObject<PlacedFeature> WHITE_LILY = createPlantPatch("white_lily", 82, Features.WHITE_LILY);
 
         private static RegistryObject<PlacedFeature> createPlantPatch(String name, int onceEvery, RegistryObject<ConfiguredFeature<?, ?>> feature) {
             return register(name, feature, RarityFilter.onAverageOnceEvery(onceEvery), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
