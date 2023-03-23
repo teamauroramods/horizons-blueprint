@@ -253,7 +253,7 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add(HorizonsBlocks.FLOWERING_REDBUD_HEDGE.get(), "Flowering Redbud Leaf Hedge");
         this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET);
         this.add(HorizonsBlocks.FLOWERING_REDBUD_LEAF_PILE.get(), "Pile of Flowering Redbud Leaves");
-        this.add(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get(), "Pile of Redbud Blossoms]");
+        this.add(HorizonsBlocks.REDBUD_BLOSSOMS_LEAF_PILE.get(), "Pile of Redbud Blossoms");
 
         this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_LOG);
         this.translateBlock(HorizonsBlocks.STRIPPED_JACARANDA_WOOD);
