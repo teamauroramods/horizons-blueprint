@@ -235,8 +235,6 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.dropSelf(HorizonsBlocks.REDBUD_SIGNS.getSecond().get());
             this.dropSelf(HorizonsBlocks.REDBUD_SAPLING.get());
             this.dropPottedContents(HorizonsBlocks.POTTED_REDBUD_SAPLING.get());
-            this.dropSelf(HorizonsBlocks.BUDDING_REDBUD_SAPLING.get());
-            this.dropPottedContents(HorizonsBlocks.POTTED_BUDDING_REDBUD_SAPLING.get());
             this.dropSelf(HorizonsBlocks.FLOWERING_REDBUD_SAPLING.get());
             this.dropPottedContents(HorizonsBlocks.POTTED_FLOWERING_REDBUD_SAPLING.get());
             this.normalLeaves(HorizonsBlocks.REDBUD_LEAVES.get(), HorizonsBlocks.REDBUD_SAPLING.get());

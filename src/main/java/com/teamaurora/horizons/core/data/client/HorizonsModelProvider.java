@@ -209,7 +209,6 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.button(HorizonsBlocks.REDBUD_BUTTON, HorizonsBlocks.REDBUD_PLANKS);
         this.signs(HorizonsBlocks.REDBUD_SIGNS, HorizonsBlocks.REDBUD_PLANKS);
         this.pottedPlant(HorizonsBlocks.REDBUD_SAPLING, HorizonsBlocks.POTTED_REDBUD_SAPLING);
-        this.pottedPlant(HorizonsBlocks.BUDDING_REDBUD_SAPLING, HorizonsBlocks.POTTED_BUDDING_REDBUD_SAPLING);
         this.pottedPlant(HorizonsBlocks.FLOWERING_REDBUD_SAPLING, HorizonsBlocks.POTTED_FLOWERING_REDBUD_SAPLING);
         this.leaves(HorizonsBlocks.REDBUD_LEAVES);
         this.leaves(HorizonsBlocks.BUDDING_REDBUD_LEAVES);

@@ -30,7 +30,6 @@ public final class HorizonsBlockInfo {
         DataUtil.registerCompostable(HorizonsBlocks.REDBUD_SAPLING.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.BUDDING_REDBUD_LEAVES.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.BUDDING_REDBUD_LEAF_CARPET.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.BUDDING_REDBUD_SAPLING.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_REDBUD_LEAVES.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_REDBUD_LEAF_CARPET.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_REDBUD_SAPLING.get(), .3f);

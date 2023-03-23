@@ -224,8 +224,6 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateSigns(HorizonsBlocks.REDBUD_SIGNS, "redbud");
         this.translateBlock(HorizonsBlocks.REDBUD_SAPLING);
         this.translateBlock(HorizonsBlocks.POTTED_REDBUD_SAPLING);
-        this.translateBlock(HorizonsBlocks.BUDDING_REDBUD_SAPLING);
-        this.translateBlock(HorizonsBlocks.POTTED_BUDDING_REDBUD_SAPLING);
         this.translateBlock(HorizonsBlocks.FLOWERING_REDBUD_SAPLING);
         this.translateBlock(HorizonsBlocks.POTTED_FLOWERING_REDBUD_SAPLING);
         this.translateBlock(HorizonsBlocks.REDBUD_LEAVES);

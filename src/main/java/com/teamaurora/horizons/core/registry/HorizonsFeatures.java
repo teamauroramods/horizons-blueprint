@@ -1,23 +1,27 @@
 package com.teamaurora.horizons.core.registry;
 
+import com.google.common.collect.ImmutableList;
 import com.teamaurora.horizons.common.levelgen.feature.AlgaePatch;
 import com.teamaurora.horizons.core.Horizons;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.util.InclusiveRange;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.DualNoiseProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
+import net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraft.world.level.levelgen.synth.NormalNoise;
@@ -47,11 +51,12 @@ public final class HorizonsFeatures {
         public static final RandomPatchConfiguration PURPLE_LILY = createPlantPatch(64, HorizonsBlocks.PURPLE_LILY.get().defaultBlockState());
         public static final RandomPatchConfiguration WHITE_LILY = createPlantPatch(64, HorizonsBlocks.WHITE_LILY.get().defaultBlockState());
 
-        public static final TreeConfiguration CYPRESS_TREE = createCypressTree().build();
+        public static final TreeConfiguration REDBUD_TREE = createRedbudTree(BlockStateProvider.simple(HorizonsBlocks.REDBUD_LEAVES.get())).decorators(List.of(new BeehiveDecorator(.02f))).build();
+        public static final TreeConfiguration FLOWERING_REDBUD_TREE = createRedbudTree(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(HorizonsBlocks.BUDDING_REDBUD_LEAVES.get().defaultBlockState(), 3).add(HorizonsBlocks.FLOWERING_REDBUD_LEAVES.get().defaultBlockState(), 1).build())).decorators(List.of(new BeehiveDecorator(.02f))).build();
 
         private static RandomPatchConfiguration createPlantPatch(int tries, BlockState state) {
             return new RandomPatchConfiguration(tries, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                    new SimpleBlockConfiguration(new DualNoiseProvider(new InclusiveRange<Integer>(1, 3),
+                    new SimpleBlockConfiguration(new DualNoiseProvider(new InclusiveRange<>(1, 3),
                             new NormalNoise.NoiseParameters(-10, 1d), 1f, 2345l,
                             new NormalNoise.NoiseParameters(-3, 1d), 1f, List.of(state)))));
         }
@@ -65,6 +70,16 @@ public final class HorizonsFeatures {
                     new TwoLayersFeatureSize(0, 0, 0)).forceDirt();
 
         }
+
+        private static TreeConfiguration.TreeConfigurationBuilder createRedbudTree(BlockStateProvider leaves) {
+            return new TreeConfiguration.TreeConfigurationBuilder(
+                    BlockStateProvider.simple(HorizonsBlocks.REDBUD_LOG.get()),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    leaves,
+                    new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 4),
+                    new TwoLayersFeatureSize(1, 0, 1)).forceDirt().ignoreVines();
+        }
+
     }
 
     public static class Features {
@@ -81,6 +96,9 @@ public final class HorizonsFeatures {
         public static final RegistryObject<ConfiguredFeature<?, ?>> PINK_LILY = CONFIGURED_FEATURES.register("pink_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.PINK_LILY));
         public static final RegistryObject<ConfiguredFeature<?, ?>> PURPLE_LILY = CONFIGURED_FEATURES.register("purple_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.PURPLE_LILY));
         public static final RegistryObject<ConfiguredFeature<?, ?>> WHITE_LILY = CONFIGURED_FEATURES.register("white_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.WHITE_LILY));
+
+        public static final RegistryObject<ConfiguredFeature<?, ?>> REDBUD_TREES = CONFIGURED_FEATURES.register("redbud_trees", () -> new ConfiguredFeature<>(Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(TreePlacements.FLOWERING_REDBUD_TREES.getHolder().get(), 0.33333334F)), TreePlacements.REDBUD_TREES.getHolder().get())));
+
     }
 
     public static class Placements {
@@ -98,6 +116,8 @@ public final class HorizonsFeatures {
         public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPlantPatch("purple_lily", 82, Features.PURPLE_LILY);
         public static final RegistryObject<PlacedFeature> WHITE_LILY = createPlantPatch("white_lily", 82, Features.WHITE_LILY);
 
+        public static final RegistryObject<PlacedFeature> REDBUD_TREES = register("redbud_trees", Features.REDBUD_TREES, TreePlacements.treePlacement(PlacementUtils.countExtra(9, .1f, 1)));
+
         private static RegistryObject<PlacedFeature> createPlantPatch(String name, int onceEvery, RegistryObject<ConfiguredFeature<?, ?>> feature) {
             return register(name, feature, RarityFilter.onAverageOnceEvery(onceEvery), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
         }
@@ -112,6 +132,23 @@ public final class HorizonsFeatures {
 
         public static RegistryObject<PlacedFeature> register(String name, Holder<? extends ConfiguredFeature<?, ?>> configuredFeature, List<PlacementModifier> placementModifiers) {
             return PLACED_FEATURES.register(name, () -> new PlacedFeature((Holder<ConfiguredFeature<?, ?>>) configuredFeature, placementModifiers));
+        }
+    }
+
+    public static class TreeFeatures {
+        public static final RegistryObject<ConfiguredFeature<?, ?>> REDBUD_TREES = Features.CONFIGURED_FEATURES.register("redbud_trees_checked", () -> new ConfiguredFeature<>(Feature.TREE, Configs.REDBUD_TREE));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> FLOWERING_REDBUD_TREES = Features.CONFIGURED_FEATURES.register("flowering_redbud_trees_checked", () -> new ConfiguredFeature<>(Feature.TREE, Configs.FLOWERING_REDBUD_TREE));
+
+    }
+
+    public static class TreePlacements {
+        public static final RegistryObject<PlacedFeature> REDBUD_TREES = Placements.register("redbud_trees_checked", TreeFeatures.REDBUD_TREES, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING));
+        public static final RegistryObject<PlacedFeature> FLOWERING_REDBUD_TREES = Placements.register("flowering_redbud_trees_checked", TreeFeatures.FLOWERING_REDBUD_TREES, PlacementUtils.filteredByBlockSurvival(Blocks.OAK_SAPLING));
+
+        public static List<PlacementModifier> treePlacement(PlacementModifier modifier) {
+            return ImmutableList.<PlacementModifier>builder().add(modifier).add(InSquarePlacement.spread())
+                    .add(VegetationPlacements.TREE_THRESHOLD).add(PlacementUtils.HEIGHTMAP_OCEAN_FLOOR)
+                    .add(BiomeFilter.biome()).build();
         }
     }
 

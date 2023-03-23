@@ -228,8 +228,6 @@ public class HorizonsBlocks {
     public static final Pair<RegistryObject<BlueprintStandingSignBlock>, RegistryObject<BlueprintWallSignBlock>> REDBUD_SIGNS = HELPER.createSignBlock("redbud", MaterialColor.COLOR_PURPLE);
     public static final RegistryObject<Block> REDBUD_SAPLING = HELPER.createBlock("redbud_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> POTTED_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_redbud_sapling", () -> new FlowerPotBlock(REDBUD_SAPLING.get(), PropertyUtil.flowerPot()));
-    public static final RegistryObject<Block> BUDDING_REDBUD_SAPLING = HELPER.createBlock("budding_redbud_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
-    public static final RegistryObject<Block> POTTED_BUDDING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_budding_redbud_sapling", () -> new FlowerPotBlock(BUDDING_REDBUD_SAPLING.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> FLOWERING_REDBUD_SAPLING = HELPER.createBlock("flowering_redbud_sapling", () -> new BlueprintSaplingBlock(new OakTreeGrower(), PropertyUtil.sapling()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> POTTED_FLOWERING_REDBUD_SAPLING = HELPER.createBlockNoItem("potted_flowering_redbud_sapling", () -> new FlowerPotBlock(FLOWERING_REDBUD_SAPLING.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> REDBUD_LEAVES = HELPER.createBlock("redbud_leaves", () -> new BlueprintLeavesBlock(HorizonsProperties.REDBUD.leaves()), CreativeModeTab.TAB_DECORATIONS);
