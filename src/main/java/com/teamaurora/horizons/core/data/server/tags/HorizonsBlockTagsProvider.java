@@ -25,7 +25,7 @@ public class HorizonsBlockTagsProvider extends BlockTagsProvider {
         //horizons
         this.tag(HorizonsBlockTags.CYPRESS_LOGS).add(HorizonsBlocks.CYPRESS_LOG.get(), HorizonsBlocks.CYPRESS_WOOD.get(), HorizonsBlocks.STRIPPED_CYPRESS_LOG.get(), HorizonsBlocks.STRIPPED_CYPRESS_WOOD.get());
         this.tag(HorizonsBlockTags.CYPRESS_LEAVES).add(HorizonsBlocks.CYPRESS_LEAVES.get());
-        this.tag(HorizonsBlockTags.REDWOOD_LOGS).add(HorizonsBlocks.REDWOOD_LOG.get(), HorizonsBlocks.REDWOOD_WOOD.get(), HorizonsBlocks.STRIPPED_REDWOOD_LOG.get(), HorizonsBlocks.STRIPPED_REDWOOD_WOOD.get());
+        this.tag(HorizonsBlockTags.REDWOOD_LOGS).add(HorizonsBlocks.REDWOOD_LOG.get(), HorizonsBlocks.REDWOOD.get(), HorizonsBlocks.STRIPPED_REDWOOD_LOG.get(), HorizonsBlocks.STRIPPED_REDWOOD.get());
         this.tag(HorizonsBlockTags.REDWOOD_LEAVES).add(HorizonsBlocks.REDWOOD_LEAVES.get());
         this.tag(HorizonsBlockTags.REDBUD_LOGS).add(HorizonsBlocks.REDBUD_LOG.get(), HorizonsBlocks.REDBUD_WOOD.get(), HorizonsBlocks.STRIPPED_REDBUD_LOG.get(), HorizonsBlocks.STRIPPED_REDBUD_WOOD.get(), HorizonsBlocks.FLOWERING_REDBUD_LOG.get(), HorizonsBlocks.FLOWERING_REDBUD_WOOD.get());
         this.tag(HorizonsBlockTags.REDBUD_LEAVES).add(HorizonsBlocks.REDBUD_LEAVES.get(), HorizonsBlocks.BUDDING_REDBUD_LEAVES.get(), HorizonsBlocks.FLOWERING_REDBUD_LEAVES.get());

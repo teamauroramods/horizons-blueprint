@@ -132,9 +132,9 @@ public class HorizonsBlocks {
     // Redwood //
 
     public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = HELPER.createBlock("stripped_redwood_log", () -> new StrippedLogBlock(HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = HELPER.createBlock("stripped_redwood_wood", () -> new StrippedWoodBlock(HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> STRIPPED_REDWOOD = HELPER.createBlock("stripped_redwood", () -> new StrippedWoodBlock(HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDWOOD_LOG = HELPER.createBlock("redwood_log", () -> new LogBlock(STRIPPED_REDWOOD_LOG, HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
-    public static final RegistryObject<Block> REDWOOD_WOOD = HELPER.createBlock("redwood_wood", () -> new WoodBlock(STRIPPED_REDWOOD_WOOD, HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
+    public static final RegistryObject<Block> REDWOOD = HELPER.createBlock("redwood", () -> new WoodBlock(STRIPPED_REDWOOD, HorizonsProperties.REDWOOD.log()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDWOOD_PLANKS = HELPER.createBlock("redwood_planks", () -> new PlanksBlock(HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDWOOD_SLAB = HELPER.createBlock("redwood_slab", () -> new WoodSlabBlock(HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);
     public static final RegistryObject<Block> REDWOOD_STAIRS = HELPER.createBlock("redwood_stairs", () -> new WoodStairBlock(REDWOOD_PLANKS.get().defaultBlockState(), HorizonsProperties.REDWOOD.planks()), CreativeModeTab.TAB_BUILDING_BLOCKS);

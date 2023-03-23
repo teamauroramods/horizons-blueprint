@@ -11,7 +11,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "horizons:stripped_redwood_wood"
+          "name": "horizons:stripped_redwood"
         }
       ],
       "rolls": 1.0

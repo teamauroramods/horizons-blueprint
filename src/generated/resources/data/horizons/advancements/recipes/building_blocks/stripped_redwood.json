@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "horizons:stripped_redwood_wood"
+        "recipe": "horizons:stripped_redwood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "horizons:stripped_redwood_wood"
+      "horizons:stripped_redwood"
     ]
   }
 }

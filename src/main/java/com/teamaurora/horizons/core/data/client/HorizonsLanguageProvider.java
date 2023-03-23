@@ -133,9 +133,9 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.GIANT_FERN);
 
         this.translateBlock(HorizonsBlocks.STRIPPED_REDWOOD_LOG);
-        this.add(HorizonsBlocks.STRIPPED_REDWOOD_WOOD.get(), "Stripped Redwood");
+        this.translateBlock(HorizonsBlocks.STRIPPED_REDWOOD);
         this.translateBlock(HorizonsBlocks.REDWOOD_LOG);
-        this.add(HorizonsBlocks.REDWOOD_WOOD.get(), "Redwood");
+        this.translateBlock(HorizonsBlocks.REDWOOD);
         this.translateBlock(HorizonsBlocks.REDWOOD_PLANKS);
         this.translateBlock(HorizonsBlocks.REDWOOD_SLAB);
         this.translateBlock(HorizonsBlocks.REDWOOD_STAIRS);

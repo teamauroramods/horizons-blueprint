@@ -128,9 +128,9 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.triplePlant(HorizonsBlocks.GIANT_FERN);
 
         this.log(HorizonsBlocks.STRIPPED_REDWOOD_LOG);
-        this.cubeAll(HorizonsBlocks.STRIPPED_REDWOOD_WOOD, this.blockTexture(HorizonsBlocks.STRIPPED_REDWOOD_LOG.get()));
+        this.cubeAll(HorizonsBlocks.STRIPPED_REDWOOD, this.blockTexture(HorizonsBlocks.STRIPPED_REDWOOD_LOG.get()));
         this.log(HorizonsBlocks.REDWOOD_LOG);
-        this.cubeAll(HorizonsBlocks.REDWOOD_WOOD, this.blockTexture(HorizonsBlocks.REDWOOD_LOG.get()));
+        this.cubeAll(HorizonsBlocks.REDWOOD, this.blockTexture(HorizonsBlocks.REDWOOD_LOG.get()));
         this.cubeAll(HorizonsBlocks.REDWOOD_PLANKS);
         this.slab(HorizonsBlocks.REDWOOD_SLAB, HorizonsBlocks.REDWOOD_PLANKS);
         this.stairs(HorizonsBlocks.REDWOOD_STAIRS, HorizonsBlocks.REDWOOD_PLANKS);

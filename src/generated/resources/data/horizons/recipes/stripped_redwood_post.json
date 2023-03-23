@@ -12,7 +12,7 @@
         "type": "minecraft:crafting_shaped",
         "key": {
           "#": {
-            "item": "horizons:stripped_redwood_wood"
+            "item": "horizons:stripped_redwood"
           }
         },
         "pattern": [

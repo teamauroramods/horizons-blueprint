@@ -143,9 +143,9 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.add(HorizonsBlocks.GIANT_FERN.get(), b -> createTriplePlantWithSeedDrops(b, Items.FERN));
 
             this.dropSelf(HorizonsBlocks.STRIPPED_REDWOOD_LOG.get());
-            this.dropSelf(HorizonsBlocks.STRIPPED_REDWOOD_WOOD.get());
+            this.dropSelf(HorizonsBlocks.STRIPPED_REDWOOD.get());
             this.dropSelf(HorizonsBlocks.REDWOOD_LOG.get());
-            this.dropSelf(HorizonsBlocks.REDWOOD_WOOD.get());
+            this.dropSelf(HorizonsBlocks.REDWOOD.get());
             this.dropSelf(HorizonsBlocks.REDWOOD_PLANKS.get());
             this.add(HorizonsBlocks.REDWOOD_SLAB.get(), Blocks::createSlabItemTable);
             this.dropSelf(HorizonsBlocks.REDWOOD_STAIRS.get());

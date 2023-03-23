@@ -3,7 +3,7 @@
   "group": "bark",
   "key": {
     "#": {
-      "item": "horizons:redwood_log"
+      "item": "horizons:stripped_redwood_log"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "horizons:redwood_wood"
+    "item": "horizons:stripped_redwood"
   }
 }

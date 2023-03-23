@@ -103,9 +103,9 @@ public final class HorizonsBlockInfo {
         DataUtil.registerFlammable(HorizonsBlocks.BEARD_MOSS.get(), 30, 60);
 
         DataUtil.registerFlammable(HorizonsBlocks.STRIPPED_REDWOOD_LOG.get(), 5, 5);
-        DataUtil.registerFlammable(HorizonsBlocks.STRIPPED_REDWOOD_WOOD.get(), 5, 5);
+        DataUtil.registerFlammable(HorizonsBlocks.STRIPPED_REDWOOD.get(), 5, 5);
         DataUtil.registerFlammable(HorizonsBlocks.REDWOOD_LOG.get(), 5, 5);
-        DataUtil.registerFlammable(HorizonsBlocks.REDWOOD_WOOD.get(), 5, 5);
+        DataUtil.registerFlammable(HorizonsBlocks.REDWOOD.get(), 5, 5);
         DataUtil.registerFlammable(HorizonsBlocks.REDWOOD_PLANKS.get(), 5, 20);
         DataUtil.registerFlammable(HorizonsBlocks.VERTICAL_REDWOOD_PLANKS.get(), 5, 20);
         DataUtil.registerFlammable(HorizonsBlocks.REDWOOD_SLAB.get(), 5, 20);
