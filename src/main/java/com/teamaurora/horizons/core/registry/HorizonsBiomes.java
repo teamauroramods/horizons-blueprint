@@ -29,6 +29,7 @@ public class HorizonsBiomes {
 
     public static final BiomeSubRegistryHelper.KeyedBiome BAYOU = HELPER.createBiome("bayou", HorizonsBiomes::bayou);
     public static final BiomeSubRegistryHelper.KeyedBiome REDBUD_GROVE = HELPER.createBiome("redbud_grove", HorizonsBiomes::redbudGrove);
+    public static final BiomeSubRegistryHelper.KeyedBiome REDWOOD_FOREST = HELPER.createBiome("redwood_forest", () -> OverworldBiomes.oldGrowthTaiga(true));
 
     // Biome Builders //
 

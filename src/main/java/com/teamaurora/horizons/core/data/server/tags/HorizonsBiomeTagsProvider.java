@@ -33,13 +33,18 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(HorizonsBiomeTags.HAS_CATTAILS).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(HorizonsBiomeTags.HAS_MUD_DISK).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(HorizonsBiomeTags.HAS_SPOTTED_RED_MAPLE_TREES).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
 
-        this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(BiomeTags.IS_FOREST).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDBUD_GROVE.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());
+        this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDBUD_GROVE.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());
         this.tag(BiomeTags.HAS_SWAMP_HUT).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(BiomeTags.SPAWNS_WARM_VARIANT_FROGS).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(BiomeTags.HAS_RUINED_PORTAL_SWAMP).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(BiomeTags.IS_TAIGA).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
+        this.tag(BiomeTags.STRONGHOLD_BIASED_TO).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
         this.tag(Tags.Biomes.IS_SWAMP).add(HorizonsBiomes.BAYOU.getKey());
-        this.tag(Tags.Biomes.IS_DENSE).add(HorizonsBiomes.BAYOU.getKey());
-        this.tag(Tags.Biomes.IS_DENSE_OVERWORLD).add(HorizonsBiomes.BAYOU.getKey());
+        this.tag(Tags.Biomes.IS_DENSE).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());
+        this.tag(Tags.Biomes.IS_DENSE_OVERWORLD).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());
+        this.tag(Tags.Biomes.IS_CONIFEROUS).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
     }
 }
