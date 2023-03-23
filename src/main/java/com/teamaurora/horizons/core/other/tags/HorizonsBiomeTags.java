@@ -23,4 +23,6 @@ public final class HorizonsBiomeTags {
     public static final TagKey<Biome> HAS_PINK_LILY = TagUtil.biomeTag(Horizons.MODID, "has_feature/pink_lily");
     public static final TagKey<Biome> HAS_PURPLE_LILY = TagUtil.biomeTag(Horizons.MODID, "has_feature/purple_lily");
     public static final TagKey<Biome> HAS_WHITE_LILY = TagUtil.biomeTag(Horizons.MODID, "has_feature/white_lily");
+    public static final TagKey<Biome> HAS_AMARANTHUS = TagUtil.biomeTag(Horizons.MODID, "has_feature/amaranthus");
+    public static final TagKey<Biome> HAS_MYOSOTIS = TagUtil.biomeTag(Horizons.MODID, "has_feature/myosotis");
 }

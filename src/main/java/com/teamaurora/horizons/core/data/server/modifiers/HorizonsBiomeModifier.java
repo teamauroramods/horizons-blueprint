@@ -52,6 +52,9 @@ public class HorizonsBiomeModifier {
         addFeature("purple_lily", HorizonsBiomeTags.HAS_PURPLE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.PURPLE_LILY);
         addFeature("white_lily", HorizonsBiomeTags.HAS_WHITE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.WHITE_LILY);
 
+        addFeature("amaranthus", HorizonsBiomeTags.HAS_AMARANTHUS, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.AMARANTHUS);
+        addFeature("myosotis", HorizonsBiomeTags.HAS_MYOSOTIS, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.MYOSOTIS);
+
         return JsonCodecProvider.forDatapackRegistry(event.getGenerator(), event.getExistingFileHelper(), Horizons.MODID, RegistryOps.create(JsonOps.INSTANCE, access), ForgeRegistries.Keys.BIOME_MODIFIERS, modifiers);
     }
 

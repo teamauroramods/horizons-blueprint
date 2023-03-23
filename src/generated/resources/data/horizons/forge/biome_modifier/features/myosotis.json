@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/myosotis",
+  "features": "horizons:myosotis",
+  "step": "vegetal_decoration"
+}

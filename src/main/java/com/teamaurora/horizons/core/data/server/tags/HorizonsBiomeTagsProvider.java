@@ -5,6 +5,7 @@ import com.teamaurora.horizons.core.other.tags.HorizonsBiomeTags;
 import com.teamaurora.horizons.core.registry.HorizonsBiomes;
 import net.minecraft.data.tags.BiomeTagsProvider;
 import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.data.event.GatherDataEvent;
 
@@ -29,6 +30,9 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(HorizonsBiomeTags.HAS_PINK_LILY).addTag(Tags.Biomes.IS_SWAMP);
         this.tag(HorizonsBiomeTags.HAS_PURPLE_LILY).addTag(Tags.Biomes.IS_SWAMP);
         this.tag(HorizonsBiomeTags.HAS_WHITE_LILY).addTag(Tags.Biomes.IS_SWAMP);
+
+        this.tag(HorizonsBiomeTags.HAS_AMARANTHUS).add(HorizonsBiomes.REDBUD_GROVE.getKey(), Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_MYOSOTIS).addTag(BiomeTags.IS_TAIGA);
 
         this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(HorizonsBiomeTags.HAS_CATTAILS).add(HorizonsBiomes.BAYOU.getKey());

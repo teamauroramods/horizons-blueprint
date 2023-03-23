@@ -52,8 +52,11 @@ public final class HorizonsFeatures {
         public static final RandomPatchConfiguration PURPLE_LILY = createPlantPatch(64, HorizonsBlocks.PURPLE_LILY.get().defaultBlockState());
         public static final RandomPatchConfiguration WHITE_LILY = createPlantPatch(64, HorizonsBlocks.WHITE_LILY.get().defaultBlockState());
 
-        public static final TreeConfiguration REDBUD_TREE = createRedbudTree(BlockStateProvider.simple(HorizonsBlocks.REDBUD_LEAVES.get())).decorators(List.of(new BeehiveDecorator(.02f))).build();
-        public static final TreeConfiguration FLOWERING_REDBUD_TREE = createRedbudTree(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(HorizonsBlocks.BUDDING_REDBUD_LEAVES.get().defaultBlockState(), 3).add(HorizonsBlocks.FLOWERING_REDBUD_LEAVES.get().defaultBlockState(), 1).build())).decorators(List.of(new BeehiveDecorator(.02f))).build();
+        public static final RandomPatchConfiguration AMARANTHUS = createPlantPatch(82, HorizonsBlocks.AMARANTHUS.get().defaultBlockState());
+        public static final RandomPatchConfiguration MYOSOTIS = createPlantPatch(64, HorizonsBlocks.MYOSOTIS.get().defaultBlockState());
+
+        public static final TreeConfiguration REDBUD_TREE = createRedbudTree().decorators(List.of(new BeehiveDecorator(.005f))).build();
+        public static final TreeConfiguration FLOWERING_REDBUD_TREE = createFloweringRedbudTree().decorators(List.of(new BeehiveDecorator(.02f))).build();
 
         private static RandomPatchConfiguration createPlantPatch(int tries, BlockState state) {
             return new RandomPatchConfiguration(tries, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
@@ -72,11 +75,20 @@ public final class HorizonsFeatures {
 
         }
 
-        private static TreeConfiguration.TreeConfigurationBuilder createRedbudTree(BlockStateProvider leaves) {
+        private static TreeConfiguration.TreeConfigurationBuilder createRedbudTree() {
             return new TreeConfiguration.TreeConfigurationBuilder(
                     BlockStateProvider.simple(HorizonsBlocks.REDBUD_LOG.get()),
                     new StraightTrunkPlacer(4, 2, 0),
-                    leaves,
+                    BlockStateProvider.simple(HorizonsBlocks.REDBUD_LEAVES.get()),
+                    new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 4),
+                    new TwoLayersFeatureSize(1, 0, 1)).forceDirt().ignoreVines();
+        }
+
+        private static TreeConfiguration.TreeConfigurationBuilder createFloweringRedbudTree() {
+            return new TreeConfiguration.TreeConfigurationBuilder(
+                    new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(HorizonsBlocks.REDBUD_LOG.get().defaultBlockState(), 3).add(HorizonsBlocks.FLOWERING_REDBUD_LOG.get().defaultBlockState(), 1).build()),
+                    new StraightTrunkPlacer(4, 2, 0),
+                    new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(HorizonsBlocks.BUDDING_REDBUD_LEAVES.get().defaultBlockState(), 3).add(HorizonsBlocks.FLOWERING_REDBUD_LEAVES.get().defaultBlockState(), 1).build()),
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(2), 4),
                     new TwoLayersFeatureSize(1, 0, 1)).forceDirt().ignoreVines();
         }
@@ -98,6 +110,9 @@ public final class HorizonsFeatures {
         public static final RegistryObject<ConfiguredFeature<?, ?>> PURPLE_LILY = CONFIGURED_FEATURES.register("purple_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.PURPLE_LILY));
         public static final RegistryObject<ConfiguredFeature<?, ?>> WHITE_LILY = CONFIGURED_FEATURES.register("white_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.WHITE_LILY));
 
+        public static final RegistryObject<ConfiguredFeature<?, ?>> AMARANTHUS = CONFIGURED_FEATURES.register("amaranthus", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.AMARANTHUS));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> MYOSOTIS = CONFIGURED_FEATURES.register("myosotis", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.MYOSOTIS));
+
         public static final RegistryObject<ConfiguredFeature<?, ?>> REDBUD_TREES = CONFIGURED_FEATURES.register("redbud_trees", () -> new ConfiguredFeature<>(Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(TreePlacements.FLOWERING_REDBUD_TREES.getHolder().get(), 0.33333334F)), TreePlacements.REDBUD_TREES.getHolder().get())));
 
     }
@@ -116,6 +131,9 @@ public final class HorizonsFeatures {
         public static final RegistryObject<PlacedFeature> PINK_LILY = createPlantPatch("pink_lily", 82, Features.PINK_LILY);
         public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPlantPatch("purple_lily", 82, Features.PURPLE_LILY);
         public static final RegistryObject<PlacedFeature> WHITE_LILY = createPlantPatch("white_lily", 82, Features.WHITE_LILY);
+
+        public static final RegistryObject<PlacedFeature> AMARANTHUS = createPlantPatch("amaranthus", 12, Features.AMARANTHUS);
+        public static final RegistryObject<PlacedFeature> MYOSOTIS = createPlantPatch("myosotis", 24, Features.MYOSOTIS);
 
         public static final RegistryObject<PlacedFeature> REDBUD_TREES = register("redbud_trees", Features.REDBUD_TREES, TreePlacements.treePlacement(PlacementUtils.countExtra(9, .1f, 1)));
         public static final RegistryObject<PlacedFeature> TALL_BIRCH = register("tall_birch", VegetationFeatures.BIRCH_TALL, TreePlacements.treePlacement(PlacementUtils.countExtra(1, .1f, 1)));
