@@ -301,15 +301,15 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_CARPET);
         this.add(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_PILE.get(), "Pile of Flowering Jacaranda Leaves");
 
-        this.add(HorizonsBlocks.AZURE_JACARANDA_HEDGE.get(), "Blue Jacaranda Leaf Hedge");
+        this.add(HorizonsBlocks.AZURE_JACARANDA_HEDGE.get(), "Azure Jacaranda Leaf Hedge");
         this.translateBlock(HorizonsBlocks.AZURE_JACARANDA_LEAF_CARPET);
-        this.add(HorizonsBlocks.AZURE_JACARANDA_LEAF_PILE.get(), "Pile of Blue Jacaranda Leaves");
-        this.add(HorizonsBlocks.BUDDING_AZURE_JACARANDA_HEDGE.get(), "Budding Blue Jacaranda Leaf Hedge");
+        this.add(HorizonsBlocks.AZURE_JACARANDA_LEAF_PILE.get(), "Pile of Azure Jacaranda Leaves");
+        this.add(HorizonsBlocks.BUDDING_AZURE_JACARANDA_HEDGE.get(), "Budding Azure Jacaranda Leaf Hedge");
         this.translateBlock(HorizonsBlocks.BUDDING_AZURE_JACARANDA_LEAF_CARPET);
-        this.add(HorizonsBlocks.BUDDING_AZURE_JACARANDA_LEAF_PILE.get(), "Pile of Budding Blue Jacaranda Leaves");
-        this.add(HorizonsBlocks.FLOWERING_AZURE_JACARANDA_HEDGE.get(), "Flowering Blue Jacaranda Leaf Hedge");
+        this.add(HorizonsBlocks.BUDDING_AZURE_JACARANDA_LEAF_PILE.get(), "Pile of Budding Azure Jacaranda Leaves");
+        this.add(HorizonsBlocks.FLOWERING_AZURE_JACARANDA_HEDGE.get(), "Flowering Azure Jacaranda Leaf Hedge");
         this.translateBlock(HorizonsBlocks.FLOWERING_AZURE_JACARANDA_LEAF_CARPET);
-        this.add(HorizonsBlocks.FLOWERING_AZURE_JACARANDA_LEAF_PILE.get(), "Pile of Flowering Blue Jacaranda Leaves");
+        this.add(HorizonsBlocks.FLOWERING_AZURE_JACARANDA_LEAF_PILE.get(), "Pile of Flowering Azure Jacaranda Leaves");
 
         this.translateBlock(HorizonsBlocks.SUNFLOWER_SEED_SACK);
 
