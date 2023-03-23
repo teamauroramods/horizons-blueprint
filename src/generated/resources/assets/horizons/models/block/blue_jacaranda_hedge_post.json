@@ -1,8 +1,0 @@
-{
-  "parent": "blueprint:block/hedge_post",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "leaf": "horizons:block/blue_jacaranda_leaves",
-    "log": "horizons:block/jacaranda_log"
-  }
-}

@@ -41,13 +41,13 @@ public final class HorizonsBlockInfo {
         DataUtil.registerCompostable(HorizonsBlocks.BUDDING_JACARANDA_LEAF_CARPET.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_JACARANDA_LEAVES.get(), .3f);
         DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_JACARANDA_LEAF_CARPET.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.BLUE_JACARANDA_LEAVES.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.BLUE_JACARANDA_LEAF_CARPET.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.BLUE_JACARANDA_SAPLING.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAVES.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.BUDDING_BLUE_JACARANDA_LEAF_CARPET.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAVES.get(), .3f);
-        DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_BLUE_JACARANDA_LEAF_CARPET.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.AZURE_JACARANDA_LEAVES.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.AZURE_JACARANDA_LEAF_CARPET.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.AZURE_JACARANDA_SAPLING.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.BUDDING_AZURE_JACARANDA_LEAVES.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.BUDDING_AZURE_JACARANDA_LEAF_CARPET.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_AZURE_JACARANDA_LEAVES.get(), .3f);
+        DataUtil.registerCompostable(HorizonsBlocks.FLOWERING_AZURE_JACARANDA_LEAF_CARPET.get(), .3f);
 
         DataUtil.registerCompostable(HorizonsBlocks.BLUE_LILY.get(), .65f);
         DataUtil.registerCompostable(HorizonsBlocks.LIGHT_GRAY_LILY.get(), .65f);

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/leaves",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "all": "horizons:block/budding_blue_jacaranda_leaves"
-  }
-}

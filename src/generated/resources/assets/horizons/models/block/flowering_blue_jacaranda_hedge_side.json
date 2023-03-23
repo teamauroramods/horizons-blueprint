@@ -1,7 +1,0 @@
-{
-  "parent": "blueprint:block/hedge_side",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "leaf": "horizons:block/flowering_blue_jacaranda_leaves"
-  }
-}
