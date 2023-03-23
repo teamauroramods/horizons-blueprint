@@ -14,6 +14,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
@@ -322,10 +323,20 @@ public class HorizonsLootTableProvider extends LootTableProvider {
 
             this.dropSelf(HorizonsBlocks.SUNFLOWER_SEED_SACK.get());
 
-
             this.dropSelf(HorizonsBlocks.LAVENDER.get()); //change
             this.dropSelf(HorizonsBlocks.TALL_LAVENDER.get()); //change
             this.dropSelf(HorizonsBlocks.LAVENDER_BASKET.get());
+
+            this.tallFlower(HorizonsBlocks.HELICONIA.get());
+            this.dropSelf(HorizonsBlocks.AMARANTHUS.get());
+            this.dropSelf(HorizonsBlocks.MYOSOTIS.get());
+
+            this.dropSelf(HorizonsBlocks.POTTED_AMARANTHUS.get());
+            this.dropSelf(HorizonsBlocks.POTTED_MYOSOTIS.get());
+        }
+
+        private void tallFlower(Block flower) {
+            this.add(flower, b -> createSinglePropConditionTable(b, DoublePlantBlock.HALF, DoubleBlockHalf.LOWER));
         }
 
         private void normalLeaves(Block leaves, Block sapling) {
@@ -361,7 +372,6 @@ public class HorizonsLootTableProvider extends LootTableProvider {
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.UPPER))).when(LocationCheck.checkLocation(LocationPredicate.Builder.location().setBlock(BlockPredicate.Builder.block().of(b)
                             .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(DoublePlantBlock.HALF, DoubleBlockHalf.LOWER).build()).build()), new BlockPos(0, -1, 0)))));
         }
-
 
         @Override
         public Iterable<Block> getKnownBlocks() {

@@ -95,6 +95,9 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         quarkCompressedBlock(HorizonsBlocks.LAVENDER.get(), HorizonsBlocks.LAVENDER_BASKET.get(), "berry_sack", consumer);
         ShapelessRecipeBuilder.shapeless(HorizonsItems.LAVENDER_SALAD.get()).requires(HorizonsBlocks.LAVENDER.get(), 2).requires(Items.CARROT).requires(Items.BOWL).unlockedBy(getHasName(HorizonsBlocks.LAVENDER.get()), has(HorizonsBlocks.LAVENDER.get())).save(consumer, getSaveLocation(HorizonsItems.LAVENDER_SALAD.get()));
         conditionalRecipe(ShapelessRecipeBuilder.shapeless(HorizonsItems.LAVENDER_TEA.get()).requires(HorizonsBlocks.LAVENDER.get()).requires(ItemTags.LEAVES).requires(Items.GLASS_BOTTLE).unlockedBy(getHasName(HorizonsBlocks.LAVENDER.get()), has(HorizonsBlocks.LAVENDER.get())), new NotCondition(new ModLoadedCondition("farmersdelight")), consumer, getSaveLocation(HorizonsItems.LAVENDER_TEA.get()));
+        tallFlowerToDye(HorizonsBlocks.HELICONIA.get(), Items.RED_DYE, consumer);
+        flowerToDye(HorizonsBlocks.AMARANTHUS.get(), Items.RED_DYE, consumer);
+        flowerToDye(HorizonsBlocks.MYOSOTIS.get(), Items.CYAN_DYE, consumer);
     }
 
     private static void woodSet(TagKey<Item> logs, Block planks, Block slab, Block stairs, Block log, Block wood, Block strippedLog, Block strippedWood, ItemLike boat, ItemLike chestBoat, Block button, Block door, Block trapdoor, Block fence, Block fenceGate, Block pressurePlate, Block sign, Block verticalSlab, Block post, Block strippedPost, Block boards, Block beehive, Block ladder, Block bookshelf, Block chest, Block trappedChest, Item largeBoat, Item furnaceBoat, Block verticalPlanks, Block cabinet, Consumer<FinishedRecipe> consumer) {
@@ -150,6 +153,11 @@ public class HorizonsRecipeProvider extends RecipeProvider {
     private static void flowerToDye(Block flower, Item dye, Consumer<FinishedRecipe> consumer) {
         String dyeName = getItemName(dye);
         ShapelessRecipeBuilder.shapeless(dye).group(dyeName).requires(flower).unlockedBy(getHasName(flower), has(flower)).save(consumer, Horizons.REGISTRY_HELPER.prefix(dyeName + "_from_" + getItemName(flower)));
+    }
+
+    private static void tallFlowerToDye(Block flower, Item dye, Consumer<FinishedRecipe> consumer) {
+        String dyeName = getItemName(dye);
+        ShapelessRecipeBuilder.shapeless(dye, 2).group(dyeName).requires(flower).unlockedBy(getHasName(flower), has(flower)).save(consumer, Horizons.REGISTRY_HELPER.prefix(dyeName + "_from_" + getItemName(flower)));
     }
 
     private static void mossyBlock(ItemLike ingredient, ItemLike result, Consumer<FinishedRecipe> consumer) {

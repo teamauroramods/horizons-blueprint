@@ -293,6 +293,10 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.lavender(HorizonsBlocks.LAVENDER);
         this.doubleBlockNoItem(HorizonsBlocks.TALL_LAVENDER);
         this.cubeBottomTop(HorizonsBlocks.LAVENDER_BASKET);
+
+        this.doublePlant(HorizonsBlocks.HELICONIA);
+        this.pottedPlant(HorizonsBlocks.AMARANTHUS, HorizonsBlocks.POTTED_AMARANTHUS);
+        this.pottedPlant(HorizonsBlocks.MYOSOTIS, HorizonsBlocks.POTTED_MYOSOTIS);
     }
 
     // Specific Block Generators //
@@ -392,6 +396,12 @@ public class HorizonsModelProvider extends BlockStateProvider {
     private void pot(RegistryObject<Block> pot, ResourceLocation texture) {
         ModelFile model = this.models().withExistingParent(getBlockName(pot.get()), "block/flower_pot_cross").texture("plant", texture).renderType("cutout");
         this.simpleBlock(pot.get(), model);
+    }
+
+    private void doublePlant(RegistryObject<Block> plant) {
+        String name = getItemName(plant.get());
+        this.doubleBlockNoItem(plant);
+        this.itemModels().withExistingParent(name, "item/generated").texture("layer0", this.modLoc("block/" + name + "_top"));
     }
 
     private void trapdoor(RegistryObject<Block> trapdoor) {

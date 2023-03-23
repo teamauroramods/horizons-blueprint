@@ -326,4 +326,13 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> TALL_LAVENDER = HELPER.createBlockNoItem("tall_lavender", () -> new TallLavenderBlock(HorizonsProperties.LAVENDER));
     public static final RegistryObject<Block> LAVENDER_BASKET = HELPER.createCompatFuelBlock(HorizonsConstants.QUARK, "lavender_basket", () -> new Block(HorizonsProperties.LAVENDER_BASKET), 300, CreativeModeTab.TAB_DECORATIONS);
 
+    // Misc Flowers //
+
+    public static final RegistryObject<Block> HELICONIA = HELPER.createBlock("heliconia", () -> new BlueprintTallFlowerBlock(PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", () -> new BlueprintFlowerBlock(() -> MobEffects.DAMAGE_BOOST, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> MYOSOTIS = HELPER.createBlock("myosotis", () -> new BlueprintFlowerBlock(() -> MobEffects.JUMP, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<Block> POTTED_AMARANTHUS = HELPER.createBlockNoItem("potted_amaranthus", () -> new FlowerPotBlock(AMARANTHUS.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_MYOSOTIS = HELPER.createBlockNoItem("potted_myosotis", () -> new FlowerPotBlock(AMARANTHUS.get(), PropertyUtil.flowerPot()));
+
 }

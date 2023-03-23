@@ -317,6 +317,13 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.add(HorizonsBlocks.TALL_LAVENDER.get(), "Lavender");
         this.translateBlock(HorizonsBlocks.LAVENDER_BASKET);
 
+        this.translateBlock(HorizonsBlocks.HELICONIA);
+        this.translateBlock(HorizonsBlocks.AMARANTHUS);
+        this.translateBlock(HorizonsBlocks.MYOSOTIS);
+
+        this.translateBlock(HorizonsBlocks.POTTED_AMARANTHUS);
+        this.translateBlock(HorizonsBlocks.POTTED_MYOSOTIS);
+
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);
         this.translateBiome(HorizonsBiomes.REDBUD_GROVE);
