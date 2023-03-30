@@ -55,6 +55,9 @@ public final class HorizonsFeatures {
         public static final RandomPatchConfiguration AMARANTHUS = createPlantPatch(82, HorizonsBlocks.AMARANTHUS.get().defaultBlockState());
         public static final RandomPatchConfiguration MYOSOTIS = createPlantPatch(64, HorizonsBlocks.MYOSOTIS.get().defaultBlockState());
 
+        public static final BlockStateConfiguration LIGHT_BOULDER = new BlockStateConfiguration(HorizonsBlocks.MOSSY_LIGHT_BOULDER.get().defaultBlockState());
+        public static final BlockStateConfiguration DARK_BOULDER = new BlockStateConfiguration(HorizonsBlocks.MOSSY_DARK_BOULDER.get().defaultBlockState());
+
         public static final TreeConfiguration REDBUD_TREE = createRedbudTree().decorators(List.of(new BeehiveDecorator(.005f))).build();
         public static final TreeConfiguration FLOWERING_REDBUD_TREE = createFloweringRedbudTree().decorators(List.of(new BeehiveDecorator(.02f))).build();
 
@@ -113,6 +116,9 @@ public final class HorizonsFeatures {
         public static final RegistryObject<ConfiguredFeature<?, ?>> AMARANTHUS = CONFIGURED_FEATURES.register("amaranthus", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.AMARANTHUS));
         public static final RegistryObject<ConfiguredFeature<?, ?>> MYOSOTIS = CONFIGURED_FEATURES.register("myosotis", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.MYOSOTIS));
 
+        public static final RegistryObject<ConfiguredFeature<?, ?>> LIGHT_BOULDER = CONFIGURED_FEATURES.register("light_boulder", () -> new ConfiguredFeature<>(Feature.FOREST_ROCK, Configs.LIGHT_BOULDER));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> DARK_BOULDER = CONFIGURED_FEATURES.register("dark_boulder", () -> new ConfiguredFeature<>(Feature.FOREST_ROCK, Configs.DARK_BOULDER));
+
         public static final RegistryObject<ConfiguredFeature<?, ?>> REDBUD_TREES = CONFIGURED_FEATURES.register("redbud_trees", () -> new ConfiguredFeature<>(Feature.RANDOM_SELECTOR, new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(TreePlacements.FLOWERING_REDBUD_TREES.getHolder().get(), 0.33333334F)), TreePlacements.REDBUD_TREES.getHolder().get())));
 
     }
@@ -120,25 +126,28 @@ public final class HorizonsFeatures {
     public static class Placements {
         public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Horizons.MODID);
 
-        public static final RegistryObject<PlacedFeature> ALGAE = createPlantPatch("algae", 3, Features.ALGAE);
-        public static final RegistryObject<PlacedFeature> GIANT_FERN = createPlantPatch("giant_fern", 4, Features.GIANT_FERN);
+        public static final RegistryObject<PlacedFeature> ALGAE = createPatch("algae", 3, Features.ALGAE);
+        public static final RegistryObject<PlacedFeature> GIANT_FERN = createPatch("giant_fern", 4, Features.GIANT_FERN);
 
-        public static final RegistryObject<PlacedFeature> BLUE_LILY = createPlantPatch("blue_lily", 82, Features.BLUE_LILY);
-        public static final RegistryObject<PlacedFeature> LIGHT_GRAY_LILY = createPlantPatch("light_gray_lily", 82, Features.LIGHT_GRAY_LILY);
-        public static final RegistryObject<PlacedFeature> CYAN_LILY = createPlantPatch("cyan_lily", 82, Features.CYAN_LILY);
-        public static final RegistryObject<PlacedFeature> LIGHT_BLUE_LILY = createPlantPatch("light_blue_lily", 82, Features.LIGHT_BLUE_LILY);
-        public static final RegistryObject<PlacedFeature> MAGENTA_LILY = createPlantPatch("magenta_lily", 82, Features.MAGENTA_LILY);
-        public static final RegistryObject<PlacedFeature> PINK_LILY = createPlantPatch("pink_lily", 82, Features.PINK_LILY);
-        public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPlantPatch("purple_lily", 82, Features.PURPLE_LILY);
-        public static final RegistryObject<PlacedFeature> WHITE_LILY = createPlantPatch("white_lily", 82, Features.WHITE_LILY);
+        public static final RegistryObject<PlacedFeature> BLUE_LILY = createPatch("blue_lily", 82, Features.BLUE_LILY);
+        public static final RegistryObject<PlacedFeature> LIGHT_GRAY_LILY = createPatch("light_gray_lily", 82, Features.LIGHT_GRAY_LILY);
+        public static final RegistryObject<PlacedFeature> CYAN_LILY = createPatch("cyan_lily", 82, Features.CYAN_LILY);
+        public static final RegistryObject<PlacedFeature> LIGHT_BLUE_LILY = createPatch("light_blue_lily", 82, Features.LIGHT_BLUE_LILY);
+        public static final RegistryObject<PlacedFeature> MAGENTA_LILY = createPatch("magenta_lily", 82, Features.MAGENTA_LILY);
+        public static final RegistryObject<PlacedFeature> PINK_LILY = createPatch("pink_lily", 82, Features.PINK_LILY);
+        public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPatch("purple_lily", 82, Features.PURPLE_LILY);
+        public static final RegistryObject<PlacedFeature> WHITE_LILY = createPatch("white_lily", 82, Features.WHITE_LILY);
 
-        public static final RegistryObject<PlacedFeature> AMARANTHUS = createPlantPatch("amaranthus", 12, Features.AMARANTHUS);
-        public static final RegistryObject<PlacedFeature> MYOSOTIS = createPlantPatch("myosotis", 24, Features.MYOSOTIS);
+        public static final RegistryObject<PlacedFeature> AMARANTHUS = createPatch("amaranthus", 12, Features.AMARANTHUS);
+        public static final RegistryObject<PlacedFeature> MYOSOTIS = createPatch("myosotis", 24, Features.MYOSOTIS);
+
+        public static final RegistryObject<PlacedFeature> LIGHT_BOULDER = register("light_boulder", Features.LIGHT_BOULDER, CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
+        public static final RegistryObject<PlacedFeature> DARK_BOULDER = register("dark_boulder", Features.DARK_BOULDER, CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
         public static final RegistryObject<PlacedFeature> REDBUD_TREES = register("redbud_trees", Features.REDBUD_TREES, TreePlacements.treePlacement(PlacementUtils.countExtra(9, .1f, 1)));
         public static final RegistryObject<PlacedFeature> TALL_BIRCH = register("tall_birch", VegetationFeatures.BIRCH_TALL, TreePlacements.treePlacement(PlacementUtils.countExtra(1, .1f, 1)));
 
-        private static RegistryObject<PlacedFeature> createPlantPatch(String name, int onceEvery, RegistryObject<ConfiguredFeature<?, ?>> feature) {
+        private static RegistryObject<PlacedFeature> createPatch(String name, int onceEvery, RegistryObject<ConfiguredFeature<?, ?>> feature) {
             return register(name, feature, RarityFilter.onAverageOnceEvery(onceEvery), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
         }
 

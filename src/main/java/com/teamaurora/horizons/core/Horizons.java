@@ -13,6 +13,7 @@ import com.teamaurora.horizons.core.data.server.tags.HorizonsBiomeTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsBlockTagsProvider;
 import com.teamaurora.horizons.core.data.server.tags.HorizonsItemTagsProvider;
 import com.teamaurora.horizons.core.other.HorizonsBlockInfo;
+import com.teamaurora.horizons.core.registry.HorizonsBiomeModifierSerializers;
 import com.teamaurora.horizons.core.registry.HorizonsEffects;
 import com.teamaurora.horizons.core.registry.HorizonsFeatures;
 import com.teamaurora.horizons.core.registry.util.EffectSubRegistryHelper;
@@ -42,6 +43,7 @@ public class Horizons {
         HorizonsFeatures.FEATURES.register(bus);
         HorizonsFeatures.Features.CONFIGURED_FEATURES.register(bus);
         HorizonsFeatures.Placements.PLACED_FEATURES.register(bus);
+        HorizonsBiomeModifierSerializers.SERIALIZERS.register(bus);
 
         REGISTRY_HELPER.register(bus);
 

@@ -1,6 +1,7 @@
 package com.teamaurora.horizons.core.data.server.modifiers;
 
 import com.mojang.serialization.JsonOps;
+import com.teamaurora.horizons.common.levelgen.modifier.BoulderBiomeModifier;
 import com.teamaurora.horizons.core.Horizons;
 import com.teamaurora.horizons.core.registry.HorizonsFeatures;
 import com.teamaurora.horizons.core.other.tags.HorizonsBiomeTags;
@@ -33,13 +34,17 @@ import java.util.stream.Stream;
 /**
  * @author rose_
  */
-public class HorizonsBiomeModifier {
+public final class HorizonsBiomeModifier {
     private static final RegistryAccess access = RegistryAccess.builtinCopy();
     private static final Registry<Biome> biomeRegistry = access.registryOrThrow(Registry.BIOME_REGISTRY);
     private static final Registry<PlacedFeature> placedFeatures = access.registryOrThrow(Registry.PLACED_FEATURE_REGISTRY);
     private static final HashMap<ResourceLocation, BiomeModifier> modifiers = new HashMap<>();
 
     public static JsonCodecProvider<BiomeModifier> register(GatherDataEvent event) {
+        //modifiers
+        addModifier("boulders", BoulderBiomeModifier.INSTANCE);
+
+        //features
         addFeature("algae", HorizonsBiomeTags.HAS_ALGAE, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.ALGAE);
         addFeature("giant_fern", HorizonsBiomeTags.HAS_GIANT_FERN, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.GIANT_FERN);
 
@@ -60,18 +65,19 @@ public class HorizonsBiomeModifier {
 
     @SafeVarargs
     private static void addFeature(String name, TagKey<Biome> tagKey, GenerationStep.Decoration step, RegistryObject<PlacedFeature>... features) {
-        modifiers.put(Horizons.REGISTRY_HELPER.prefix("features/" + name),
-                new ForgeBiomeModifiers.AddFeaturesBiomeModifier(new HolderSet.Named<>(biomeRegistry, tagKey), featureSet(features), step));
+        addModifier("features/" + name, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(new HolderSet.Named<>(biomeRegistry, tagKey), featureSet(features), step));
     }
 
     private static void removeFeature(String name, TagKey<Biome> tagKey, GenerationStep.Decoration step, Holder<PlacedFeature> feature) {
-        modifiers.put(Horizons.REGISTRY_HELPER.prefix("removed_features/" + name),
-                new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(new HolderSet.Named<>(biomeRegistry, tagKey), featureSet(feature), Set.of(step)));
+        addModifier("removed_features/" + name, new ForgeBiomeModifiers.RemoveFeaturesBiomeModifier(new HolderSet.Named<>(biomeRegistry, tagKey), featureSet(feature), Set.of(step)));
     }
 
     private static <T extends LivingEntity> void addSpawn(String name, TagKey<Biome> tagKey, RegistryObject<EntityType<T>> entity, int weight, int min, int max) {
-        modifiers.put(Horizons.REGISTRY_HELPER.prefix("spawns/" + name),
-                new ForgeBiomeModifiers.AddSpawnsBiomeModifier(new HolderSet.Named<>(biomeRegistry, tagKey), List.of(new MobSpawnSettings.SpawnerData(entity.get(), weight, min, max))));
+        addModifier("spawns/" + name, new ForgeBiomeModifiers.AddSpawnsBiomeModifier(new HolderSet.Named<>(biomeRegistry, tagKey), List.of(new MobSpawnSettings.SpawnerData(entity.get(), weight, min, max))));
+    }
+
+    private static void addModifier(String name, BiomeModifier modifier) {
+        modifiers.put(Horizons.REGISTRY_HELPER.prefix(name), modifier);
     }
 
     @SafeVarargs
@@ -86,4 +92,5 @@ public class HorizonsBiomeModifier {
     private static HolderSet<PlacedFeature> featureSet(Holder<PlacedFeature>... features) {
         return HolderSet.direct(Stream.of(features).map(holder -> placedFeatures.getOrCreateHolderOrThrow(holder.unwrapKey().get())).collect(Collectors.toList()));
     }
+
 }
