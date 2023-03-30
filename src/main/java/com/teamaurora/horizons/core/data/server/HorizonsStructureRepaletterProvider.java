@@ -27,7 +27,10 @@ public class HorizonsStructureRepaletterProvider extends StructureRepaletterProv
 
     @Override
     protected void registerRepaletters() {
+        //swamp hut
         this.register(BuiltinStructures.SWAMP_HUT, Blocks.POTTED_RED_MUSHROOM, HorizonsBlocks.POTTED_PINK_LILY.get());
+        this.register(BuiltinStructures.SWAMP_HUT, Blocks.SPRUCE_PLANKS, HorizonsBlocks.CYPRESS_PLANKS.get());
+        this.register(BuiltinStructures.SWAMP_HUT, Blocks.SPRUCE_STAIRS, HorizonsBlocks.CYPRESS_STAIRS.get());
     }
 
     private void register(ResourceKey<Structure> structure, Block replacesBlock, Block replacesWith, ICondition... conditions) {

@@ -1,0 +1,7 @@
+{
+  "type": "blueprint:simple",
+  "priority": "normal",
+  "replaces_block": "minecraft:spruce_planks",
+  "replaces_with": "horizons:cypress_planks",
+  "selector": "minecraft:swamp_hut"
+}
