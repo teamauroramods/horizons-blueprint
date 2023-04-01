@@ -98,6 +98,7 @@ public class HorizonsRecipeProvider extends RecipeProvider {
         tallFlowerToDye(HorizonsBlocks.HELICONIA.get(), Items.RED_DYE, consumer);
         flowerToDye(HorizonsBlocks.AMARANTHUS.get(), Items.RED_DYE, consumer);
         flowerToDye(HorizonsBlocks.MYOSOTIS.get(), Items.CYAN_DYE, consumer);
+        flowerToDye(HorizonsBlocks.FIDDLENECK.get(), Items.YELLOW_DYE, consumer);
     }
 
     private static void woodSet(TagKey<Item> logs, Block planks, Block slab, Block stairs, Block log, Block wood, Block strippedLog, Block strippedWood, ItemLike boat, ItemLike chestBoat, Block button, Block door, Block trapdoor, Block fence, Block fenceGate, Block pressurePlate, Block sign, Block verticalSlab, Block post, Block strippedPost, Block boards, Block beehive, Block ladder, Block bookshelf, Block chest, Block trappedChest, Item largeBoat, Item furnaceBoat, Block verticalPlanks, Block cabinet, Consumer<FinishedRecipe> consumer) {

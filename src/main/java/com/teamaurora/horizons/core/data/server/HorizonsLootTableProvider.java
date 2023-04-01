@@ -330,9 +330,11 @@ public class HorizonsLootTableProvider extends LootTableProvider {
             this.tallFlower(HorizonsBlocks.HELICONIA.get());
             this.dropSelf(HorizonsBlocks.AMARANTHUS.get());
             this.dropSelf(HorizonsBlocks.MYOSOTIS.get());
+            this.dropSelf(HorizonsBlocks.FIDDLENECK.get());
 
-            this.dropSelf(HorizonsBlocks.POTTED_AMARANTHUS.get());
-            this.dropSelf(HorizonsBlocks.POTTED_MYOSOTIS.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_AMARANTHUS.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_MYOSOTIS.get());
+            this.dropPottedContents(HorizonsBlocks.POTTED_FIDDLENECK.get());
         }
 
         private void tallFlower(Block flower) {

@@ -320,9 +320,11 @@ public class HorizonsLanguageProvider extends LanguageProvider {
         this.translateBlock(HorizonsBlocks.HELICONIA);
         this.translateBlock(HorizonsBlocks.AMARANTHUS);
         this.translateBlock(HorizonsBlocks.MYOSOTIS);
+        this.translateBlock(HorizonsBlocks.FIDDLENECK);
 
         this.translateBlock(HorizonsBlocks.POTTED_AMARANTHUS);
         this.translateBlock(HorizonsBlocks.POTTED_MYOSOTIS);
+        this.translateBlock(HorizonsBlocks.POTTED_FIDDLENECK);
 
         //biomes
         this.translateBiome(HorizonsBiomes.BAYOU);

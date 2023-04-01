@@ -331,8 +331,10 @@ public class HorizonsBlocks {
     public static final RegistryObject<Block> HELICONIA = HELPER.createBlock("heliconia", () -> new BlueprintTallFlowerBlock(PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> AMARANTHUS = HELPER.createBlock("amaranthus", () -> new BlueprintFlowerBlock(() -> MobEffects.DAMAGE_BOOST, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
     public static final RegistryObject<Block> MYOSOTIS = HELPER.createBlock("myosotis", () -> new BlueprintFlowerBlock(() -> MobEffects.JUMP, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<Block> FIDDLENECK = HELPER.createBlock("fiddleneck", () -> new BlueprintFlowerBlock(() -> MobEffects.INVISIBILITY, 12, PropertyUtil.flower()), CreativeModeTab.TAB_DECORATIONS);
 
     public static final RegistryObject<Block> POTTED_AMARANTHUS = HELPER.createBlockNoItem("potted_amaranthus", () -> new FlowerPotBlock(AMARANTHUS.get(), PropertyUtil.flowerPot()));
     public static final RegistryObject<Block> POTTED_MYOSOTIS = HELPER.createBlockNoItem("potted_myosotis", () -> new FlowerPotBlock(MYOSOTIS.get(), PropertyUtil.flowerPot()));
+    public static final RegistryObject<Block> POTTED_FIDDLENECK = HELPER.createBlockNoItem("potted_fiddleneck", () -> new FlowerPotBlock(FIDDLENECK.get(), PropertyUtil.flowerPot()));
 
 }

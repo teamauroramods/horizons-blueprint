@@ -297,6 +297,7 @@ public class HorizonsModelProvider extends BlockStateProvider {
         this.doublePlant(HorizonsBlocks.HELICONIA);
         this.pottedPlant(HorizonsBlocks.AMARANTHUS, HorizonsBlocks.POTTED_AMARANTHUS);
         this.pottedPlant(HorizonsBlocks.MYOSOTIS, HorizonsBlocks.POTTED_MYOSOTIS);
+        this.pottedPlant(HorizonsBlocks.FIDDLENECK, HorizonsBlocks.POTTED_FIDDLENECK);
     }
 
     // Specific Block Generators //

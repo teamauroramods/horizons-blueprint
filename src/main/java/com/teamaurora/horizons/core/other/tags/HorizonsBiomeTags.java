@@ -32,4 +32,5 @@ public final class HorizonsBiomeTags {
     public static final TagKey<Biome> HAS_BLUE_DAISY = TagUtil.biomeTag(Horizons.MODID, "has_feature/blue_daisy");
     public static final TagKey<Biome> HAS_AMARANTHUS = TagUtil.biomeTag(Horizons.MODID, "has_feature/amaranthus");
     public static final TagKey<Biome> HAS_MYOSOTIS = TagUtil.biomeTag(Horizons.MODID, "has_feature/myosotis");
+    public static final TagKey<Biome> HAS_FIDDLENECK = TagUtil.biomeTag(Horizons.MODID, "has_feature/fiddleneck");
 }
