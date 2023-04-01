@@ -81,7 +81,7 @@ public class HorizonsBiomes {
         BiomeGenerationSettings.Builder gen = new BiomeGenerationSettings.Builder();
 
         OverworldBiomes.globalOverworldGeneration(gen);
-        BiomeDefaultFeatures.addMossyStoneBlock(gen);
+        gen.addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, HorizonsFeatures.Placements.DARK_BOULDER.getHolder().get());
         BiomeDefaultFeatures.addFerns(gen);
         BiomeDefaultFeatures.addDefaultOres(gen);
         BiomeDefaultFeatures.addDefaultSoftDisks(gen);
@@ -90,9 +90,6 @@ public class HorizonsBiomes {
         BiomeDefaultFeatures.addDefaultMushrooms(gen);
         BiomeDefaultFeatures.addDefaultExtraVegetation(gen);
         BiomeDefaultFeatures.addCommonBerryBushes(gen);
-
-        gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.FIDDLENECK.getHolder().get());
-        gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.HELICONIA.getHolder().get());
 
         return biome(Biome.Precipitation.RAIN, 0.25F, 0.8F, 4159204, 329011, 12638463, spawns, gen, Musics.createGameMusic(SoundEvents.MUSIC_BIOME_OLD_GROWTH_TAIGA));
     }

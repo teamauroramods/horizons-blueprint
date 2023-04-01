@@ -41,12 +41,14 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
 
         this.tag(HorizonsBiomeTags.HAS_AMARANTHUS).add(HorizonsBiomes.REDBUD_GROVE.getKey(), Biomes.MEADOW);
         this.tag(HorizonsBiomeTags.HAS_MYOSOTIS).addTag(BiomeTags.IS_TAIGA);
-        //this.tag(HorizonsBiomeTags.HAS_FIDDLENECK).a //redwood
+        this.tag(HorizonsBiomeTags.HAS_FIDDLENECK).add(HorizonsBiomes.REDWOOD_FOREST.getKey(), Biomes.OLD_GROWTH_SPRUCE_TAIGA, Biomes.OLD_GROWTH_PINE_TAIGA);
+        this.tag(HorizonsBiomeTags.HAS_HELICONIA).add(HorizonsBiomes.REDWOOD_FOREST.getKey(), Biomes.OLD_GROWTH_SPRUCE_TAIGA, Biomes.OLD_GROWTH_PINE_TAIGA);
 
         this.tag(HorizonsBiomeTags.HAS_PERCH).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(HorizonsBiomeTags.HAS_CATTAILS).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(HorizonsBiomeTags.HAS_MUD_DISK).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(HorizonsBiomeTags.HAS_SPOTTED_RED_MAPLE_TREES).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
+        this.tag(HorizonsBiomeTags.HAS_HOLLY_TREES).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
 
         this.tag(BiomeTags.IS_FOREST).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDBUD_GROVE.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());
         this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDBUD_GROVE.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());

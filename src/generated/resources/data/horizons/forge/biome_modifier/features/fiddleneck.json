@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/fiddleneck",
+  "features": "horizons:fiddleneck",
+  "step": "vegetal_decoration"
+}

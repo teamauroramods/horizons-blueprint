@@ -65,8 +65,10 @@ public final class HorizonsBiomeModifier {
         addFeature("magenta_daisy", HorizonsBiomeTags.HAS_MAGENTA_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.MAGENTA_DAISY);
         addFeature("blue_daisy", HorizonsBiomeTags.HAS_BLUE_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.BLUE_DAISY);
 
+        addFeature("heliconia", HorizonsBiomeTags.HAS_HELICONIA, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.HELICONIA);
         addFeature("amaranthus", HorizonsBiomeTags.HAS_AMARANTHUS, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.AMARANTHUS);
         addFeature("myosotis", HorizonsBiomeTags.HAS_MYOSOTIS, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.MYOSOTIS);
+        addFeature("fiddleneck", HorizonsBiomeTags.HAS_FIDDLENECK, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.FIDDLENECK);
 
         return JsonCodecProvider.forDatapackRegistry(event.getGenerator(), event.getExistingFileHelper(), Horizons.MODID, RegistryOps.create(JsonOps.INSTANCE, access), ForgeRegistries.Keys.BIOME_MODIFIERS, modifiers);
     }
