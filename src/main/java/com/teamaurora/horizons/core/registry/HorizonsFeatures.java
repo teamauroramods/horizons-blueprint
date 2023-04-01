@@ -62,6 +62,7 @@ public final class HorizonsFeatures {
 
         public static final RandomPatchConfiguration AMARANTHUS = createPlantPatch(82, HorizonsBlocks.AMARANTHUS.get().defaultBlockState());
         public static final RandomPatchConfiguration MYOSOTIS = createPlantPatch(64, HorizonsBlocks.MYOSOTIS.get().defaultBlockState());
+        public static final RandomPatchConfiguration FIDDLENECK = createPlantPatch(64, HorizonsBlocks.FIDDLENECK.get().defaultBlockState());
 
         public static final BlockStateConfiguration LIGHT_BOULDER = new BlockStateConfiguration(HorizonsBlocks.MOSSY_LIGHT_BOULDER.get().defaultBlockState());
         public static final BlockStateConfiguration DARK_BOULDER = new BlockStateConfiguration(HorizonsBlocks.MOSSY_DARK_BOULDER.get().defaultBlockState());
@@ -131,6 +132,7 @@ public final class HorizonsFeatures {
 
         public static final RegistryObject<ConfiguredFeature<?, ?>> AMARANTHUS = CONFIGURED_FEATURES.register("amaranthus", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.AMARANTHUS));
         public static final RegistryObject<ConfiguredFeature<?, ?>> MYOSOTIS = CONFIGURED_FEATURES.register("myosotis", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.MYOSOTIS));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> FIDDLENECK = CONFIGURED_FEATURES.register("fiddleneck", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.FIDDLENECK));
 
         public static final RegistryObject<ConfiguredFeature<?, ?>> LIGHT_BOULDER = CONFIGURED_FEATURES.register("light_boulder", () -> new ConfiguredFeature<>(Feature.FOREST_ROCK, Configs.LIGHT_BOULDER));
         public static final RegistryObject<ConfiguredFeature<?, ?>> DARK_BOULDER = CONFIGURED_FEATURES.register("dark_boulder", () -> new ConfiguredFeature<>(Feature.FOREST_ROCK, Configs.DARK_BOULDER));
@@ -154,16 +156,17 @@ public final class HorizonsFeatures {
         public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPatch("purple_lily", 82, Features.PURPLE_LILY);
         public static final RegistryObject<PlacedFeature> WHITE_LILY = createPatch("white_lily", 82, Features.WHITE_LILY);
 
-        public static final RegistryObject<PlacedFeature> YELLOW_DAISY = createPatch("yellow_daisy", 82, Features.YELLOW_DAISY);
-        public static final RegistryObject<PlacedFeature> RED_DAISY = createPatch("red_daisy", 82, Features.RED_DAISY);
-        public static final RegistryObject<PlacedFeature> PURPLE_DAISY = createPatch("purple_daisy", 82, Features.PURPLE_DAISY);
-        public static final RegistryObject<PlacedFeature> PINK_DAISY = createPatch("pink_daisy", 82, Features.PINK_DAISY);
-        public static final RegistryObject<PlacedFeature> ORANGE_DAISY = createPatch("orange_daisy", 82, Features.ORANGE_DAISY);
-        public static final RegistryObject<PlacedFeature> MAGENTA_DAISY = createPatch("magenta_daisy", 82, Features.MAGENTA_DAISY);
-        public static final RegistryObject<PlacedFeature> BLUE_DAISY = createPatch("blue_daisy", 82, Features.BLUE_DAISY);
+        public static final RegistryObject<PlacedFeature> YELLOW_DAISY = createPatch("yellow_daisy", 120, Features.YELLOW_DAISY);
+        public static final RegistryObject<PlacedFeature> RED_DAISY = createPatch("red_daisy", 120, Features.RED_DAISY);
+        public static final RegistryObject<PlacedFeature> PURPLE_DAISY = createPatch("purple_daisy", 120, Features.PURPLE_DAISY);
+        public static final RegistryObject<PlacedFeature> PINK_DAISY = createPatch("pink_daisy", 120, Features.PINK_DAISY);
+        public static final RegistryObject<PlacedFeature> ORANGE_DAISY = createPatch("orange_daisy", 120, Features.ORANGE_DAISY);
+        public static final RegistryObject<PlacedFeature> MAGENTA_DAISY = createPatch("magenta_daisy", 120, Features.MAGENTA_DAISY);
+        public static final RegistryObject<PlacedFeature> BLUE_DAISY = createPatch("blue_daisy", 120, Features.BLUE_DAISY);
 
         public static final RegistryObject<PlacedFeature> AMARANTHUS = createPatch("amaranthus", 12, Features.AMARANTHUS);
         public static final RegistryObject<PlacedFeature> MYOSOTIS = createPatch("myosotis", 24, Features.MYOSOTIS);
+        public static final RegistryObject<PlacedFeature> FIDDLENECK = createPatch("fiddleneck", 12, Features.FIDDLENECK);
 
         public static final RegistryObject<PlacedFeature> LIGHT_BOULDER = register("light_boulder", Features.LIGHT_BOULDER, CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
         public static final RegistryObject<PlacedFeature> DARK_BOULDER = register("dark_boulder", Features.DARK_BOULDER, CountPlacement.of(2), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());

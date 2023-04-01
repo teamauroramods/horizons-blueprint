@@ -1,0 +1,7 @@
+{
+  "type": "blueprint:simple",
+  "priority": "normal",
+  "replaces_block": "minecraft:dandelion",
+  "replaces_with": "horizons:yellow_daisy",
+  "selector": "minecraft:village_plains"
+}
