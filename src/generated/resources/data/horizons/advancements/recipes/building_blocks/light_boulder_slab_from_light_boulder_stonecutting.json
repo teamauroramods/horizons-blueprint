@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_boulder_bricks": {
+    "has_light_boulder": {
       "conditions": {
         "items": [
           {
             "items": [
-              "horizons:boulder_bricks"
+              "horizons:light_boulder"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "horizons:boulder_bricks_from_boulder_brick_stairs_stonecutting"
+        "recipe": "horizons:light_boulder_slab_from_light_boulder_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_boulder_bricks",
+      "has_light_boulder",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "horizons:boulder_bricks_from_boulder_brick_stairs_stonecutting"
+      "horizons:light_boulder_slab_from_light_boulder_stonecutting"
     ]
   }
 }

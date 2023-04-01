@@ -203,7 +203,7 @@ public class HorizonsRecipeProvider extends RecipeProvider {
     }
 
     private static void stonecutting(ItemLike ingredient, ItemLike result, int amount, Consumer<FinishedRecipe> consumer) {
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient), result, amount).unlockedBy(getHasName(ingredient), has(ingredient)).save(consumer, Horizons.REGISTRY_HELPER.prefix(getItemName(ingredient) + "_from_" + getItemName(result) + "_stonecutting"));
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(ingredient), result, amount).unlockedBy(getHasName(ingredient), has(ingredient)).save(consumer, Horizons.REGISTRY_HELPER.prefix(getItemName(result) + "_from_" + getItemName(ingredient) + "_stonecutting"));
     }
 
     private static void conditionalRecipe(RecipeBuilder recipe, ICondition condition, Consumer<FinishedRecipe> consumer, ResourceLocation id) {

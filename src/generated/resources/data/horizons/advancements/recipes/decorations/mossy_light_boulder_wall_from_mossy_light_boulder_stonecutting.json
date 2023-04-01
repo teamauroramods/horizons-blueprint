@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "horizons:mossy_light_boulder_from_mossy_light_boulder_wall_stonecutting"
+        "recipe": "horizons:mossy_light_boulder_wall_from_mossy_light_boulder_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "horizons:mossy_light_boulder_from_mossy_light_boulder_wall_stonecutting"
+      "horizons:mossy_light_boulder_wall_from_mossy_light_boulder_stonecutting"
     ]
   }
 }

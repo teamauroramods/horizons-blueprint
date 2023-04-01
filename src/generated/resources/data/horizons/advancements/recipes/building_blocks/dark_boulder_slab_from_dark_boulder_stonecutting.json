@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "horizons:dark_boulder_from_dark_boulder_slab_stonecutting"
+        "recipe": "horizons:dark_boulder_slab_from_dark_boulder_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "horizons:dark_boulder_from_dark_boulder_slab_stonecutting"
+      "horizons:dark_boulder_slab_from_dark_boulder_stonecutting"
     ]
   }
 }

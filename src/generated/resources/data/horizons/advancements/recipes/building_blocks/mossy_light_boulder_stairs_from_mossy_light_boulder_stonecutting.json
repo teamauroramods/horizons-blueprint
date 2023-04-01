@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_boulder": {
+    "has_mossy_light_boulder": {
       "conditions": {
         "items": [
           {
             "items": [
-              "horizons:light_boulder"
+              "horizons:mossy_light_boulder"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "horizons:light_boulder_from_light_boulder_slab_stonecutting"
+        "recipe": "horizons:mossy_light_boulder_stairs_from_mossy_light_boulder_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_light_boulder",
+      "has_mossy_light_boulder",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "horizons:light_boulder_from_light_boulder_slab_stonecutting"
+      "horizons:mossy_light_boulder_stairs_from_mossy_light_boulder_stonecutting"
     ]
   }
 }
