@@ -29,7 +29,7 @@ public class HorizonsBiomes {
 
     public static final BiomeSubRegistryHelper.KeyedBiome BAYOU = HELPER.createBiome("bayou", HorizonsBiomes::bayou);
     public static final BiomeSubRegistryHelper.KeyedBiome REDBUD_GROVE = HELPER.createBiome("redbud_grove", HorizonsBiomes::redbudGrove);
-    public static final BiomeSubRegistryHelper.KeyedBiome REDWOOD_FOREST = HELPER.createBiome("redwood_forest", () -> OverworldBiomes.oldGrowthTaiga(true));
+    public static final BiomeSubRegistryHelper.KeyedBiome REDWOOD_FOREST = HELPER.createBiome("redwood_forest", HorizonsBiomes::redwoodForest);
 
     // Biome Builders //
 
@@ -76,6 +76,27 @@ public class HorizonsBiomes {
         return biome(Biome.Precipitation.RAIN, 0.8F, 0.8F, 937679, 329011, 12638463, spawns, gen, Musics.createGameMusic(SoundEvents.MUSIC_BIOME_MEADOW));
     }
 
+    private static Biome redwoodForest() {
+        MobSpawnSettings.Builder spawns = baseRedwoodForestSpawns();
+        BiomeGenerationSettings.Builder gen = new BiomeGenerationSettings.Builder();
+
+        OverworldBiomes.globalOverworldGeneration(gen);
+        BiomeDefaultFeatures.addMossyStoneBlock(gen);
+        BiomeDefaultFeatures.addFerns(gen);
+        BiomeDefaultFeatures.addDefaultOres(gen);
+        BiomeDefaultFeatures.addDefaultSoftDisks(gen);
+        BiomeDefaultFeatures.addDefaultFlowers(gen);
+        BiomeDefaultFeatures.addGiantTaigaVegetation(gen);
+        BiomeDefaultFeatures.addDefaultMushrooms(gen);
+        BiomeDefaultFeatures.addDefaultExtraVegetation(gen);
+        BiomeDefaultFeatures.addCommonBerryBushes(gen);
+
+        gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.FIDDLENECK.getHolder().get());
+        gen.addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.HELICONIA.getHolder().get());
+
+        return biome(Biome.Precipitation.RAIN, 0.25F, 0.8F, 4159204, 329011, 12638463, spawns, gen, Musics.createGameMusic(SoundEvents.MUSIC_BIOME_OLD_GROWTH_TAIGA));
+    }
+
     // Base Spawns //
 
     private static MobSpawnSettings.Builder baseBayouSpawns() {
@@ -96,6 +117,18 @@ public class HorizonsBiomes {
         spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.DONKEY, 1, 1, 2));
         spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 2, 2, 6));
         spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.SHEEP, 2, 2, 4));
+
+        return spawns;
+    }
+
+    private static MobSpawnSettings.Builder baseRedwoodForestSpawns() {
+        MobSpawnSettings.Builder spawns = new MobSpawnSettings.Builder();
+
+        BiomeDefaultFeatures.commonSpawns(spawns);
+        BiomeDefaultFeatures.farmAnimals(spawns);
+        spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 8, 4, 4));
+        spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 4, 2, 3));
+        spawns.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FOX, 8, 2, 4));
 
         return spawns;
     }

@@ -60,6 +60,7 @@ public final class HorizonsFeatures {
         public static final RandomPatchConfiguration MAGENTA_DAISY = createPlantPatch(64, HorizonsBlocks.MAGENTA_DAISY.get().defaultBlockState());
         public static final RandomPatchConfiguration BLUE_DAISY = createPlantPatch(64, HorizonsBlocks.BLUE_DAISY.get().defaultBlockState());
 
+        public static final RandomPatchConfiguration HELICONIA = createPlantPatch(64, HorizonsBlocks.HELICONIA.get().defaultBlockState());
         public static final RandomPatchConfiguration AMARANTHUS = createPlantPatch(82, HorizonsBlocks.AMARANTHUS.get().defaultBlockState());
         public static final RandomPatchConfiguration MYOSOTIS = createPlantPatch(64, HorizonsBlocks.MYOSOTIS.get().defaultBlockState());
         public static final RandomPatchConfiguration FIDDLENECK = createPlantPatch(64, HorizonsBlocks.FIDDLENECK.get().defaultBlockState());
@@ -130,6 +131,7 @@ public final class HorizonsFeatures {
         public static final RegistryObject<ConfiguredFeature<?, ?>> MAGENTA_DAISY = CONFIGURED_FEATURES.register("magenta_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.MAGENTA_DAISY));
         public static final RegistryObject<ConfiguredFeature<?, ?>> BLUE_DAISY = CONFIGURED_FEATURES.register("blue_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.BLUE_DAISY));
 
+        public static final RegistryObject<ConfiguredFeature<?, ?>> HELICONIA = CONFIGURED_FEATURES.register("heliconia", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.HELICONIA));
         public static final RegistryObject<ConfiguredFeature<?, ?>> AMARANTHUS = CONFIGURED_FEATURES.register("amaranthus", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.AMARANTHUS));
         public static final RegistryObject<ConfiguredFeature<?, ?>> MYOSOTIS = CONFIGURED_FEATURES.register("myosotis", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.MYOSOTIS));
         public static final RegistryObject<ConfiguredFeature<?, ?>> FIDDLENECK = CONFIGURED_FEATURES.register("fiddleneck", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.FIDDLENECK));
@@ -164,6 +166,7 @@ public final class HorizonsFeatures {
         public static final RegistryObject<PlacedFeature> MAGENTA_DAISY = createPatch("magenta_daisy", 120, Features.MAGENTA_DAISY);
         public static final RegistryObject<PlacedFeature> BLUE_DAISY = createPatch("blue_daisy", 120, Features.BLUE_DAISY);
 
+        public static final RegistryObject<PlacedFeature> HELICONIA = createPatch("heliconia", 12, Features.HELICONIA);
         public static final RegistryObject<PlacedFeature> AMARANTHUS = createPatch("amaranthus", 12, Features.AMARANTHUS);
         public static final RegistryObject<PlacedFeature> MYOSOTIS = createPatch("myosotis", 24, Features.MYOSOTIS);
         public static final RegistryObject<PlacedFeature> FIDDLENECK = createPatch("fiddleneck", 12, Features.FIDDLENECK);
