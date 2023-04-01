@@ -26,7 +26,7 @@ public class HorizonsModdedBiomeSliceProvider extends ModdedBiomeSliceProvider {
     protected void registerSlices() {
         List<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> entries = new ArrayList<>();
         new HorizonsBiomeBuilder().addBiomesToSlice(entries::add);
-        this.registerSlice("horizons", 3, new BiomeUtil.MultiNoiseModdedBiomeProvider(new Climate.ParameterList<>(entries)), LevelStem.OVERWORLD.location());
+        this.registerSlice("horizons", 4, new BiomeUtil.MultiNoiseModdedBiomeProvider(new Climate.ParameterList<>(entries)), LevelStem.OVERWORLD.location());
     }
 
     private static final class HorizonsBiomeBuilder {
