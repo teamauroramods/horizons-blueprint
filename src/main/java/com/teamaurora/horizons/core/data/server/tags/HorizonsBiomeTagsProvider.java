@@ -49,6 +49,7 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(HorizonsBiomeTags.HAS_MUD_DISK).add(HorizonsBiomes.BAYOU.getKey());
         this.tag(HorizonsBiomeTags.HAS_SPOTTED_RED_MAPLE_TREES).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
         this.tag(HorizonsBiomeTags.HAS_HOLLY_TREES).add(HorizonsBiomes.REDWOOD_FOREST.getKey());
+        this.tag(HorizonsBiomeTags.HAS_RARE_CHESTNUT_TREES).add(HorizonsBiomes.REDWOOD_FOREST.getKey(), HorizonsBiomes.REDBUD_GROVE.getKey());
 
         this.tag(BiomeTags.IS_FOREST).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDBUD_GROVE.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());
         this.tag(BiomeTags.HAS_MINESHAFT).add(HorizonsBiomes.BAYOU.getKey(), HorizonsBiomes.REDBUD_GROVE.getKey(), HorizonsBiomes.REDWOOD_FOREST.getKey());
