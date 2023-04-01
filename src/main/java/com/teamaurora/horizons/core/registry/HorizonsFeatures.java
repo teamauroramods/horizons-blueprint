@@ -52,6 +52,14 @@ public final class HorizonsFeatures {
         public static final RandomPatchConfiguration PURPLE_LILY = createPlantPatch(64, HorizonsBlocks.PURPLE_LILY.get().defaultBlockState());
         public static final RandomPatchConfiguration WHITE_LILY = createPlantPatch(64, HorizonsBlocks.WHITE_LILY.get().defaultBlockState());
 
+        public static final RandomPatchConfiguration YELLOW_DAISY = createPlantPatch(64, HorizonsBlocks.YELLOW_DAISY.get().defaultBlockState());
+        public static final RandomPatchConfiguration RED_DAISY = createPlantPatch(64, HorizonsBlocks.RED_DAISY.get().defaultBlockState());
+        public static final RandomPatchConfiguration PURPLE_DAISY = createPlantPatch(64, HorizonsBlocks.PURPLE_DAISY.get().defaultBlockState());
+        public static final RandomPatchConfiguration PINK_DAISY = createPlantPatch(64, HorizonsBlocks.PINK_DAISY.get().defaultBlockState());
+        public static final RandomPatchConfiguration ORANGE_DAISY = createPlantPatch(64, HorizonsBlocks.ORANGE_DAISY.get().defaultBlockState());
+        public static final RandomPatchConfiguration MAGENTA_DAISY = createPlantPatch(64, HorizonsBlocks.MAGENTA_DAISY.get().defaultBlockState());
+        public static final RandomPatchConfiguration BLUE_DAISY = createPlantPatch(64, HorizonsBlocks.BLUE_DAISY.get().defaultBlockState());
+
         public static final RandomPatchConfiguration AMARANTHUS = createPlantPatch(82, HorizonsBlocks.AMARANTHUS.get().defaultBlockState());
         public static final RandomPatchConfiguration MYOSOTIS = createPlantPatch(64, HorizonsBlocks.MYOSOTIS.get().defaultBlockState());
 
@@ -113,6 +121,14 @@ public final class HorizonsFeatures {
         public static final RegistryObject<ConfiguredFeature<?, ?>> PURPLE_LILY = CONFIGURED_FEATURES.register("purple_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.PURPLE_LILY));
         public static final RegistryObject<ConfiguredFeature<?, ?>> WHITE_LILY = CONFIGURED_FEATURES.register("white_lily", () -> new ConfiguredFeature<>(Feature.NO_BONEMEAL_FLOWER, Configs.WHITE_LILY));
 
+        public static final RegistryObject<ConfiguredFeature<?, ?>> YELLOW_DAISY = CONFIGURED_FEATURES.register("yellow_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.YELLOW_DAISY));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> RED_DAISY = CONFIGURED_FEATURES.register("red_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.RED_DAISY));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> PURPLE_DAISY = CONFIGURED_FEATURES.register("purple_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.PURPLE_DAISY));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> PINK_DAISY = CONFIGURED_FEATURES.register("pink_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.PINK_DAISY));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> ORANGE_DAISY = CONFIGURED_FEATURES.register("orange_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.ORANGE_DAISY));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> MAGENTA_DAISY = CONFIGURED_FEATURES.register("magenta_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.MAGENTA_DAISY));
+        public static final RegistryObject<ConfiguredFeature<?, ?>> BLUE_DAISY = CONFIGURED_FEATURES.register("blue_daisy", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.BLUE_DAISY));
+
         public static final RegistryObject<ConfiguredFeature<?, ?>> AMARANTHUS = CONFIGURED_FEATURES.register("amaranthus", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.AMARANTHUS));
         public static final RegistryObject<ConfiguredFeature<?, ?>> MYOSOTIS = CONFIGURED_FEATURES.register("myosotis", () -> new ConfiguredFeature<>(Feature.FLOWER, Configs.MYOSOTIS));
 
@@ -137,6 +153,14 @@ public final class HorizonsFeatures {
         public static final RegistryObject<PlacedFeature> PINK_LILY = createPatch("pink_lily", 82, Features.PINK_LILY);
         public static final RegistryObject<PlacedFeature> PURPLE_LILY = createPatch("purple_lily", 82, Features.PURPLE_LILY);
         public static final RegistryObject<PlacedFeature> WHITE_LILY = createPatch("white_lily", 82, Features.WHITE_LILY);
+
+        public static final RegistryObject<PlacedFeature> YELLOW_DAISY = createPatch("yellow_daisy", 82, Features.YELLOW_DAISY);
+        public static final RegistryObject<PlacedFeature> RED_DAISY = createPatch("red_daisy", 82, Features.RED_DAISY);
+        public static final RegistryObject<PlacedFeature> PURPLE_DAISY = createPatch("purple_daisy", 82, Features.PURPLE_DAISY);
+        public static final RegistryObject<PlacedFeature> PINK_DAISY = createPatch("pink_daisy", 82, Features.PINK_DAISY);
+        public static final RegistryObject<PlacedFeature> ORANGE_DAISY = createPatch("orange_daisy", 82, Features.ORANGE_DAISY);
+        public static final RegistryObject<PlacedFeature> MAGENTA_DAISY = createPatch("magenta_daisy", 82, Features.MAGENTA_DAISY);
+        public static final RegistryObject<PlacedFeature> BLUE_DAISY = createPatch("blue_daisy", 82, Features.BLUE_DAISY);
 
         public static final RegistryObject<PlacedFeature> AMARANTHUS = createPatch("amaranthus", 12, Features.AMARANTHUS);
         public static final RegistryObject<PlacedFeature> MYOSOTIS = createPatch("myosotis", 24, Features.MYOSOTIS);

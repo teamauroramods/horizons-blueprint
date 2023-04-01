@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/pink_daisy",
+  "features": "horizons:pink_daisy",
+  "step": "vegetal_decoration"
+}

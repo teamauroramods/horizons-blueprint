@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/blue_daisy",
+  "features": "horizons:blue_daisy",
+  "step": "vegetal_decoration"
+}

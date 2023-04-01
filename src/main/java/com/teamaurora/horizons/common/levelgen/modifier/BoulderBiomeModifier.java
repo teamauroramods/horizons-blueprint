@@ -22,16 +22,13 @@ public enum BoulderBiomeModifier implements BiomeModifier {
     @Override
     public void modify(Holder<Biome> biome, Phase phase, ModifiableBiomeInfo.BiomeInfo.Builder builder) {
         List<Holder<PlacedFeature>> placements = builder.getGenerationSettings().getFeatures(GenerationStep.Decoration.LOCAL_MODIFICATIONS);
-        float temp = builder.getClimateSettings().getTemperature();
 
-        if (!placements.contains(MiscOverworldPlacements.FOREST_ROCK))
-            return;
+        if (phase == Phase.REMOVE && placements.contains(MiscOverworldPlacements.FOREST_ROCK)) {
+            float temp = builder.getClimateSettings().getTemperature();
 
-        if (phase == Phase.MODIFY)
-            placements.add((temp > 0.75 ? HorizonsFeatures.Placements.LIGHT_BOULDER : HorizonsFeatures.Placements.DARK_BOULDER).getHolder().get());
-
-        if (phase == Phase.REMOVE)
             placements.remove(MiscOverworldPlacements.FOREST_ROCK);
+            placements.add((temp > 0.75F ? HorizonsFeatures.Placements.LIGHT_BOULDER : HorizonsFeatures.Placements.DARK_BOULDER).getHolder().get());
+        }
     }
 
     @Override

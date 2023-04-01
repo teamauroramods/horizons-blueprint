@@ -31,6 +31,14 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(HorizonsBiomeTags.HAS_PURPLE_LILY).addTag(Tags.Biomes.IS_SWAMP);
         this.tag(HorizonsBiomeTags.HAS_WHITE_LILY).addTag(Tags.Biomes.IS_SWAMP);
 
+        this.tag(HorizonsBiomeTags.HAS_YELLOW_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_RED_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_PURPLE_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_PINK_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_ORANGE_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_MAGENTA_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_BLUE_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+
         this.tag(HorizonsBiomeTags.HAS_AMARANTHUS).add(HorizonsBiomes.REDBUD_GROVE.getKey(), Biomes.MEADOW);
         this.tag(HorizonsBiomeTags.HAS_MYOSOTIS).addTag(BiomeTags.IS_TAIGA);
 

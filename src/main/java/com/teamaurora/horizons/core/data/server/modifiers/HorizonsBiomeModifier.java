@@ -57,6 +57,14 @@ public final class HorizonsBiomeModifier {
         addFeature("purple_lily", HorizonsBiomeTags.HAS_PURPLE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.PURPLE_LILY);
         addFeature("white_lily", HorizonsBiomeTags.HAS_WHITE_LILY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.WHITE_LILY);
 
+        addFeature("yellow_daisy", HorizonsBiomeTags.HAS_YELLOW_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.YELLOW_DAISY);
+        addFeature("red_daisy", HorizonsBiomeTags.HAS_RED_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.RED_DAISY);
+        addFeature("purple_daisy", HorizonsBiomeTags.HAS_PURPLE_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.PURPLE_DAISY);
+        addFeature("pink_daisy", HorizonsBiomeTags.HAS_PINK_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.PINK_DAISY);
+        addFeature("orange_daisy", HorizonsBiomeTags.HAS_ORANGE_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.ORANGE_DAISY);
+        addFeature("magenta_daisy", HorizonsBiomeTags.HAS_MAGENTA_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.MAGENTA_DAISY);
+        addFeature("blue_daisy", HorizonsBiomeTags.HAS_BLUE_DAISY, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.BLUE_DAISY);
+
         addFeature("amaranthus", HorizonsBiomeTags.HAS_AMARANTHUS, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.AMARANTHUS);
         addFeature("myosotis", HorizonsBiomeTags.HAS_MYOSOTIS, GenerationStep.Decoration.VEGETAL_DECORATION, HorizonsFeatures.Placements.MYOSOTIS);
 

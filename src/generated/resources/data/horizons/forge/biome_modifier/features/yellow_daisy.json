@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#horizons:has_feature/yellow_daisy",
+  "features": "horizons:yellow_daisy",
+  "step": "vegetal_decoration"
+}
