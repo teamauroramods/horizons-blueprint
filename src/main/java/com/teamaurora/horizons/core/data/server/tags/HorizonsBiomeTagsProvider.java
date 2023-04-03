@@ -20,7 +20,7 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
     @Override
     protected void addTags() {
         this.tag(HorizonsBiomeTags.HAS_ALGAE).add(HorizonsBiomes.BAYOU.getKey());
-        this.tag(HorizonsBiomeTags.HAS_GIANT_FERN).addTag(Tags.Biomes.IS_SWAMP);
+        this.tag(HorizonsBiomeTags.HAS_GIANT_FERN).addTag(Tags.Biomes.IS_SWAMP).add(HorizonsBiomes.REDWOOD_FOREST.getKey(), Biomes.OLD_GROWTH_PINE_TAIGA, Biomes.OLD_GROWTH_SPRUCE_TAIGA);
 
         this.tag(HorizonsBiomeTags.HAS_BLUE_LILY).addTag(Tags.Biomes.IS_SWAMP);
         this.tag(HorizonsBiomeTags.HAS_LIGHT_GRAY_LILY).addTag(Tags.Biomes.IS_SWAMP);
@@ -31,13 +31,13 @@ public class HorizonsBiomeTagsProvider extends BiomeTagsProvider {
         this.tag(HorizonsBiomeTags.HAS_PURPLE_LILY).addTag(Tags.Biomes.IS_SWAMP);
         this.tag(HorizonsBiomeTags.HAS_WHITE_LILY).addTag(Tags.Biomes.IS_SWAMP);
 
-        this.tag(HorizonsBiomeTags.HAS_YELLOW_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
-        this.tag(HorizonsBiomeTags.HAS_RED_DAISY).add(Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU, Biomes.WINDSWEPT_SAVANNA, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_YELLOW_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.OLD_GROWTH_BIRCH_FOREST, HorizonsBiomes.REDWOOD_FOREST.getKey(), Biomes.OLD_GROWTH_SPRUCE_TAIGA, Biomes.OLD_GROWTH_PINE_TAIGA, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_RED_DAISY).add(Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU, Biomes.WINDSWEPT_SAVANNA);
         this.tag(HorizonsBiomeTags.HAS_PURPLE_DAISY).add(Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU, Biomes.WINDSWEPT_SAVANNA, Biomes.FLOWER_FOREST, Biomes.MEADOW);
         this.tag(HorizonsBiomeTags.HAS_PINK_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
-        this.tag(HorizonsBiomeTags.HAS_ORANGE_DAISY).add(Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU, Biomes.WINDSWEPT_SAVANNA, Biomes.FLOWER_FOREST, Biomes.MEADOW);
-        this.tag(HorizonsBiomeTags.HAS_MAGENTA_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
-        this.tag(HorizonsBiomeTags.HAS_BLUE_DAISY).add(Biomes.PLAINS, Biomes.FOREST, Biomes.BIRCH_FOREST, Biomes.WINDSWEPT_FOREST, Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_ORANGE_DAISY).add(Biomes.SAVANNA, Biomes.SAVANNA_PLATEAU, Biomes.WINDSWEPT_SAVANNA);
+        this.tag(HorizonsBiomeTags.HAS_MAGENTA_DAISY).addTag(BiomeTags.IS_JUNGLE).add(Biomes.FLOWER_FOREST, Biomes.MEADOW);
+        this.tag(HorizonsBiomeTags.HAS_BLUE_DAISY).addTag(BiomeTags.IS_JUNGLE).add(Biomes.FLOWER_FOREST, Biomes.MEADOW);
 
         this.tag(HorizonsBiomeTags.HAS_AMARANTHUS).add(HorizonsBiomes.REDBUD_GROVE.getKey(), Biomes.MEADOW);
         this.tag(HorizonsBiomeTags.HAS_MYOSOTIS).addTag(BiomeTags.IS_TAIGA);

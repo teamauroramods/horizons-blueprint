@@ -3,6 +3,10 @@
     "minecraft:plains",
     "minecraft:forest",
     "minecraft:birch_forest",
+    "minecraft:old_growth_birch_forest",
+    "horizons:redwood_forest",
+    "minecraft:old_growth_spruce_taiga",
+    "minecraft:old_growth_pine_taiga",
     "minecraft:windswept_forest",
     "minecraft:flower_forest",
     "minecraft:meadow"
